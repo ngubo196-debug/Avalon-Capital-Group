@@ -1359,6 +1359,7 @@
         <div>
           <div class="contact-block-label">Direct Contact</div>
           <a href="tel:+27712205313" style="display:block; font-size:14px; color:var(--text); text-decoration:none; margin-bottom:6px; transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text)'">+27 71 220 5313</a>
+          <span style="display:block; font-size:14px; color:var(--text-muted); margin-bottom:6px;">luyanda[at]avaloncapitalgroup.co.za</span>
           <a href="/cdn-cgi/l/email-protection#274b525e46494346674651464b48494446574e53464b4055485257094448095d46" style="display:block; font-size:13px; color:var(--text-muted); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'"><span class="__cf_email__" data-cfemail="076b727e66696366476671666b68696466776e73666b6075687277296468297d66">[email&#160;protected]</span></a>
         </div>
         <div style="height:1px; background:var(--border);"></div>
@@ -1384,11 +1385,19 @@
 
 <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
   function showPage(id) {
-    document.querySelectorAll('.page').forEach(function(p) { p.classList.remove('active'); });
-    document.querySelectorAll('.nav-links a').forEach(function(a) { a.classList.remove('active'); });
+    var pages = document.querySelectorAll('.page');
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].classList.remove('active');
+      pages[i].style.display = 'none';
+    }
+    var navLinks = document.querySelectorAll('.nav-links a');
+    for (var j = 0; j < navLinks.length; j++) {
+      navLinks[j].classList.remove('active');
+    }
     var page = document.getElementById('page-' + id);
     if (page) {
       page.classList.add('active');
+      page.style.display = 'block';
       var navLink = document.getElementById('nav-' + id);
       if (navLink) navLink.classList.add('active');
     }
