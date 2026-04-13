@@ -326,7 +326,7 @@
         </div>
         <div>
           <div class="contact-label">Email</div>
-          <div class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c4ddd1c9c6ccc9e8c9dec9c4c7c6cbc9d8c1dcc9c4cfdac7ddd886cbc786d2c9">[email&#160;protected]</a></div>
+          <div class="contact-value"><span data-user="luyanda" data-domain="avaloncapitalgroup.co.za" class="card-email"></span></div>
         </div>
       </div>
 
@@ -390,6 +390,9 @@
 
     <div class="c
 <script>
+document.querySelectorAll('.card-email').forEach(function(el) {
+  el.textContent = el.getAttribute('data-user') + '@' + el.getAttribute('data-domain');
+});
 function saveContact() {
   var vcard = [
     'BEGIN:VCARD',
