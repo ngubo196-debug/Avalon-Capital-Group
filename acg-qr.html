@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Avalon Capital Group — QR</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400&family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    background: #0A0A0A;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 32px;
+    width: 100%;
+    max-width: 480px;
+  }
+
+  /* ACG Mark */
+  .mark { margin-bottom: 28px; color: #C9A84C; }
+
+  /* Wordmark */
+  .wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #F0EDE8;
+    margin-bottom: 4px;
+  }
+
+  .wordmark-sub {
+    font-size: 9px;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    margin-bottom: 40px;
+  }
+
+  /* QR container */
+  .qr-outer {
+    border: 1px solid rgba(201,168,76,0.25);
+    padding: 28px;
+    background: #111111;
+    position: relative;
+    margin-bottom: 32px;
+  }
+
+  /* Gold corner accents */
+  .qr-outer::before,
+  .qr-outer::after {
+    content: '';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+  }
+  .qr-outer::before {
+    top: -1px; left: -1px;
+    border-top: 2px solid #C9A84C;
+    border-left: 2px solid #C9A84C;
+  }
+  .qr-outer::after {
+    bottom: -1px; right: -1px;
+    border-bottom: 2px solid #C9A84C;
+    border-right: 2px solid #C9A84C;
+  }
+
+  .corner-tr {
+    position: absolute;
+    top: -1px; right: -1px;
+    width: 16px; height: 16px;
+    border-top: 2px solid #C9A84C;
+    border-right: 2px solid #C9A84C;
+  }
+  .corner-bl {
+    position: absolute;
+    bottom: -1px; left: -1px;
+    width: 16px; height: 16px;
+    border-bottom: 2px solid #C9A84C;
+    border-left: 2px solid #C9A84C;
+  }
+
+  #qrcode canvas,
+  #qrcode img {
+    display: block;
+  }
+
+  /* URL display */
+  .url-label {
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #555250;
+    margin-bottom: 6px;
+  }
+
+  .url-value {
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: #C9A84C;
+    margin-bottom: 40px;
+  }
+
+  /* Divider */
+  .divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(201,168,76,0.1);
+    margin-bottom: 32px;
+  }
+
+  /* Instruction */
+  .instruction {
+    font-size: 10px;
+    letter-spacing: 0.14em;
+    color: #444240;
+    text-align: center;
+    line-height: 1.9;
+    margin-bottom: 32px;
+  }
+
+  /* Download button */
+  .dl-btn {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #0A0A0A;
+    background: #C9A84C;
+    border: none;
+    padding: 14px 36px;
+    cursor: pointer;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    transition: background 0.2s;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 12px;
+  }
+  .dl-btn:hover { background: #DFC06A; }
+
+  .dl-note {
+    font-size: 8px;
+    letter-spacing: 0.12em;
+    color: #333130;
+    text-align: center;
+  }
+
+  /* Top gold bar */
+  .top-bar {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #5A4820, #C9A84C, #E8D5A3, #C9A84C, #5A4820);
+  }
+</style>
+</head>
+<body>
+
+<div class="top-bar"></div>
+
+<div class="page">
+
+  <!-- ACG Mark -->
+  <div class="mark">
+    <svg width="48" height="60" viewBox="0 0 100 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="qm">
+          <rect width="100" height="128" fill="white"/>
+          <polygon points="26,48 44,90 50,90 36,48" fill="black"/>
+          <polygon points="74,48 56,90 50,90 64,48" fill="black"/>
+          <path d="M26,48 A24,24 0 0,1 74,48 Z" fill="black"/>
+        </mask>
+      </defs>
+      <polygon points="50,2 98,90 2,90" fill="#C9A84C" mask="url(#qm)"/>
+      <polygon points="44,90 50,114 56,90" fill="#C9A84C"/>
+    </svg>
+  </div>
+
+  <div class="wordmark">Avalon Capital Group</div>
+  <div class="wordmark-sub">Scan to connect</div>
+
+  <!-- QR Code -->
+  <div class="qr-outer">
+    <div class="corner-tr"></div>
+    <div class="corner-bl"></div>
+    <div id="qrcode"></div>
+  </div>
+
+  <div class="url-label">Destination</div>
+  <div class="url-value">avaloncapitalgroup.co.za</div>
+
+  <div class="divider"></div>
+
+  <div class="instruction">
+    Point your phone camera at the code<br>to visit Avalon Capital Group
+  </div>
+
+  <button class="dl-btn" onclick="downloadQR()">Download QR Code</button>
+  <div class="dl-note">PNG · Print-ready · 512 × 512px</div>
+
+</div>
+
+<script>
+  // Generate QR code — dark background, gold modules
+  var qr = new QRCode(document.getElementById('qrcode'), {
+    text: 'https://avaloncapitalgroup.co.za',
+    width: 220,
+    height: 220,
+    colorDark: '#C9A84C',
+    colorLight: '#111111',
+    correctLevel: QRCode.CorrectLevel.H
+  });
+
+  function downloadQR() {
+    // Wait a tick for QR to render
+    setTimeout(function() {
+      var canvas = document.querySelector('#qrcode canvas');
+      if (!canvas) {
+        // Try img fallback
+        var img = document.querySelector('#qrcode img');
+        if (img) {
+          var a = document.createElement('a');
+          a.href = img.src;
+          a.download = 'ACG-QR-Code.png';
+          a.click();
+        }
+        return;
+      }
+
+      // Create a larger canvas with branding
+      var out = document.createElement('canvas');
+      out.width = 512;
+      out.height = 512;
+      var ctx = out.getContext('2d');
+
+      // Background
+      ctx.fillStyle = '#111111';
+      ctx.fillRect(0, 0, 512, 512);
+
+      // Border
+      ctx.strokeStyle = 'rgba(201,168,76,0.4)';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(20, 20, 472, 472);
+
+      // Draw QR centred
+      var qrSize = 360;
+      var qrX = (512 - qrSize) / 2;
+      var qrY = (512 - qrSize) / 2;
+      ctx.drawImage(canvas, qrX, qrY, qrSize, qrSize);
+
+      // Download
+      var a = document.createElement('a');
+      a.href = out.toDataURL('image/png');
+      a.download = 'ACG-QR-Code.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }, 100);
+  }
+</script>
+
+</body>
+</html>

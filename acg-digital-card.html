@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>Luyanda Ngubo — Avalon Capital Group</title>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap');
+
+  .card-root {
+    background: #0A0A0A;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .card {
+    background: #111111;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid rgba(201,168,76,0.2);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card-top-bar {
+    height: 3px;
+    background: linear-gradient(90deg, #8A6E2F, #C9A84C, #E8D5A3, #C9A84C, #8A6E2F);
+  }
+
+  .card-header {
+    padding: 44px 40px 36px;
+    text-align: center;
+    border-bottom: 1px solid rgba(201,168,76,0.12);
+    position: relative;
+  }
+
+  .card-header::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(201,168,76,0.05) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .logo-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 28px;
+  }
+
+  .logo-svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .logo-text-block {
+    text-align: left;
+  }
+
+  .logo-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    color: #F0EDE8;
+    text-transform: uppercase;
+    line-height: 1.2;
+  }
+
+  .logo-sub {
+    font-size: 9px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    margin-top: 3px;
+  }
+
+  .person-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 32px;
+    font-weight: 300;
+    color: #F0EDE8;
+    letter-spacing: 0.02em;
+    line-height: 1.1;
+    margin-bottom: 8px;
+  }
+
+  .person-title {
+    font-size: 9px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    margin-bottom: 6px;
+  }
+
+  .person-group {
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #555250;
+  }
+
+  .card-body {
+    padding: 32px 40px;
+  }
+
+  .contact-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 13px 0;
+    border-bottom: 1px solid rgba(201,168,76,0.08);
+  }
+
+  .contact-row:last-of-type {
+    border-bottom: none;
+  }
+
+  .contact-icon {
+    width: 32px;
+    height: 32px;
+    border: 1px solid rgba(201,168,76,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .contact-label {
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #555250;
+    margin-bottom: 3px;
+  }
+
+  .contact-value {
+    font-size: 13px;
+    color: #F0EDE8;
+    font-weight: 300;
+    letter-spacing: 0.03em;
+  }
+
+  .contact-value a {
+    color: #F0EDE8;
+    text-decoration: none;
+  }
+
+  .card-actions {
+    padding: 0 40px 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .action-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 14px 16px;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .action-btn svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+  }
+
+  .btn-whatsapp {
+    background: #C9A84C;
+    color: #0A0A0A;
+  }
+  .btn-whatsapp:hover { background: #E8D5A3; }
+
+  .btn-call {
+    background: transparent;
+    color: #C9A84C;
+    border: 1px solid rgba(201,168,76,0.35);
+  }
+  .btn-call:hover { background: rgba(201,168,76,0.08); }
+
+  .btn-email {
+    background: transparent;
+    color: #8A8680;
+    border: 1px solid rgba(201,168,76,0.12);
+    grid-column: span 2;
+  }
+  .btn-email:hover { color: #C9A84C; border-color: rgba(201,168,76,0.3); }
+
+  .card-divider {
+    height: 1px;
+    background: rgba(201,168,76,0.1);
+    margin: 0 40px 28px;
+  }
+
+  .divisions-row {
+    padding: 0 40px 36px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+
+  .division-pill {
+    border: 1px solid rgba(201,168,76,0.15);
+    padding: 14px 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: all 0.25s;
+  }
+
+  .division-pill:hover {
+    border-color: rgba(201,168,76,0.35);
+    background: rgba(201,168,76,0.04);
+  }
+
+  .division-pill-label {
+    font-size: 8px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #8A6E2F;
+    margin-bottom: 4px;
+  }
+
+  .division-pill-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: #F0EDE8;
+    line-height: 1.2;
+  }
+
+  .division-pill-tag {
+    font-size: 8px;
+    color: #555250;
+    margin-top: 3px;
+    letter-spacing: 0.05em;
+  }
+
+  .card-footer {
+    padding: 20px 40px;
+    border-top: 1px solid rgba(201,168,76,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .footer-web {
+    font-size: 9px;
+    letter-spacing: 0.14em;
+    color: #555250;
+    text-decoration: none;
+  }
+
+  .footer-web:hover { color: #C9A84C; }
+
+  .save-btn {
+    font-size: 8px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #C9A84C;
+    border: 1px solid rgba(201,168,76,0.3);
+    padding: 8px 16px;
+    cursor: pointer;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    transition: all 0.25s;
+  }
+
+  .save-btn:hover { background: rgba(201,168,76,0.08); }
+</style>
+
+<div class="card-root">
+  <div class="card">
+    <div class="card-top-bar"></div>
+
+    <div class="card-header">
+      <div class="logo-wrap">
+        <img src="data:image/jpeg;base64,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GCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAABCACACAABBAADDBBACAAAAAAAAAAAAAAAAAAFOJPFIACEAMFCEAAAAAAAAAAAAAAHLCLFBEAHIABCBCOLEAAAAAAAAAAAAABEIIEKAEMPPDBHEFIBAAAAAAAAAAAAAAAAAABBCDCCBDCAAAAAAAAAAAAAAAAAAAAAAAEPGDKLMOJNCIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP/EAAL/2gAMAwEAAgADAAAAEPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPKPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPFNPPPPPPPPPPPPPPPPPPPPPPPPPPPPPJPOPPPPPPPPPPPPPPPPPPPPPPPPPPPPLOPNPPPPPPPPPPPPPPPPPPPPPPPPPPPPBGPEJNPPPPPPPPPPPPPPPPPPPPPPPPPKLNEBLEPPPPPPPPPPPPPPPPPPPPPPPPPPPMAHNPNPPPPPPPPPPPPPPPPPPPPPPPPPPOPGPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPAHPPPPPPPPPPPPPPPPPPPPPPPPPPPPPPHPPPPPPPPPPPPPPPPPPPPPPPONONPPONOOPPOMOMPMPPPPPPPPPPPPPPKELGLFDLKFPINOFOPAPPPPPPPPPPPPPPFOFBNGHNKPPKNLHDAAPPPPPPPPPPPPPO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" alt="Avalon Capital Group" style="height:72px; width:auto; display:block;">
+      </div>
+
+      <div class="person-name">Luyanda Ngubo</div>
+      <div class="person-title">Founder</div>
+      <div class="person-group">Avalon Capital Group</div>
+    </div>
+
+    <div class="card-body">
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.1 1.18 2 2 0 012.08 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Phone & WhatsApp</div>
+          <div class="contact-value">+27 71 220 5313</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a8c4ddd1c9c6ccc9e8c9dec9c4c7c6cbc9d8c1dcc9c4cfdac7ddd886cbc786d2c9">[email&#160;protected]</a></div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="2" y1="12" x2="22" y2="12"/>
+            <path d="M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Website</div>
+          <div class="contact-value">avaloncapitalgroup.co.za</div>
+        </div>
+      </div>
+
+      <div class="contact-row">
+        <div class="contact-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/>
+            <circle cx="12" cy="10" r="3"/>
+          </svg>
+        </div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Durban, KwaZulu-Natal</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-actions">
+      <a class="action-btn btn-whatsapp" href="https://wa.me/27712205313">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a class="action-btn btn-call" href="tel:+27712205313">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.8 19.79 19.79 0 01.1 1.18 2 2 0 012.08 0h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
+        Call
+      </a>
+      <a class="action-btn btn-email" href="/cdn-cgi/l/email-protection#9df1e8e4fcf3f9fcddfcebfcf1f2f3fefcedf4e9fcf1faeff2e8edb3fef2b3e7fc">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Send Email
+      </a>
+    </div>
+
+    <div class="card-divider"></div>
+
+    <div class="divisions-row">
+      <a class="division-pill" href="https://avaloncapitalgroup.co.za/vantara">
+        <div class="division-pill-label">Division</div>
+        <div class="division-pill-name">Vantara</div>
+        <div class="division-pill-tag">Structured. Advised. Delivered.</div>
+      </a>
+      <a class="division-pill" href="https://avaloncapitalgroup.co.za/ada">
+        <div class="division-pill-label">Division</div>
+        <div class="division-pill-name">Avalon Digital Agency</div>
+        <div class="division-pill-tag">AI-Powered Digital</div>
+      </a>
+    </div>
+
+    <div class="c
+<script>
+function saveContact() {
+  var vcard = [
+    'BEGIN:VCARD',
+    'VERSION:3.0',
+    'FN:Luyanda Ngubo',
+    'N:Ngubo;Luyanda;;;',
+    'ORG:Avalon Capital Group',
+    'TITLE:Founder',
+    'TEL;TYPE=CELL,VOICE:+27712205313',
+    'TEL;TYPE=CELL,WHATSAPP:+27712205313',
+    'EMAIL:luyanda@avaloncapitalgroup.co.za',
+    'URL:https://avaloncapitalgroup.co.za',
+    'ADR;TYPE=WORK:;;Durban;KwaZulu-Natal;;;ZA',
+    'NOTE:Founder — Avalon Capital Group. Divisions: Vantara | Avalon Digital Agency (ADA)',
+    'END:VCARD'
+  ].join('\n');
+
+  var blob = new Blob([vcard], { type: 'text/vcard' });
+  var url = URL.createObjectURL(blob);
+  var a = document.createElement('a');
+  a.href = url;
+  a.download = 'Luyanda-Ngubo-ACG.vcf';
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+
+  // Show toast
+  var toast = document.getElementById('toast');
+  toast.classList.add('show');
+  setTimeout(function() { toast.classList.remove('show'); }, 3000);
+}
+</script>
+
+<style>
+  .toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #1E1E1E;
+    border: 1px solid rgba(201,168,76,0.3);
+    color: #C9A84C;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 9px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 12px 24px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    pointer-events: none;
+    white-space: nowrap;
+    z-index: 999;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+</style>
+
+<div id="toast">Contact saved to your device</div>
+
+</html>
