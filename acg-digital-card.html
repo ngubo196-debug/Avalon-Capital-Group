@@ -455,4 +455,10 @@ function saveContact() {
 
 <div id="toast">Contact saved to your device</div>
 
+<script>
+var emailSpans = document.getElementsByClassName('card-email');
+for (var i = 0; i < emailSpans.length; i++) {
+  emailSpans[i].textContent = emailSpans[i].getAttribute('data-user') + '@' + emailSpans[i].getAttribute('data-domain');
+}
+</script>
 </html>
