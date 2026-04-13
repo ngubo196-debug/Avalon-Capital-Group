@@ -279,25 +279,26 @@
     display: none;
     position: fixed;
     top: 72px; left: 0; right: 0;
-    background: rgba(10,10,10,0.98);
+    background: #0A0A0A;
     border-bottom: 1px solid var(--border);
-    padding: 24px;
-    z-index: 99;
+    padding: 0;
+    z-index: 999;
     flex-direction: column;
     gap: 0;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.8);
   }
 
   .mobile-menu.open { display: flex; }
 
   .mobile-menu a {
-    font-size: 11px;
+    font-size: 12px;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--text-muted);
     text-decoration: none;
     cursor: pointer;
-    padding: 14px 0;
-    border-bottom: 1px solid var(--border);
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(201,168,76,0.1);
     transition: color 0.2s;
   }
 
