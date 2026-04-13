@@ -1361,7 +1361,7 @@
         <div>
           <div class="contact-block-label">Direct Contact</div>
           <a href="tel:+27712205313" style="display:block; font-size:14px; color:var(--text); text-decoration:none; margin-bottom:6px; transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text)'">+27 71 220 5313</a>
-          <span style="display:block; font-size:14px; color:var(--text-muted); margin-bottom:6px;">luyanda&#64;avaloncapitalgroup.co.za</span>
+          <span data-user="luyanda" data-domain="avaloncapitalgroup.co.za" class="email-display" style="display:block; font-size:13px; color:var(--text-muted); margin-bottom:6px;"></span>
           <a href="https://wa.me/27712205313?text=Hi%20Avalon%20Capital%20Group%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener" style="display:block; font-size:13px; color:var(--text-muted); text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='var(--gold)'" onmouseout="this.style.color='var(--text-muted)'">WhatsApp</a>
         </div>
         <div style="height:1px; background:var(--border);"></div>
@@ -1429,11 +1429,12 @@
     for (var i = 0; i < pageLinks.length; i++) {
       (function(el) {
         el.addEventListener('click', function() {
-          showPage(el.getAttribute('data-page'));
+          showPage(el.dataset.page);
         });
       })(pageLinks[i]);
     }
     document.querySelector('.nav-hamburger').addEventListener('click', toggleMobile);
+    document.querySelectorAll('.email-display').forEach(el => el.textContent = el.dataset.user + '@' + el.dataset.domain);
   });
 
   function handleSubmit(e) {
