@@ -2417,12 +2417,7 @@
     }
     document.querySelector('.nav-hamburger').addEventListener('click', toggleMobile);
     document.querySelectorAll('.email-display').forEach(el => el.textContent = el.dataset.user + '@' + el.dataset.domain);
-    var backBtns = document.querySelectorAll('.back-btn');
-    for (var j = 0; j < backBtns.length; j++) {
-      backBtns[j].addEventListener('click', function() {
-        showPage('home');
-      });
-    }
+
   });
 
   function handleSubmit(e) {
