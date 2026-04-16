@@ -1,4 +1,10 @@
 {
+  "rewrites": [
+    { "source": "/about",   "destination": "/?page=about" },
+    { "source": "/vantara", "destination": "/?page=vantara" },
+    { "source": "/ada",     "destination": "/?page=ada" },
+    { "source": "/contact", "destination": "/?page=contact" }
+  ],
   "headers": [
     {
       "source": "/(.*)",
