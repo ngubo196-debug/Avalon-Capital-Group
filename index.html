@@ -2406,6 +2406,10 @@
     console.log('DOMContentLoaded fired');
     var urlParams = new URLSearchParams(window.location.search);
     var pageParam = urlParams.get('page');
+    if (!pageParam) {
+      var path = window.location.pathname.replace(/^\/|\/$/g, '');
+      if (path && path !== 'index.html') { pageParam = path; }
+    }
     if (pageParam) { showPage(pageParam); }
     var pageLinks = document.querySelectorAll('[data-page]');
     for (var i = 0; i < pageLinks.length; i++) {
