@@ -1,11 +1,8 @@
 {
   "rewrites": [
-    { "source": "/about",   "destination": "/?page=about" },
-    { "source": "/vantara", "destination": "/?page=vantara" },
-    { "source": "/ada",     "destination": "/?page=ada" },
-    { "source": "/contact",          "destination": "/?page=contact" },
-    { "source": "/digital-card/saud",   "destination": "/saud-olla-digital-card.html" },
-    { "source": "/digital-card/luyanda","destination": "/acg-digital-card.html" }
+    { "source": "/digital-card/saud",    "destination": "/saud-olla-digital-card.html" },
+    { "source": "/digital-card/luyanda", "destination": "/acg-digital-card.html" },
+    { "source": "/(.*)",                 "destination": "/index.html" }
   ],
   "headers": [
     {

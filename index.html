@@ -3045,7 +3045,13 @@
       contact: 'Contact | Avalon Capital Group'
     };
     document.title = titles[id] || titles.home;
+    history.pushState({ page: id }, document.title, '/' + (id === 'home' ? '' : id));
   }
+
+  window.addEventListener('popstate', function(e) {
+    var id = (e.state && e.state.page) ? e.state.page : 'home';
+    showPage(id);
+  });
 
   function toggleMobile() {
     document.getElementById('mobileMenu').classList.toggle('open');
@@ -3058,13 +3064,21 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded fired');
-    var urlParams = new URLSearchParams(window.location.search);
-    var pageParam = urlParams.get('page');
-    if (!pageParam) {
-      var path = window.location.pathname.replace(/^\/|\/$/g, '');
-      if (path && path !== 'index.html') { pageParam = path; }
+    var initialPage = 'home';
+    var qs = new URLSearchParams(window.location.search);
+    if (qs.get('page')) {
+      initialPage = qs.get('page');
+    } else {
+      var path = window.location.pathname.replace(/^\//, '').replace(/\/$/, '');
+      if (path && path !== 'index.html') {
+        initialPage = path;
+      }
     }
-    if (pageParam) { showPage(pageParam); }
+    if (initialPage !== 'home') {
+      showPage(initialPage);
+    } else {
+      history.replaceState({ page: 'home' }, document.title, '/');
+    }
     var pageLinks = document.querySelectorAll('[data-page]');
     for (var i = 0; i < pageLinks.length; i++) {
       (function(el) {
