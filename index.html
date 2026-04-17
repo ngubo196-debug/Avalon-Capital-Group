@@ -1088,6 +1088,30 @@
      VANTARA
 ══════════════════════════════════════════ -->
 <div id="page-vantara" class="page" role="main">
+  <style>
+    @media (max-width: 768px) {
+      #page-vantara section,
+      #page-vantara footer {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+      }
+      #page-vantara [style*="grid-template-columns:repeat(2"],
+      #page-vantara [style*="grid-template-columns: repeat(2"] {
+        grid-template-columns: 1fr !important;
+      }
+      #page-vantara [style*="grid-template-columns:repeat(3"],
+      #page-vantara [style*="grid-template-columns: repeat(3"] {
+        grid-template-columns: 1fr !important;
+      }
+      #page-vantara [style*="grid-template-columns:repeat(4"],
+      #page-vantara [style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: 1fr 1fr !important;
+      }
+      #page-vantara [style*="grid-template-columns:200px"] {
+        grid-template-columns: 1fr !important;
+      }
+    }
+  </style>
   <div class="inner-hero">
     <div class="inner-hero-bg" aria-hidden="true"></div>
     <div class="back-btn" data-page="home" style="position:relative;z-index:9999;">← Back to Avalon Capital Group</div>
