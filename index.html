@@ -161,7 +161,7 @@
 <!-- ═══ FONTS ═══ -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
   :root {
@@ -875,6 +875,232 @@
   }
 
   .ada-contact-grid { display:grid; grid-template-columns:1fr 1fr; gap:1px; background:var(--border); margin-top:56px; }
+
+.founder-section {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  overflow: hidden;
+}
+.bg-name {
+  position: absolute;
+  bottom: -0.05em;
+  left: -0.02em;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(120px, 18vw, 260px);
+  letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.03);
+  pointer-events: none;
+  white-space: nowrap;
+  line-height: 1;
+  z-index: 0;
+  user-select: none;
+}
+.gold-rule {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  bottom: 8%;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, #C9A84C 20%, #C9A84C 80%, transparent);
+  opacity: 0.4;
+  z-index: 1;
+}
+.photo-col {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding: 60px 40px 0 60px;
+  min-height: 100vh;
+}
+.photo-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 480px;
+}
+.photo-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -16px;
+  left: -16px;
+  width: 50px;
+  height: 50px;
+  border-top: 2px solid #C9A84C;
+  border-left: 2px solid #C9A84C;
+  z-index: 3;
+  opacity: 0.8;
+}
+.founder-photo {
+  width: 100%;
+  display: block;
+  filter: contrast(1.05) brightness(1.02);
+  -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 55%, transparent 100%);
+}
+.content-col {
+  position: relative;
+  z-index: 2;
+  padding: 80px 60px 80px 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.founder-section .overline {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: #C9A84C;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: fadeUp 0.6s ease forwards 0.1s;
+}
+.founder-name {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: clamp(52px, 6vw, 88px);
+  letter-spacing: 0.05em;
+  line-height: 0.9;
+  color: #fff;
+  margin-bottom: 16px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.2s;
+}
+.founder-name span { display: block; color: #C9A84C; }
+.title-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 32px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.3s;
+}
+.founder-section .tag {
+  font-family: "Montserrat", sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  border: 1px solid rgba(201,168,76,0.25);
+  padding: 6px 12px;
+  border-radius: 2px;
+}
+.gold-divider {
+  width: 40px;
+  height: 1px;
+  background: #C9A84C;
+  margin-bottom: 28px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.35s;
+}
+.founder-quote {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  font-size: clamp(17px, 2vw, 22px);
+  font-weight: 300;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 28px;
+  border-left: 2px solid #C9A84C;
+  padding-left: 20px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.4s;
+}
+.founder-bio {
+  font-family: "Montserrat", sans-serif;
+  font-size: 12.5px;
+  font-weight: 300;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.45);
+  margin-bottom: 30px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.5s;
+}
+.metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 36px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.6s;
+}
+.metric-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: rgba(255,255,255,0.65);
+}
+.metric-item::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  background: #C9A84C;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.metric-item strong { color: #E8C97A; font-weight: 500; }
+.founder-section .cta-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease forwards 0.75s;
+}
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #C9A84C;
+  color: #111;
+  font-family: "Montserrat", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 14px 28px;
+  transition: background 0.2s, transform 0.2s;
+}
+.cta-primary:hover { background: #E8C97A; transform: translateY(-1px); }
+.cta-primary svg { width: 14px; height: 14px; }
+.cta-secondary {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.45);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+  padding-bottom: 2px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.cta-secondary:hover { color: #C9A84C; border-color: #C9A84C; }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@media (max-width: 900px) {
+  .founder-section { grid-template-columns: 1fr; }
+  .gold-rule { display: none; }
+  .photo-col { padding: 40px 40px 0; min-height: auto; }
+  .content-col { padding: 40px 40px 60px; }
+  .bg-name { font-size: 22vw; }
+}
+@media (max-width: 560px) {
+  .photo-col { padding: 30px 20px 0; }
+  .content-col { padding: 30px 20px 50px; }
+  .founder-section .cta-row { flex-direction: column; align-items: flex-start; }
+}
 </style>
 </head>
 <body>
@@ -1036,6 +1262,56 @@
       </div>
     </div>
   </section>
+
+  <div class="divider"></div>
+
+<section class="founder-section">
+  <div class="bg-name">NGUBO</div>
+  <div class="gold-rule"></div>
+
+  <div class="photo-col">
+    <div class="photo-wrapper">
+      <img
+        class="founder-photo"
+        src="/assets/luyanda-ngubo.jpg"
+        alt="Luyanda Ngubo – Founder, Avalon Capital Group"
+      >
+    </div>
+  </div>
+
+  <div class="content-col">
+    <p class="overline">Founder &amp; Principal</p>
+    <h2 class="founder-name">Luyanda<span>Ngubo</span></h2>
+    <div class="title-tags">
+      <span class="tag">Strategic Operator</span>
+      <span class="tag">Deal Structuring</span>
+      <span class="tag">Commercial Leverage</span>
+    </div>
+    <div class="gold-divider"></div>
+    <blockquote class="founder-quote">
+      "I find where the money is moving, position my clients inside it, and make sure the deal closes."
+    </blockquote>
+    <p class="founder-bio">
+      Avalon didn't start with capital. It started with a vision I carried for four years without knowing how to build it.<br><br>
+      No business background. No family money. Just a picture in my head of what was possible — an ecosystem where each venture feeds the next, where Business A supports B, and C funds A. Self-sustaining. Compounding.<br><br>
+      The gap between that vision and today was filled with exposure, trial, and learning in environments I had no obvious right to be in. That's not a weakness. That's the credential.
+    </p>
+    <div class="metrics">
+      <div class="metric-item"><strong>R3M+</strong> in transactions facilitated</div>
+      <div class="metric-item">Vantara and ADA — built to feed each other</div>
+      <div class="metric-item">Early stage. Real results. Long game.</div>
+    </div>
+    <div class="cta-row">
+      <a href="https://wa.me/27712205313" class="cta-primary">
+        <svg viewBox="0 0 24 24" fill="currentColor">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347"/>
+        </svg>
+        Speak Directly
+      </a>
+      <a href="#" class="cta-secondary">Learn More &#8594;</a>
+    </div>
+  </div>
+</section>
 
   <div class="divider"></div>
 
