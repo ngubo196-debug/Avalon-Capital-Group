@@ -2,6 +2,7 @@
   "rewrites": [
     { "source": "/digital-card/saud",    "destination": "/saud-olla-digital-card.html" },
     { "source": "/digital-card/luyanda", "destination": "/acg-digital-card.html" },
+    { "source": "/privacy-policy",       "destination": "/privacy-policy.html" },
     { "source": "/(.*)",                 "destination": "/index.html" }
   ],
   "headers": [
