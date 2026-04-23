@@ -3723,9 +3723,15 @@
           <option>Not sure yet</option>
         </select>
       </div>
+      <div class="form-group" style="margin-top:20px;">
+        <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;font-size:12px;color:var(--text-muted);line-height:1.7;">
+          <input type="checkbox" id="om-popia" style="flex-shrink:0;margin-top:3px;accent-color:var(--gold);width:15px;height:15px;cursor:pointer;" onchange="document.getElementById('om-submit').disabled=!this.checked;document.getElementById('om-submit').style.opacity=this.checked?'1':'0.4';document.getElementById('om-submit').style.cursor=this.checked?'pointer':'not-allowed';">
+          I have read and agree to the <a href="/privacy-policy" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none;" onmouseover="this.style.color='var(--gold-light)'" onmouseout="this.style.color='var(--gold)'">Privacy Policy</a>. I understand my information will be used to respond to my enquiry.
+        </label>
+      </div>
       <div class="om-foot">
         <span class="om-note" id="om-note">48-hour turnaround</span>
-        <button class="form-submit" id="om-submit" onclick="offersSubmit()" style="width:auto;padding:14px 32px;">Submit request</button>
+        <button class="form-submit" id="om-submit" onclick="offersSubmit()" style="width:auto;padding:14px 32px;opacity:0.4;cursor:not-allowed;" disabled>Submit request</button>
       </div>
     </div>
     <div id="offers-success">
@@ -3795,6 +3801,12 @@
     if (t === 'growth')     document.getElementById('om-svc').value = 'Growth';
     if (t === 'foundation') document.getElementById('om-svc').value = 'Foundation';
     if (t === 'authority')  document.getElementById('om-svc').value = 'Authority';
+    var cb = document.getElementById('om-popia');
+    var sb = document.getElementById('om-submit');
+    cb.checked = false;
+    sb.disabled = true;
+    sb.style.opacity = '0.4';
+    sb.style.cursor = 'not-allowed';
     document.getElementById('offers-modal-bg').classList.add('on');
   };
 
@@ -3803,6 +3815,7 @@
   };
 
   window.offersSubmit = function() {
+    if (!document.getElementById('om-popia').checked) return;
     var b = document.getElementById('om-biz').value.trim();
     var f = document.getElementById('om-frust').value.trim();
     if (!b || !f) {
