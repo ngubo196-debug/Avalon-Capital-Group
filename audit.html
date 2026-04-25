@@ -1,0 +1,1499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Digital Presence Audit — Avalon Digital Agency</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8D5A3;
+  --gold-dim: #8A6E2F;
+  --black: #0A0A0A;
+  --deep: #111111;
+  --surface: #161616;
+  --surface2: #1E1E1E;
+  --border: rgba(201,168,76,0.15);
+  --border-hover: rgba(201,168,76,0.35);
+  --text: #F0EDE8;
+  --text-muted: #8A8680;
+  --text-dim: #555250;
+  --red: #E05A5A;
+  --amber: #E8A84C;
+  --green: #5ACA8E;
+}
+
+*,*::before,*::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--black);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 1.8;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── NAV ── */
+nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 100;
+  padding: 0 60px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(10,10,10,0.96);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.nav-logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  color: var(--text);
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+}
+
+.nav-links a {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--gold); }
+.nav-links a.active { color: var(--gold); }
+
+.nav-cta {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid var(--gold-dim);
+  padding: 10px 22px;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.nav-cta:hover { background: var(--gold); color: var(--black); }
+
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 1px;
+  background: var(--gold);
+  transition: all 0.3s;
+}
+
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  background: #0A0A0A;
+  z-index: 9999;
+  flex-direction: column;
+}
+
+.mobile-menu.open { display: flex; }
+
+.mobile-menu a {
+  font-size: 13px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #F0EDE8;
+  text-decoration: none;
+  padding: 20px 32px;
+  border-bottom: 1px solid var(--border);
+  transition: color 0.2s;
+}
+
+.mobile-menu a:hover { color: var(--gold); }
+
+/* ── PROGRESS BAR ── */
+#prog-track {
+  position: fixed;
+  top: 72px; left: 0; right: 0;
+  height: 1px;
+  background: var(--border);
+  z-index: 99;
+  pointer-events: none;
+}
+
+#prog-fill {
+  height: 100%;
+  background: var(--gold);
+  width: 0;
+  transition: width 0.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+/* ── SCREENS ── */
+.scr {
+  display: none;
+  min-height: 100vh;
+  padding: 120px 60px 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.scr.on { display: flex; animation: fu 0.5s ease forwards; }
+
+#s-report { min-height: 100vh; display: none; padding: 100px 60px 80px; }
+
+@keyframes fu { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
+
+.inner { width: 100%; max-width: 640px; }
+.inner.wide { max-width: 900px; }
+
+/* ── TYPOGRAPHY ── */
+.meta {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.meta::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.q {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4.5vw, 48px);
+  font-weight: 300;
+  line-height: 1.1;
+  margin-bottom: 14px;
+  color: var(--text);
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.9;
+  margin-bottom: 36px;
+  max-width: 520px;
+}
+
+.section-label {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.section-label::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+.section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(34px, 5vw, 60px);
+  font-weight: 300;
+  line-height: 1.05;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.section-title em { font-style: italic; color: var(--gold-light); }
+
+.section-body {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  max-width: 520px;
+}
+
+/* ── INTRO ── */
+.feats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 52px;
+  margin-top: 32px;
+}
+
+.feat {
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feat::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── OPTIONS ── */
+.opts { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+
+.opt {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 18px 22px;
+  background: var(--black);
+  cursor: pointer;
+  transition: background 0.3s;
+  user-select: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.opt::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 0;
+  background: var(--gold);
+  transition: height 0.4s;
+}
+
+.opt:hover { background: var(--surface); }
+.opt:hover::before { height: 100%; }
+.opt.sel { background: var(--surface); }
+.opt.sel::before { height: 100%; }
+
+.oradio {
+  width: 14px; height: 14px;
+  flex-shrink: 0;
+  border: 1px solid var(--text-dim);
+  transition: all 0.3s;
+}
+
+.opt.sel .oradio { background: var(--gold); border-color: var(--gold); }
+
+.olabel { font-size: 13px; color: var(--text); font-weight: 300; }
+.osub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+/* ── URL REVEAL ── */
+.urlbox { margin-top: 12px; display: none; }
+.urlbox.open { display: block; }
+
+/* ── INPUTS ── */
+.igroup { display: flex; flex-direction: column; margin-bottom: 20px; }
+
+.ilabel {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 8px;
+}
+
+.ilabel .opt-tag { color: var(--text-dim); margin-left: 6px; opacity: 0.6; }
+
+.ifield {
+  width: 100%;
+  padding: 14px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  font-weight: 300;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.ifield:focus { border-color: var(--gold-dim); }
+.ifield::placeholder { color: var(--text-dim); }
+
+/* ── SOCIAL GRID ── */
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.social-platform {
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+/* ── BUTTONS ── */
+.navrow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 36px;
+  flex-wrap: wrap;
+}
+
+.btn { font-family: 'Montserrat', sans-serif; cursor: pointer; border: none; }
+
+.btn-p {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--black);
+  background: var(--gold);
+  border: 1px solid var(--gold);
+  padding: 16px 36px;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.btn-p:hover { background: var(--gold-light); border-color: var(--gold-light); }
+
+.btn-s {
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  padding: 16px 36px;
+  font-weight: 300;
+  transition: all 0.3s;
+}
+
+.btn-s:hover { border-color: var(--text-muted); color: var(--text); }
+
+/* ── ERROR BOX ── */
+.errbox {
+  background: rgba(224,90,90,0.07);
+  border: 1px solid rgba(224,90,90,0.25);
+  padding: 12px 16px;
+  font-size: 12px;
+  color: var(--red);
+  margin-top: 16px;
+  display: none;
+  letter-spacing: 0.02em;
+}
+
+/* ── LOADING ── */
+.spin {
+  width: 40px; height: 40px;
+  border: 1px solid var(--border);
+  border-top-color: var(--gold);
+  border-radius: 50%;
+  animation: rot 1s linear infinite;
+  margin: 0 auto 32px;
+}
+
+@keyframes rot { to { transform: rotate(360deg); } }
+
+.load-t {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 28px;
+  font-weight: 300;
+  margin-bottom: 10px;
+  text-align: center;
+  color: var(--text);
+}
+
+.load-s {
+  font-size: 12px;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  text-align: center;
+}
+
+/* ── REPORT: SCORE HERO ── */
+.score-hero { text-align: center; padding: 60px 0 48px; }
+
+.score-biz {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 24px;
+}
+
+.score-display {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 8px;
+}
+
+.score-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(80px, 14vw, 120px);
+  font-weight: 300;
+  line-height: 1;
+}
+
+.score-denom {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-weight: 300;
+  color: var(--text-dim);
+  padding-top: 22px;
+}
+
+.score-lbl {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  margin-bottom: 20px;
+}
+
+.score-bar-wrap {
+  max-width: 280px;
+  margin: 0 auto;
+  height: 2px;
+  background: var(--border);
+}
+
+.score-bar-fill {
+  height: 100%;
+  width: 0;
+  transition: width 1.6s cubic-bezier(0.4,0,0.2,1);
+}
+
+.sc-poor  { color: var(--red); }
+.sc-fair  { color: var(--amber); }
+.sc-good  { color: var(--gold-light); }
+.sc-excellent { color: var(--green); }
+.sc-bg-poor  { background: var(--red); }
+.sc-bg-fair  { background: var(--amber); }
+.sc-bg-good  { background: var(--gold); }
+.sc-bg-excellent { background: var(--green); }
+
+/* ── REPORT: BIGGEST COSTLY ── */
+.bc-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  padding: 24px 28px;
+  margin-bottom: 48px;
+}
+
+.bc-icon { font-size: 14px; flex-shrink: 0; padding-top: 2px; color: var(--gold); }
+
+.bc-label {
+  font-size: 9px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+.bc-text { font-size: 13px; color: var(--text); line-height: 1.7; }
+
+/* ── REPORT: OPENING STATEMENT ── */
+.opening-stmt {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-weight: 300;
+  font-style: italic;
+  line-height: 1.75;
+  color: var(--text);
+  border-left: 2px solid var(--gold);
+  padding: 24px 28px;
+  margin-bottom: 60px;
+  background: var(--surface);
+}
+
+/* ── REPORT: SECTION HEADERS ── */
+.report-sec { margin-bottom: 60px; }
+
+.sec-hd {
+  font-size: 10px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sec-hd::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 1px;
+  background: var(--gold);
+}
+
+/* ── REPORT: DIMENSION CARDS ── */
+.dim-grid { display: flex; flex-direction: column; gap: 1px; background: var(--border); }
+
+.dim-card {
+  background: var(--black);
+  padding: 36px 40px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s;
+}
+
+.dim-card:hover { background: var(--surface); }
+
+.dim-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 2px; height: 0;
+  background: var(--gold);
+  transition: height 0.5s;
+}
+
+.dim-card:hover::before { height: 100%; }
+
+.dim-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 6px;
+  gap: 20px;
+}
+
+.dim-name {
+  font-size: 9px;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-dim);
+  padding-top: 6px;
+}
+
+.dim-score {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.score-frac { font-size: 13px; color: var(--text-dim); font-weight: 300; }
+
+.ds-poor  { color: var(--red); }
+.ds-fair  { color: var(--amber); }
+.ds-good  { color: var(--gold); }
+.ds-excellent { color: var(--green); }
+
+.dim-bar { height: 1px; background: var(--border); margin-bottom: 20px; overflow: hidden; }
+
+.dim-fill { height: 100%; width: 0; transition: width 1.3s cubic-bezier(0.4,0,0.2,1); }
+
+.df-poor  { background: var(--red); }
+.df-fair  { background: var(--amber); }
+.df-good  { background: var(--gold); }
+.df-excellent { background: var(--green); }
+
+.dim-headline {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 12px;
+  line-height: 1.3;
+}
+
+.dim-analysis {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 16px;
+}
+
+.dim-teaser {
+  border-left: 2px solid var(--gold);
+  padding: 12px 16px;
+  background: rgba(201,168,76,0.05);
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 15px;
+  color: var(--gold-light);
+  line-height: 1.7;
+}
+
+/* ── REPORT: PRIORITY FIXES ── */
+.pfix-list { border-top: 1px solid var(--border); }
+
+.pfix {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  align-items: start;
+  gap: 24px;
+  padding: 28px 0;
+  border-bottom: 1px solid var(--border);
+  transition: all 0.3s;
+}
+
+.pfix:hover { background: var(--surface); padding-left: 20px; padding-right: 20px; margin: 0 -20px; }
+
+.pfix-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 40px;
+  font-weight: 300;
+  color: var(--border-hover);
+  line-height: 1;
+}
+
+.pfix-text {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.75;
+  padding-top: 6px;
+}
+
+/* ── REPORT: CLOSING ── */
+.closing-wrap { padding: 48px 0 32px; max-width: 560px; }
+.closing-stmt { font-size: 14px; color: var(--text-muted); line-height: 1.9; }
+
+/* ── REPORT: CTA ── */
+.cta-box {
+  border: 1px solid var(--border);
+  padding: 64px 40px;
+  text-align: center;
+  margin-top: 8px;
+}
+
+.cta-t {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 300;
+  margin-bottom: 16px;
+  line-height: 1.1;
+}
+
+.cta-t em { font-style: italic; color: var(--gold-light); }
+
+.cta-s {
+  font-size: 13px;
+  color: var(--text-muted);
+  max-width: 400px;
+  margin: 0 auto 32px;
+  line-height: 1.85;
+}
+
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 36px;
+  background: #25D366;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.wa-btn:hover { background: #20bc5a; }
+.cta-sub { font-size: 11px; color: var(--text-dim); margin-top: 16px; }
+
+/* ── RESTART ── */
+.restart-row { text-align: center; margin: 32px 0 24px; }
+
+.restart-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text-dim);
+  padding: 12px 28px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.restart-btn:hover { border-color: var(--text-muted); color: var(--text); }
+
+/* ── DIVIDER ── */
+.divider { height: 1px; background: var(--border); margin: 60px 0; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 44px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 60px;
+}
+
+.footer-logo {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.footer-links { display: flex; gap: 28px; list-style: none; }
+
+.footer-links a {
+  font-size: 10px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover { color: var(--gold); }
+.footer-copy { font-size: 11px; color: var(--text-dim); }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; }
+  .nav-links, .nav-cta { display: none; }
+  .nav-hamburger { display: flex; }
+  .scr { padding: 100px 24px 60px; }
+  #s-report { padding: 100px 24px 60px; }
+  footer { padding: 36px 24px; }
+  .dim-card { padding: 24px; }
+  .cta-box { padding: 40px 24px; }
+}
+
+@media (max-width: 560px) {
+  .scr { padding: 92px 20px 48px; }
+  #s-report { padding: 92px 20px 48px; }
+  .social-grid { grid-template-columns: 1fr; }
+  .feats { gap: 20px; flex-direction: column; }
+  .pfix { grid-template-columns: 48px 1fr; gap: 16px; }
+  footer { padding: 28px 20px; }
+  .footer-links { gap: 16px; }
+  .score-num { font-size: 72px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <a class="nav-logo-text" href="/">Avalon Capital Group</a>
+  <ul class="nav-links">
+    <li><a href="/">Home</a></li>
+    <li><a href="/">About</a></li>
+    <li><a href="/">Vantara</a></li>
+    <li><a href="/" class="active">ADA</a></li>
+    <li><a href="/">Contact</a></li>
+    <li><a href="/">Offers</a></li>
+  </ul>
+  <a class="nav-cta" href="/">Enquire</a>
+  <div class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+  <a href="/">Home</a>
+  <a href="/">About</a>
+  <a href="/">Vantara</a>
+  <a href="/">ADA</a>
+  <a href="/">Contact / Enquire</a>
+  <a href="/">Offers</a>
+</nav>
+
+<!-- PROGRESS -->
+<div id="prog-track"><div id="prog-fill"></div></div>
+
+<!-- INTRO -->
+<div class="scr" id="s-intro">
+  <div class="inner" style="max-width:720px">
+    <div class="section-label">Avalon Digital Agency — Free Audit</div>
+    <h1 class="section-title">How visible is your<br>business <em>online?</em></h1>
+    <p class="section-body">Answer 11 questions and receive a personalised digital presence report — scored across 6 dimensions and built around your specific situation in South Africa.</p>
+    <div class="feats">
+      <div class="feat">11 Questions</div>
+      <div class="feat">AI-Powered Analysis</div>
+      <div class="feat">Scored Report</div>
+      <div class="feat">Free &amp; Confidential</div>
+    </div>
+    <button class="btn btn-p" onclick="startAudit()">Begin My Audit</button>
+  </div>
+</div>
+
+<!-- STEPS CONTAINER -->
+<div id="steps-wrap"></div>
+
+<!-- CONTACT -->
+<div class="scr" id="s-contact">
+  <div class="inner">
+    <div class="meta">Almost Done</div>
+    <h2 class="q">Where should we send your report?</h2>
+    <p class="sub">Leave your details and we'll follow up with a tailored action plan for your business.</p>
+    <div class="igroup">
+      <div class="ilabel">Full Name *</div>
+      <input type="text" class="ifield" id="c-name" placeholder="Your name" />
+    </div>
+    <div class="igroup">
+      <div class="ilabel">Email Address *</div>
+      <input type="email" class="ifield" id="c-email" placeholder="your@email.com" />
+    </div>
+    <div class="igroup">
+      <div class="ilabel">WhatsApp / Phone <span class="opt-tag">optional</span></div>
+      <input type="tel" class="ifield" id="c-phone" placeholder="+27 71 234 5678" />
+    </div>
+    <div class="igroup">
+      <div class="ilabel">City / Area <span class="opt-tag">optional</span></div>
+      <input type="text" class="ifield" id="c-loc" placeholder="e.g. Durban, KwaZulu-Natal" />
+    </div>
+    <div class="navrow">
+      <button class="btn btn-s" onclick="back()">← Back</button>
+      <button class="btn btn-p" onclick="submit()">Generate My Report</button>
+    </div>
+    <div class="errbox" id="c-err"></div>
+  </div>
+</div>
+
+<!-- LOADING -->
+<div class="scr" id="s-load">
+  <div class="inner" style="text-align:center">
+    <div class="spin"></div>
+    <h2 class="load-t">Analysing Your Digital Presence</h2>
+    <p class="load-s" id="load-msg">Running your audit through our AI engine…</p>
+  </div>
+</div>
+
+<!-- REPORT -->
+<div id="s-report">
+  <div class="inner wide" id="report-body"></div>
+
+  <footer>
+    <div class="footer-logo">Avalon Capital Group</div>
+    <ul class="footer-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/">Vantara</a></li>
+      <li><a href="/">ADA</a></li>
+      <li><a href="/">Contact</a></li>
+    </ul>
+    <div class="footer-copy">© 2026 Avalon Capital Group</div>
+    <div style="width:100%;padding-top:20px;border-top:1px solid var(--border);margin-top:4px;">
+      <p style="font-size:11px;color:var(--text-dim);margin-bottom:8px;">Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa</p>
+      <p style="font-size:12px;color:var(--text-dim);line-height:1.7;margin-bottom:12px;">Avalon Capital Group does not provide financial, investment, or legal advice. All information shared is for general informational purposes only. Clients are encouraged to consult with licensed professionals before making any investment or business decisions.</p>
+      <p style="font-size:11px;"><a href="/privacy-policy" style="color:var(--gold);text-decoration:none;margin-right:24px;">Privacy Policy</a><a href="/terms-of-service" style="color:var(--gold);text-decoration:none;">Terms of Service</a></p>
+    </div>
+  </footer>
+</div>
+
+<script>
+let step = 0;
+let ans = {};
+const TOTAL = 11;
+
+const STEPS = [
+  {
+    id:'biz-name', meta:'Step 1 of 11',
+    q:"What is your business called?",
+    sub:"Use the name your customers know you by.",
+    type:'single',
+    field:{k:'businessName', label:'Business Name', ph:'e.g. Sunshine Plumbing, Studio North, Nkosi Legal'}
+  },
+  {
+    id:'biz-desc', meta:'Step 2 of 11',
+    q:"In one sentence — what does your business do, and where?",
+    sub:"Be specific. This personalises every finding in your report.",
+    type:'single',
+    field:{k:'businessDescription', label:'Business description', ph:'e.g. We supply and install solar systems across KwaZulu-Natal.'}
+  },
+  {
+    id:'website', meta:'Step 3 of 11',
+    q:"How would you describe your website?",
+    sub:"If you have one, share the URL — we factor in what's actually there.",
+    type:'radio-url', key:'websiteStatus',
+    opts:[
+      {v:"It's live and we're happy with it", l:"Live and confident", s:"Looks good, generates leads", url:true},
+      {v:"It's live but outdated or slow", l:"Live — but outdated or slow", url:true},
+      {v:"It's live but doesn't generate enquiries", l:"Live — but not converting", s:"Traffic doesn't turn into leads", url:true},
+      {v:"We're building one", l:"In development", s:"Coming soon"},
+      {v:"We don't have a website yet", l:"No website yet"}
+    ]
+  },
+  {
+    id:'google-name', meta:'Step 4 of 11',
+    q:"What name do you trade under on Google?",
+    sub:"This is what appears on Google Maps and Google Search. Leave blank if you're unsure or not listed.",
+    type:'single-opt',
+    field:{k:'googleName', label:'Google Business Name', ph:'e.g. Sunshine Plumbing KZN'}
+  },
+  {
+    id:'social', meta:'Step 5 of 11',
+    q:"Share your social media handles or page links.",
+    sub:"Leave any blank that you're not active on. Handles or full URLs both work.",
+    type:'social',
+    fields:[
+      {k:'facebook', label:'Facebook', ph:'facebook.com/yourpage or @handle'},
+      {k:'instagram', label:'Instagram', ph:'@yourhandle'},
+      {k:'linkedin', label:'LinkedIn', ph:'linkedin.com/company/yourco'},
+      {k:'tiktok', label:'TikTok', ph:'@yourhandle'}
+    ]
+  },
+  {
+    id:'search-vis', meta:'Step 6 of 11',
+    q:"When a customer searches for what you do in your area — where do you appear?",
+    sub:'Try it now: search "[your service] [your city]" on Google.',
+    type:'radio', key:'searchVisibility',
+    opts:[
+      {v:"Consistently in the top 3 results", l:"Top 3 on Google — consistently"},
+      {v:"On page 1, but not the top 3 spots", l:"Page 1 — but not top 3"},
+      {v:"Appears sometimes, inconsistently", l:"Inconsistent — sometimes there, sometimes not"},
+      {v:"Rarely appears — competitors outrank me consistently", l:"Rarely appears — competitors dominate"},
+      {v:"Does not appear or has never been checked", l:"Don't appear / never checked"}
+    ]
+  },
+  {
+    id:'gmb', meta:'Step 7 of 11',
+    q:"What's the state of your Google Business Profile?",
+    sub:"The listing on Google Maps with your address, hours, photos, and reviews.",
+    type:'radio', key:'googleProfile',
+    opts:[
+      {v:"Complete — photos, services, hours, and regular updates", l:"Fully optimised", s:"Photos, services, hours, recent posts, and reviews"},
+      {v:"Set up but not regularly updated", l:"Set up — but inactive", s:"Claimed and filled in, but rarely touched"},
+      {v:"Claimed but barely filled in", l:"Claimed — mostly empty", s:"We have it, it's just not complete"},
+      {v:"Not claimed or not sure if I have one", l:"Not claimed / unsure"}
+    ]
+  },
+  {
+    id:'social-pres', meta:'Step 8 of 11',
+    q:"How would you honestly describe your social media presence?",
+    sub:"Pick the one closest to the truth.",
+    type:'radio', key:'socialPresence',
+    opts:[
+      {v:"Active and intentional — consistent content that drives enquiries", l:"Active and strategic", s:"Regular posts, real engagement, leads from social"},
+      {v:"Inconsistent — we post when we remember", l:"Inconsistent — ad hoc posting"},
+      {v:"Rarely active — accounts exist but barely used", l:"Barely active", s:"Accounts exist but months pass without posts"},
+      {v:"Not present on social media", l:"Not on social media"}
+    ]
+  },
+  {
+    id:'lead-cap', meta:'Step 9 of 11',
+    q:"How easy is it for a potential customer to take action on your digital platforms?",
+    sub:"Think about your website, social pages, and Google listing together.",
+    type:'radio', key:'leadCapture',
+    opts:[
+      {v:"Easy — clear call-to-action, WhatsApp link, quote or booking form", l:"Easy — clear path to contact", s:"WhatsApp button, quote form, or click-to-call"},
+      {v:"Acceptable — contact options exist but aren't prominent", l:"Acceptable — but not optimised"},
+      {v:"Difficult — contact info is buried or hard to find", l:"Difficult — contact is buried"},
+      {v:"Unclear — visitors likely leave without knowing what to do", l:"Unclear — no obvious next step"}
+    ]
+  },
+  {
+    id:'brand', meta:'Step 10 of 11',
+    q:"Does your brand look and feel consistent across all platforms?",
+    sub:"Same logo, colours, tone, and message — on your website, social, and Google listing.",
+    type:'radio', key:'brandConsistency',
+    opts:[
+      {v:"Consistent — same look, tone, and message everywhere", l:"Consistent across all platforms"},
+      {v:"Mostly consistent — but some platforms feel disconnected", l:"Mostly consistent — minor gaps"},
+      {v:"Inconsistent — different look and feel across platforms", l:"Inconsistent — noticeably different"},
+      {v:"No real thought given to brand consistency", l:"Not considered yet"}
+    ]
+  },
+  {
+    id:'cost', meta:'Step 11 of 11',
+    q:"What is your digital presence costing you most right now?",
+    sub:"Pick the single biggest issue. This anchors your entire report.",
+    type:'radio', key:'biggestCostly',
+    opts:[
+      {v:"Not appearing in local searches while competitors do", l:"Not being found on Google"},
+      {v:"A website that doesn't convert visitors into enquiries", l:"Website that doesn't generate leads"},
+      {v:"Looking unprofessional or inconsistent to potential clients", l:"Weak or inconsistent brand impression"},
+      {v:"Missing leads because it's too hard to contact me or enquire", l:"Poor lead capture — friction at the point of action"},
+      {v:"Social media that looks inactive, abandoned, or amateur", l:"Inactive or poor social media presence"},
+      {v:"Competitors being found before me on Google and Google Maps", l:"Losing ground to competitors on search"}
+    ]
+  }
+];
+
+// ─── INIT ─────────────────────────────────────────────────────
+function init(){
+  buildSteps();
+  show('s-intro');
+
+  document.getElementById('hamburger').addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  });
+  document.querySelectorAll('#mobileMenu a').forEach(a => {
+    a.addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.remove('open');
+    });
+  });
+}
+
+function setProg(n){
+  const fill = document.getElementById('prog-fill');
+  const pct = n >= 1 ? (n / (TOTAL + 2)) * 100 : 0;
+  fill.style.width = pct.toFixed(1) + '%';
+}
+
+function show(id){
+  document.querySelectorAll('.scr').forEach(s => s.classList.remove('on'));
+
+  if(id === 's-report'){
+    document.getElementById('s-report').style.display = 'block';
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  document.getElementById('s-report').style.display = 'none';
+
+  const t = document.getElementById(id);
+  if(!t) return;
+
+  // Make element temporarily visible so offsetWidth triggers a real layout reflow,
+  // which resets the CSS animation state before we add the class back.
+  t.style.display = 'flex';
+  void t.offsetWidth;
+  t.style.display = '';
+  t.classList.add('on');
+}
+
+// ─── BUILD STEPS ──────────────────────────────────────────────
+function buildSteps(){
+  const wrap = document.getElementById('steps-wrap');
+  STEPS.forEach((s, i) => {
+    const n = i + 1;
+    const div = document.createElement('div');
+    div.className = 'scr'; div.id = `s-step-${n}`;
+    div.innerHTML = stepHTML(s, n);
+    wrap.appendChild(div);
+  });
+}
+
+function stepHTML(s, n){
+  let body = '';
+
+  if(s.type === 'single' || s.type === 'single-opt'){
+    const opt = s.type === 'single-opt';
+    body = `<div class="igroup">
+      <div class="ilabel">${s.field.label}${opt ? '<span class="opt-tag">optional</span>' : ''}</div>
+      <input type="text" class="ifield" id="f-${s.field.k}" placeholder="${s.field.ph}" />
+    </div>`;
+  } else if(s.type === 'social'){
+    body = `<div class="social-grid">${s.fields.map(f => `
+      <div class="igroup">
+        <div class="social-platform">${f.label}</div>
+        <input type="text" class="ifield" id="f-${f.k}" placeholder="${f.ph}" />
+      </div>`).join('')}</div>`;
+  } else if(s.type === 'radio' || s.type === 'radio-url'){
+    body = `<div class="opts">`;
+    s.opts.forEach(o => {
+      body += `<div class="opt" data-v="${escAttr(o.v)}" onclick="selOpt('${s.key}',this,${!!o.url})">
+        <div class="oradio"></div>
+        <div><div class="olabel">${o.l}</div>${o.s ? `<div class="osub">${o.s}</div>` : ''}</div>
+      </div>
+      ${o.url ? `<div class="urlbox" id="urlbox-${n}-${escAttr(o.v).replace(/[^a-z0-9]/gi,'_')}"><input type="text" class="ifield" placeholder="https://yourwebsite.co.za" oninput="ans.webUrl=this.value" /></div>` : ''}`;
+    });
+    body += `</div>`;
+  }
+
+  const isLast = n === STEPS.length;
+  return `<div class="inner">
+    <div class="meta">${s.meta}</div>
+    <h2 class="q">${s.q}</h2>
+    <p class="sub">${s.sub}</p>
+    ${body}
+    <div class="navrow">
+      ${n > 1 ? `<button class="btn btn-s" onclick="back()">← Back</button>` : ''}
+      <button class="btn btn-p" onclick="next(${n})">${isLast ? 'Next' : 'Continue'}</button>
+    </div>
+    <div class="errbox" id="err-${n}">Please make a selection to continue.</div>
+  </div>`;
+}
+
+function escAttr(v){ return String(v).replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+
+// ─── NAVIGATION ───────────────────────────────────────────────
+function startAudit(){ step = 1; setProg(1); show('s-step-1'); }
+
+function next(n){
+  const s = STEPS[n-1];
+  const e = document.getElementById(`err-${n}`);
+
+  if(s.type === 'single'){
+    const v = document.getElementById(`f-${s.field.k}`)?.value.trim();
+    if(!v){ e.textContent = 'Please fill in this field to continue.'; e.style.display = 'block'; return; }
+    ans[s.field.k] = v;
+  } else if(s.type === 'single-opt'){
+    ans[s.field.k] = document.getElementById(`f-${s.field.k}`)?.value.trim() || '';
+  } else if(s.type === 'social'){
+    s.fields.forEach(f => { ans[f.k] = document.getElementById(`f-${f.k}`)?.value.trim() || ''; });
+  } else if(s.type === 'radio' || s.type === 'radio-url'){
+    if(!ans[s.key]){ e.style.display = 'block'; return; }
+  }
+  e.style.display = 'none';
+
+  if(n === STEPS.length){
+    step = TOTAL + 1; setProg(TOTAL + 1); show('s-contact');
+  } else {
+    step = n + 1; setProg(n + 1); show(`s-step-${n+1}`);
+  }
+}
+
+function back(){
+  if(step <= 1){ show('s-intro'); setProg(0); return; }
+  step--;
+  if(step > STEPS.length) show(`s-step-${STEPS.length}`);
+  else show(`s-step-${step}`);
+  setProg(step);
+}
+
+// ─── OPTION SELECTION ─────────────────────────────────────────
+function selOpt(key, el, hasUrl){
+  const grid = el.closest('.opts');
+  grid.querySelectorAll('.opt').forEach(o => o.classList.remove('sel'));
+  el.closest('.inner').querySelectorAll('.urlbox').forEach(b => b.classList.remove('open'));
+
+  el.classList.add('sel');
+  ans[key] = el.dataset.v;
+
+  if(hasUrl){
+    let sib = el.nextElementSibling;
+    while(sib && !sib.classList.contains('urlbox')) sib = sib.nextElementSibling;
+    if(sib) sib.classList.add('open');
+  }
+}
+
+// ─── SUBMIT ───────────────────────────────────────────────────
+async function submit(){
+  const name = document.getElementById('c-name').value.trim();
+  const email = document.getElementById('c-email').value.trim();
+  const e = document.getElementById('c-err');
+  if(!name || !email){ e.textContent = 'Please enter your name and email to continue.'; e.style.display = 'block'; return; }
+  ans.cName = name; ans.cEmail = email;
+  ans.cPhone = document.getElementById('c-phone').value.trim();
+  ans.cLoc = document.getElementById('c-loc').value.trim();
+  e.style.display = 'none';
+  show('s-load');
+  await callAPI();
+}
+
+// ─── API ──────────────────────────────────────────────────────
+const MSGS = [
+  'Analysing your website presence…',
+  'Evaluating your search visibility…',
+  'Assessing your Google Business Profile…',
+  'Scoring your lead capture…',
+  'Compiling your personalised report…'
+];
+
+async function callAPI(){
+  let mi = 0;
+  const mel = document.getElementById('load-msg');
+  const tick = setInterval(() => { mi = (mi + 1) % MSGS.length; mel.textContent = MSGS[mi]; }, 2600);
+
+  try {
+    const res = await fetch('/api/audit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ systemPrompt: sysPrompt(), userMessage: buildPrompt() })
+    });
+    clearInterval(tick);
+    if(!res.ok){ const d = await res.json(); throw new Error(d.error || `HTTP ${res.status}`); }
+    const data = await res.json();
+    const raw = data.content[0].text;
+    const m = raw.match(/\{[\s\S]*\}/);
+    if(!m) throw new Error('Response was not valid JSON. Please try again.');
+    renderReport(JSON.parse(m[0]));
+  } catch(err){
+    clearInterval(tick);
+    show('s-contact');
+    const e = document.getElementById('c-err');
+    e.textContent = `Error: ${err.message}`;
+    e.style.display = 'block';
+  }
+}
+
+// ─── SYSTEM PROMPT ────────────────────────────────────────────
+function sysPrompt(){
+  return `You are a senior digital strategist at Avalon Digital Agency (ADA), a division of Avalon Capital Group, based in KwaZulu-Natal, South Africa.
+
+Your job is to analyse a South African business's digital presence based on their self-reported answers and produce a personalised audit report.
+
+You write with authority, clarity, and directness. You do not use filler phrases, generic advice, or motivational language. Every sentence must be specific to this business.
+
+---
+
+TONE
+- Direct and confident — like a trusted advisor, not a salesperson
+- Specific — reference their actual business name, industry, location, and answers throughout
+- Honest — if something is weak, say so clearly without softening it into vagueness
+- Outcome-focused — frame every finding in terms of what it costs them or what it could earn them
+- In each dimension analysis, lead with the sharpest observation. The most painful truth comes first, not the context that explains it.
+
+---
+
+INPUT YOU WILL RECEIVE
+The user will submit a JSON object containing:
+- businessName: their trading name
+- businessDescription: one sentence about what they do and where
+- websiteUrl: their website address (may be blank)
+- googleName: what they trade under on Google (may be blank)
+- socialHandles: object with facebook, instagram, linkedin, tiktok fields (may be blank)
+- websiteStatus: how they feel about their website
+- searchVisibility: whether they appear on Google searches
+- googleProfile: state of their Google Business Profile
+- socialPresence: how they describe their social media
+- leadCapture: ease of contacting them or taking action
+- brandConsistency: whether their presence feels unified
+- biggestCostly: the single biggest thing their digital presence is costing them
+
+---
+
+SCORING
+Score each of the 6 dimensions from 1 to 10.
+- 1–3: Critical gap. This is actively costing them business.
+- 4–6: Functional but underperforming. Opportunity being left on the table.
+- 7–8: Solid foundation. Refinements will compound results.
+- 9–10: Strong. Maintain and build on this.
+
+Do not inflate scores. A business with no website scores 1 on Website. A business that does not appear on Google searches scores 2 on Search Visibility. Honest scores create trust. Inflated scores destroy it.
+
+Score Brand Consistency relative to the other dimensions. A business with an organically grown presence and no active digital strategy should not score Brand Consistency above the average of its other five dimension scores.
+
+---
+
+TEASERS
+Each dimension includes a teaser field. This field exists to create desire for ADA's action plan — not to deliver it.
+
+Rules for teasers:
+- Hint at the type of solution, not the solution itself. Specific tension, not vague mystery.
+- Never use phrases like "there is a specific way" or "there is a secret" — these read as hollow.
+- Frame the teaser around the commercial outcome of fixing the dimension — what becomes possible, not what needs doing.
+- The teaser should make a business owner think: "I need to know what that is." It should not make them think: "That could mean anything."
+
+---
+
+REPORT STRUCTURE
+Return a valid JSON object with exactly this structure:
+
+{
+  "businessName": "string",
+  "overallScore": number (average of 6 dimension scores, rounded to 1 decimal),
+  "biggestCostly": "string (their selected answer, quoted back naturally)",
+  "openingStatement": "string (2–3 sentences. Name the business. State the core finding bluntly. Frame it in terms of revenue or opportunity lost. This is the hook.)",
+  "dimensions": [
+    {
+      "name": "Website",
+      "score": number,
+      "headline": "string (one sharp sentence — the verdict on this dimension)",
+      "analysis": "string (3–4 sentences. Specific. Reference their URL or stated situation. Lead with the most painful truth. Name what is weak and why it matters commercially. No generic advice.)",
+      "teaser": "string (one sentence. Hint at the type of fix and what it makes possible — without the how. This is what ADA sells.)"
+    },
+    { "name": "Search Visibility", "score": number, "headline": "string", "analysis": "string", "teaser": "string" },
+    { "name": "Google Business Profile", "score": number, "headline": "string", "analysis": "string", "teaser": "string" },
+    { "name": "Social Media", "score": number, "headline": "string", "analysis": "string", "teaser": "string" },
+    { "name": "Lead Capture", "score": number, "headline": "string", "analysis": "string", "teaser": "string" },
+    { "name": "Brand Consistency", "score": number, "headline": "string", "analysis": "string", "teaser": "string" }
+  ],
+  "priorityFixes": [
+    "string (the single most urgent fix, named specifically — not generically)",
+    "string (second priority)",
+    "string (third priority)"
+  ],
+  "closingStatement": "string (2 sentences. Acknowledge what they have just seen. End with a single, direct invitation to get the action plan — no pressure, no hype. Natural.)"
+}
+
+---
+
+RULES
+- Return only the JSON object. No preamble, no explanation, no markdown fences.
+- Every string must reference this specific business — never produce output that could apply to any business.
+- The teaser field must never contain actionable advice. It creates desire. ADA delivers the solution.
+- If websiteUrl is blank, score Website at 1 and note the absence directly.
+- If googleName is blank, score Google Business Profile at 2 and note accordingly.
+- If all social handles are blank, score Social Media at 1.
+- priorityFixes must be ranked by commercial impact — the fix most likely to generate or recover revenue comes first.
+- overallScore is the honest average. Do not round up to make it feel better.`;
+}
+
+// ─── BUILD PROMPT ─────────────────────────────────────────────
+function buildPrompt(){
+  return JSON.stringify({
+    businessName: ans.businessName || '',
+    businessDescription: ans.businessDescription || '',
+    websiteUrl: ans.webUrl || '',
+    googleName: ans.googleName || '',
+    socialHandles:{
+      facebook: ans.facebook || '',
+      instagram: ans.instagram || '',
+      linkedin: ans.linkedin || '',
+      tiktok: ans.tiktok || ''
+    },
+    websiteStatus: ans.websiteStatus || '',
+    searchVisibility: ans.searchVisibility || '',
+    googleProfile: ans.googleProfile || '',
+    socialPresence: ans.socialPresence || '',
+    leadCapture: ans.leadCapture || '',
+    brandConsistency: ans.brandConsistency || '',
+    biggestCostly: ans.biggestCostly || ''
+  }, null, 2);
+}
+
+// ─── RENDER REPORT ────────────────────────────────────────────
+function scoreClass(s){
+  return s <= 3 ? 'poor' : s <= 6 ? 'fair' : s <= 8 ? 'good' : 'excellent';
+}
+
+function renderReport(r){
+  const score = parseFloat(r.overallScore) || 0;
+  const sc = scoreClass(score);
+
+  const dims = (r.dimensions || []).map(d => {
+    const cls = scoreClass(d.score);
+    const pct = (d.score / 10) * 100;
+    return `<div class="dim-card">
+      <div class="dim-top">
+        <div class="dim-name">${d.name}</div>
+        <div class="dim-score ds-${cls}">${d.score}<span class="score-frac">/10</span></div>
+      </div>
+      <div class="dim-bar"><div class="dim-fill df-${cls}" data-w="${pct.toFixed(1)}"></div></div>
+      <div class="dim-headline">${d.headline}</div>
+      <div class="dim-analysis">${d.analysis}</div>
+      <div class="dim-teaser">${d.teaser}</div>
+    </div>`;
+  }).join('');
+
+  const fixes = (r.priorityFixes || []).map((f, i) => `
+    <div class="pfix">
+      <div class="pfix-num">0${i+1}</div>
+      <div class="pfix-text">${f}</div>
+    </div>`).join('');
+
+  const biz = r.businessName || ans.businessName || 'Your Business';
+  const waMsg = encodeURIComponent(`Hi Avalon Digital! I just completed my digital presence audit. My business is ${biz} — I scored ${score}/10 and I'd love to discuss the action plan. My name is ${ans.cName}.`);
+
+  document.getElementById('report-body').innerHTML = `
+    <div class="score-hero">
+      <div class="score-biz">${biz}</div>
+      <div class="score-display">
+        <span class="score-num sc-${sc}" id="snum">0</span><span class="score-denom">/10</span>
+      </div>
+      <div class="score-lbl">Overall Digital Presence Score</div>
+      <div class="score-bar-wrap"><div class="score-bar-fill sc-bg-${sc}" id="score-bar"></div></div>
+    </div>
+
+    <div class="bc-card">
+      <div class="bc-icon">▲</div>
+      <div class="bc-inner">
+        <div class="bc-label">You identified your biggest cost as</div>
+        <div class="bc-text">${r.biggestCostly || ans.biggestCostly || ''}</div>
+      </div>
+    </div>
+
+    <div class="opening-stmt">${r.openingStatement || ''}</div>
+
+    <div class="report-sec">
+      <div class="sec-hd">Dimension Breakdown</div>
+      <div class="dim-grid">${dims}</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="report-sec">
+      <div class="sec-hd">Priority Fixes</div>
+      <div class="pfix-list">${fixes}</div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="closing-wrap">
+      <p class="closing-stmt">${r.closingStatement || ''}</p>
+    </div>
+
+    <div class="cta-box">
+      <div class="section-label" style="justify-content:center;margin-bottom:20px">Get Your Action Plan</div>
+      <h2 class="cta-t">Get your <em>action plan.</em></h2>
+      <p class="cta-s">We'll map out exactly what to fix, in what order, and what each change is worth to your business.</p>
+      <a class="wa-btn" href="https://wa.me/27712205313?text=${waMsg}" target="_blank">
+        <svg width="16" height="16" fill="white" viewBox="0 0 24 24" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chat on WhatsApp
+      </a>
+      <p class="cta-sub">+27 71 220 5313 — Avalon Digital Agency, Durban KZN</p>
+    </div>
+
+    <div class="restart-row">
+      <button class="restart-btn" onclick="restart()">Start a New Audit</button>
+    </div>
+  `;
+
+  show('s-report');
+  setProg(0);
+
+  setTimeout(() => {
+    document.getElementById('score-bar').style.width = ((score / 10) * 100).toFixed(1) + '%';
+    let c = 0; const inc = score / (1500 / 16);
+    const t = setInterval(() => {
+      c = Math.min(c + inc, score);
+      document.getElementById('snum').textContent = c.toFixed(1);
+      if(c >= score) clearInterval(t);
+    }, 16);
+    document.querySelectorAll('.dim-fill').forEach(b => {
+      setTimeout(() => { b.style.width = b.dataset.w + '%'; }, 200);
+    });
+  }, 80);
+}
+
+function restart(){
+  ans = {}; step = 0; setProg(0);
+  document.querySelectorAll('.opts .opt').forEach(o => o.classList.remove('sel'));
+  document.querySelectorAll('.urlbox').forEach(b => b.classList.remove('open'));
+  document.querySelectorAll('.ifield').forEach(f => f.value = '');
+  document.querySelectorAll('.errbox').forEach(e => e.style.display = 'none');
+  show('s-intro');
+}
+
+init();
+</script>
+</body>
+</html>

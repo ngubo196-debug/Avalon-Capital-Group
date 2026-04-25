@@ -4,6 +4,7 @@
     { "source": "/digital-card/luyanda", "destination": "/acg-digital-card.html" },
     { "source": "/privacy-policy",       "destination": "/privacy-policy.html" },
     { "source": "/terms-of-service",     "destination": "/terms-of-service.html" },
+    { "source": "/audit",                 "destination": "/audit.html" },
     { "source": "/(.*)",                 "destination": "/index.html" }
   ],
   "headers": [
