@@ -13,7 +13,7 @@
 <!-- email obfuscation disabled -->
 <meta name="author" content="Avalon Capital Group">
 <meta name="google-site-verification" content="xakG5wb8pmc22WJRC2LrpUiq5hJo1lErDmrOzsi-F1U" />
-<link rel="canonical" href="https://avaloncapitalgroup.co.za/">
+<link rel="canonical">
 
 <!-- ═══ OPEN GRAPH (WhatsApp / LinkedIn / Facebook previews) ═══ -->
 <meta property="og:type" content="website">
@@ -3843,6 +3843,11 @@
 </script>
 
 <script>
+  function updateCanonical(path) {
+    var el = document.querySelector('link[rel="canonical"]');
+    if (el) el.setAttribute('href', 'https://www.avaloncapitalgroup.co.za' + path);
+  }
+
   function showPage(id, scrollTarget) {
     var pages = document.querySelectorAll('.page');
     for (var i = 0; i < pages.length; i++) {
@@ -3881,6 +3886,7 @@
       contact: 'Contact | Avalon Capital Group'
     };
     document.title = titles[id] || titles.home;
+    updateCanonical('/' + (id === 'home' ? '' : id));
     history.pushState({ page: id }, document.title, '/' + (id === 'home' ? '' : id));
   }
 
@@ -3900,6 +3906,7 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     console.log('DOMContentLoaded fired');
+    updateCanonical(window.location.pathname);
     var initialPage = 'home';
     var qs = new URLSearchParams(window.location.search);
     if (qs.get('page')) {
