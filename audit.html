@@ -165,11 +165,9 @@ nav {
   justify-content: center;
 }
 
-.scr.on { display: flex; animation: fu 0.5s ease forwards; }
+.scr.on { display: flex; opacity: 1; }
 
 #s-report { min-height: 100vh; display: none; padding: 100px 60px 80px; }
-
-@keyframes fu { from { opacity:0; transform:translateY(16px); } to { opacity:1; transform:translateY(0); } }
 
 .inner { width: 100%; max-width: 640px; }
 .inner.wide { max-width: 900px; }
@@ -1108,7 +1106,11 @@ function setProg(n){
 }
 
 function show(id){
-  document.querySelectorAll('.scr').forEach(s => s.classList.remove('on'));
+  document.querySelectorAll('.scr').forEach(s => {
+    s.classList.remove('on');
+    s.style.display = 'none';
+    s.style.opacity = '';
+  });
 
   if(id === 's-report'){
     document.getElementById('s-report').style.display = 'block';
@@ -1121,17 +1123,9 @@ function show(id){
   const t = document.getElementById(id);
   if(!t) return;
 
-  // Reset animation state so the entrance keyframe replays correctly.
   t.style.display = 'flex';
-  void t.offsetWidth;
-  t.style.display = '';
+  t.style.opacity = '1';
   t.classList.add('on');
-
-  // Safety fallback: if the CSS animation state or specificity leaves the element
-  // invisible after the class commit, force it visible rather than black-screening.
-  requestAnimationFrame(() => {
-    if(getComputedStyle(t).display === 'none') t.style.display = 'flex';
-  });
 }
 
 // ─── BUILD STEPS ──────────────────────────────────────────────
