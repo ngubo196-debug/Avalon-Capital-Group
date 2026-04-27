@@ -1121,12 +1121,17 @@ function show(id){
   const t = document.getElementById(id);
   if(!t) return;
 
-  // Make element temporarily visible so offsetWidth triggers a real layout reflow,
-  // which resets the CSS animation state before we add the class back.
+  // Reset animation state so the entrance keyframe replays correctly.
   t.style.display = 'flex';
   void t.offsetWidth;
   t.style.display = '';
   t.classList.add('on');
+
+  // Safety fallback: if the CSS animation state or specificity leaves the element
+  // invisible after the class commit, force it visible rather than black-screening.
+  requestAnimationFrame(() => {
+    if(getComputedStyle(t).display === 'none') t.style.display = 'flex';
+  });
 }
 
 // ─── BUILD STEPS ──────────────────────────────────────────────
@@ -1263,24 +1268,45 @@ async function callAPI(){
   const mel = document.getElementById('load-msg');
   const tick = setInterval(() => { mi = (mi + 1) % MSGS.length; mel.textContent = MSGS[mi]; }, 2600);
 
-  try {
+  // Encapsulate one fetch+parse attempt so it can be retried cleanly.
+  const attempt = async () => {
     const res = await fetch('/api/audit', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ systemPrompt: sysPrompt(), userMessage: buildPrompt() })
     });
-    clearInterval(tick);
     if(!res.ok){ const d = await res.json(); throw new Error(d.error || `HTTP ${res.status}`); }
     const data = await res.json();
     const raw = data.content[0].text;
-    const m = raw.match(/\{[\s\S]*\}/);
-    if(!m) throw new Error('Response was not valid JSON. Please try again.');
-    renderReport(JSON.parse(m[0]));
+    // Strip markdown fences the model sometimes wraps around the JSON.
+    const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+    const m = cleaned.match(/\{[\s\S]*\}/);
+    if(!m) throw new SyntaxError('no-json-block');
+    return JSON.parse(m[0]);
+  };
+
+  try {
+    let parsed;
+    try {
+      parsed = await attempt();
+    } catch(e){
+      if(e instanceof SyntaxError){
+        // One silent retry on parse failure — truncated or malformed responses
+        // are non-deterministic; a fresh call usually succeeds.
+        parsed = await attempt();
+      } else {
+        throw e;
+      }
+    }
+    clearInterval(tick);
+    renderReport(parsed);
   } catch(err){
     clearInterval(tick);
     show('s-contact');
     const e = document.getElementById('c-err');
-    e.textContent = `Error: ${err.message}`;
+    e.textContent = err instanceof SyntaxError
+      ? 'The report couldn\'t be formatted correctly — please try again.'
+      : `Something went wrong: ${err.message}`;
     e.style.display = 'block';
   }
 }
