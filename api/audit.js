@@ -23,6 +23,29 @@ module.exports = async (req, res) => {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) return res.status(500).json({ error: 'API key not configured' });
 
+  // Crawl the business website and append real data to the system prompt.
+  let enrichedPrompt = systemPrompt;
+  try {
+    const input = JSON.parse(userMessage);
+    const websiteUrl = input.websiteUrl;
+    if (websiteUrl && typeof websiteUrl === 'string' && websiteUrl.trim()) {
+      const crawlRes = await fetch(`${req.headers['x-forwarded-proto'] || 'https'}://${req.headers.host}/api/crawl`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ url: websiteUrl.trim() })
+      });
+      if (crawlRes.ok) {
+        const crawlData = await crawlRes.json();
+        enrichedPrompt = systemPrompt +
+          '\n\n---\n\nREAL CRAWL DATA (live-fetched from the business website)\n' +
+          'Use this data to validate or override the self-reported websiteStatus answer. If the crawl data contradicts the self-report, trust the crawl data.\n\n' +
+          JSON.stringify(crawlData, null, 2);
+      }
+    }
+  } catch (_) {
+    // Crawl failure must not block the audit.
+  }
+
   try {
     const upstream = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST',
@@ -34,7 +57,7 @@ module.exports = async (req, res) => {
       body: JSON.stringify({
         model: 'claude-sonnet-4-5',
         max_tokens: 4000,
-        system: systemPrompt,
+        system: enrichedPrompt,
         messages: [{ role: 'user', content: userMessage }]
       })
     });

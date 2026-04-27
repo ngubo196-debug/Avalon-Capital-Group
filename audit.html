@@ -1385,6 +1385,7 @@ The user submits a JSON object containing:
 - biggestCostly: the single biggest thing their digital presence is costing them
 - industry: one of — Retail & Products / Professional Services / Health & Medical / Construction & Trades / Hospitality & Food / Education & Training / Other
 - transactionBracket: one of — Under R1,000 / R1,000–R5,000 / R5,000–R20,000 / R20,000–R100,000 / Over R100,000
+- crawlData (when available): live-fetched data from the business website including pageTitle, metaDescription, h1Tags, h2Count, hasSchemaMarkup, imagesTotal, imagesMissingAlt, hasMobileViewport, isSSL, internalLinkCount, wordCount. If crawlData is present, use it to score the Website dimension based on real data. If it contradicts the self-reported websiteStatus, trust crawlData.
 
 ---
 
