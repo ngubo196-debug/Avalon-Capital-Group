@@ -1486,12 +1486,36 @@ Round to nearest R1,000.
 ---
 
 TEASERS
-Each dimension includes a teaser. Rules:
-- Hint at the type of fix and what it makes commercially possible — never the how
-- Reference the specific business name and industry
-- Frame around recoverable revenue or competitive position
-- Never use phrases like "there is a specific way" or vague mystery language
-- The teaser makes the business owner think: "I need to know what that is"
+Each dimension includes a teaser field. These are the most important lines in the report — they create desire for ADA's action plan without delivering it.
+
+Rules that apply to ALL teasers:
+- Never use the phrase "there is a specific system/approach/method/way" — this construction is overused and reads as templated
+- Never use vague mystery language — the teaser must hint at what type of fix it is, not just that a fix exists
+- Every teaser must use a different opening construction — no two teasers in the same report may start the same way
+- Reference the business name, industry, or calculated capture rate where it strengthens the line
+- End with tension — a statement that makes the business owner think "I need to know what that is"
+- Never contain actionable advice — the teaser creates desire, ADA delivers the solution
+
+Dimension-specific teaser guidance:
+
+WEBSITE teaser — frame around the gap between what the site currently does and what a correctly architected site produces. Reference the architecture or conversion gap, not generic "improvements":
+Example construction: "The conversion gap between [businessName]'s current site and the version that generates consistent inbound enquiries is not a design problem — it is an architecture problem, and the fix is more targeted than most [industry] businesses expect."
+
+SEARCH VISIBILITY teaser — frame around the capture rate gap and what the businesses currently winning those searches are doing differently. Make the gap feel specific and closable:
+Example construction: "[businessName] is currently capturing [currentCaptureRate]% of available local search demand. The businesses capturing 28% are not doing dramatically more — they have addressed three specific signals that Google weights heavily in [industry] local results."
+
+GOOGLE BUSINESS PROFILE teaser — frame around the activity pattern that drives map rankings, not generic optimisation advice. Make it feel like insider knowledge:
+Example construction: "A Google Business Profile in [industry] does not rank on completeness alone — it ranks on a specific activity pattern that most businesses in [businessName]'s category have never been shown. The practices generating consistent map-initiated enquiries are doing one thing differently."
+
+SOCIAL MEDIA teaser — frame around the content architecture that builds trust in this specific industry, not posting frequency or generic consistency:
+Example construction: "In [industry], the content that builds trust before a buying or booking decision is made follows a specific pattern — and it has nothing to do with posting frequency. [businessName] has the audience access. What is missing is the content architecture."
+
+LEAD CAPTURE teaser — if lead capture is functional, reframe it as an advantage that compounds when other layers are fixed. If it is critical, frame around the specific friction point costing conversions:
+Example construction (functional): "[businessName]'s capture infrastructure is the strongest element in this diagnostic — which means every improvement to visibility and discovery feeds directly into a system already positioned to convert. The compounding effect of fixing the discovery layers first is significant."
+Example construction (critical): "Every [industry] customer who reaches [businessName]'s digital presence and cannot find an immediate, low-friction path to make contact is a lost transaction — and the fix is not a redesign. It is a single structural change to how contact options are presented."
+
+BRAND CONSISTENCY teaser — frame around the trust gap that inconsistency creates at the decision moment, and how closing it affects conversion without changing rankings:
+Example construction: "The businesses in [businessName]'s category that convert the highest percentage of search traffic into enquiries do not necessarily rank higher — they feel more trustworthy across every touchpoint a prospect checks before deciding. That gap closes faster than the SEO gap."
 
 ---
 
@@ -1518,7 +1542,7 @@ Return a valid JSON object with exactly this structure. Return only the JSON —
       "severityLabel": "string",
       "headline": "string (one sharp verdict sentence)",
       "analysis": "string (3–4 sentences. Lead with the most painful truth. Reference their URL or stated situation. Name what is broken and what it costs commercially.)",
-      "teaser": "string (one sentence. Hint at the fix type and what becomes possible — never the how.)"
+      "teaser": "string (one sentence. Follow the dimension-specific teaser guidance above exactly.)"
     },
     {
       "name": "Search Visibility",
