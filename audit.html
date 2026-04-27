@@ -144,6 +144,20 @@ nav {
 
 .mobile-menu a:hover { color: var(--gold); }
 
+.back-btn {
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s;
+}
+.back-btn:hover { color: var(--gold); }
+.back-btn::before { content: '←'; font-size: 14px; }
+
 /* ── PROGRESS BAR ── */
 #prog-track {
   position: fixed;
@@ -831,7 +845,7 @@ footer {
     <li><a href="/">Vantara</a></li>
     <li><a href="/">ADA</a></li>
     <li><a href="/">Contact</a></li>
-    <li><a href="/">Offers</a></li>
+    <li><a href="/offers">Offers</a></li>
     <li><a href="/audit">Free Audit</a></li>
   </ul>
   <a class="nav-cta" href="/">Enquire</a>
@@ -840,7 +854,9 @@ footer {
   </div>
 </nav>
 
-<div style='position:relative; padding: 24px 60px 0; font-size: 11px; letter-spacing: 0.1em;'><a href='/offers' style='color: var(--text-muted); text-decoration: none;'>← BACK TO ADA</a></div>
+<div style="position:relative; padding: 24px 60px 0;">
+  <a class="back-btn" href="/offers">Back to ADA</a>
+</div>
 
 <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
   <a href="/">Home</a>
@@ -848,7 +864,7 @@ footer {
   <a href="/">Vantara</a>
   <a href="/">ADA</a>
   <a href="/">Contact / Enquire</a>
-  <a href="/">Offers</a>
+  <a href="/offers">Offers</a>
   <a href="/audit">Free Audit</a>
 </nav>
 
