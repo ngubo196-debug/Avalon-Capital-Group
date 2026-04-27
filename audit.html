@@ -158,6 +158,14 @@ nav {
 .back-btn:hover { color: var(--gold); }
 .back-btn::before { content: '←'; font-size: 14px; }
 
+.back-nav {
+  position: fixed;
+  top: 72px;
+  left: 60px;
+  z-index: 90;
+  padding: 16px 0;
+}
+
 /* ── PROGRESS BAR ── */
 #prog-track {
   position: fixed;
@@ -815,6 +823,7 @@ footer {
   nav { padding: 0 20px; }
   .nav-links, .nav-cta { display: none; }
   .nav-hamburger { display: flex; }
+  .back-nav { left: 20px; }
   .scr { padding: 100px 24px 60px; }
   #s-report { padding: 100px 24px 60px; }
   footer { padding: 36px 24px; }
@@ -854,8 +863,8 @@ footer {
   </div>
 </nav>
 
-<div style="position:relative; padding: 24px 60px 0;">
-  <a class="back-btn" href="/offers">Back to ADA</a>
+<div class="back-nav">
+  <a class="back-btn" href="/#ada">Back to ADA</a>
 </div>
 
 <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
