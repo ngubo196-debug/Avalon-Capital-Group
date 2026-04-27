@@ -1301,6 +1301,18 @@ async function callAPI(){
     }
     clearInterval(tick);
     renderReport(parsed);
+    // Fire-and-forget: save contact details against this audit row.
+    fetch('/api/save-contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        business_name:     ans.businessName  || '',
+        contact_name:      ans.cName         || '',
+        contact_email:     ans.cEmail        || '',
+        contact_whatsapp:  ans.cPhone        || '',
+        contact_city:      ans.cLoc          || ''
+      })
+    }).catch(() => {});
   } catch(err){
     clearInterval(tick);
     show('s-contact');

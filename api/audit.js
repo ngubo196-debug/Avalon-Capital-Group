@@ -1,3 +1,12 @@
+const { createClient } = require('@supabase/supabase-js');
+
+function getSupabase() {
+  const url = process.env.SUPABASE_URL;
+  const key = process.env.SUPABASE_SERVICE_KEY;
+  if (!url || !key) return null;
+  return createClient(url, key, { auth: { persistSession: false } });
+}
+
 module.exports = async (req, res) => {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
@@ -34,6 +43,35 @@ module.exports = async (req, res) => {
 
     if (!upstream.ok) {
       return res.status(upstream.status).json({ error: data.error?.message || 'Upstream API error' });
+    }
+
+    // Attempt to parse the report and write to Supabase — never block the response on failure.
+    try {
+      const raw = data.content?.[0]?.text || '';
+      const cleaned = raw.replace(/^```(?:json)?\s*/i, '').replace(/\s*```\s*$/i, '').trim();
+      const match = cleaned.match(/\{[\s\S]*\}/);
+      if (match) {
+        const report = JSON.parse(match[0]);
+        const input = JSON.parse(userMessage);
+
+        const supabase = getSupabase();
+        if (supabase) {
+          await supabase.from('audits').insert({
+            business_name:      report.businessName   || input.businessName   || '',
+            industry:           report.industry        || input.industry        || '',
+            transaction_bracket: input.transactionBracket || '',
+            final_score:        report.finalScore      ?? null,
+            benchmark_tier:     report.benchmarkTier   || '',
+            severity_label:     report.severityLabel   || '',
+            revenue_loss_range: report.revenueLossRange || '',
+            recovery_hook:      report.recoveryHook    || '',
+            biggest_costly:     report.biggestCostly   || '',
+            full_report:        report
+          });
+        }
+      }
+    } catch (_) {
+      // Supabase write failure must not affect the client response.
     }
 
     return res.status(200).json(data);
