@@ -239,25 +239,30 @@ export default function Offers() {
           <div className="offers-tiers-grid" style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', margin:'40px 0 16px'}}>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div className="offers-tier-name">Foundation</div>
-              <div className="offers-tier-desc">A clean, high-performance website built properly from day one.</div>
-              <div className="offers-tier-line">The right foundation changes everything.</div>
+              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'14px'}}>Credibility Build</div>
+              <div className="offers-tier-desc">Your digital presence should reflect the quality of what you actually deliver. Foundation builds the infrastructure that makes that possible: a fast, conversion-ready website, search visibility where it counts, and a Google presence that works for you around the clock.</div>
+              <div className="offers-tier-line">Right for: established businesses with no serious digital foundation.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', marginBottom:'24px'}}>R18,500 once-off</div>
               <button className="btn-primary" onClick={() => openModal('foundation')} style={{position:'relative', zIndex:2, padding:'12px 24px'}}>Get started</button>
             </div>
             <div style={{background:'var(--surface)', padding:'40px', borderLeft:'1px solid rgba(201,168,76,0.2)', borderRight:'1px solid rgba(201,168,76,0.2)'}}>
               <div className="offers-tier-popular">Most popular</div>
               <div className="offers-tier-name">Growth</div>
-              <div className="offers-tier-desc">SEO, AEO, and content structured to rank and bring in leads.</div>
-              <div className="offers-tier-line">Built to be found. Built to perform.</div>
+              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'14px'}}>Revenue System Build</div>
+              <div className="offers-tier-desc">A full digital revenue system built around your specific business. Website, SEO and AEO architecture, competitor analysis, social media infrastructure handed to you ready to run, schema markup, and analytics configured so you can see exactly what is working.</div>
+              <div className="offers-tier-line">Right for: businesses ready to make their website and digital presence generate consistent revenue.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', marginBottom:'24px'}}>R34,000 once-off &middot; R12,500/month on a 3-month minimum retainer</div>
               <button className="btn-primary" onClick={() => openModal('growth')} style={{position:'relative', zIndex:2, padding:'12px 24px'}}>Get started</button>
             </div>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div className="offers-tier-name">Authority</div>
-              <div className="offers-tier-desc">Full-scale digital execution for businesses that want to dominate their space.</div>
-              <div className="offers-tier-line">Stop competing. Start leading.</div>
-              <button className="btn-primary" onClick={() => openModal('authority')} style={{position:'relative', zIndex:2, padding:'12px 24px'}}>Get started</button>
+              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'14px'}}>By Enquiry Only</div>
+              <div className="offers-tier-desc">For businesses that want to dominate their category. Authority is a custom strategic engagement, scoped specifically around your market position, your competitors, and where you want to be. No two Authority builds are the same. If you are serious about owning your space digitally, this is the conversation to have.</div>
+              <div className="offers-tier-line">Right for: businesses ready to dominate their category.</div>
+              <button className="btn-primary" onClick={() => openModal('authority')} style={{position:'relative', zIndex:2, padding:'12px 24px'}}>Enquire directly</button>
             </div>
           </div>
-          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'15px', fontStyle:'italic', color:'var(--gold)'}}>Not sure where you fit? The free audit will tell you.</p>
+          <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px'}}>Foundation and Growth are fixed-scope, fixed-price engagements. You know exactly what you are getting and what it costs before anything begins. Authority is scoped per client and the investment reflects the ambition. If you are looking for the cheapest option, we are probably not the right fit. If you are looking for the most valuable one, let us talk.</p>
         </section>
 
         <div className="divider"></div>
