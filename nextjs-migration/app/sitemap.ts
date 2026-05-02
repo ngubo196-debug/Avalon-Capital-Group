@@ -89,6 +89,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
+      url: `${BASE}/ada/acg-case-study`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.8,
+    },
+    {
       url: `${BASE}/privacy-policy`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
