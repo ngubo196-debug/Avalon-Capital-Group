@@ -1,21 +1,6 @@
 {
-  "rewrites": [
-    { "source": "/digital-card/saud",    "destination": "/saud-olla-digital-card.html" },
-    { "source": "/digital-card/luyanda", "destination": "/acg-digital-card.html" },
-    { "source": "/privacy-policy",       "destination": "/privacy-policy.html" },
-    { "source": "/terms-of-service",     "destination": "/terms-of-service.html" },
-    { "source": "/audit",                 "destination": "/audit.html" },
-    { "source": "/(.*)",                 "destination": "/index.html" }
-  ],
-  "headers": [
-    {
-      "source": "/(.*)",
-      "headers": [
-        {
-          "key": "X-Content-Type-Options",
-          "value": "nosniff"
-        }
-      ]
-    }
-  ]
+  "buildCommand": "cd nextjs-migration && npm install && npm run build",
+  "outputDirectory": "nextjs-migration/.next",
+  "framework": "nextjs",
+  "installCommand": "cd nextjs-migration && npm install"
 }
