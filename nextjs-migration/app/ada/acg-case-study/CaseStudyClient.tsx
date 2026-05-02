@@ -223,8 +223,12 @@ export default function CaseStudyClient() {
 
         {/* HERO */}
         <section className="cs-hero">
-          <svg style={{position:'absolute', right:'-60px', top:'50%', transform:'translateY(-50%)', width:'500px', height:'580px', pointerEvents:'none', userSelect:'none'}} viewBox="0 0 500 580" aria-hidden="true">
-            <polygon points="250,20 490,560 10,560" fill="rgba(201,168,76,0.06)" />
+          <svg style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', userSelect:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
+              <polygon points="290,20 560,640 20,640"/>
+              <polygon points="290,80 510,600 70,600"/>
+              <polygon points="290,140 460,560 120,560"/>
+            </g>
           </svg>
           <Link className="back-btn" href="/ada" style={{ position: 'relative', zIndex: 10, marginBottom: '32px', display: 'inline-block' }}>← Back to ADA</Link>
           <div className="cs-eyebrow anim-1">
