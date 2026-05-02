@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
+import PhilosophyGrid from './components/PhilosophyGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -72,23 +73,7 @@ export default function Home() {
           <h2 className="section-title" id="philosophy-heading">We help first.<br /><em>We transact second.</em></h2>
           <p className="section-body">Every engagement begins with understanding, not selling. Whether you&apos;re acquiring a vehicle, a property, or a digital system, the process starts with listening.</p>
 
-          <div className="philosophy-grid">
-            <div className="philosophy-item">
-              <div className="philosophy-num">01</div>
-              <div className="philosophy-title">Advisory Before Transaction</div>
-              <div className="philosophy-desc">We never push for a deal that isn&apos;t right for the client. Our value is in understanding your situation fully before we structure anything.</div>
-            </div>
-            <div className="philosophy-item">
-              <div className="philosophy-num">02</div>
-              <div className="philosophy-title">Precision in Execution</div>
-              <div className="philosophy-desc">Every deal, every system, every campaign is built with intent. No wasted motion. No misaligned outcomes. We deliver what we commit to.</div>
-            </div>
-            <div className="philosophy-item">
-              <div className="philosophy-num">03</div>
-              <div className="philosophy-title">Long-Term Value</div>
-              <div className="philosophy-desc">We measure success by the value created after the transaction, not by the commission before it. Our clients return because results compound.</div>
-            </div>
-          </div>
+          <PhilosophyGrid />
         </section>
 
         <section style={{paddingTop:0, textAlign:'center'}} aria-labelledby="cta-home">
