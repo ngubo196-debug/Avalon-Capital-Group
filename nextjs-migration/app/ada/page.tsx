@@ -268,7 +268,7 @@ export default function ADA() {
 
           <div style={{marginTop:'56px', borderTop:'1px solid var(--border)'}}>
 
-            <div style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px'}}>
+            <Link href="/ada/insights/ai-awareness" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'10px', flexWrap:'wrap'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Market insight</span>
@@ -278,9 +278,9 @@ export default function ADA() {
                 <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>AI hasn&apos;t changed how websites are built. It&apos;s changed what websites are responsible for. Here&apos;s what that shift means for any business that wants to stay competitive over the next three years.</div>
               </div>
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </div>
+            </Link>
 
-            <div style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px'}}>
+            <Link href="/ada/insights/why-websites-fail" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>The problem</span>
@@ -289,9 +289,9 @@ export default function ADA() {
                 <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>It&apos;s not the design. It&apos;s not the traffic. It&apos;s the fact that most websites were never built to convert. Here&apos;s what a website that doesn&apos;t perform actually costs you, and why the problem is more common than most business owners realise.</div>
               </div>
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </div>
+            </Link>
 
-            <div style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px'}}>
+            <Link href="/ada/insights/revenue-website" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>The solution</span>
@@ -300,9 +300,9 @@ export default function ADA() {
                 <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>Most business owners have never seen one up close. Here&apos;s a breakdown of the specific elements that separate a website that performs from one that just exists: offer clarity, conversion flow, and trust architecture.</div>
               </div>
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </div>
+            </Link>
 
-            <div style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px'}}>
+            <Link href="/ada/insights/ai-websites" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Authority piece</span>
@@ -311,9 +311,9 @@ export default function ADA() {
                 <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>Everyone&apos;s asking whether AI makes websites obsolete. The answer is the opposite. Here&apos;s why the businesses that invest in strong digital infrastructure now will be the ones AI points people toward, and what that means for yours.</div>
               </div>
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </div>
+            </Link>
 
-            <div style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px'}}>
+            <Link href="/ada/insights/canopy-deep-dive" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Case study deep-dive</span>
@@ -322,7 +322,7 @@ export default function ADA() {
                 <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>A ground-level breakdown of a real project. What we found, what we built, and the specific decisions that turned a functional website into a business development tool with R1M+ annual revenue potential.</div>
               </div>
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </div>
+            </Link>
 
           </div>
 
