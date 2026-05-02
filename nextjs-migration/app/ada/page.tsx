@@ -206,26 +206,26 @@ export default function ADA() {
             <div style={{background:'var(--surface)', padding:'40px', display:'flex', flexDirection:'column'}}>
               <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'20px'}}>Foundation</div>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:300, marginBottom:'16px'}}>Credibility build</div>
-              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>You need a digital presence that reflects your business accurately and builds trust with people who don&apos;t know you yet. Professional, conversion-ready, built to last.</p>
-              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: established businesses with no serious digital presence</div>
+              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>Your digital presence should reflect the quality of what you actually deliver. Foundation builds the infrastructure that makes that possible: a fast, conversion-ready website, search visibility where it counts, and a Google presence that works for you around the clock.</p>
+              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: established businesses with no serious digital foundation.<br />R18,500 once-off</div>
             </div>
             <div style={{background:'var(--surface)', padding:'40px', display:'flex', flexDirection:'column', border:'1px solid var(--border-hover)', margin:'-1px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Core</div>
+              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Growth</div>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:300, marginBottom:'16px'}}>Revenue system build</div>
-              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>A full conversion infrastructure — multiple pages, offer clarity, trust architecture, SEO foundation, and lead capture. Built around a specific revenue outcome for your business.</p>
-              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: businesses ready to make their website work for them</div>
+              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>A full digital revenue system built around your specific business. Website, SEO and AEO architecture, competitor analysis, social media infrastructure handed to you ready to run, schema markup, and analytics configured so you can see exactly what is working.</p>
+              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: businesses ready to make their website and digital presence generate consistent revenue.<br />R34,000 once-off · R12,500/month on a 3-month minimum retainer</div>
             </div>
             <div style={{background:'var(--surface)', padding:'40px', display:'flex', flexDirection:'column'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'20px'}}>Growth</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:300, marginBottom:'16px'}}>Build and grow</div>
-              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>The full system plus ongoing SEO, content, outreach, and optimisation. For businesses that want to compound their digital presence month over month.</p>
-              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: businesses committed to long-term digital growth</div>
+              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'20px'}}>Authority</div>
+              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:300, marginBottom:'16px'}}>By enquiry only</div>
+              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>For businesses that want to dominate their category. Authority is a custom strategic engagement, scoped specifically around your market position, your competitors, and where you want to be. No two Authority builds are the same. If you are serious about owning your space digitally, this is the conversation to have.</p>
+              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: businesses ready to dominate their category.<br />Enquire directly</div>
             </div>
           </div>
 
           <div style={{background:'var(--surface2)', border:'1px solid var(--border)', padding:'48px', marginTop:'1px', maxWidth:'100%'}}>
             <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'16px'}}>A straightforward note on pricing</div>
-            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px'}}>We don&apos;t publish rates because the right number depends on your business, your goals, and the scope of what actually needs to be done. What we don&apos;t do is race to the bottom. The work we produce generates real commercial outcomes — for Afripact Civils, for Canopy Courier, and for every client we take on. That work is priced accordingly. If you&apos;re looking for the cheapest option, we&apos;re probably not the right fit. If you&apos;re looking for the most valuable one, let&apos;s talk.</p>
+            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px'}}>Foundation and Growth are fixed-scope, fixed-price engagements. You know exactly what you are getting and what it costs before anything begins. Authority is scoped per client and the investment reflects the ambition. If you are looking for the cheapest option, we are probably not the right fit. If you are looking for the most valuable one, let&apos;s talk.</p>
           </div>
 
           <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
