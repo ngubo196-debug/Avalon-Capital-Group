@@ -23,7 +23,7 @@ export default function CanopyCourier() {
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:9999}}>← Back to ADA</Link>
-          <div className="section-label">Case study — Canopy Courier</div>
+          <div className="section-label">Case study - Canopy Courier</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>From a retail shop to a fleet revenue system.</h1>
           <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>Canopy Courier had a strong service, a loyal customer base, and a website that was leaving most of their revenue potential completely untouched. This is the story of what we found, what we built, and what it means for the business going forward.</p>
           <div style={{display:'flex', gap:'1px', background:'var(--border)', flexWrap:'wrap', maxWidth:'640px'}}>
@@ -47,9 +47,9 @@ export default function CanopyCourier() {
         <section style={{padding:'80px 60px'}} aria-labelledby="canopy-situation">
           <div className="section-label">The situation</div>
           <h2 className="section-title" id="canopy-situation">Strong service.<br /><em>Silent on the biggest opportunity.</em></h2>
-          <p className="section-body">Canopy Courier is a KZN-based canopy specialist — installations, repairs, fitment, parts. Fast turnaround. Experienced team. Nationwide delivery capability. Trusted by hundreds of customers over many years. By every operational measure, a strong business.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>But when we looked at the digital presence, the story was different. The website was built entirely around the retail walk-in customer — someone who already knew they needed a canopy and just needed a number to call. That customer is real and valuable. The problem is they represent only one slice of the revenue available to a business like this.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Fleet clients — construction firms, logistics companies, security businesses, municipal vehicles — represent recurring, high-volume, predictable income. One fleet contract alone can mean 10 to 50 installations, ongoing maintenance, and a relationship that compounds over years. None of that was being captured. The website had no fleet page, no fleet offer, no language that spoke to a fleet manager. That revenue was invisible because the business was invisible to the people holding it.</p>
+          <p className="section-body">Canopy Courier is a KZN-based canopy specialist: installations, repairs, fitment, parts. Fast turnaround. Experienced team. Nationwide delivery capability. Trusted by hundreds of customers over many years. By every operational measure, a strong business.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>But when we looked at the digital presence, the story was different. The website was built entirely around the retail walk-in customer, someone who already knew they needed a canopy and just needed a number to call. That customer is real and valuable. The problem is they represent only one slice of the revenue available to a business like this.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>Fleet clients, construction firms, logistics companies, security businesses, municipal vehicles, represent recurring, high-volume, predictable income. One fleet contract alone can mean 10 to 50 installations, ongoing maintenance, and a relationship that compounds over years. None of that was being captured. The website had no fleet page, no fleet offer, no language that spoke to a fleet manager. That revenue was invisible because the business was invisible to the people holding it.</p>
         </section>
 
         <div className="divider"></div>
@@ -62,7 +62,7 @@ export default function CanopyCourier() {
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>A single retail customer is worth R3,000–R8,000. A single fleet client is worth R100,000–R500,000 per year. Five fleet clients alone represents R1.2M in annual recurring revenue.</p>
             <cite style={{display:'block', marginTop:'14px', fontSize:'11px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>Revenue modelling — ADA strategy analysis</cite>
           </blockquote>
-          <p className="section-body" style={{marginTop:'40px'}}>The website was optimised for the smaller opportunity and silent on the larger one. Every week without fleet positioning was revenue left on the table — not because the service wasn&apos;t there, but because the digital infrastructure wasn&apos;t.</p>
+          <p className="section-body" style={{marginTop:'40px'}}>The website was optimised for the smaller opportunity and silent on the larger one. Every week without fleet positioning was revenue left on the table, not because the service wasn&apos;t there, but because the digital infrastructure wasn&apos;t.</p>
           <p style={{marginTop:'32px', fontSize:'12px', fontStyle:'italic', color:'var(--text-dim)', lineHeight:1.8}}>Past performance is not indicative of future results. All figures shown are for illustrative purposes and may vary based on market conditions and individual circumstances. This does not constitute financial or investment advice.</p>
         </section>
 
@@ -96,7 +96,7 @@ export default function CanopyCourier() {
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>05</div>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Service pages</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Canopies, repairs, fitment, fleet — each with its own page, its own intent, its own conversion path.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Canopies, repairs, fitment, fleet: each with its own page, its own intent, its own conversion path.</div>
             </div>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>06</div>

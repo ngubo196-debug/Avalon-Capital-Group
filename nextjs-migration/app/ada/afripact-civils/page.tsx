@@ -23,9 +23,9 @@ export default function AfripactCivils() {
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:9999}}>← Back to ADA</Link>
-          <div className="section-label">Case study — Afripact Civils</div>
+          <div className="section-label">Case study - Afripact Civils</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Building credibility before the conversation starts.</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>In construction, trust isn&apos;t a nice-to-have. It&apos;s the deal. Afripact Civils had the capability, the experience, and the track record — but nothing online that proved it. We changed that.</p>
+          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>In construction, trust isn&apos;t a nice-to-have. It&apos;s the deal. Afripact Civils had the capability, the experience, and the track record, but nothing online that proved it. We changed that.</p>
           <div style={{display:'flex', gap:'1px', background:'var(--border)', flexWrap:'wrap', maxWidth:'640px'}}>
             <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>Civil construction</div>
@@ -47,9 +47,9 @@ export default function AfripactCivils() {
         <section style={{padding:'80px 60px'}} aria-labelledby="afripact-situation">
           <div className="section-label">The situation</div>
           <h2 className="section-title" id="afripact-situation">Reputation without reach.<br /><em>Trust without proof.</em></h2>
-          <p className="section-body">Afripact Civils operates in civil construction — an industry where reputation carries enormous weight and where new clients almost always do their homework before picking up the phone. The question every prospect asks before reaching out is some version of the same thing: is this a real business I can trust with my project?</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Without a digital presence that answered that question clearly, Afripact was relying entirely on word of mouth and personal relationships. That works — until it doesn&apos;t. The moment a prospect outside that network searched for them, or was referred and went to verify, there was nothing there to confirm what they&apos;d heard.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>The website we inherited wasn&apos;t strategic. It was a starting point. Our job was to turn it into something that worked — a digital presence that made Afripact look like exactly what they are: a legitimate, capable, professional construction business worth doing serious work with.</p>
+          <p className="section-body">Afripact Civils operates in civil construction, an industry where reputation carries enormous weight and where new clients almost always do their homework before picking up the phone. The question every prospect asks before reaching out is some version of the same thing: is this a real business I can trust with my project?</p>
+          <p className="section-body" style={{marginTop:'20px'}}>Without a digital presence that answered that question clearly, Afripact was relying entirely on word of mouth and personal relationships. That works, until it doesn&apos;t. The moment a prospect outside that network searched for them, or was referred and went to verify, there was nothing there to confirm what they&apos;d heard.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>The website we inherited wasn&apos;t strategic. It was a starting point. Our job was to turn it into something that worked: a digital presence that made Afripact look like exactly what they are: a legitimate, capable, professional construction business worth doing serious work with.</p>
         </section>
 
         <div className="divider"></div>
@@ -62,49 +62,49 @@ export default function AfripactCivils() {
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>The website shows people I have never done business with that Afripact is not a scam but an actual business.</p>
             <cite style={{display:'block', marginTop:'14px', fontSize:'11px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>— Client, Afripact Civils</cite>
           </blockquote>
-          <p className="section-body" style={{marginTop:'40px'}}>That&apos;s not a throwaway comment. That&apos;s the exact job a website is supposed to do in a trust-heavy industry — and confirmation that it was doing it. When someone with no prior relationship with Afripact lands on the site, the question of legitimacy is answered before the conversation even begins. That&apos;s trust infrastructure working exactly as designed.</p>
+          <p className="section-body" style={{marginTop:'40px'}}>That&apos;s not a throwaway comment. That&apos;s the exact job a website is supposed to do in a trust-heavy industry, and confirmation that it was doing it. When someone with no prior relationship with Afripact lands on the site, the question of legitimacy is answered before the conversation even begins. That&apos;s trust infrastructure working exactly as designed.</p>
           <p className="section-body" style={{marginTop:'20px'}}>He also told us what comes next: the business needs a solid marketing strategy to penetrate the private construction sector and start ranking for construction-related searches. That brief became the foundation for phase two.</p>
         </section>
 
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="afripact-build">
-          <div className="section-label">The build — phase one</div>
+          <div className="section-label">The build - phase one</div>
           <h2 className="section-title" id="afripact-build">Every element in service<br /><em>of one objective.</em></h2>
           <p className="section-body">Phase one had a focused objective: give Afripact a face in the digital space that matched the quality of the work they do. Every decision was made in service of that goal.</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Professional credibility</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Design, copy, and structure positioned to reflect a serious construction business — not a startup or a side operation.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Design, copy, and structure positioned to reflect a serious construction business, not a startup or a side operation.</div>
             </div>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Social proof architecture</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Trust signals, service clarity, and proof elements built in — so the site answers objections before the client raises them.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Trust signals, service clarity, and proof elements built in, so the site answers objections before the client raises them.</div>
             </div>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Clear service communication</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>What Afripact does, who they do it for, and why they&apos;re the right choice — communicated without ambiguity.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>What Afripact does, who they do it for, and why they&apos;re the right choice, communicated without ambiguity.</div>
             </div>
           </div>
-          <p className="section-body" style={{marginTop:'40px'}}>The original site was built on Bolt as a starting point. We took that foundation and evolved it — sharpening the messaging, strengthening the structure, and building it around the specific trust journey a construction client goes through before picking up the phone.</p>
+          <p className="section-body" style={{marginTop:'40px'}}>The original site was built on Bolt as a starting point. We took that foundation and evolved it, sharpening the messaging, strengthening the structure, and building it around the specific trust journey a construction client goes through before picking up the phone.</p>
         </section>
 
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="afripact-next">
-          <div className="section-label">What&apos;s next — phase two</div>
+          <div className="section-label">What&apos;s next - phase two</div>
           <h2 className="section-title" id="afripact-next">Credibility solved.<br /><em>Now we build the pipeline.</em></h2>
-          <p className="section-body">Phase one solved the credibility problem. Phase two solves the revenue problem. The site now confirms that Afripact is legitimate — the next job is making sure the right people find it.</p>
+          <p className="section-body">Phase one solved the credibility problem. Phase two solves the revenue problem. The site now confirms that Afripact is legitimate: the next job is making sure the right people find it.</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>In progress</div>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Private sector penetration</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>A targeted strategy to position Afripact in front of private construction clients — the segment with the highest project values and the most consistent pipeline.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>A targeted strategy to position Afripact in front of private construction clients, the segment with the highest project values and the most consistent pipeline.</div>
             </div>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>In progress</div>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Search visibility</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Building the SEO foundation so Afripact appears when people search for construction services in KZN — turning the website from a verification tool into a lead source.</div>
+              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Building the SEO foundation so Afripact appears when people search for construction services in KZN, turning the website from a verification tool into a lead source.</div>
             </div>
           </div>
           <p style={{marginTop:'32px', fontSize:'12px', fontStyle:'italic', color:'var(--text-dim)', lineHeight:1.8}}>Past performance is not indicative of future results. All figures shown are for illustrative purposes and may vary based on market conditions and individual circumstances. This does not constitute financial or investment advice.</p>
