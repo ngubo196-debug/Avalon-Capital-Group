@@ -37,7 +37,7 @@ export default function TermsOfService() {
             },
             {
               num: '3. What is not included',
-              body: 'Unless explicitly stated in a signed service agreement, our services do not include financial advice, legal advice, investment advice, or guaranteed business outcomes. ACG operates as a consultant, strategist, and facilitator — not as a licensed financial advisor.'
+              body: 'Unless explicitly stated in a signed service agreement, our services do not include financial advice, legal advice, investment advice, or guaranteed business outcomes. ACG operates as a consultant, strategist, and facilitator, not as a licensed financial advisor.'
             },
             {
               num: '4. No guarantee of results',
@@ -74,7 +74,7 @@ export default function TermsOfService() {
               <span style={{display:'block', width:'24px', height:'1px', background:'var(--gold)', flexShrink:0}}></span>
               9. Contact
             </div>
-            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Avalon Capital Group (Pty) Ltd &middot; Durban, KwaZulu-Natal, South Africa &middot; <a href="mailto:luyanda@avaloncapitalgroup.co.za" style={{color:'var(--gold)', textDecoration:'none'}}>luyanda@avaloncapitalgroup.co.za</a></p>
+            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Avalon Capital Group (Pty) Ltd &middot; Durban, KwaZulu-Natal, South Africa &middot; <a href="mailto:hello@avaloncapitalgroup.co.za" style={{color:'var(--gold)', textDecoration:'none'}}>hello@avaloncapitalgroup.co.za</a></p>
           </div>
 
         </div>

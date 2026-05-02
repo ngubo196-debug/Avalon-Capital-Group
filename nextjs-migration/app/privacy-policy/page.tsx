@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy | Avalon Capital Group',
-  description: 'Privacy Policy for Avalon Capital Group (Pty) Ltd — how we collect, store, and protect your personal information in accordance with POPIA.',
+  description: 'Privacy Policy for Avalon Capital Group (Pty) Ltd: how we collect, store, and protect your personal information in accordance with POPIA.',
 };
 
 export default function PrivacyPolicy() {
@@ -63,7 +63,7 @@ export default function PrivacyPolicy() {
               <span style={{display:'block', width:'24px', height:'1px', background:'var(--gold)', flexShrink:0}}></span>
               5. Your rights
             </div>
-            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Under POPIA, you have the right to access, correct, or request deletion of your personal information held by us. To exercise these rights, contact us at <a href="mailto:luyanda@avaloncapitalgroup.co.za" style={{color:'var(--gold)', textDecoration:'none'}}>luyanda@avaloncapitalgroup.co.za</a>.</p>
+            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Under POPIA, you have the right to access, correct, or request deletion of your personal information held by us. To exercise these rights, contact us at <a href="mailto:hello@avaloncapitalgroup.co.za" style={{color:'var(--gold)', textDecoration:'none'}}>hello@avaloncapitalgroup.co.za</a>.</p>
           </div>
 
           <div>
@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
               <span style={{display:'block', width:'24px', height:'1px', background:'var(--gold)', flexShrink:0}}></span>
               6. Contact
             </div>
-            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Avalon Capital Group (Pty) Ltd &middot; Durban, KwaZulu-Natal, South Africa &middot; <a href="mailto:luyanda@avaloncapitalgroup.co.za" style={{color:'var(--gold)', textDecoration:'none'}}>luyanda@avaloncapitalgroup.co.za</a></p>
+            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Avalon Capital Group (Pty) Ltd &middot; Durban, KwaZulu-Natal, South Africa &middot; <a href="mailto:hello@avaloncapitalgroup.co.za" style={{color:'var(--gold)', textDecoration:'none'}}>hello@avaloncapitalgroup.co.za</a></p>
           </div>
 
         </div>

@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Property Investor vs Property Buyer | Vantara Insights',
-  description: 'Most people who buy property are not investors. They are buyers. The difference is not the asset — it is the analysis, the structure, and the clarity of the decision before the money moves.',
+  description: 'Most people who buy property are not investors. They are buyers. The difference is not the asset, it is the analysis, the structure, and the clarity of the decision before the money moves.',
 };
 
 export default function VantaraInsight2() {
@@ -25,7 +25,7 @@ export default function VantaraInsight2() {
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara Insights · Property</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>How Deals Get Structured</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,5vw,64px)', fontWeight:400, lineHeight:1.08, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>What separates a property investor from someone<br /><em style={{color:'var(--gold)'}}>who just bought a property.</em></h1>
-          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px'}}>Most people who buy property are not investors. They are buyers. The difference is not the asset — it is the analysis, the structure, and the clarity of the decision before the money moves.</p>
+          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px'}}>Most people who buy property are not investors. They are buyers. The difference is not the asset, it is the analysis, the structure, and the clarity of the decision before the money moves.</p>
         </div>
 
         <div className="divider"></div>
@@ -35,20 +35,20 @@ export default function VantaraInsight2() {
           <p className="section-body" style={{marginBottom:'28px'}}>Most private buyers make property decisions based on: the asking price, the area, the yield calculation on the listing, and their gut. That is not analysis. That is hope with a bond attached to it.</p>
 
           <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>What institutional investors do<br /><em>that private buyers don&apos;t.</em></h2>
-          <p className="section-body" style={{marginBottom:'28px'}}>Before a listed property fund deploys capital, they run a full feasibility study. They analyse the node — its gentrification trajectory, competitor supply, proximity to demand drivers, and infrastructure investment pipeline. They model the income — not just the current rent, but what the market rent ceiling is and what escalation assumptions are realistic. They stress-test the deal across multiple scenarios. They identify every risk, rate it, and pair it with a specific mitigant.</p>
-          <p className="section-body" style={{marginBottom:'28px'}}>Then they structure the entry — the capital stack, the equity split, the governance, the exit options. They know before the money moves exactly what they are buying, what it should produce, and under what conditions the thesis breaks.</p>
-          <p className="section-body" style={{marginBottom:'28px'}}>Private investors rarely do any of this. Not because they are unsophisticated — but because they have never had access to the tools, the framework, or the expertise to do it at the level that actually changes the quality of the decision.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>Before a listed property fund deploys capital, they run a full feasibility study. They analyse the node: its gentrification trajectory, competitor supply, proximity to demand drivers, and infrastructure investment pipeline. They model the income, not just the current rent, but what the market rent ceiling is and what escalation assumptions are realistic. They stress-test the deal across multiple scenarios. They identify every risk, rate it, and pair it with a specific mitigant.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>Then they structure the entry: the capital stack, the equity split, the governance, the exit options. They know before the money moves exactly what they are buying, what it should produce, and under what conditions the thesis breaks.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>Private investors rarely do any of this. Not because they are unsophisticated, but because they have never had access to the tools, the framework, or the expertise to do it at the level that actually changes the quality of the decision.</p>
 
           <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>What the right structure<br /><em>actually protects.</em></h2>
-          <p className="section-body" style={{marginBottom:'28px'}}>An SPV — a Special Purpose Vehicle — is a separate company registered solely to hold the property. It ring-fences the investment from your personal balance sheet. It provides clean governance for profit distribution. It enables a structured exit without requiring the full property to be sold. It files its own tax returns. It is how serious property investors hold assets.</p>
-          <p className="section-body" style={{marginBottom:'28px'}}>A priority return clause means your capital comes back to you before profit is split. A shareholders&apos; agreement governs every material decision — leasing, renovation, refinancing, sale. These structures are not complicated. They are just not standard in how most private property purchases are approached.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>An SPV, a Special Purpose Vehicle, is a separate company registered solely to hold the property. It ring-fences the investment from your personal balance sheet. It provides clean governance for profit distribution. It enables a structured exit without requiring the full property to be sold. It files its own tax returns. It is how serious property investors hold assets.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>A priority return clause means your capital comes back to you before profit is split. A shareholders&apos; agreement governs every material decision: leasing, renovation, refinancing, sale. These structures are not complicated. They are just not standard in how most private property purchases are approached.</p>
 
           <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>What Vantara brings<br /><em>to a property mandate.</em></h2>
-          <p className="section-body" style={{marginBottom:'28px'}}>We identify the opportunity. We conduct the full analysis — area study, feasibility, financial modelling, risk register. We structure the investor entry — equity stake, SPV mechanics, priority return, exit options. We package everything into a decision-ready document that gives you full confidence in either direction.</p>
-          <p className="section-body" style={{marginBottom:'40px'}}>You do not need to understand conveyancing, LTV ratios, or net operating income calculations to make a good property decision. You need someone who does — working for your outcome, not earning a commission on whether you buy.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>We identify the opportunity. We conduct the full analysis: area study, feasibility, financial modelling, risk register. We structure the investor entry: equity stake, SPV mechanics, priority return, exit options. We package everything into a decision-ready document that gives you full confidence in either direction.</p>
+          <p className="section-body" style={{marginBottom:'40px'}}>You do not need to understand conveyancing, LTV ratios, or net operating income calculations to make a good property decision. You need someone who does, working for your outcome, not earning a commission on whether you buy.</p>
 
           <div style={{background:'var(--surface)', padding:'36px 40px', borderLeft:'2px solid var(--gold)'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontStyle:'italic', color:'var(--text-primary)', lineHeight:1.5}}>A property agent shows you the listing. Vantara shows you whether the listing is worth your capital — and exactly how to structure your entry if it is.</p>
+            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontStyle:'italic', color:'var(--text-primary)', lineHeight:1.5}}>A property agent shows you the listing. Vantara shows you whether the listing is worth your capital, and exactly how to structure your entry if it is.</p>
           </div>
         </section>
 
@@ -66,7 +66,7 @@ export default function VantaraInsight2() {
         <div className="divider"></div>
 
         <footer style={{borderTop:'1px solid var(--border)', padding:'40px 60px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'16px'}}>
-          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'14px', letterSpacing:'0.1em', color:'var(--text-muted)'}}><strong style={{color:'var(--gold)', fontWeight:400}}>Vantara</strong> — A Division of Avalon Capital Group</p>
+          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'14px', letterSpacing:'0.1em', color:'var(--text-muted)'}}><strong style={{color:'var(--gold)', fontWeight:400}}>Vantara</strong> - A Division of Avalon Capital Group</p>
           <p style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.06em'}}>Durban, KwaZulu-Natal · South Africa</p>
           <div style={{width:'100%', paddingTop:'20px', borderTop:'1px solid var(--border)', marginTop:'4px'}}>
             <p style={{fontSize:'11px', color:'var(--text-dim)', marginBottom:'8px'}}>Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa</p>

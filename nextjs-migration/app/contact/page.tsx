@@ -65,7 +65,7 @@ export default function Contact() {
                   noValidate
                 >
                   <input type="text" name="_gotcha" style={{display:'none'}} />
-                  <input type="hidden" name="_subject" value="New enquiry — Avalon Capital Group" />
+                  <input type="hidden" name="_subject" value="New enquiry - Avalon Capital Group" />
 
                   <div className="contact-form">
                     <div className="form-group">
@@ -84,14 +84,14 @@ export default function Contact() {
                       <label className="form-label" htmlFor="interest">Area of Interest</label>
                       <select className="form-select" id="interest" name="interest" required style={{background:'var(--surface)'}}>
                         <option value="" style={{background:'var(--surface)'}}>Select one</option>
-                        <option style={{background:'var(--surface)'}}>Vantara — Vehicle Acquisition</option>
-                        <option style={{background:'var(--surface)'}}>Vantara — Property or Asset Deal</option>
-                        <option style={{background:'var(--surface)'}}>Vantara — Supply or Commodity Deal</option>
-                        <option style={{background:'var(--surface)'}}>Vantara — Strategic Brokerage</option>
-                        <option style={{background:'var(--surface)'}}>ADA — Website Development</option>
-                        <option style={{background:'var(--surface)'}}>ADA — AI Automation</option>
-                        <option style={{background:'var(--surface)'}}>ADA — SEO or Paid Advertising</option>
-                        <option style={{background:'var(--surface)'}}>ADA — Digital Retainer</option>
+                        <option style={{background:'var(--surface)'}}>Vantara - Vehicle Acquisition</option>
+                        <option style={{background:'var(--surface)'}}>Vantara - Property or Asset Deal</option>
+                        <option style={{background:'var(--surface)'}}>Vantara - Supply or Commodity Deal</option>
+                        <option style={{background:'var(--surface)'}}>Vantara - Strategic Brokerage</option>
+                        <option style={{background:'var(--surface)'}}>ADA - Website Development</option>
+                        <option style={{background:'var(--surface)'}}>ADA - AI Automation</option>
+                        <option style={{background:'var(--surface)'}}>ADA - SEO or Paid Advertising</option>
+                        <option style={{background:'var(--surface)'}}>ADA - Digital Retainer</option>
                         <option style={{background:'var(--surface)'}}>General Enquiry</option>
                       </select>
                     </div>
@@ -152,7 +152,7 @@ export default function Contact() {
               <div style={{height:'1px', background:'var(--border)'}}></div>
               <div style={{border:'1px solid var(--border)', padding:'24px'}}>
                 <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold-dim)', marginBottom:'10px'}}>Response Time</div>
-                <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, fontStyle:'italic'}}>&ldquo;We help first. We transact second. Every engagement begins with understanding — not selling.&rdquo;</p>
+                <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, fontStyle:'italic'}}>&ldquo;We help first. We transact second. Every engagement begins with understanding, not selling.&rdquo;</p>
               </div>
             </div>
           </div>

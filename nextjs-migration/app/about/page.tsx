@@ -22,7 +22,7 @@ export default function About() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:9999}}>Back to Home</Link>
+          <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:10}}>Back to Home</Link>
           <div className="section-label">About the Group</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(40px,6vw,78px)', fontWeight:300, lineHeight:1.05, maxWidth:'640px'}}>
             Built to generate,<br />structure, and<br /><em>compound value.</em>
@@ -33,7 +33,7 @@ export default function About() {
           <div className="section-label">Who We Are</div>
           <h2 className="section-title" id="about-heading">A group built on<br /><em>doing the work.</em></h2>
           <p className="section-body">Avalon Capital Group is a South African business group operating through two focused portfolio companies. We are not a consultancy. We are not a holding company in name only. Every division operates in its market, executes real transactions, and delivers measurable outcomes for clients.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Our structure is deliberate. Vantara handles the physical world — acquisitions, brokerage, deal-making. Avalon Digital Agency handles the digital world — systems, automation, visibility. Together they create a group with multiple entry points, multiple revenue streams, and a single unifying standard of service.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>Our structure is deliberate. Vantara handles the physical world: acquisitions, brokerage, deal-making. Avalon Digital Agency handles the digital world: systems, automation, visibility. Together they create a group with multiple entry points, multiple revenue streams, and a single unifying standard of service.</p>
 
           <div className="philosophy-grid" style={{marginTop:'72px'}}>
             <div className="philosophy-item">
@@ -44,12 +44,12 @@ export default function About() {
             <div className="philosophy-item">
               <div className="philosophy-num">02</div>
               <div className="philosophy-title">Multi-Industry Reach</div>
-              <div className="philosophy-desc">From vehicle acquisition to AI automation — our divisions operate in distinct markets, giving the group resilience, breadth, and multiple revenue channels.</div>
+              <div className="philosophy-desc">From vehicle acquisition to AI automation, our divisions operate in distinct markets, giving the group resilience, breadth, and multiple revenue channels.</div>
             </div>
             <div className="philosophy-item">
               <div className="philosophy-num">03</div>
               <div className="philosophy-title">Results-First Culture</div>
-              <div className="philosophy-desc">We are measured by client outcomes, not by activity. Every engagement is judged on the value it creates — for the client and for the group.</div>
+              <div className="philosophy-desc">We are measured by client outcomes, not by activity. Every engagement is judged on the value it creates, for the client and for the group.</div>
             </div>
           </div>
         </section>
@@ -80,16 +80,16 @@ export default function About() {
             </div>
             <div className="gold-divider"></div>
             <blockquote className="founder-quote">
-              &ldquo;I find where the money is moving, position my clients inside it, and make sure the deal closes.&rdquo;
+              &ldquo;I find where the money is moving, position my clients inside it, and engineer outcomes that pay.&rdquo;
             </blockquote>
             <p className="founder-bio">
               Avalon didn&apos;t start with capital. It started with a vision I carried for four years without knowing how to build it.<br /><br />
-              No business background. No family money. Just a picture in my head of what was possible — an ecosystem where each venture feeds the next, where Business A supports B, and C funds A. Self-sustaining. Compounding.<br /><br />
+              No business background. No family money. Just a picture in my head of what was possible: an ecosystem where each venture feeds the next, where Business A supports B, and C funds A. Self-sustaining. Compounding.<br /><br />
               The gap between that vision and today was filled with exposure, trial, and learning in environments I had no obvious right to be in. That&apos;s not a weakness. That&apos;s the credential.
             </p>
             <div className="metrics">
               <div className="metric-item"><strong>R3M+</strong> in transactions facilitated</div>
-              <div className="metric-item">Vantara and ADA — built to feed each other</div>
+              <div className="metric-item">Vantara and ADA - built to feed each other</div>
               <div className="metric-item">Built in KwaZulu-Natal. Playing a bigger game.</div>
             </div>
             <div className="cta-row">
@@ -116,7 +116,7 @@ export default function About() {
                 <div className="division-role">Acquisition &amp; Brokerage</div>
                 <div className="division-name">Vantara</div>
               </div>
-              <div className="division-desc">Premium brokerage for vehicle acquisitions, property deals, and strategic asset transactions. We source, qualify, structure, and deliver — with the client&apos;s interest as the only agenda.</div>
+              <div className="division-desc">Premium brokerage for vehicle acquisitions, property deals, and strategic asset transactions. We source, qualify, structure, and deliver, with the client&apos;s interest as the only agenda.</div>
               <div className="division-arrow">→</div>
             </Link>
             <Link className="division-row" href="/ada">
@@ -134,8 +134,8 @@ export default function About() {
           <div style={{border:'1px solid var(--border)', padding:'64px 40px', maxWidth:'600px', margin:'0 auto'}}>
             <div className="section-label" style={{justifyContent:'center', marginBottom:'20px'}}>Get in Touch</div>
             <h2 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'34px', fontWeight:300, marginBottom:'16px'}}>Interested in working<br />with the group?</h2>
-            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, marginBottom:'32px'}}>Whether it&apos;s a deal, a project, or a partnership — every conversation starts the same way.</p>
-            <Link className="btn-primary" href="/contact">Start a Conversation</Link>
+            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, marginBottom:'32px'}}>Whether it&apos;s a deal, a project, or a partnership: every conversation starts the same way.</p>
+            <Link className="btn-primary" href="/contact" style={{color:'#141414'}}>Start a Conversation</Link>
           </div>
         </section>
 

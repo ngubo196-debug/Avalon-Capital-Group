@@ -2,9 +2,15 @@
 
 import Link from 'next/link';
 import { useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  function activeStyle(href: string) {
+    return pathname === href ? { color: 'var(--gold)' } : {};
+  }
 
   return (
     <>
@@ -19,12 +25,12 @@ export default function Nav() {
           </Link>
         </div>
         <ul className="nav-links">
-          <li><Link id="nav-home" href="/">Home</Link></li>
-          <li><Link id="nav-about" href="/about">About</Link></li>
-          <li><Link id="nav-vantara" href="/vantara">Vantara</Link></li>
-          <li><Link id="nav-ada" href="/ada">ADA</Link></li>
-          <li><Link id="nav-contact" href="/contact">Contact</Link></li>
-          <li><Link id="nav-offers" href="/offers">Offers</Link></li>
+          <li><Link id="nav-home" href="/" style={activeStyle('/')}>Home</Link></li>
+          <li><Link id="nav-about" href="/about" style={activeStyle('/about')}>About</Link></li>
+          <li><Link id="nav-vantara" href="/vantara" style={activeStyle('/vantara')}>Vantara</Link></li>
+          <li><Link id="nav-ada" href="/ada" style={activeStyle('/ada')}>ADA</Link></li>
+          <li><Link id="nav-contact" href="/contact" style={activeStyle('/contact')}>Contact</Link></li>
+          <li><Link id="nav-offers" href="/offers" style={activeStyle('/offers')}>Offers</Link></li>
           <li><a href="/audit" style={{color:'var(--gold)'}}>Free Audit</a></li>
         </ul>
         <Link className="nav-cta" href="/contact">Enquire</Link>
@@ -38,12 +44,12 @@ export default function Nav() {
       </nav>
 
       <nav className={`mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu" aria-label="Mobile navigation">
-        <Link href="/" onClick={() => setMenuOpen(false)}>Home</Link>
-        <Link href="/about" onClick={() => setMenuOpen(false)}>About</Link>
-        <Link href="/vantara" onClick={() => setMenuOpen(false)}>Vantara</Link>
-        <Link href="/ada" onClick={() => setMenuOpen(false)}>ADA</Link>
-        <Link href="/contact" onClick={() => setMenuOpen(false)}>Contact / Enquire</Link>
-        <Link href="/offers" onClick={() => setMenuOpen(false)}>Offers</Link>
+        <Link href="/" style={activeStyle('/')} onClick={() => setMenuOpen(false)}>Home</Link>
+        <Link href="/about" style={activeStyle('/about')} onClick={() => setMenuOpen(false)}>About</Link>
+        <Link href="/vantara" style={activeStyle('/vantara')} onClick={() => setMenuOpen(false)}>Vantara</Link>
+        <Link href="/ada" style={activeStyle('/ada')} onClick={() => setMenuOpen(false)}>ADA</Link>
+        <Link href="/contact" style={activeStyle('/contact')} onClick={() => setMenuOpen(false)}>Contact / Enquire</Link>
+        <Link href="/offers" style={activeStyle('/offers')} onClick={() => setMenuOpen(false)}>Offers</Link>
         <a href="/audit" style={{color:'var(--gold)'}} onClick={() => setMenuOpen(false)}>Free Audit</a>
       </nav>
     </>

@@ -25,7 +25,7 @@ const STEPS: Step[] = [
   },
   {
     id:'biz-desc', meta:'Step 2 of 13',
-    q:"In one sentence — what does your business do, and where?",
+    q:"In one sentence: what does your business do, and where?",
     sub:"Be specific. This personalises every finding in your report.",
     type:'single' as const,
     field:{k:'businessDescription', label:'Business description', ph:'e.g. We supply and install solar systems across KwaZulu-Natal.'}
@@ -33,12 +33,12 @@ const STEPS: Step[] = [
   {
     id:'website', meta:'Step 3 of 13',
     q:"How would you describe your website?",
-    sub:"If you have one, share the URL — we factor in what's actually there.",
+    sub:"If you have one, share the URL. We factor in what's actually there.",
     type:'radio-url' as const, key:'websiteStatus',
     opts:[
       {v:"It's live and we're happy with it", l:"Live and confident", s:"Looks good, generates leads", url:true},
-      {v:"It's live but outdated or slow", l:"Live — but outdated or slow", url:true},
-      {v:"It's live but doesn't generate enquiries", l:"Live — but not converting", s:"Traffic doesn't turn into leads", url:true},
+      {v:"It's live but outdated or slow", l:"Live - but outdated or slow", url:true},
+      {v:"It's live but doesn't generate enquiries", l:"Live - but not converting", s:"Traffic doesn't turn into leads", url:true},
       {v:"We're building one", l:"In development", s:"Coming soon"},
       {v:"We don't have a website yet", l:"No website yet"}
     ]
@@ -64,14 +64,14 @@ const STEPS: Step[] = [
   },
   {
     id:'search-vis', meta:'Step 6 of 13',
-    q:"When a customer searches for what you do in your area — where do you appear?",
+    q:"When a customer searches for what you do in your area: where do you appear?",
     sub:'Try it now: search "[your service] [your city]" on Google.',
     type:'radio' as const, key:'searchVisibility',
     opts:[
-      {v:"Consistently in the top 3 results", l:"Top 3 on Google — consistently"},
-      {v:"On page 1, but not the top 3 spots", l:"Page 1 — but not top 3"},
-      {v:"Appears sometimes, inconsistently", l:"Inconsistent — sometimes there, sometimes not"},
-      {v:"Rarely appears — competitors outrank me consistently", l:"Rarely appears — competitors dominate"},
+      {v:"Consistently in the top 3 results", l:"Top 3 on Google - consistently"},
+      {v:"On page 1, but not the top 3 spots", l:"Page 1 - but not top 3"},
+      {v:"Appears sometimes, inconsistently", l:"Inconsistent - sometimes there, sometimes not"},
+      {v:"Rarely appears — competitors outrank me consistently", l:"Rarely appears - competitors dominate"},
       {v:"Does not appear or has never been checked", l:"Don't appear / never checked"}
     ]
   },
@@ -82,8 +82,8 @@ const STEPS: Step[] = [
     type:'radio' as const, key:'googleProfile',
     opts:[
       {v:"Complete — photos, services, hours, and regular updates", l:"Fully optimised", s:"Photos, services, hours, recent posts, and reviews"},
-      {v:"Set up but not regularly updated", l:"Set up — but inactive", s:"Claimed and filled in, but rarely touched"},
-      {v:"Claimed but barely filled in", l:"Claimed — mostly empty", s:"We have it, it's just not complete"},
+      {v:"Set up but not regularly updated", l:"Set up - but inactive", s:"Claimed and filled in, but rarely touched"},
+      {v:"Claimed but barely filled in", l:"Claimed - mostly empty", s:"We have it, it's just not complete"},
       {v:"Not claimed or not sure if I have one", l:"Not claimed / unsure"}
     ]
   },
@@ -94,7 +94,7 @@ const STEPS: Step[] = [
     type:'radio' as const, key:'socialPresence',
     opts:[
       {v:"Active and intentional — consistent content that drives enquiries", l:"Active and strategic", s:"Regular posts, real engagement, leads from social"},
-      {v:"Inconsistent — we post when we remember", l:"Inconsistent — ad hoc posting"},
+      {v:"Inconsistent — we post when we remember", l:"Inconsistent - ad hoc posting"},
       {v:"Rarely active — accounts exist but barely used", l:"Barely active", s:"Accounts exist but months pass without posts"},
       {v:"Not present on social media", l:"Not on social media"}
     ]
@@ -105,21 +105,21 @@ const STEPS: Step[] = [
     sub:"Think about your website, social pages, and Google listing together.",
     type:'radio' as const, key:'leadCapture',
     opts:[
-      {v:"Easy — clear call-to-action, WhatsApp link, quote or booking form", l:"Easy — clear path to contact", s:"WhatsApp button, quote form, or click-to-call"},
-      {v:"Acceptable — contact options exist but aren't prominent", l:"Acceptable — but not optimised"},
-      {v:"Difficult — contact info is buried or hard to find", l:"Difficult — contact is buried"},
-      {v:"Unclear — visitors likely leave without knowing what to do", l:"Unclear — no obvious next step"}
+      {v:"Easy — clear call-to-action, WhatsApp link, quote or booking form", l:"Easy - clear path to contact", s:"WhatsApp button, quote form, or click-to-call"},
+      {v:"Acceptable — contact options exist but aren't prominent", l:"Acceptable - but not optimised"},
+      {v:"Difficult — contact info is buried or hard to find", l:"Difficult - contact is buried"},
+      {v:"Unclear — visitors likely leave without knowing what to do", l:"Unclear - no obvious next step"}
     ]
   },
   {
     id:'brand', meta:'Step 10 of 13',
     q:"Does your brand look and feel consistent across all platforms?",
-    sub:"Same logo, colours, tone, and message — on your website, social, and Google listing.",
+    sub:"Same logo, colours, tone, and message: on your website, social, and Google listing.",
     type:'radio' as const, key:'brandConsistency',
     opts:[
       {v:"Consistent — same look, tone, and message everywhere", l:"Consistent across all platforms"},
-      {v:"Mostly consistent — but some platforms feel disconnected", l:"Mostly consistent — minor gaps"},
-      {v:"Inconsistent — different look and feel across platforms", l:"Inconsistent — noticeably different"},
+      {v:"Mostly consistent — but some platforms feel disconnected", l:"Mostly consistent - minor gaps"},
+      {v:"Inconsistent — different look and feel across platforms", l:"Inconsistent - noticeably different"},
       {v:"No real thought given to brand consistency", l:"Not considered yet"}
     ]
   },
@@ -132,7 +132,7 @@ const STEPS: Step[] = [
       {v:"Not appearing in local searches while competitors do", l:"Not being found on Google"},
       {v:"A website that doesn't convert visitors into enquiries", l:"Website that doesn't generate leads"},
       {v:"Looking unprofessional or inconsistent to potential clients", l:"Weak or inconsistent brand impression"},
-      {v:"Missing leads because it's too hard to contact me or enquire", l:"Poor lead capture — friction at the point of action"},
+      {v:"Missing leads because it's too hard to contact me or enquire", l:"Poor lead capture - friction at the point of action"},
       {v:"Social media that looks inactive, abandoned, or amateur", l:"Inactive or poor social media presence"},
       {v:"Competitors being found before me on Google and Google Maps", l:"Losing ground to competitors on search"}
     ]
@@ -601,7 +601,7 @@ export default function Audit() {
       clearInterval(tick);
       setScreen('contact');
       const msg = err instanceof SyntaxError
-        ? "The report couldn't be formatted correctly — please try again."
+        ? "The report couldn't be formatted correctly: please try again."
         : `Something went wrong: ${err instanceof Error ? err.message : 'Unknown error'}`;
       setContactErr(msg);
     }
@@ -650,7 +650,7 @@ export default function Audit() {
   const score = report ? (parseFloat(String(report.finalScore ?? report.overallScore)) || 0) : 0;
   const sc = scoreClass(score);
   const bizName = report?.businessName || answers.businessName || 'Your Business';
-  const waMsg = encodeURIComponent(`Hi Avalon Digital! I just completed my digital presence audit. My business is ${bizName} — I scored ${score}/10 and I'd love to discuss the action plan. My name is ${contactName}.`);
+  const waMsg = encodeURIComponent(`Hi Avalon Digital! I just completed my digital presence audit. My business is ${bizName}: I scored ${score}/10 and I'd love to discuss the action plan. My name is ${contactName}.`);
 
   return (
     <>
@@ -752,7 +752,7 @@ export default function Audit() {
         .audit-back-nav { position:fixed; top:72px; left:60px; z-index:90; padding:16px 0; }
         .back-btn-audit { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim); text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:color 0.3s; }
         .back-btn-audit:hover { color:var(--gold); }
-        .back-btn-audit::before { content:'←'; font-size:14px; }
+        .back-btn-audit::before { content:''; }
         @media (max-width:768px) {
           .audit-scr { padding:100px 24px 60px; }
           #audit-report { padding:100px 24px 60px; }
@@ -774,16 +774,16 @@ export default function Audit() {
       {/* Back nav (only on steps/contact) */}
       {(screen === 'intro' || screen === 'step' || screen === 'contact') && (
         <div className="audit-back-nav">
-          <Link href="/ada" className="back-btn-audit">Back to ADA</Link>
+          <Link href="/ada" className="back-btn-audit">← Back to ADA</Link>
         </div>
       )}
 
       {/* ── INTRO ── */}
       <div className={`audit-scr${screen === 'intro' ? ' on' : ''}`}>
         <div className="audit-inner" style={{maxWidth:'720px'}}>
-          <div className="section-label">Avalon Digital Agency — Free Audit</div>
+          <div className="section-label">Avalon Digital Agency - Free Audit</div>
           <h1 className="section-title">How visible is your<br />business <em>online?</em></h1>
-          <p className="section-body">Answer 13 questions and receive a personalised digital presence report — scored across 6 dimensions and built around your specific situation in South Africa.</p>
+          <p className="section-body">Answer 13 questions and receive a personalised digital presence report, scored across 6 dimensions and built around your specific situation in South Africa.</p>
           <div className="audit-feats">
             <div className="audit-feat">13 Questions</div>
             <div className="audit-feat">AI-Powered Analysis</div>
@@ -919,7 +919,7 @@ export default function Audit() {
           <div className="audit-spin"></div>
           <h2 className="audit-load-t">Analysing Your Digital Presence</h2>
           <p className="audit-load-s">{loadMsg}</p>
-          <p style={{marginTop:'20px', fontFamily:"'Montserrat',sans-serif", fontWeight:300, fontSize:'12px', color:'#8A8680', textAlign:'center'}}>This takes 20–40 seconds. We&apos;re running a live analysis of your inputs through our AI diagnostic engine — good things take a moment.</p>
+          <p style={{marginTop:'20px', fontFamily:"'Montserrat',sans-serif", fontWeight:300, fontSize:'12px', color:'#8A8680', textAlign:'center'}}>This takes 20–40 seconds. We&apos;re running a live analysis of your inputs through our AI diagnostic engine, good things take a moment.</p>
         </div>
       </div>
 
@@ -1003,7 +1003,7 @@ export default function Audit() {
                 </svg>
                 Chat on WhatsApp
               </a>
-              <p className="cta-sub">+27 71 220 5313 — Avalon Digital Agency, Durban KZN</p>
+              <p className="cta-sub">+27 71 220 5313 - Avalon Digital Agency, Durban KZN</p>
             </div>
 
             <div className="restart-row">

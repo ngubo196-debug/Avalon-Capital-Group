@@ -27,9 +27,9 @@ type ModalType = 'free' | 'paid' | 'foundation' | 'growth' | 'authority' | null;
 const modalConfig: Record<NonNullable<ModalType>, {title:string; sub:string; note:string; btn:string; showSvc:boolean}> = {
   free:       {title:'Request your free audit',     sub:'Limited slots per week. Answer three quick questions below.',  note:'48-hour turnaround',           btn:'Submit request',  showSvc:false},
   paid:       {title:'Book your deep-dive audit',   sub:'R2,500 ex VAT · Full report + 45-min walkthrough call.',       note:"We'll confirm via WhatsApp.",   btn:'Book audit',      showSvc:false},
-  foundation: {title:'Get started — Foundation',   sub:'Tell us about your business and what you need.',               note:"We'll follow up within 24 hours.", btn:'Send enquiry', showSvc:true},
-  growth:     {title:'Get started — Growth',        sub:'Tell us about your business and what you need.',               note:"We'll follow up within 24 hours.", btn:'Send enquiry', showSvc:true},
-  authority:  {title:'Get started — Authority',     sub:'Tell us about your business and what you need.',               note:"We'll follow up within 24 hours.", btn:'Send enquiry', showSvc:true},
+  foundation: {title:'Get started - Foundation',   sub:'Tell us about your business and what you need.',               note:"We'll follow up within 24 hours.", btn:'Send enquiry', showSvc:true},
+  growth:     {title:'Get started - Growth',        sub:'Tell us about your business and what you need.',               note:"We'll follow up within 24 hours.", btn:'Send enquiry', showSvc:true},
+  authority:  {title:'Get started - Authority',     sub:'Tell us about your business and what you need.',               note:"We'll follow up within 24 hours.", btn:'Send enquiry', showSvc:true},
 };
 
 export default function Offers() {
@@ -121,7 +121,7 @@ export default function Offers() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:9999}}>Back to ADA</Link>
+          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>Back to ADA</Link>
           <p style={{fontSize:'10px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px', position:'relative', zIndex:2}}>Avalon Digital Agency &middot; Durban, KZN</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(38px,5.5vw,72px)', fontWeight:300, lineHeight:1.08, maxWidth:'700px', marginBottom:'28px', position:'relative', zIndex:2}}>
             If your website isn&rsquo;t<br />generating leads,<br /><em style={{fontStyle:'italic', color:'var(--gold-light)'}}>it&rsquo;s not doing its job.</em>
@@ -136,7 +136,7 @@ export default function Offers() {
           <div className="section-label">ADA &middot; Website audits</div>
           <div style={{display:'inline-block', fontSize:'9px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--gold)', border:'1px solid var(--gold-dim)', padding:'4px 14px', marginBottom:'20px'}}>Free</div>
           <h2 className="section-title" id="offers-free">Website Health Check</h2>
-          <p className="section-body" style={{maxWidth:'580px', marginBottom:0}}>Most websites don&rsquo;t fail visually. They fail quietly. They sit online, get traffic, and still — nothing happens. No enquiries. No consistent leads. No real return. This quick audit shows you if your website is actually working, or quietly costing you opportunities.</p>
+          <p className="section-body" style={{maxWidth:'580px', marginBottom:0}}>Most websites don&rsquo;t fail visually. They fail quietly. They sit online, get traffic, and still, nothing happens. No enquiries. No consistent leads. No real return. This quick audit shows you if your website is actually working, or quietly costing you opportunities.</p>
 
           <div className="offers-check-grid">
             <div className="offers-check"><div className="offers-check-dot"></div><div><span className="offers-check-title">Search visibility</span><span className="offers-check-sub">Why you&rsquo;re not showing up when people look for what you offer</span></div></div>
@@ -153,7 +153,7 @@ export default function Offers() {
             <span>Limited slots per week</span>
           </div>
 
-          <Link href="/audit" className="btn-primary" style={{position:'relative', zIndex:2}}>Get your free audit</Link>
+          <Link href="/audit" className="btn-primary" style={{position:'relative', zIndex:2, color:'#141414'}}>Get your free audit</Link>
         </section>
 
         <div className="divider"></div>
@@ -188,7 +188,7 @@ export default function Offers() {
               ))}
             </div>
             <div style={{marginTop:'28px', paddingTop:'24px', borderTop:'1px solid var(--border)'}}>
-              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Builder promotional text — <em>&ldquo;Build any site you can imagine&hellip;&rdquo;</em> — was live on patient-facing pages. The practice&rsquo;s own bio described the principal dentist as <em>&ldquo;a specialist in his field.&rdquo;</em> Patients booking dental procedures at coastalsmiledental.co.za were seeing this.</p>
+              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Builder promotional text, <em>&ldquo;Build any site you can imagine&hellip;&rdquo;</em>, was live on patient-facing pages. The practice&rsquo;s own bio described the principal dentist as <em>&ldquo;a specialist in his field.&rdquo;</em> Patients booking dental procedures at coastalsmiledental.co.za were seeing this.</p>
             </div>
           </div>
         </section>
@@ -204,9 +204,9 @@ export default function Offers() {
           <p className="section-body" style={{maxWidth:'580px', marginBottom:0}}>This audit shows you exactly where you&rsquo;re losing business, why it&rsquo;s happening, and what needs to change first. No fluff. No theory. Just clarity.</p>
           <ul className="offers-inc" style={{margin:'28px 0 8px', padding:0}}>
             <li><strong>Full audit</strong> across all performance pillars</li>
-            <li><strong>Competitor comparison</strong> — 2&ndash;3 local businesses benchmarked</li>
-            <li><strong>Prioritised action plan</strong> — what to fix first, what can wait</li>
-            <li><strong>30-minute strategy walkthrough</strong> — we break it all down with you</li>
+            <li><strong>Competitor comparison:</strong> 2&ndash;3 local businesses benchmarked</li>
+            <li><strong>Prioritised action plan:</strong> what to fix first, what can wait</li>
+            <li><strong>30-minute strategy walkthrough:</strong> we break it all down with you</li>
           </ul>
           <p style={{fontSize:'12px', color:'var(--gold)', fontStyle:'italic', marginBottom:'28px'}}>One missed client can cost more than this audit.</p>
           <button className="btn-primary" onClick={() => openModal('paid')} style={{position:'relative', zIndex:2}}>Book your audit</button>
@@ -262,7 +262,7 @@ export default function Offers() {
               <button className="btn-primary" onClick={() => openModal('authority')} style={{position:'relative', zIndex:2, padding:'12px 24px'}}>Enquire directly</button>
             </div>
           </div>
-          <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px'}}>Foundation and Growth are fixed-scope, fixed-price engagements. You know exactly what you are getting and what it costs before anything begins. Authority is scoped per client and the investment reflects the ambition. If you are looking for the cheapest option, we are probably not the right fit. If you are looking for the most valuable one, let us talk.</p>
+          <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px'}}>Foundation and Growth are fixed-scope, fixed-price engagements. You know exactly what you are getting and what it costs before anything begins. Authority is scoped per client and the investment reflects the ambition. If you are looking for the cheapest option, we are probably not the right fit. If you are looking for the most valuable one, let&apos;s talk.</p>
         </section>
 
         <div className="divider"></div>
@@ -273,7 +273,7 @@ export default function Offers() {
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(26px,3.5vw,44px)', fontWeight:300, color:'var(--text)', marginBottom:'12px'}} id="offers-cta">You already paid for a website.</p>
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(17px,2.2vw,26px)', fontWeight:300, color:'var(--text-muted)', marginBottom:'40px'}}>Now find out if it&rsquo;s actually bringing you business.</p>
             <div style={{display:'flex', gap:'24px', justifyContent:'center', flexWrap:'wrap'}}>
-              <Link href="/audit" className="btn-primary" style={{position:'relative', zIndex:2}}>Get your free audit</Link>
+              <Link href="/audit" className="btn-primary" style={{position:'relative', zIndex:2, color:'#141414'}}>Get your free audit</Link>
               <a href="https://wa.me/27712205313?text=Hi%2C%20I%27m%20not%20sure%20where%20to%20start%20%E2%80%94%20can%20you%20help%3F" target="_blank" rel="noopener noreferrer" className="btn-ghost" style={{position:'relative', zIndex:2}}>Chat on WhatsApp</a>
             </div>
           </div>
@@ -288,7 +288,7 @@ export default function Offers() {
             <div className="offers-vantara-grid" style={{display:'grid', gridTemplateColumns:'1fr auto', gap:'40px', alignItems:'center'}}>
               <div>
                 <h2 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(22px,2.5vw,30px)', fontWeight:300, marginBottom:'14px'}} id="offers-vantara">Looking to acquire a vehicle?</h2>
-                <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.85, marginBottom:'8px'}}>Vantara handles the search, the negotiation, and the paperwork — so you don&rsquo;t have to. Tell us what you&rsquo;re looking for. We source it, vet it, and put you in the driver&rsquo;s seat without the dealership runaround.</p>
+                <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.85, marginBottom:'8px'}}>Vantara handles the search, the negotiation, and the paperwork, so you don&rsquo;t have to. Tell us what you&rsquo;re looking for. We source it, vet it, and put you in the driver&rsquo;s seat without the dealership runaround.</p>
                 <p style={{fontSize:'12px', color:'var(--text-dim)', fontStyle:'italic'}}>Available to private buyers and businesses.</p>
               </div>
               <div style={{flexShrink:0}}>
@@ -301,7 +301,7 @@ export default function Offers() {
         <div className="divider"></div>
 
         <footer style={{borderTop:'1px solid var(--border)', padding:'40px 60px', display:'flex', alignItems:'center', justifyContent:'space-between', flexWrap:'wrap', gap:'16px'}}>
-          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'14px', letterSpacing:'0.1em', color:'var(--text-muted)'}}><strong style={{color:'var(--gold)', fontWeight:400}}>ADA</strong> — A Division of Avalon Capital Group</p>
+          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'14px', letterSpacing:'0.1em', color:'var(--text-muted)'}}><strong style={{color:'var(--gold)', fontWeight:400}}>ADA</strong> - A Division of Avalon Capital Group</p>
           <p style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.06em'}}>Durban, KwaZulu-Natal &middot; South Africa</p>
           <div style={{width:'100%', paddingTop:'20px', borderTop:'1px solid var(--border)', marginTop:'4px'}}>
             <p style={{fontSize:'11px', color:'var(--text-dim)', marginBottom:'8px'}}>Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa</p>
