@@ -7,7 +7,6 @@ export const metadata: Metadata = {
     'Avalon Capital Group is a South African business ecosystem operating through Vantara (premium acquisition brokerage) and Avalon Digital Agency (AI-powered digital infrastructure). We structure deals, build digital systems, and create compounding value.',
   icons: {
     icon: [
-      { url: '/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
     ],

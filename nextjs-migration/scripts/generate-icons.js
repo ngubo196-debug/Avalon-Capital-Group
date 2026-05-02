@@ -2,9 +2,9 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-const SVG_PATH = path.join(__dirname, '..', 'public', 'favicon.svg');
-const PUBLIC   = path.join(__dirname, '..', 'public');
-const APP_DIR  = path.join(__dirname, '..', 'app');
+const SOURCE = path.join(__dirname, '..', 'public', 'assets', 'acg-logo.jpg');
+const PUBLIC = path.join(__dirname, '..', 'public');
+const APP_DIR = path.join(__dirname, '..', 'app');
 
 const SIZES = [
   { name: 'favicon-16x16.png',    size: 16  },
@@ -35,14 +35,12 @@ function buildIco(pngBuffer, w, h) {
 }
 
 async function main() {
-  const svg = fs.readFileSync(SVG_PATH);
-
   for (const { name, size } of SIZES) {
-    await sharp(svg).resize(size, size).png().toFile(path.join(PUBLIC, name));
+    await sharp(SOURCE).resize(size, size).png().toFile(path.join(PUBLIC, name));
     console.log(`  ✓ ${name} (${size}x${size})`);
   }
 
-  const png32 = await sharp(svg).resize(32, 32).png().toBuffer();
+  const png32 = await sharp(SOURCE).resize(32, 32).png().toBuffer();
   const ico   = buildIco(png32, 32, 32);
   fs.writeFileSync(path.join(APP_DIR, 'favicon.ico'), ico);
   console.log('  ✓ favicon.ico (32x32 ICO with embedded PNG)');
