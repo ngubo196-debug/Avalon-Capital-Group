@@ -30,7 +30,6 @@ const styles = `
   .anim-3 { animation: fadeUp 0.8s ease 0.5s both; }
 
   .cs-hero { min-height:92vh; display:flex; flex-direction:column; justify-content:flex-end; padding:80px 40px 80px; position:relative; overflow:hidden; }
-  .cs-hero-bg { position:absolute; top:50%; left:50%; transform:translate(-50%,-50%); font-family:'Cormorant Garamond',serif; font-size:clamp(80px,16vw,220px); font-weight:300; color:rgba(201,168,76,0.03); white-space:nowrap; user-select:none; pointer-events:none; letter-spacing:-0.02em; }
   .cs-eyebrow { display:flex; align-items:center; gap:14px; margin-bottom:24px; }
   .cs-eyebrow-line { width:36px; height:1px; background:${gold}; flex-shrink:0; }
   .cs-eyebrow-text { font-size:11px; letter-spacing:0.16em; text-transform:uppercase; color:${gold}; }
@@ -158,7 +157,6 @@ const styles = `
     .cs-del-row { grid-template-columns:30px 1fr; }
     .cs-tension { padding:36px 24px; }
     .cs-stat-div { display:none; }
-    .cs-hero-bg { font-size:80px; }
   }
 `;
 
@@ -225,7 +223,9 @@ export default function CaseStudyClient() {
 
         {/* HERO */}
         <section className="cs-hero">
-          <div className="cs-hero-bg">ACG</div>
+          <svg style={{position:'absolute', right:'-60px', top:'50%', transform:'translateY(-50%)', width:'500px', height:'580px', pointerEvents:'none', userSelect:'none'}} viewBox="0 0 500 580" aria-hidden="true">
+            <polygon points="250,20 490,560 10,560" fill="rgba(201,168,76,0.06)" />
+          </svg>
           <Link className="back-btn" href="/ada" style={{ position: 'relative', zIndex: 10, marginBottom: '32px', display: 'inline-block' }}>← Back to ADA</Link>
           <div className="cs-eyebrow anim-1">
             <div className="cs-eyebrow-line" />
