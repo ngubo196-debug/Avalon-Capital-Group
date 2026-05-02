@@ -27,7 +27,7 @@ export default function ADA() {
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Your website should be closing deals. Is it?</h1>
           <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Most business websites exist. They look fine, they have a contact page, and they do nothing. We rebuild them into revenue systems: websites that attract the right people, build trust fast, and convert visitors into clients.</p>
           <a href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." className="btn-primary" style={{display:'inline-block', position:'relative', zIndex:9999, cursor:'pointer', marginBottom:'28px'}}>Let&apos;s talk</a>
-          <p style={{fontSize:'11px', color:'var(--text-muted)', lineHeight:1.8, opacity:0.7}}><Link href="/ada/afripact-civils" style={{color:'var(--gold)', textDecoration:'none'}}>Afripact Civils</Link> - civil construction, KZN · from invisible to credible &nbsp;·&nbsp; <Link href="/ada/canopy-courier" style={{color:'var(--gold)', textDecoration:'none'}}>Canopy Courier</Link> - fleet revenue system &nbsp;·&nbsp; Durban · KwaZulu-Natal</p>
+          <p style={{fontSize:'11px', color:'var(--text-muted)', lineHeight:1.8, opacity:0.7}}><Link href="/ada/afripact-civils" style={{color:'var(--gold)', textDecoration:'none'}}>Afripact Civils</Link> - civil construction, KZN · from invisible to credible &nbsp;·&nbsp; <Link href="/ada/canopy-courier" style={{color:'var(--gold)', textDecoration:'none'}}>Canopy Courier</Link> - fleet revenue system &nbsp;·&nbsp; <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>Avalon Capital Group</Link> - self build &nbsp;·&nbsp; Durban · KwaZulu-Natal</p>
         </div>
 
         <section aria-labelledby="the-shift-heading">
@@ -133,6 +133,32 @@ export default function ADA() {
                 </div>
               </div>
               <Link href="/ada/canopy-courier" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', textDecoration:'none'}}>Full case study →</Link>
+            </div>
+
+            <div className="ada-case-card" style={{background:'var(--surface)', padding:'48px'}}>
+              <div style={{display:'flex', gap:'12px', marginBottom:'32px', flexWrap:'wrap'}}>
+                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', border:'1px solid var(--border)', padding:'5px 12px'}}>Our own build</span>
+                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', border:'1px solid var(--border)', padding:'5px 12px'}}>KwaZulu-Natal</span>
+              </div>
+              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(28px,3.5vw,44px)', fontWeight:300, lineHeight:1.1, marginBottom:'10px'}}>Avalon Capital Group</div>
+              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'28px'}}>From 1 indexed page to 16 in a server-rendered Next.js build</div>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'20px'}}>We built this. The full story of how ADA built, diagnosed, and migrated avaloncapitalgroup.co.za - from a plain HTML SPA with 1 indexed page to a server-rendered Next.js site with 16 indexed pages. Documented live.</p>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'36px'}}>The diagnosis was a hard one: 17 pages built, 1 visible to Google. The SPA was serving identical HTML for every route. Googlebot correctly concluded they were duplicates and refused to index them. The fix required a structural migration, not a patch. We ran the same process we run for clients, on ourselves, and documented every decision.</p>
+              <div style={{display:'flex', gap:'1px', background:'var(--border)', marginBottom:'36px', flexWrap:'wrap'}}>
+                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
+                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>14 days</div>
+                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Concept to live</div>
+                </div>
+                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
+                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>1 → 16 pages</div>
+                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Indexed by Google</div>
+                </div>
+                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
+                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>Next.js 14</div>
+                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Migration stack</div>
+                </div>
+              </div>
+              <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', textDecoration:'none'}}>Read the case study →</Link>
             </div>
 
           </div>
