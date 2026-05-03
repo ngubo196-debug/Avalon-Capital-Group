@@ -114,35 +114,28 @@
 
   .mobile-menu {
     display: none;
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 100%;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
     background: #141414;
     z-index: 9999;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 32px;
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
-    font-size: 13px;
-    letter-spacing: 0.2em;
+    font-size: 10px;
+    letter-spacing: 0.18em;
     text-transform: uppercase;
     color: #F0EDE8;
     text-decoration: none;
     cursor: pointer;
-    padding: 4px 0;
+    padding: 18px 24px;
+    border-bottom: 1px solid rgba(201,168,76,0.3);
     transition: color 0.2s;
   }
+  .mobile-menu a:last-child { border-bottom: none; }
   .mobile-menu a:hover { color: #C9A84C; }
-
-  .nav-hamburger span { transition: all 0.3s; }
-  .nav-hamburger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
-  .nav-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
-  .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
   /* ── HERO ── */
   .hero {
