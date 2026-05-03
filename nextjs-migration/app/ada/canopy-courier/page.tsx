@@ -22,7 +22,7 @@ export default function CanopyCourier() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:9999}}>← Back to ADA</Link>
+          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
           <div className="section-label">Case study - Canopy Courier</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>From a retail shop to a fleet revenue system.</h1>
           <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>Canopy Courier had a strong service, a loyal customer base, and a website that was leaving most of their revenue potential completely untouched. This is the story of what we found, what we built, and what it means for the business going forward.</p>

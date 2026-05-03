@@ -14,7 +14,7 @@
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
+  html { scroll-behavior: smooth; overflow-x: hidden; }
   a { color: inherit; text-decoration: none; }
   a:visited { color: inherit; }
 
@@ -118,10 +118,11 @@
     top: 72px;
     left: 0;
     right: 0;
-    height: auto;
+    bottom: 0;
     background: #0A0A0A;
     z-index: 9999;
     flex-direction: column;
+    overflow-y: auto;
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
@@ -1010,4 +1011,22 @@
     .offers-tiers { grid-template-columns:1fr !important; }
     .offers-vantara { grid-template-columns:1fr !important; }
     #offers-modal { padding:28px 20px; }
+  }
+
+  @media (max-width: 768px) {
+    #page-ada [style*="grid-template-columns: repeat(2"],
+    #page-ada [style*="grid-template-columns:repeat(2"] {
+      grid-template-columns: 1fr !important;
+    }
+    #page-ada [style*="grid-template-columns: repeat(3"],
+    #page-ada [style*="grid-template-columns:repeat(3"] {
+      grid-template-columns: 1fr !important;
+    }
+    #page-ada footer {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    #page-ada .ada-case-card {
+      padding: 32px 20px !important;
+    }
   }

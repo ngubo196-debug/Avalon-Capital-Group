@@ -21,7 +21,7 @@ export default function VantaraInsight3() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/vantara" style={{position:'relative', zIndex:9999}}>Back to Vantara</Link>
+          <Link className="back-btn" href="/vantara" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara Insights · Advisory</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>The Vantara Model</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,5vw,64px)', fontWeight:400, lineHeight:1.08, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>The advisor is free.<br /><em style={{color:'var(--gold)'}}>The mistake is not.</em></h1>
@@ -59,7 +59,7 @@ export default function VantaraInsight3() {
           <p className="section-body" style={{maxWidth:'440px', margin:'0 auto 40px'}}>Tell us what you are working on. We will tell you honestly whether we can add value, and how.</p>
           <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'16px'}}>
             <a href="https://wa.me/27712205313?text=Hi%2C%20I%27d%20like%20to%20discuss%20an%20opportunity%20with%20Vantara." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{position:'relative', zIndex:9999}}>Start the Conversation</a>
-            <Link className="btn-ghost" href="/vantara" style={{position:'relative', zIndex:9999}}>Back to Vantara</Link>
+            <Link className="btn-ghost" href="/vantara" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
           </div>
         </section>
 

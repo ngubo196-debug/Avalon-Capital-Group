@@ -22,7 +22,7 @@ export default function RevenueWebsite() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:9999}}>← Back to ADA</Link>
+          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
           <div className="section-label">The solution</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>What a revenue-driven website actually looks like</h1>
           <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · Avalon Digital Agency · Durban, KZN</p>

@@ -44,7 +44,7 @@ export default function Contact() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:9999}}>Back to Home</Link>
+          <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:10}}>Back to Home</Link>
           <div className="section-label">Get in Touch</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(40px,5.5vw,76px)', fontWeight:300, lineHeight:1.05, maxWidth:'600px'}}>
             Every great result<br />begins with a<br /><em>conversation.</em>

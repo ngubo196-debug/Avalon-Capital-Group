@@ -288,7 +288,7 @@ export default function Vantara() {
           <p className="section-body" style={{maxWidth:'480px', margin:'0 auto 40px'}}>Tell us what you&apos;re acquiring, what you&apos;re exiting, or what opportunity you&apos;re looking at. We&apos;ll tell you honestly whether we can add value, and how.</p>
           <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'16px'}}>
             <a href="https://wa.me/27712205313?text=Hi%2C%20I%20have%20a%20deal%20I%27d%20like%20to%20discuss%20with%20Vantara." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{position:'relative', zIndex:9999}}>Start the Conversation</a>
-            <Link className="btn-ghost" href="/" style={{position:'relative', zIndex:9999}}>Back to Avalon Capital Group</Link>
+            <Link className="btn-ghost" href="/" style={{position:'relative', zIndex:10}}>Back to Avalon Capital Group</Link>
           </div>
         </section>
 
