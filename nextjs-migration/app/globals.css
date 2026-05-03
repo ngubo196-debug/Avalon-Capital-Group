@@ -114,27 +114,27 @@
 
   .mobile-menu {
     display: none;
-    position: absolute;
-    top: 100%;
+    position: fixed;
+    top: 72px;
     left: 0;
-    width: 100%;
+    right: 0;
+    height: auto;
     background: #141414;
     z-index: 9999;
     flex-direction: column;
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
-    font-size: 10px;
-    letter-spacing: 0.18em;
+    font-size: 13px;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #F0EDE8;
     text-decoration: none;
     cursor: pointer;
-    padding: 18px 24px;
-    border-bottom: 1px solid rgba(201,168,76,0.3);
+    padding: 20px 32px;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
     transition: color 0.2s;
   }
-  .mobile-menu a:last-child { border-bottom: none; }
   .mobile-menu a:hover { color: #C9A84C; }
 
   /* ── HERO ── */
