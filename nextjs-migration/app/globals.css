@@ -115,14 +115,16 @@
   .mobile-menu {
     display: none;
     position: fixed;
-    top: 72px;
+    top: 0;
     left: 0;
-    right: 0;
-    bottom: 0;
-    background: #0A0A0A;
+    width: 100vw;
+    height: 100vh;
+    background: #141414;
     z-index: 9999;
     flex-direction: column;
-    overflow-y: auto;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
   }
   .mobile-menu.open { display: flex; }
   .mobile-menu a {
@@ -132,11 +134,15 @@
     color: #F0EDE8;
     text-decoration: none;
     cursor: pointer;
-    padding: 20px 32px;
-    border-bottom: 1px solid rgba(201,168,76,0.15);
+    padding: 4px 0;
     transition: color 0.2s;
   }
   .mobile-menu a:hover { color: #C9A84C; }
+
+  .nav-hamburger span { transition: all 0.3s; }
+  .nav-hamburger.is-open span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+  .nav-hamburger.is-open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+  .nav-hamburger.is-open span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
 
   /* ── HERO ── */
   .hero {

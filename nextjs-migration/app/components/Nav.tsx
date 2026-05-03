@@ -35,7 +35,7 @@ export default function Nav() {
         </ul>
         <Link className="nav-cta" href="/contact">Enquire</Link>
         <div
-          className="nav-hamburger"
+          className={`nav-hamburger${menuOpen ? ' is-open' : ''}`}
           aria-label="Toggle menu"
           onClick={() => setMenuOpen(!menuOpen)}
         >
