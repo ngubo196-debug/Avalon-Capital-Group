@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Why Buying a Car Alone Costs You | Vantara Insights',
   description: 'The dealership knows more than you do. That gap costs money. Here is what is actually happening on the other side of the desk, and how to close it.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara/insight-1' },
 };
 
 export default function VantaraInsight1() {

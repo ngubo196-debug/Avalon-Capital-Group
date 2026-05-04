@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'About | Avalon Capital Group',
   description: 'Learn about Avalon Capital Group - a Durban-based business group built on the belief that AI changes everything for ambitious businesses.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/about' },
 };
 
 export default function About() {

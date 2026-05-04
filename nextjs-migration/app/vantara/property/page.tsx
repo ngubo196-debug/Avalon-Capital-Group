@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Property Acquisition | Vantara Deal Insight',
   description: 'Vantara property acquisition: institutional-grade packaging at private investor entry. 11.24% gross yield commercial property in Durban packaged with full feasibility and SPV structure.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara/property' },
 };
 
 export default function VantaraProperty() {

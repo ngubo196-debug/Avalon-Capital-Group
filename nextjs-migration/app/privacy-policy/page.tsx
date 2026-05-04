@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Privacy Policy | Avalon Capital Group',
   description: 'Privacy Policy for Avalon Capital Group (Pty) Ltd: how we collect, store, and protect your personal information in accordance with POPIA.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/privacy-policy' },
 };
 
 export default function PrivacyPolicy() {

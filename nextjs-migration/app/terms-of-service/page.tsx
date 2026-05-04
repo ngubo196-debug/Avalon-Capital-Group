@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Terms of Service | Avalon Capital Group',
   description: 'Terms of Service for Avalon Capital Group (Pty) Ltd, Avalon Digital Agency, and Vantara.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/terms-of-service' },
 };
 
 export default function TermsOfService() {

@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'The Advisor Is Free. The Mistake Is Not. | Vantara Insights',
   description: 'Most high-value transactions happen without anyone in the buyer\'s corner. Vantara exists to change that, across vehicles, property, and strategic deals.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara/insight-3' },
 };
 
 export default function VantaraInsight3() {

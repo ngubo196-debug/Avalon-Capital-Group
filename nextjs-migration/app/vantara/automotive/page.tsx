@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Vehicle Acquisition | Vantara Deal Insight',
   description: 'Vantara automotive deal execution: two dealers, one client, every variable controlled. Trade-in arbitrage, dealer incentive extraction, and multi-scenario finance modelling.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara/automotive' },
 };
 
 export default function VantaraAutomotive() {

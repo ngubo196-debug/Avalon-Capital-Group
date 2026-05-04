@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Avalon Digital Agency | ADA | Websites That Close Deals',
   description: 'Your website should be closing deals. Is it? ADA rebuilds business websites into revenue systems: websites that attract the right people, build trust fast, and convert visitors into clients.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada' },
 };
 
 export default function ADA() {

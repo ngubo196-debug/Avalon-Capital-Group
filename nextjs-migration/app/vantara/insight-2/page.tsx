@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Property Investor vs Property Buyer | Vantara Insights',
   description: 'Most people who buy property are not investors. They are buyers. The difference is not the asset, it is the analysis, the structure, and the clarity of the decision before the money moves.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara/insight-2' },
 };
 
 export default function VantaraInsight2() {
