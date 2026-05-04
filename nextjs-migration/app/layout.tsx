@@ -36,6 +36,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="twitter:description" content="Premium brokerage and AI-powered digital services. Vantara. Avalon Digital Agency." />
         <meta name="twitter:image" content="https://avaloncapitalgroup.co.za/og-image.jpg" />
 
+        {/* Favicon */}
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
