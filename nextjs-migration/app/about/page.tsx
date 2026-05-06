@@ -5,7 +5,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'About | Avalon Capital Group',
-  description: 'Learn about Avalon Capital Group - a Durban-based business group built on the belief that AI changes everything for ambitious businesses.',
+  description: 'Avalon Capital Group is a South African business group operating through Vantara (acquisition brokerage) and Avalon Digital Agency (AI-powered digital services).',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/about' },
 };
 
