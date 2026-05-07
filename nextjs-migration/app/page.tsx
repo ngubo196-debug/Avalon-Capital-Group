@@ -33,8 +33,8 @@ export default function Home() {
           />
           <p className="hero-eyebrow">Avalon Capital Group</p>
           <h1 className="hero-title">Where Capital<br />Meets <em>Precision.</em></h1>
-          <h2 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'#8A8680', margin:'0.5rem 0 1rem', lineHeight:1.5, display:'block', visibility:'visible'}}>Avalon Capital Group structures business acquisitions and builds revenue-generating digital systems across South Africa.</h2>
-          <p className="hero-subtitle">A South African business group with two operating divisions: Vantara, our premium acquisition brokerage, and Avalon Digital Agency, our AI-powered digital infrastructure arm. We structure deals, build systems, and create compounding value.</p>
+          <h2 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(16px, 1.4vw, 20px)', fontWeight:400, color:'#8A8680', margin:'0.5rem 0 1rem', lineHeight:1.5, display:'block', visibility:'visible'}}>Avalon Capital Group structures business acquisitions and builds revenue-generating digital systems across South Africa.</h2>
+          <p className="hero-subtitle">Two divisions. One mandate: build businesses that compound.</p>
           <div className="hero-actions">
             <Link className="btn-primary" href="/about" style={{color:'#141414'}}>Our Structure</Link>
             <Link className="btn-ghost" href="/contact">Start a Conversation</Link>
