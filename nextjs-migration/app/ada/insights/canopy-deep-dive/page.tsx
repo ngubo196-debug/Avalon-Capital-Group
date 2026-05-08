@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'The Canopy Courier Rebuild | Avalon Digital Agency',
-  description: 'How ADA turned a retail website into a fleet revenue system for Canopy Courier, Durban.',
+  title: 'Website Redesign Case Study: From Retail Site to Fleet Revenue System | Avalon Digital Agency',
+  description: 'A ground-level breakdown of a real website rebuild in Durban, KwaZulu-Natal. What we found, what we built, and how a focused redesign unlocked R1M+ in annual revenue potential for Canopy Courier.',
 };
 
 export default function CanopyDeepDive() {

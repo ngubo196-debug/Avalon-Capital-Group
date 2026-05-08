@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Why Most Business Websites Don't Make Money | Avalon Digital Agency",
-  description: 'The real reason most business websites fail to generate revenue - and what to do about it.',
+  title: "Why Your Website Isn't Generating Leads (And What to Do About It) | Avalon Digital Agency",
+  description: 'Most South African business websites were never built to convert visitors into clients. Here\'s the real reason yours isn\'t generating leads - and how to fix it.',
 };
 
 export default function WhyWebsitesFail() {

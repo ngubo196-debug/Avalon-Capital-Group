@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'What a Revenue-Driven Website Actually Looks Like | Avalon Digital Agency',
-  description: 'The anatomy of a website built to generate consistent revenue for your business.',
+  title: 'What a Business Website That Actually Generates Leads Looks Like | Avalon Digital Agency',
+  description: "Most business owners have never seen a website built to convert. Here's the anatomy of a revenue-driven website - the specific elements that turn visitors into paying clients in South Africa.",
 };
 
 export default function RevenueWebsite() {

@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Why AI Won't Replace Websites | Avalon Digital Agency",
-  description: 'AI will make websites more valuable, not obsolete. Here is why.',
+  title: 'Do You Still Need a Website in 2026? Yes - Here\'s Why It Matters More Than Ever | Avalon Digital Agency',
+  description: 'With AI changing how people search and decide, South African businesses are asking whether websites still matter. They do - more than ever. Here\'s why.',
 };
 
 export default function AIWebsites() {

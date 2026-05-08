@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'The AI Awareness Cycle | Avalon Digital Agency',
-  description: 'Why your website is about to become your most valuable business asset. The AI awareness cycle explained.',
+  title: 'Will AI Make Your Website Obsolete? The Opposite Is True | Avalon Digital Agency',
+  description: "AI hasn't made websites less important for South African businesses - it's made them more critical. Here's why the businesses investing in digital infrastructure now will win.",
 };
 
 export default function AIAwareness() {
