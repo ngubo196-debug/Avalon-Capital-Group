@@ -53,10 +53,10 @@ export default function Vantara() {
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/" style={{position:'relative', zIndex:10}}>← Back to Avalon Capital Group</Link>
           <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'52px', fontWeight:300, letterSpacing:'0.14em', color:'var(--text-primary)', marginBottom:'24px', position:'relative', zIndex:2}}>Vantara</div>
-          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px', position:'relative', zIndex:2}}>Vantara · A Division of Avalon Capital Group</p>
-          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px', position:'relative', zIndex:2}}>Deal Execution &amp; Asset Acquisition</p>
+          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px', position:'relative', zIndex:2}}>Vantara · Acquisition Brokerage · South Africa</p>
+          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px', position:'relative', zIndex:2}}>Deal Execution &amp; Asset Acquisition · Durban, KwaZulu-Natal</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(42px,6vw,80px)', fontWeight:400, lineHeight:1.05, color:'var(--text-primary)', maxWidth:'700px', marginBottom:'28px', position:'relative', zIndex:2}}>We don&apos;t participate in deals.<br /><em style={{color:'var(--gold)'}}>We control them.</em></h1>
-          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px', marginBottom:'40px', position:'relative', zIndex:2}}>Vantara identifies, structures, and executes high-value transactions across vehicles, property, and strategic opportunities, working exclusively in the interest of the client, from first conversation to final close.</p>
+          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px', marginBottom:'40px', position:'relative', zIndex:2}}>Vantara identifies, structures, and executes high-value transactions across vehicles, property, and strategic opportunities, working exclusively in the interest of the client, from first conversation to final close. Based in Durban, KwaZulu-Natal, operating across South Africa.</p>
           <a href="https://wa.me/27712205313?text=Hi%2C%20I%20have%20a%20deal%20I%27d%20like%20to%20discuss%20with%20Vantara." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{position:'relative', zIndex:9999}}>Start the Conversation</a>
         </div>
 
@@ -113,7 +113,7 @@ export default function Vantara() {
             <div style={{background:'var(--surface)', padding:'44px 36px'}}>
               <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'52px', fontWeight:300, color:'var(--border)', lineHeight:1, marginBottom:'22px', fontStyle:'italic'}}>02</p>
               <h4 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'18px', fontWeight:400, color:'var(--gold)', marginBottom:'12px'}}>Market Intelligence</h4>
-              <p style={{fontSize:'13px', lineHeight:1.85, color:'var(--text-secondary)'}}>We scan the market on your behalf, identifying value, flagging what&apos;s overpriced or misrepresented, and surfacing options you wouldn&apos;t find alone.</p>
+              <p style={{fontSize:'13px', lineHeight:1.85, color:'var(--text-secondary)'}}>We scan the South African market on your behalf, identifying value, flagging what&apos;s overpriced or misrepresented, and surfacing options you wouldn&apos;t find alone.</p>
             </div>
             <div style={{background:'var(--surface)', padding:'44px 36px'}}>
               <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'52px', fontWeight:300, color:'var(--border)', lineHeight:1, marginBottom:'22px', fontStyle:'italic'}}>03</p>
@@ -253,7 +253,7 @@ export default function Vantara() {
               <p style={{position:'absolute', top:'-1px', left:'50%', transform:'translateX(-50%)', background:'var(--gold)', color:'#080807', fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', padding:'4px 14px', fontWeight:600, whiteSpace:'nowrap'}}>Primary Mandate</p>
               <p style={{fontSize:'10px', letterSpacing:'0.24em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px', marginTop:'16px'}}>02 - Property</p>
               <h3 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.2, marginBottom:'20px'}}>Property Acquisition</h3>
-              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'28px'}}>We identify high-yield opportunities, conduct full investment and feasibility analysis, and structure deals for private investors. Compensation is deal-side, structured as an equity stake or structuring fee within the transaction.</p>
+              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'28px'}}>We identify high-yield property opportunities across KwaZulu-Natal and South Africa, conduct full investment and feasibility analysis, and structure deals for private investors. Compensation is deal-side, structured as an equity stake or structuring fee within the transaction.</p>
               <div style={{display:'flex', flexDirection:'column', gap:0, borderTop:'1px solid var(--border)', marginTop:'auto'}}>
                 <p style={{fontSize:'13px', lineHeight:1.75, color:'var(--text-secondary)', padding:'12px 0', borderBottom:'1px solid var(--border)'}}>· Opportunity sourcing</p>
                 <p style={{fontSize:'13px', lineHeight:1.75, color:'var(--text-secondary)', padding:'12px 0', borderBottom:'1px solid var(--border)'}}>· Full feasibility &amp; risk analysis</p>
