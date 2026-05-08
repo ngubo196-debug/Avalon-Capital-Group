@@ -25,9 +25,9 @@ export default function ADA() {
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:10}}>Back to Avalon Capital Group</Link>
           <img src="/assets/acg-logo.jpg" alt="Avalon Digital Agency" style={{width:'120px', height:'auto', marginBottom:'24px', display:'block', objectFit:'contain', mixBlendMode:'screen', position:'relative', zIndex:2, maxWidth:'100%'}} />
-          <p style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'28px'}}>Avalon Digital Agency · Durban, KZN</p>
+          <p style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'28px'}}>Avalon Digital Agency · Digital Agency Durban, KwaZulu-Natal</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Your website should be closing deals. Is it?</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Most business websites exist. They look fine, they have a contact page, and they do nothing. We rebuild them into revenue systems: websites that attract the right people, build trust fast, and convert visitors into clients.</p>
+          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Most business websites exist. They look fine, they have a contact page, and they do nothing. We rebuild them into revenue systems: websites that attract the right people, build trust fast, and convert visitors into clients. We work with businesses across Durban, KwaZulu-Natal, and South Africa.</p>
           <a href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." className="btn-primary" style={{display:'inline-block', position:'relative', zIndex:9999, cursor:'pointer', marginBottom:'28px'}}>Let&apos;s talk</a>
           <p style={{fontSize:'11px', color:'var(--text-muted)', lineHeight:1.8, opacity:0.7}}><Link href="/ada/afripact-civils" style={{color:'var(--gold)', textDecoration:'none'}}>Afripact Civils</Link> - civil construction, KZN · from invisible to credible &nbsp;·&nbsp; <Link href="/ada/canopy-courier" style={{color:'var(--gold)', textDecoration:'none'}}>Canopy Courier</Link> - fleet revenue system &nbsp;·&nbsp; <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>Avalon Capital Group</Link> - self build &nbsp;·&nbsp; Durban · KwaZulu-Natal</p>
         </div>
@@ -49,7 +49,7 @@ export default function ADA() {
           <div className="section-label">What we do</div>
           <h2 className="section-title" id="what-we-do-heading">We don&apos;t build websites.<br /><em>We build the system behind them.</em></h2>
           <p className="section-body">There&apos;s no shortage of people who can make a website look good. That&apos;s not the problem. The problem is that most websites are designed without ever asking the only question that matters: what is this page supposed to make someone do?</p>
-          <p className="section-body" style={{marginTop:'20px'}}>At ADA, we approach every project as conversion infrastructure. That means understanding your offer, your audience, and the specific moment a visitor decides to reach out, or walk away. We then build around that moment. Clear messaging. A logical flow. Trust signals placed where decisions actually happen. Every element earns its place or it doesn&apos;t make the cut.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>At ADA, our digital agency in Durban, we approach every project as conversion infrastructure. That means understanding your offer, your audience, and the specific moment a visitor decides to reach out, or walk away. We then build around that moment. Clear messaging. A logical flow. Trust signals placed where decisions actually happen. Every element earns its place or it doesn&apos;t make the cut.</p>
           <p className="section-body" style={{marginTop:'20px'}}>The result isn&apos;t just a better-looking website. It&apos;s a website that works while you&apos;re not, qualifying visitors, building credibility, and moving people toward a conversation with you.</p>
 
           <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
@@ -315,7 +315,7 @@ export default function ADA() {
         <section aria-labelledby="lets-work-heading">
           <div className="section-label">Let&apos;s work</div>
           <h2 className="section-title" id="lets-work-heading">Your website should be the hardest working part<br />of <em>your business.</em></h2>
-          <p className="section-body">Right now, somewhere, a potential client is looking for exactly what you offer. The question is whether your digital presence is ready to meet them, or whether it&apos;s quietly sending them somewhere else.</p>
+          <p className="section-body">Right now, somewhere in South Africa, a potential client is looking for exactly what you offer. The question is whether your digital presence is ready to meet them, or whether it&apos;s quietly sending them somewhere else.</p>
           <p className="section-body" style={{marginTop:'20px'}}>We build the systems that make sure it&apos;s the former. One conversation is all it takes to know if we&apos;re the right fit. No pressure, no hard sell, just an honest look at where your business is and what it would take to get it where you want it.</p>
 
           <div className="divider" style={{margin:'48px 0'}}></div>
