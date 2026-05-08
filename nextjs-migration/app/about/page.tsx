@@ -4,7 +4,7 @@ import Footer from '../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About | Avalon Capital Group',
+  title: 'About Avalon Capital Group | Business Group | Durban, South Africa',
   description: 'Avalon Capital Group is a South African business group operating through Vantara (acquisition brokerage) and Avalon Digital Agency (AI-powered digital services).',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/about' },
 };

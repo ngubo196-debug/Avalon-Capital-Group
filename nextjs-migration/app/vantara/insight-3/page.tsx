@@ -3,8 +3,8 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'The Advisor Is Free. The Mistake Is Not. | Vantara Insights',
-  description: 'Most high-value transactions happen without anyone in the buyer\'s corner. Vantara exists to change that, across vehicles, property, and strategic deals.',
+  title: 'Why Every High-Value Transaction in South Africa Needs an Advisor | Vantara',
+  description: 'Most high-value transactions in South Africa happen without anyone in the buyer\'s corner. Vantara exists to change that - across vehicles, property, and strategic deals.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara/insight-3' },
 };
 
