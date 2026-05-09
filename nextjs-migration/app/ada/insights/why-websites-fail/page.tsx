@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "Why Your Website Isn't Generating Leads (And What to Do About It) | Avalon Digital Agency",
   description: 'Most South African business websites were never built to convert visitors into clients. Here\'s the real reason yours isn\'t generating leads - and how to fix it.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/why-websites-fail' },
 };
 
 export default function WhyWebsitesFail() {

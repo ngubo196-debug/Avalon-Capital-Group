@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Do You Still Need a Website in 2026? Yes - Here\'s Why It Matters More Than Ever | Avalon Digital Agency',
   description: 'With AI changing how people search and decide, South African businesses are asking whether websites still matter. They do - more than ever. Here\'s why.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/ai-websites' },
 };
 
 export default function AIWebsites() {

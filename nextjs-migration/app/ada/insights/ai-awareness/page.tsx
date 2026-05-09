@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Will AI Make Your Website Obsolete? The Opposite Is True | Avalon Digital Agency',
   description: "AI hasn't made websites less important for South African businesses - it's made them more critical. Here's why the businesses investing in digital infrastructure now will win.",
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/ai-awareness' },
 };
 
 export default function AIAwareness() {

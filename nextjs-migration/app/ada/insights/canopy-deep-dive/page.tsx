@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Website Redesign Case Study: From Retail Site to Fleet Revenue System | Avalon Digital Agency',
   description: 'A ground-level breakdown of a real website rebuild in Durban, KwaZulu-Natal. What we found, what we built, and how a focused redesign unlocked R1M+ in annual revenue potential for Canopy Courier.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/canopy-deep-dive' },
 };
 
 export default function CanopyDeepDive() {

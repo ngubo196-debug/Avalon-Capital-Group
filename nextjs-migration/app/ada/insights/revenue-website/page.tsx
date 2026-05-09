@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'What a Business Website That Actually Generates Leads Looks Like | Avalon Digital Agency',
   description: "Most business owners have never seen a website built to convert. Here's the anatomy of a revenue-driven website - the specific elements that turn visitors into paying clients in South Africa.",
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/revenue-website' },
 };
 
 export default function RevenueWebsite() {

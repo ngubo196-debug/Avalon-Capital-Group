@@ -6,6 +6,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Canopy Courier — Case Study | Avalon Digital Agency',
   description: 'How ADA built a fleet revenue system for Canopy Courier. Durban, KwaZulu-Natal.',
+  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/canopy-courier' },
 };
 
 export default function CanopyCourier() {
