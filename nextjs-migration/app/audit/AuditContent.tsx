@@ -753,6 +753,7 @@ export default function AuditContent() {
         .back-btn-audit { font-size:10px; letter-spacing:0.2em; text-transform:uppercase; color:var(--text-dim); text-decoration:none; display:inline-flex; align-items:center; gap:10px; transition:color 0.3s; }
         .back-btn-audit:hover { color:var(--gold); }
         .back-btn-audit::before { content:''; }
+        .audit-intro-back { display:none; }
         @media (max-width:768px) {
           .audit-scr { padding:100px 24px 60px; }
           #audit-report { padding:100px 24px 60px; }
@@ -761,6 +762,9 @@ export default function AuditContent() {
           .pfix { grid-template-columns:48px 1fr; gap:16px; }
           .cta-box { padding:40px 24px; }
           .audit-back-nav { left:20px; }
+          .audit-back-nav--intro { display:none; }
+          .audit-intro-header { display:flex; flex-direction:column; gap:12px; }
+          .audit-intro-back { display:inline-flex; align-items:center; gap:10px; }
         }
       `}</style>
 
@@ -773,7 +777,7 @@ export default function AuditContent() {
 
       {/* Back nav (only on steps/contact) */}
       {(screen === 'intro' || screen === 'step' || screen === 'contact') && (
-        <div className="audit-back-nav">
+        <div className={`audit-back-nav${screen === 'intro' ? ' audit-back-nav--intro' : ''}`}>
           <Link href="/ada" className="back-btn-audit">← Back to ADA</Link>
         </div>
       )}
@@ -781,7 +785,10 @@ export default function AuditContent() {
       {/* ── INTRO ── */}
       <div className={`audit-scr${screen === 'intro' ? ' on' : ''}`}>
         <div className="audit-inner" style={{maxWidth:'720px'}}>
-          <div className="section-label">Avalon Digital Agency - Free Audit</div>
+          <div className="audit-intro-header">
+            <Link href="/ada" className="back-btn-audit audit-intro-back">← Back to ADA</Link>
+            <div className="section-label">Avalon Digital Agency - Free Audit</div>
+          </div>
           <h1 className="section-title">How visible is your<br />business <em>online?</em></h1>
           <p className="section-body">Answer 13 questions and receive a personalised digital presence report, scored across 6 dimensions and built around your specific situation in South Africa.</p>
           <div className="audit-feats">

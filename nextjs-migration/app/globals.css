@@ -120,7 +120,7 @@
     right: 0;
     height: auto;
     background: rgba(10,10,10,0.96);
-    z-index: 9999;
+    z-index: 10000;
     flex-direction: column;
   }
   .mobile-menu.open { display: flex; }
