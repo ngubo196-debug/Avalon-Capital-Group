@@ -18,7 +18,7 @@ export default function SaudCardContent() {
       'EMAIL:saud@avaloncapitalgroup.co.za',
       'URL:https://avaloncapitalgroup.co.za',
       'ADR;TYPE=WORK:;;Durban;KwaZulu-Natal;;;ZA',
-      'NOTE:Co-Founder & Chief Executive — Avalon Capital Group. Divisions: Vantara | Avalon Digital Agency (ADA)',
+      'NOTE:Co-Founder & Chief Executive, Avalon Capital Group. Divisions: Vantara | Avalon Digital Agency (ADA)',
       'END:VCARD'
     ].join('\n');
 

@@ -233,7 +233,7 @@ export default function CaseStudyClient() {
           <Link className="back-btn" href="/ada" style={{ position: 'relative', zIndex: 10, marginBottom: '32px', display: 'inline-block' }}>← Back to ADA</Link>
           <div className="cs-eyebrow anim-1">
             <div className="cs-eyebrow-line" />
-            <span className="cs-eyebrow-text">Internal Build — avaloncapitalgroup.co.za</span>
+            <span className="cs-eyebrow-text">Internal Build - avaloncapitalgroup.co.za</span>
           </div>
           <h1 className="cs-headline anim-2">
             The agency without a presence<br />
@@ -243,7 +243,7 @@ export default function CaseStudyClient() {
             and documented everything.
           </h1>
           <p className="cs-hero-sub anim-3">
-            This is not a portfolio piece. It is a live record of how ADA thinks, builds, and solves — on our own problem, before yours.
+            This is not a portfolio piece. It is a live record of how ADA thinks, builds, and solves: on our own problem, before yours.
           </p>
           <div className="cs-hero-meta anim-3">
             <div className="cs-stat-group">
@@ -313,7 +313,7 @@ export default function CaseStudyClient() {
 
         {/* 02 BUILD */}
         <div className="cs-section">
-          <SectionLabel num="02" text="Phase One — The Build" />
+          <SectionLabel num="02" text="Phase One - The Build" />
           <h2 className="cs-section-h2">Every section designed,<br />written, and <em>shipped.</em></h2>
           <p className="cs-body">
             The site needed to do three things simultaneously: position ACG as a credible parent group, position Vantara as a serious brokerage operation, and position ADA as an agency worth hiring. Three audiences, one architecture, zero margin for a generic output.
@@ -403,13 +403,13 @@ export default function CaseStudyClient() {
           <SectionLabel num="05" text="What Was Built" />
           <h2 className="cs-section-h2">Every deliverable,<br /><em>documented.</em></h2>
           <div className="cs-deliverables">
-            <DelRow delay={0} num="001" title="ACG Website — Full Build" body="Complete site architecture and build. ACG home, Vantara division, ADA division, Contact. All copy written and implemented from scratch. Premium design language applied throughout." status="Live" />
+            <DelRow delay={0} num="001" title="ACG Website - Full Build" body="Complete site architecture and build. ACG home, Vantara division, ADA division, Contact. All copy written and implemented from scratch. Premium design language applied throughout." status="Live" />
             <DelRow delay={50} num="002" title="Vantara Division Page" body="Full positioning and copy for the acquisition brokerage arm. Vehicles, property, assets. Advisory-first model communicated clearly. Audience-specific CTAs and WhatsApp routing." status="Live" />
-            <DelRow delay={100} num="003" title="ADA Section — Full Methodology" body="Four methodology pillars, three pricing tiers (Foundation, Growth, Authority), How We Work, testimonial block with real client quote, FAQ accordion, case study cards, and conversion-focused close section." status="Live" />
-            <DelRow delay={150} num="004" title="Case Studies — Two Clients" body="Dedicated full-page case studies for both clients. Complete narrative, context, and outcome framing. Linked from the ADA section with working back navigation." status="Live" />
-            <DelRow delay={200} num="005" title="Insights Section — 5 Blog Posts" body="Five original articles written and published. Covering AI in business, digital infrastructure, the South African SME opportunity, and ADA&apos;s positioning thesis. SEO-oriented content with long-term compounding intent." status="Live" />
+            <DelRow delay={100} num="003" title="ADA Section - Full Methodology" body="Four methodology pillars, three pricing tiers (Foundation, Growth, Authority), How We Work, testimonial block with real client quote, FAQ accordion, case study cards, and conversion-focused close section." status="Live" />
+            <DelRow delay={150} num="004" title="Case Studies - Two Clients" body="Dedicated full-page case studies for both clients. Complete narrative, context, and outcome framing. Linked from the ADA section with working back navigation." status="Live" />
+            <DelRow delay={200} num="005" title="Insights Section - 5 Blog Posts" body="Five original articles written and published. Covering AI in business, digital infrastructure, the South African SME opportunity, and ADA&apos;s positioning thesis. SEO-oriented content with long-term compounding intent." status="Live" />
             <DelRow delay={250} num="006" title="Digital Business Cards" body="Founder digital business cards deployed at clean URLs. Tap or scan to open. Matching ACG design language. WhatsApp, call, and email actions built in." status="Live" />
-            <DelRow delay={300} num="007" title="AI-Powered Audit Tool — V1 and V2" body="13-step diagnostic tool. V1 launched questionnaire-driven, same week as site. V2 upgraded to live website crawl, PageSpeed API integration, and Supabase lead capture - all within days. Real data, not self-reported." status="Live" />
+            <DelRow delay={300} num="007" title="AI-Powered Audit Tool - V1 and V2" body="13-step diagnostic tool. V1 launched questionnaire-driven, same week as site. V2 upgraded to live website crawl, PageSpeed API integration, and Supabase lead capture - all within days. Real data, not self-reported." status="Live" />
             <DelRow delay={350} num="008" title="Google Search Console Setup" body="Both sites verified in GSC. Sitemaps submitted. URL inspection and manual indexing executed. Structured data (LocalBusiness, FAQ, Review schema) validated." status="Live" />
             <DelRow delay={400} num="009" title="Next.js 14 Migration" body="Full migration to App Router with TypeScript and Tailwind. Scaffolded in dedicated branch. Each SPA page becoming a server-rendered page.tsx. The structural fix that takes the site from 1 indexed page to full coverage." status="In Progress" />
           </div>
@@ -485,7 +485,7 @@ export default function CaseStudyClient() {
             We showed you the stack because the stack is not what you are buying. You are buying the judgment to know when a partial fix is not enough. The speed to move from diagnosis to deployed solution in the same week. The understanding of how a business actually converts.
           </p>
           <div className="cs-founder-voice">
-            <div className="cs-founder-label">Founder — Luyanda, ACG</div>
+            <div className="cs-founder-label">Founder - Luyanda, ACG</div>
             <div className="cs-founder-quote">&ldquo;ADA is a two-person team running at a pace most agencies cannot match with ten. That is not a claim. This page is the evidence.&rdquo;</div>
           </div>
           <div style={{ marginTop: 52, display: 'flex', justifyContent: 'center', gap: 14, flexWrap: 'wrap' }}>

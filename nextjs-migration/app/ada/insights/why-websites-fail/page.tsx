@@ -34,7 +34,7 @@ export default function WhyWebsitesFail() {
 
         <section style={{padding:'80px 60px'}} aria-labelledby="wwf-brochure">
           <h2 className="section-title" id="wwf-brochure">The brochure era hangover</h2>
-          <p className="section-body">Most business websites were built with one goal: exist. Get online, put your services up, add a contact page, done. That was the standard for twenty years — and for twenty years it was good enough. Having a website at all put you ahead of businesses that didn&apos;t.</p>
+          <p className="section-body">Most business websites were built with one goal: exist. Get online, put your services up, add a contact page, done. That was the standard for twenty years, and for twenty years it was good enough. Having a website at all put you ahead of businesses that didn&apos;t.</p>
           <p className="section-body" style={{marginTop:'20px'}}>That standard is dead. Being online is no longer a differentiator. Every competitor you have is online. The question is no longer whether your website exists: it&apos;s whether it works. And for most businesses, the honest answer is no.</p>
         </section>
 
@@ -67,7 +67,7 @@ export default function WhyWebsitesFail() {
 
         <section style={{padding:'80px 60px'}} aria-labelledby="wwf-five">
           <h2 className="section-title" id="wwf-five">The five reasons websites don&apos;t convert</h2>
-          <p className="section-body">After rebuilding websites for businesses across KZN, the same problems appear over and over. They&apos;re not random. They&apos;re predictable — and they&apos;re fixable.</p>
+          <p className="section-body">After rebuilding websites for businesses across KZN, the same problems appear over and over. They&apos;re not random. They&apos;re predictable. And they&apos;re fixable.</p>
           <div style={{marginTop:'56px', borderTop:'1px solid var(--border)'}}>
             <div style={{padding:'32px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'32px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'32px', fontWeight:300, color:'var(--gold)', flexShrink:0, lineHeight:1, width:'48px'}}>01</div>

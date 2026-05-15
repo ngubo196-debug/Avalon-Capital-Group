@@ -71,7 +71,7 @@ const STEPS: Step[] = [
       {v:"Consistently in the top 3 results", l:"Top 3 on Google - consistently"},
       {v:"On page 1, but not the top 3 spots", l:"Page 1 - but not top 3"},
       {v:"Appears sometimes, inconsistently", l:"Inconsistent - sometimes there, sometimes not"},
-      {v:"Rarely appears — competitors outrank me consistently", l:"Rarely appears - competitors dominate"},
+      {v:"Rarely appears. Competitors outrank me consistently.", l:"Rarely appears - competitors dominate"},
       {v:"Does not appear or has never been checked", l:"Don't appear / never checked"}
     ]
   },
@@ -81,7 +81,7 @@ const STEPS: Step[] = [
     sub:"The listing on Google Maps with your address, hours, photos, and reviews.",
     type:'radio' as const, key:'googleProfile',
     opts:[
-      {v:"Complete — photos, services, hours, and regular updates", l:"Fully optimised", s:"Photos, services, hours, recent posts, and reviews"},
+      {v:"Complete: photos, services, hours, and regular updates", l:"Fully optimised", s:"Photos, services, hours, recent posts, and reviews"},
       {v:"Set up but not regularly updated", l:"Set up - but inactive", s:"Claimed and filled in, but rarely touched"},
       {v:"Claimed but barely filled in", l:"Claimed - mostly empty", s:"We have it, it's just not complete"},
       {v:"Not claimed or not sure if I have one", l:"Not claimed / unsure"}
@@ -93,9 +93,9 @@ const STEPS: Step[] = [
     sub:"Pick the one closest to the truth.",
     type:'radio' as const, key:'socialPresence',
     opts:[
-      {v:"Active and intentional — consistent content that drives enquiries", l:"Active and strategic", s:"Regular posts, real engagement, leads from social"},
-      {v:"Inconsistent — we post when we remember", l:"Inconsistent - ad hoc posting"},
-      {v:"Rarely active — accounts exist but barely used", l:"Barely active", s:"Accounts exist but months pass without posts"},
+      {v:"Active and intentional: consistent content that drives enquiries", l:"Active and strategic", s:"Regular posts, real engagement, leads from social"},
+      {v:"Inconsistent. We post when we remember.", l:"Inconsistent - ad hoc posting"},
+      {v:"Rarely active: accounts exist but barely used", l:"Barely active", s:"Accounts exist but months pass without posts"},
       {v:"Not present on social media", l:"Not on social media"}
     ]
   },
@@ -105,10 +105,10 @@ const STEPS: Step[] = [
     sub:"Think about your website, social pages, and Google listing together.",
     type:'radio' as const, key:'leadCapture',
     opts:[
-      {v:"Easy — clear call-to-action, WhatsApp link, quote or booking form", l:"Easy - clear path to contact", s:"WhatsApp button, quote form, or click-to-call"},
-      {v:"Acceptable — contact options exist but aren't prominent", l:"Acceptable - but not optimised"},
-      {v:"Difficult — contact info is buried or hard to find", l:"Difficult - contact is buried"},
-      {v:"Unclear — visitors likely leave without knowing what to do", l:"Unclear - no obvious next step"}
+      {v:"Easy: clear call-to-action, WhatsApp link, quote or booking form", l:"Easy - clear path to contact", s:"WhatsApp button, quote form, or click-to-call"},
+      {v:"Acceptable, but contact options aren't prominent", l:"Acceptable - but not optimised"},
+      {v:"Difficult. Contact info is buried or hard to find.", l:"Difficult - contact is buried"},
+      {v:"Unclear. Visitors likely leave without knowing what to do.", l:"Unclear - no obvious next step"}
     ]
   },
   {
@@ -117,9 +117,9 @@ const STEPS: Step[] = [
     sub:"Same logo, colours, tone, and message: on your website, social, and Google listing.",
     type:'radio' as const, key:'brandConsistency',
     opts:[
-      {v:"Consistent — same look, tone, and message everywhere", l:"Consistent across all platforms"},
-      {v:"Mostly consistent — but some platforms feel disconnected", l:"Mostly consistent - minor gaps"},
-      {v:"Inconsistent — different look and feel across platforms", l:"Inconsistent - noticeably different"},
+      {v:"Consistent: same look, tone, and message everywhere", l:"Consistent across all platforms"},
+      {v:"Mostly consistent, but some platforms feel disconnected", l:"Mostly consistent - minor gaps"},
+      {v:"Inconsistent: different look and feel across platforms", l:"Inconsistent - noticeably different"},
       {v:"No real thought given to brand consistency", l:"Not considered yet"}
     ]
   },

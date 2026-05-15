@@ -34,7 +34,7 @@ export default function AIAwareness() {
 
         <section style={{padding:'80px 60px'}} aria-labelledby="ai-why-now">
           <h2 className="section-title" id="ai-why-now">Why websites? Why now?</h2>
-          <p className="section-body">Websites aren&apos;t new. But their role has changed completely. For twenty years, a website was a brochure, a business card, a checkbox. Now it&apos;s something else entirely. It has become the conversion home base of the internet — and four technical forces are driving that shift.</p>
+          <p className="section-body">Websites aren&apos;t new. But their role has changed completely. For twenty years, a website was a brochure, a business card, a checkbox. Now it&apos;s something else entirely. It has become the conversion home base of the internet, and four technical forces are driving that shift.</p>
         </section>
 
         <div className="divider"></div>
@@ -62,7 +62,7 @@ export default function AIAwareness() {
 
         <section style={{padding:'80px 60px'}} aria-labelledby="ai-force4">
           <h2 className="section-title" id="ai-force4">Force 4 - Platforms are training the market</h2>
-          <p className="section-body">When Wix, Webflow, Framer, and Shopify all push AI website building into the mainstream, that&apos;s not a tech trend. It&apos;s market conditioning. Business owners now think &apos;AI websites are normal&apos; — which changes expectations, and expectations change spending. These cycles are not about innovation. They are about perception shifts. The market moves when perception shifts from &apos;that&apos;s interesting&apos; to &apos;we can&apos;t ignore this anymore.&apos;</p>
+          <p className="section-body">When Wix, Webflow, Framer, and Shopify all push AI website building into the mainstream, that&apos;s not a tech trend. It&apos;s market conditioning. Business owners now think &apos;AI websites are normal&apos;, which changes expectations, and expectations change spending. These cycles are not about innovation. They are about perception shifts. The market moves when perception shifts from &apos;that&apos;s interesting&apos; to &apos;we can&apos;t ignore this anymore.&apos;</p>
         </section>
 
         <div className="divider"></div>
@@ -70,7 +70,7 @@ export default function AIAwareness() {
         <section style={{padding:'80px 60px'}} aria-labelledby="ai-means">
           <h2 className="section-title" id="ai-means">What this actually means</h2>
           <p className="section-body">Right now, businesses feel pressure to modernise. Pressure to convert better. Pressure to look credible and keep up. They don&apos;t say &apos;we need AI.&apos; They say &apos;we need a better website.&apos; And that is how awareness shows up in the real world.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>AI has not changed how websites are built. It has changed what websites are responsible for. They are no longer informational, passive, or optional. They are now revenue engines, trust machines, and conversion hubs. The website is where AI becomes visible — and visible value is what sells.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>AI has not changed how websites are built. It has changed what websites are responsible for. They are no longer informational, passive, or optional. They are now revenue engines, trust machines, and conversion hubs. The website is where AI becomes visible. Visible value is what sells.</p>
           <p className="section-body" style={{marginTop:'20px'}}>This pattern has been seen in every emerging market. Money never flows to the deepest tech or the smartest tools. It flows to the clearest outcome, the easiest win, the most obvious upgrade. Right now, that upgrade is: my website looks sharper, converts better, and feels modern.</p>
         </section>
 

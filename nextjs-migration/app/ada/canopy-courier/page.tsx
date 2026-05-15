@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Canopy Courier — Case Study | Avalon Digital Agency',
+  title: 'Canopy Courier: Case Study | Avalon Digital Agency',
   description: 'How ADA built a fleet revenue system for Canopy Courier. Durban, KwaZulu-Natal.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/canopy-courier' },
 };
@@ -61,7 +61,7 @@ export default function CanopyCourier() {
           <p className="section-body">The gap between where Canopy Courier was and where the business could be wasn&apos;t a design problem. It was a strategy problem that design had to solve.</p>
           <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>A single retail customer is worth R3,000–R8,000. A single fleet client is worth R100,000–R500,000 per year. Five fleet clients alone represents R1.2M in annual recurring revenue.</p>
-            <cite style={{display:'block', marginTop:'14px', fontSize:'11px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>Revenue modelling — ADA strategy analysis</cite>
+            <cite style={{display:'block', marginTop:'14px', fontSize:'11px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>Revenue modelling: ADA strategy analysis</cite>
           </blockquote>
           <p className="section-body" style={{marginTop:'40px'}}>The website was optimised for the smaller opportunity and silent on the larger one. Every week without fleet positioning was revenue left on the table, not because the service wasn&apos;t there, but because the digital infrastructure wasn&apos;t.</p>
           <p style={{marginTop:'32px', fontSize:'12px', fontStyle:'italic', color:'var(--text-dim)', lineHeight:1.8}}>Past performance is not indicative of future results. All figures shown are for illustrative purposes and may vary based on market conditions and individual circumstances. This does not constitute financial or investment advice.</p>
