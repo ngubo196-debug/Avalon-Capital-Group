@@ -74,6 +74,7 @@ export default function ADA() {
           <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>If your website isn&apos;t actively working for your business, it&apos;s quietly working against it.</p>
           </blockquote>
+          <a href="/ada/web-design-durban" style={{display:'inline-block', marginTop:'24px', fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)'}}>Web design in Durban →</a>
         </section>
 
         <div className="divider"></div>
