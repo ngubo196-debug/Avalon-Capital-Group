@@ -55,6 +55,53 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
+        {/* LocalBusiness JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'LocalBusiness',
+              name: 'Avalon Capital Group',
+              description: 'Business acquisition brokerage and AI digital agency based in Durban, KwaZulu-Natal, South Africa.',
+              url: 'https://avaloncapitalgroup.co.za',
+              telephone: '',
+              email: '',
+              address: {
+                '@type': 'PostalAddress',
+                addressLocality: 'Durban',
+                addressRegion: 'KwaZulu-Natal',
+                addressCountry: 'ZA',
+              },
+              geo: {
+                '@type': 'GeoCoordinates',
+                latitude: -29.8587,
+                longitude: 31.0218,
+              },
+              areaServed: [
+                { '@type': 'City', name: 'Durban' },
+                { '@type': 'State', name: 'KwaZulu-Natal' },
+                { '@type': 'Country', name: 'South Africa' },
+              ],
+              hasOfferCatalog: {
+                '@type': 'OfferCatalog',
+                name: 'Services',
+                itemListElement: [
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Business Acquisition Brokerage' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vehicle Acquisition' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design Durban' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Digital Agency' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services KwaZulu-Natal' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Presence Audit' } },
+                ],
+              },
+              sameAs: [
+                'https://www.linkedin.com/company/avalon-capital-group',
+              ],
+            }),
+          }}
+        />
+
         {/* Google Fonts */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />

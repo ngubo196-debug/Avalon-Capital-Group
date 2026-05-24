@@ -36,8 +36,8 @@ export default function Home() {
           <h2 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(16px, 1.4vw, 20px)', fontWeight:400, color:'#8A8680', margin:'0.5rem 0 1rem', lineHeight:1.5, display:'block', visibility:'visible', maxWidth:'480px'}}>Avalon Capital Group structures business acquisitions and builds revenue-generating digital systems across South Africa.</h2>
           <p className="hero-subtitle">Two divisions. One mandate: build businesses that compound.</p>
           <div className="hero-actions">
-            <Link className="btn-primary" href="/about" style={{color:'#141414'}}>Our Structure</Link>
-            <Link className="btn-ghost" href="/contact">Start a Conversation</Link>
+            <Link className="btn-primary" href="/contact" style={{color:'#141414'}}>Start a Conversation</Link>
+            <Link className="btn-ghost" href="/about">Our Structure</Link>
           </div>
           <div className="hero-scroll" aria-hidden="true">
             <div className="hero-scroll-line"></div>
