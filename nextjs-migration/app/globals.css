@@ -227,7 +227,7 @@
     font-size: 10px;
     letter-spacing: 0.25em;
     text-transform: uppercase;
-    color: #141414;
+    color: #141414 !important;
     background: var(--gold);
     border: 1px solid var(--gold);
     padding: 16px 36px;
