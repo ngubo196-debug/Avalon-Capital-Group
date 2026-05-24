@@ -86,6 +86,13 @@ export default function WebDesignConstructionKZN() {
 
         <div className="divider"></div>
 
+        <section style={{padding:'64px 0', textAlign:'center'}}>
+          <p style={{fontFamily:'Montserrat', fontSize:'13px', letterSpacing:'0.1em', color:'var(--text-muted)', marginBottom:'24px', textTransform:'uppercase'}}>Seen enough?</p>
+          <a className="btn-primary" href="/audit">Get Your Free Audit</a>
+        </section>
+
+        <div className="divider"></div>
+
         <section aria-labelledby="proof-heading">
           <div className="section-label">Case Study</div>
           <h2 className="section-title" id="proof-heading">Afripact Civils. From zero presence to fully indexed.</h2>
