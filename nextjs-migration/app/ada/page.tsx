@@ -4,7 +4,7 @@ import HowWeWork from './HowWeWork';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Avalon Digital Agency | ADA | Websites That Close Deals',
+  title: 'Avalon Digital Agency Durban | AI Websites That Rank & Close Deals',
   description: 'ADA rebuilds South African business websites into revenue systems that attract the right clients, build trust fast, and convert visitors into paying customers.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada' },
 };

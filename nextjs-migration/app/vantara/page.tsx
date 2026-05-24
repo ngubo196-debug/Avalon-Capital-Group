@@ -3,8 +3,8 @@ import Nav from '../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Vantara | Premium Acquisition Brokerage | Avalon Capital Group',
-  description: "Vantara is Avalon's premium acquisition brokerage. We represent buyers in vehicle and property transactions - structuring deals, managing risk, and eliminating costly mistakes.",
+  title: 'Vantara | Vehicle & Property Acquisition Broker Durban | Avalon Capital Group',
+  description: "Vantara is Avalon's premium acquisition brokerage. We represent buyers in vehicle and property transactions, structuring deals, managing risk, and eliminating costly mistakes.",
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara' },
 };
 
