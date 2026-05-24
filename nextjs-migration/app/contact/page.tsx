@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ContactContent from './ContactContent';
 
 export const metadata: Metadata = {
-  title: 'Contact | Avalon Capital Group',
+  title: 'Contact Avalon Capital Group | Durban Business Acquisitions & Digital Services',
   description: 'Reach Avalon Capital Group directly via WhatsApp or email. Whether it is a deal, a project, or a partnership, every great result begins with a conversation.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/contact' },
 };
