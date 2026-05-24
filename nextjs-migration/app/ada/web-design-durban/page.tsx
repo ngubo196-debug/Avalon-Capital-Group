@@ -14,6 +14,13 @@ export default function WebDesignDurban() {
       <Nav />
       <div id="page-web-design-durban" className="page" role="main">
 
+        <style>{`
+          @media (max-width: 768px) {
+            .wdd-grid-3 { grid-template-columns: 1fr !important; }
+            .wdd-grid-2 { grid-template-columns: 1fr !important; }
+          }
+        `}</style>
+
         <div className="inner-hero">
           <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
@@ -39,7 +46,7 @@ export default function WebDesignDurban() {
         <section aria-labelledby="what-heading">
           <div className="section-label">What We Build</div>
           <h2 className="section-title" id="what-heading">Three things every site we build must do.</h2>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
+          <div className="wdd-grid-3" style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'36px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Built for Google from day one</div>
               <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Proper SEO architecture, schema markup, fast Core Web Vitals, and clean indexing from the first deploy.</div>
@@ -61,7 +68,7 @@ export default function WebDesignDurban() {
           <div className="section-label">Who It&apos;s For</div>
           <h2 className="section-title" id="for-heading">Built for businesses that compete on quality.</h2>
           <p className="section-body">We work with fleet companies, construction firms, logistics operators, professional services, and retail businesses across Durban and KwaZulu-Natal.</p>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
+          <div className="wdd-grid-2" style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'36px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Fleet Companies</div>
             </div>
