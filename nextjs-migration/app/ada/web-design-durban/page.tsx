@@ -69,25 +69,32 @@ export default function WebDesignDurban() {
           <h2 className="section-title" id="for-heading">Built for businesses that compete on quality.</h2>
           <p className="section-body">We work with fleet companies, construction firms, logistics operators, professional services, and retail businesses across Durban and KwaZulu-Natal.</p>
           <div className="wdd-grid-2" style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
+            <a href="/ada/web-design-fleet-companies" style={{background:'var(--surface)', padding:'36px', display:'block', textDecoration:'none', color:'inherit', transition:'border-color 0.2s'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Fleet Companies</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
+            </a>
+            <a href="/ada/web-design-construction-kzn" style={{background:'var(--surface)', padding:'36px', display:'block', textDecoration:'none', color:'inherit', transition:'border-color 0.2s'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Construction &amp; Civil</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
+            </a>
+            <a href="/ada/web-design-logistics-transport" style={{background:'var(--surface)', padding:'36px', display:'block', textDecoration:'none', color:'inherit', transition:'border-color 0.2s'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Logistics &amp; Transport</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
+            </a>
+            <a href="/ada/web-design-professional-services-durban" style={{background:'var(--surface)', padding:'36px', display:'block', textDecoration:'none', color:'inherit', transition:'border-color 0.2s'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Professional Services</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
+            </a>
+            <a href="/ada/web-design-retail-ecommerce" style={{background:'var(--surface)', padding:'36px', display:'block', textDecoration:'none', color:'inherit', transition:'border-color 0.2s'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Retail &amp; E-commerce</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
+            </a>
+            <a href="/ada/web-design-property-real-estate" style={{background:'var(--surface)', padding:'36px', display:'block', textDecoration:'none', color:'inherit', transition:'border-color 0.2s'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Property &amp; Real Estate</div>
-            </div>
+            </a>
           </div>
+        </section>
+
+        <div className="divider"></div>
+
+        <section style={{padding:'64px 0', textAlign:'center'}}>
+          <p style={{fontFamily:'Montserrat', fontSize:'13px', letterSpacing:'0.1em', color:'var(--text-muted)', marginBottom:'24px', textTransform:'uppercase'}}>Seen enough?</p>
+          <a className="btn-primary" href="/audit">Get Your Free Audit</a>
         </section>
 
         <div className="divider"></div>
