@@ -102,8 +102,8 @@ export default function WebDesignProfessionalServicesDurban() {
         <section aria-labelledby="proof-heading">
           <div className="section-label">Our Work</div>
           <h2 className="section-title" id="proof-heading">We build for businesses that compete on trust.</h2>
-          <p className="section-body">We have built digital presences for construction firms and fleet operators that went from zero visibility to fully indexed and ranking within weeks. Professional services demand the same standard.</p>
-          <Link href="/ada/afripact-civils" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>See how we work →</Link>
+          <p className="section-body">We have built digital presences for businesses across KZN that went from zero visibility to fully indexed and ranking within weeks. The same structured process applies to every professional services firm we work with.</p>
+          <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the ACG case study →</Link>
         </section>
 
         <div className="divider"></div>

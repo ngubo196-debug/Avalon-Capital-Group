@@ -95,9 +95,9 @@ export default function WebDesignPietermaritzburg() {
 
         <section aria-labelledby="proof-heading">
           <div className="section-label">Case Study</div>
-          <h2 className="section-title" id="proof-heading">Built, launched, and indexed within 14 days.</h2>
-          <p className="section-body">Afripact Civils had no website, no search visibility, and no structured online presence. We designed and launched a fully optimised Next.js website and had its pages indexed on Google within two weeks of launch.</p>
-          <Link href="/ada/afripact-civils" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the Afripact case study →</Link>
+          <h2 className="section-title" id="proof-heading">How we built ACG&apos;s own search presence from scratch.</h2>
+          <p className="section-body">Avalon Capital Group&apos;s own website was migrated to Next.js, structured for search, and submitted to Google Search Console. Every page indexed correctly within days. We apply the same foundations to every client site we build in KZN.</p>
+          <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the ACG case study →</Link>
         </section>
 
         <div className="divider"></div>

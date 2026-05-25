@@ -101,9 +101,9 @@ export default function WebDesignDurban() {
 
         <section aria-labelledby="proof-heading">
           <div className="section-label">Case Study</div>
-          <h2 className="section-title" id="proof-heading">From no presence to fully indexed in 14 days.</h2>
-          <p className="section-body">Afripact Civils had no digital presence. We built a fully optimised Next.js site, submitted to Google Search Console, and had all pages indexed within two weeks.</p>
-          <Link href="/ada/afripact-civils" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the case study →</Link>
+          <h2 className="section-title" id="proof-heading">How we built ACG&apos;s own search presence from scratch.</h2>
+          <p className="section-body">Before we sell digital presence, we build our own. Avalon Capital Group&apos;s website was migrated to Next.js, structured for search, and submitted to Google Search Console. Every page indexed correctly within days. This is our process working on our own problem.</p>
+          <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the ACG case study →</Link>
         </section>
 
         <div className="divider"></div>

@@ -75,6 +75,8 @@ export default function ADA() {
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>If your website isn&apos;t actively working for your business, it&apos;s quietly working against it.</p>
           </blockquote>
           <a href="/ada/web-design-durban" style={{display:'inline-block', marginTop:'24px', fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)'}}>Web design in Durban →</a>
+          <a href="/ada/seo-agency-durban" style={{display:'inline-block', marginTop:'12px', fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)'}}>SEO services in Durban →</a>
+          <a href="/ada/ai-automation-south-africa" style={{display:'inline-block', marginTop:'12px', fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)'}}>AI automation for your business →</a>
         </section>
 
         <div className="divider"></div>

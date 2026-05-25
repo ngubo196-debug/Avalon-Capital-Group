@@ -96,7 +96,7 @@ export default function WebDesignConstructionKZN() {
         <section aria-labelledby="proof-heading">
           <div className="section-label">Case Study</div>
           <h2 className="section-title" id="proof-heading">Afripact Civils. From zero presence to fully indexed.</h2>
-          <p className="section-body">Afripact Civils had no website and no digital presence. We built a fully optimised Next.js site from scratch, structured for Google, and had all pages indexed within 14 days of launch.</p>
+          <p className="section-body">Afripact Civils had no digital presence. We migrated their platform to Next.js, structured the site for Google, and had all pages indexed within two weeks of launch.</p>
           <Link href="/ada/afripact-civils" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the Afripact case study →</Link>
         </section>
 
