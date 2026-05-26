@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ':*)",
+      "Bash(sed -n '1292,1300p' \"C:\\\\Users\\\\Luyanda\\\\Desktop\\\\Avalon-Capital-Group\\\\index.html\")",
+      "Bash(sed -n '1348,1360p' \"C:\\\\Users\\\\Luyanda\\\\Desktop\\\\Avalon-Capital-Group\\\\index.html\")",
+      "Bash(sed -n '1338,1348p' \"C:\\\\Users\\\\Luyanda\\\\Desktop\\\\Avalon-Capital-Group\\\\index.html\")",
+      "Bash(sed -n '1388,1396p' \"C:\\\\Users\\\\Luyanda\\\\Desktop\\\\Avalon-Capital-Group\\\\index.html\")",
+      "Bash(sed -n '1376,1386p' \"C:\\\\Users\\\\Luyanda\\\\Desktop\\\\Avalon-Capital-Group\\\\index.html\")",
+      "Bash(sed -n '1436,1442p' \"C:\\\\Users\\\\Luyanda\\\\Desktop\\\\Avalon-Capital-Group\\\\index.html\")",
+      "Bash(awk NR>=1237 && NR<=1246:*)",
+      "Bash(awk NR>=1220 && NR<=1238:*)",
+      "Bash(awk NR>=180 && NR<=220:*)",
+      "Read(//c/Users/Luyanda/Desktop/pitchd/**)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000/api/regenerate -X POST -H 'Content-Type: application/json' -d '{ *)"
+    ]
+  }
+}

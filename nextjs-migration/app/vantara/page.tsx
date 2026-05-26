@@ -56,7 +56,7 @@ export default function Vantara() {
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px', position:'relative', zIndex:2}}>Vantara · Acquisition Brokerage · South Africa</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px', position:'relative', zIndex:2}}>Deal Execution &amp; Asset Acquisition · Durban, KwaZulu-Natal</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(42px,6vw,80px)', fontWeight:400, lineHeight:1.05, color:'var(--text-primary)', maxWidth:'700px', marginBottom:'28px', position:'relative', zIndex:2}}>We don&apos;t participate in deals.<br /><em style={{color:'var(--gold)'}}>We control them.</em></h1>
-          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px', marginBottom:'40px', position:'relative', zIndex:2}}>Vantara identifies, structures, and executes high-value transactions across vehicles, property, and strategic opportunities, working exclusively in the interest of the client, from first conversation to final close. Based in Durban, KwaZulu-Natal, operating across South Africa.</p>
+          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px', marginBottom:'40px', position:'relative', zIndex:2}}>Most people making a high-value acquisition are doing it alone - against a dealer, an agent, or a seller who does this every day. Vantara changes that. We work exclusively for the buyer, from the first conversation through to handover. Vehicles, property, and strategic opportunities. Based in Durban, operating across South Africa.</p>
           <a href="https://wa.me/27712205313?text=Hi%2C%20I%20have%20a%20deal%20I%27d%20like%20to%20discuss%20with%20Vantara." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{position:'relative', zIndex:9999}}>Start the Conversation</a>
         </div>
 
@@ -65,7 +65,7 @@ export default function Vantara() {
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-difference">
           <div className="section-label">01 - The Difference</div>
           <h2 className="section-title" id="vantara-difference">Advisory-first.<br /><em>Always.</em></h2>
-          <p className="section-body" style={{maxWidth:'560px'}}>Most acquisition channels have a financial incentive to close, not necessarily to close the right deal for you. Vantara carries none of that conflict. We work on mandate, for the client, from brief to handover.</p>
+          <p className="section-body" style={{maxWidth:'560px'}}>The dealer wants to move stock. The agent wants to close the listing. The finance desk wants to maximise rate. None of them are working for you - and most buyers only realise that after the deal is done. Vantara carries none of that conflict. We work on mandate, for the client, and our position is simple: the right deal, or no deal.</p>
 
           <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'48px'}}>
             <div style={{background:'var(--surface)', padding:'48px 40px'}}>
@@ -167,7 +167,7 @@ export default function Vantara() {
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-insights-heading">
           <div className="section-label">Insights</div>
           <h2 className="section-title" id="vantara-insights-heading">We share how we think.</h2>
-          <p className="section-body" style={{maxWidth:'520px'}}>Every piece here comes from real experience in the market, not theory. Read it, apply it, or reach out if it raises a question.</p>
+          <p className="section-body" style={{maxWidth:'520px'}}>Everything here comes from real transactions - what we saw, what we found, and what it cost the people who went in without the right information. Read it before your next acquisition. It will change how you see the process.</p>
 
           <div style={{marginTop:'48px', display:'flex', flexDirection:'column', gap:0}}>
             <Link href="/vantara/insight-1" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
@@ -194,7 +194,7 @@ export default function Vantara() {
               <p style={{fontSize:'18px', color:'var(--text-muted)', flexShrink:0, marginTop:'4px'}}>→</p>
             </Link>
           </div>
-          <p style={{fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', marginTop:'32px'}}>Written from the inside. Every piece is worth your time, that&apos;s the only standard we publish to.</p>
+          <p style={{fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', marginTop:'32px'}}>Written by Luyanda, from the inside of every deal. If something raises a question, start a conversation.</p>
         </section>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-faq-heading">
@@ -286,7 +286,7 @@ export default function Vantara() {
         <section style={{padding:'100px 60px', textAlign:'center'}}>
           <div className="section-label" style={{justifyContent:'center'}}>Engage Vantara</div>
           <h2 className="section-title" style={{textAlign:'center'}}>Bring us<br /><em>the deal.</em></h2>
-          <p className="section-body" style={{maxWidth:'480px', margin:'0 auto 40px'}}>Tell us what you&apos;re acquiring, what you&apos;re exiting, or what opportunity you&apos;re looking at. We&apos;ll tell you honestly whether we can add value, and how.</p>
+          <p className="section-body" style={{maxWidth:'480px', margin:'0 auto 40px'}}>Tell us what you&apos;re looking at. It doesn&apos;t have to be fully formed - a vehicle, a property, an opportunity you&apos;re not sure about. We&apos;ll tell you honestly whether Vantara can add value, and what that looks like. No obligation. No pitch.</p>
           <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'16px'}}>
             <a href="https://wa.me/27712205313?text=Hi%2C%20I%20have%20a%20deal%20I%27d%20like%20to%20discuss%20with%20Vantara." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{position:'relative', zIndex:9999}}>Start the Conversation</a>
             <Link className="btn-ghost" href="/" style={{position:'relative', zIndex:10}}>Back to Avalon Capital Group</Link>
