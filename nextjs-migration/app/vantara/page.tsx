@@ -193,8 +193,17 @@ export default function Vantara() {
               </div>
               <p style={{fontSize:'18px', color:'var(--text-muted)', flexShrink:0, marginTop:'4px'}}>→</p>
             </Link>
+
+            <Link href="/vantara/insight-4" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
+              <div>
+                <p style={{fontSize:'10px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Automotive</p>
+                <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3}}>First vehicle. Two options. One right decision.</p>
+                <p style={{fontSize:'13px', lineHeight:1.65, color:'var(--text-secondary)', marginTop:'8px'}}>What Vantara does before the deal starts - and how a first-time buyer made the right call with full information.</p>
+              </div>
+              <p style={{fontSize:'18px', color:'var(--text-muted)', flexShrink:0, marginTop:'4px'}}>→</p>
+            </Link>
           </div>
-          <p style={{fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', marginTop:'32px'}}>Written by Luyanda, from the inside of every deal. If something raises a question, start a conversation.</p>
+          <p style={{fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', marginTop:'32px'}}>Written by Luyanda, from the inside of every deal. If something raises a question, <a href="https://wa.me/27712205313" target="_blank" rel="noopener noreferrer" style={{color:'var(--gold)', textDecoration:'none'}}>start a conversation</a>.</p>
         </section>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-faq-heading">
