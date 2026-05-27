@@ -26,7 +26,8 @@ export default function VantaraProperty() {
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara · Property Acquisition</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>Deal Insight - Commercial Property</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5.5vw,68px)', fontWeight:400, lineHeight:1.05, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>Institutional-grade<br />packaging.<br /><em style={{color:'var(--gold)'}}>Private investor entry.</em></h1>
-          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px', marginBottom:'40px'}}>A commercial property opportunity in Durban, identified, analysed, and packaged by Vantara at an institutional level for a private investor entry of R875 000 into an 11.24% gross yield asset.</p>
+          <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px', marginBottom:'24px'}}>A commercial property opportunity in Durban, identified, analysed, and packaged by Vantara at an institutional level for a private investor entry of R875 000 into an 11.24% gross yield asset.</p>
+          <p style={{fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', maxWidth:'500px', lineHeight:1.75, marginBottom:'40px'}}>This opportunity was identified, analysed, and fully packaged by Vantara. The property was sold by the vendor before the transaction could close. The work here stands as a demonstration of methodology - this is what Vantara produces before a single rand is committed.</p>
         </div>
 
         <div className="divider"></div>
