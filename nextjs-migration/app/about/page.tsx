@@ -4,8 +4,8 @@ import Footer from '../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'About Avalon Capital Group | Business Group | Durban, South Africa',
-  description: 'Avalon Capital Group is a South African business group operating through Vantara (acquisition brokerage) and Avalon Digital Agency (AI-powered digital services).',
+  title: 'Avalon Capital Group | KwaZulu-Natal Business Group | South Africa',
+  description: 'ACG is a KZN-based holding group with two operating divisions - Vantara for high-value acquisition brokerage and Avalon Digital Agency for digital growth. Registered, local, and built to deliver.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/about' },
 };
 
