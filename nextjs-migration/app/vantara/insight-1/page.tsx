@@ -22,7 +22,7 @@ export default function VantaraInsight1() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/vantara" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
+          <Link className="back-btn" href="/vantara#insights" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara Insights · Automotive</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>Insider Perspective</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,5vw,64px)', fontWeight:400, lineHeight:1.08, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>Why buying a car alone is the most expensive thing<br /><em style={{color:'var(--gold)'}}>you&apos;ll do this year.</em></h1>

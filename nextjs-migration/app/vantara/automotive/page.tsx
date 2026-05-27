@@ -22,7 +22,7 @@ export default function VantaraAutomotive() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/vantara" style={{position:'relative', zIndex:10}}>← Back to Vantara</Link>
+          <Link className="back-btn" href="/vantara#deal-insights" style={{position:'relative', zIndex:10}}>← Back to Vantara</Link>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara · Automotive Deal Execution</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>Deal Insight - Vehicle Acquisition</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5.5vw,68px)', fontWeight:400, lineHeight:1.05, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>Two dealers.<br />One client.<br /><em style={{color:'var(--gold)'}}>Every variable controlled.</em></h1>

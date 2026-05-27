@@ -40,6 +40,19 @@ export default function Vantara() {
             .vantara-geo { display: none; }
             .inner-hero-geo { display: none; }
           }
+          .vantara-hover-card {
+            transition: transform 200ms ease, box-shadow 200ms ease;
+          }
+          .vantara-hover-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+          }
+          .vantara-hover-row {
+            transition: transform 200ms ease;
+          }
+          .vantara-hover-row:hover {
+            transform: translateY(-4px);
+          }
         `}</style>
 
         <div className="inner-hero">
@@ -130,12 +143,12 @@ export default function Vantara() {
 
         <div className="divider"></div>
 
-        <section style={{padding:'80px 60px'}} aria-labelledby="vantara-insights">
+        <section id="deal-insights" style={{padding:'80px 60px'}} aria-labelledby="vantara-insights">
           <div className="section-label">03 - Deal Insights</div>
           <h2 className="section-title" id="vantara-insights">Real transactions.<br /><em>Real outcomes.</em></h2>
-          <p className="section-body" style={{maxWidth:'520px'}}>Two examples of how Vantara operates in practice. Client details are kept confidential: the work speaks for itself.</p>
+          <p className="section-body" style={{maxWidth:'520px'}}>Two mandates broken down in full - the thinking, the structure, and the execution. Read these to understand how Vantara approaches a deal before you bring us yours.</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'48px'}}>
-            <div style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
+            <div className="vantara-hover-card" style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
               <p style={{fontSize:'10px', letterSpacing:'0.24em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Automotive Deal Execution</p>
               <h3 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'24px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3, marginBottom:'16px'}}>Two dealers. One client. Every variable controlled.</h3>
               <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'14px'}}>A client came to Vantara wanting to upgrade their vehicle but facing a significant trade-in shortfall across two competing dealerships, with different pricing structures, different dealer incentives, and different finance scenarios on the table.</p>
@@ -147,7 +160,7 @@ export default function Vantara() {
               </div>
               <Link href="/vantara/automotive" style={{display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'24px', fontSize:'12px', letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--gold)', borderBottom:'1px solid var(--gold)', paddingBottom:'2px'}}>Full deal insight →</Link>
             </div>
-            <div style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
+            <div className="vantara-hover-card" style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
               <p style={{fontSize:'10px', letterSpacing:'0.24em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Property Acquisition</p>
               <h3 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'24px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3, marginBottom:'16px'}}>Institutional-grade packaging. Private investor entry.</h3>
               <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'14px'}}>A commercial property opportunity in Durban was identified with a verified gross yield of 11.24%, above the market average for the node, and an accessible equity entry point for a private investor.</p>
@@ -169,7 +182,7 @@ export default function Vantara() {
           <h2 className="section-title" id="vantara-outcomes">Recent client outcomes.<br /><em>Real numbers.</em></h2>
           <p className="section-body" style={{maxWidth:'520px'}}>Two mandates. What the process delivered in practice.</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'48px'}}>
-            <div style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
+            <div className="vantara-hover-card" style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
               <p style={{fontSize:'10px', letterSpacing:'0.24em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Automotive · Deal Insight</p>
               <h3 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'24px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3, marginBottom:'16px'}}>Two dealers. One client. R60,000 extracted.</h3>
               <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'32px'}}>A vehicle acquisition mandate where every variable was controlled - trade-in arbitrage, dual-dealer leverage, and four balloon scenarios modelled across two vehicles. The client made the final call with full information and nothing left to chance.</p>
@@ -180,7 +193,7 @@ export default function Vantara() {
               </div>
               <Link href="/vantara/automotive" style={{display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'24px', fontSize:'12px', letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--gold)', borderBottom:'1px solid var(--gold)', paddingBottom:'2px'}}>Read the full breakdown →</Link>
             </div>
-            <div style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
+            <div className="vantara-hover-card" style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
               <p style={{fontSize:'10px', letterSpacing:'0.24em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Automotive · Client Mandate</p>
               <h3 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'24px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3, marginBottom:'16px'}}>First vehicle. R19,014 found before negotiation started.</h3>
               <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'32px'}}>A first-time buyer, two options, and a budget that pulled in two directions. Vantara assessed the full KZN market, modelled eight finance scenarios, and mapped the complete cost of ownership before the client saw a single dealer.</p>
@@ -196,13 +209,13 @@ export default function Vantara() {
 
         <div className="divider"></div>
 
-        <section style={{padding:'80px 60px'}} aria-labelledby="vantara-insights-heading">
+        <section id="insights" style={{padding:'80px 60px'}} aria-labelledby="vantara-insights-heading">
           <div className="section-label">Insights</div>
           <h2 className="section-title" id="vantara-insights-heading">We share how we think.</h2>
           <p className="section-body" style={{maxWidth:'520px'}}>Everything here comes from real transactions - what we saw, what we found, and what it cost the people who went in without the right information. Read it before your next acquisition. It will change how you see the process.</p>
 
           <div style={{marginTop:'48px', display:'flex', flexDirection:'column', gap:0}}>
-            <Link href="/vantara/insight-1" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
+            <Link href="/vantara/insight-1" className="vantara-hover-row" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
               <div>
                 <p style={{fontSize:'10px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Automotive · Insider perspective</p>
                 <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3}}>Why buying a car alone is the most expensive thing you&apos;ll do this year</p>
@@ -210,7 +223,7 @@ export default function Vantara() {
               <p style={{fontSize:'18px', color:'var(--text-muted)', flexShrink:0, marginTop:'4px'}}>→</p>
             </Link>
 
-            <Link href="/vantara/insight-2" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
+            <Link href="/vantara/insight-2" className="vantara-hover-row" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
               <div>
                 <p style={{fontSize:'10px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Property · How deals get structured</p>
                 <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3}}>What separates a property investor from someone who just bought a property</p>
@@ -218,7 +231,7 @@ export default function Vantara() {
               <p style={{fontSize:'18px', color:'var(--text-muted)', flexShrink:0, marginTop:'4px'}}>→</p>
             </Link>
 
-            <Link href="/vantara/insight-3" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
+            <Link href="/vantara/insight-3" className="vantara-hover-row" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
               <div>
                 <p style={{fontSize:'10px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Advisory · The Vantara model</p>
                 <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3}}>The advisor is free. The mistake is not.</p>
@@ -226,7 +239,7 @@ export default function Vantara() {
               <p style={{fontSize:'18px', color:'var(--text-muted)', flexShrink:0, marginTop:'4px'}}>→</p>
             </Link>
 
-            <Link href="/vantara/insight-4" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
+            <Link href="/vantara/insight-4" className="vantara-hover-row" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', justifyContent:'space-between', gap:'24px', cursor:'pointer', textDecoration:'none'}}>
               <div>
                 <p style={{fontSize:'10px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Automotive</p>
                 <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3}}>First vehicle. Two options. One right decision.</p>

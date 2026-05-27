@@ -14,6 +14,21 @@ export default function ADA() {
     <>
       <Nav />
       <div id="page-ada" className="page" role="main">
+        <style suppressHydrationWarning>{`
+          .ada-case-card {
+            transition: transform 200ms ease, box-shadow 200ms ease;
+          }
+          .ada-case-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+          }
+          .ada-insight-link {
+            transition: transform 200ms ease;
+          }
+          .ada-insight-link:hover {
+            transform: translateY(-4px);
+          }
+        `}</style>
         <div className="inner-hero">
           <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
             <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
@@ -252,7 +267,7 @@ export default function ADA() {
 
           <div style={{marginTop:'56px', borderTop:'1px solid var(--border)'}}>
 
-            <Link href="/ada/insights/ai-awareness" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
+            <Link href="/ada/insights/ai-awareness" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'10px', flexWrap:'wrap'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Market insight</span>
@@ -264,7 +279,7 @@ export default function ADA() {
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
             </Link>
 
-            <Link href="/ada/insights/why-websites-fail" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
+            <Link href="/ada/insights/why-websites-fail" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>The problem</span>
@@ -275,7 +290,7 @@ export default function ADA() {
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
             </Link>
 
-            <Link href="/ada/insights/revenue-website" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
+            <Link href="/ada/insights/revenue-website" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>The solution</span>
@@ -286,7 +301,7 @@ export default function ADA() {
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
             </Link>
 
-            <Link href="/ada/insights/ai-websites" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
+            <Link href="/ada/insights/ai-websites" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Authority piece</span>
@@ -297,7 +312,7 @@ export default function ADA() {
               <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
             </Link>
 
-            <Link href="/ada/insights/canopy-deep-dive" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
+            <Link href="/ada/insights/canopy-deep-dive" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
               <div style={{flex:1}}>
                 <div style={{marginBottom:'10px'}}>
                   <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Case study deep-dive</span>
