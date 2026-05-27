@@ -164,6 +164,38 @@ export default function Vantara() {
 
         <div className="divider"></div>
 
+        <section style={{padding:'80px 60px'}} aria-labelledby="vantara-outcomes">
+          <div className="section-label">Recent Outcomes</div>
+          <h2 className="section-title" id="vantara-outcomes">Recent client outcomes.<br /><em>Real numbers.</em></h2>
+          <p className="section-body" style={{maxWidth:'520px'}}>Two mandates. What the process delivered in practice.</p>
+          <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'48px'}}>
+            <div style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
+              <p style={{fontSize:'10px', letterSpacing:'0.24em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Automotive · Deal Insight</p>
+              <h3 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'24px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3, marginBottom:'16px'}}>Two dealers. One client. R60,000 extracted.</h3>
+              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'32px'}}>A vehicle acquisition mandate where every variable was controlled - trade-in arbitrage, dual-dealer leverage, and four balloon scenarios modelled across two vehicles. The client made the final call with full information and nothing left to chance.</p>
+              <div style={{borderTop:'1px solid var(--border)', paddingTop:'24px', display:'flex', flexDirection:'column', gap:'8px'}}>
+                <p style={{fontSize:'11px', letterSpacing:'0.08em', color:'var(--text-muted)'}}>· <span style={{color:'var(--gold)', fontStyle:'italic'}}>R60,000 dealer support</span></p>
+                <p style={{fontSize:'11px', letterSpacing:'0.08em', color:'var(--text-muted)'}}>· <span style={{color:'var(--gold)', fontStyle:'italic'}}>8 scenarios modelled</span></p>
+                <p style={{fontSize:'11px', letterSpacing:'0.08em', color:'var(--text-muted)'}}>· <span style={{color:'var(--gold)', fontStyle:'italic'}}>0 dealer pressure</span></p>
+              </div>
+              <Link href="/vantara/automotive" style={{display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'24px', fontSize:'12px', letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--gold)', borderBottom:'1px solid var(--gold)', paddingBottom:'2px'}}>Read the full breakdown →</Link>
+            </div>
+            <div style={{background:'var(--surface)', padding:'48px 40px', borderLeft:'2px solid var(--gold)'}}>
+              <p style={{fontSize:'10px', letterSpacing:'0.24em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Automotive · Client Mandate</p>
+              <h3 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'24px', fontWeight:400, color:'var(--text-primary)', lineHeight:1.3, marginBottom:'16px'}}>First vehicle. R19,014 found before negotiation started.</h3>
+              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)', marginBottom:'32px'}}>A first-time buyer, two options, and a budget that pulled in two directions. Vantara assessed the full KZN market, modelled eight finance scenarios, and mapped the complete cost of ownership before the client saw a single dealer.</p>
+              <div style={{borderTop:'1px solid var(--border)', paddingTop:'24px', display:'flex', flexDirection:'column', gap:'8px'}}>
+                <p style={{fontSize:'11px', letterSpacing:'0.08em', color:'var(--text-muted)'}}>· <span style={{color:'var(--gold)', fontStyle:'italic'}}>R19,014 below-market pricing identified</span></p>
+                <p style={{fontSize:'11px', letterSpacing:'0.08em', color:'var(--text-muted)'}}>· <span style={{color:'var(--gold)', fontStyle:'italic'}}>8 finance scenarios modelled</span></p>
+                <p style={{fontSize:'11px', letterSpacing:'0.08em', color:'var(--text-muted)'}}>· <span style={{color:'var(--gold)', fontStyle:'italic'}}>Full cost of ownership mapped</span></p>
+              </div>
+              <Link href="/vantara/insight-4" style={{display:'inline-flex', alignItems:'center', gap:'8px', marginTop:'24px', fontSize:'12px', letterSpacing:'0.16em', textTransform:'uppercase', color:'var(--gold)', borderBottom:'1px solid var(--gold)', paddingBottom:'2px'}}>Read the full breakdown →</Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="divider"></div>
+
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-insights-heading">
           <div className="section-label">Insights</div>
           <h2 className="section-title" id="vantara-insights-heading">We share how we think.</h2>
