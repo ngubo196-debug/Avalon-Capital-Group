@@ -48,7 +48,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'Avalon Capital Group',
               url: 'https://www.avaloncapitalgroup.co.za',
               logo: 'https://www.avaloncapitalgroup.co.za/assets/acg-logo.jpg',
-              sameAs: [],
+              image: 'https://www.avaloncapitalgroup.co.za/og-image.jpg',
+              telephone: '+27712205313',
+              email: 'hello@avaloncapitalgroup.co.za',
+              sameAs: [
+                'https://www.linkedin.com/company/avalon-capital-group',
+              ],
             }),
           }}
         />
@@ -62,9 +67,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'LocalBusiness',
               name: 'Avalon Capital Group',
               description: 'Business acquisition brokerage and AI digital agency based in Durban, KwaZulu-Natal, South Africa.',
-              url: 'https://avaloncapitalgroup.co.za',
-              telephone: '',
-              email: '',
+              url: 'https://www.avaloncapitalgroup.co.za',
+              telephone: '+27712205313',
+              email: 'hello@avaloncapitalgroup.co.za',
+              image: 'https://www.avaloncapitalgroup.co.za/og-image.jpg',
+              priceRange: 'From R18,500',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Durban',
@@ -78,8 +85,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               },
               areaServed: [
                 { '@type': 'City', name: 'Durban' },
-                { '@type': 'State', name: 'KwaZulu-Natal' },
-                { '@type': 'Country', name: 'South Africa' },
+                { '@type': 'City', name: 'Pietermaritzburg' },
+                { '@type': 'AdministrativeArea', name: 'KwaZulu-Natal' },
               ],
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
