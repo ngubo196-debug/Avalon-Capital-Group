@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Vantara | Acquisition Brokerage for Vehicles & Property | South Africa',
-  description: 'We represent buyers - not sellers. Vantara structures vehicle and property deals, manages risk, and makes sure you never pay more than you should. Based in KZN.',
+  description: 'Vantara represents buyers, not dealers. We source, negotiate, and structure vehicle and property deals across KwaZulu-Natal. You pay within your budget, usually less.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara' },
 };
 

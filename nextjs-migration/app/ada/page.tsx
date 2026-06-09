@@ -162,7 +162,7 @@ export default function ADA() {
               </div>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(28px,3.5vw,44px)', fontWeight:300, lineHeight:1.1, marginBottom:'10px'}}>Avalon Capital Group</div>
               <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'28px'}}>From 1 indexed page to 16 in a server-rendered Next.js build</div>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'20px'}}>We built this. The full story of how ADA built, diagnosed, and migrated avaloncapitalgroup.co.za - from a plain HTML SPA with 1 indexed page to a server-rendered Next.js site with 16 indexed pages. Documented live.</p>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'20px'}}>We built this. The full story of how ADA built, diagnosed, and migrated avaloncapitalgroup.co.za - from a plain HTML SPA with 1 indexed page to a server-rendered Next.js site with 29 indexed pages. Documented live.</p>
               <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'36px'}}>The diagnosis was a hard one: 17 pages built, 1 visible to Google. The SPA was serving identical HTML for every route. Googlebot correctly concluded they were duplicates and refused to index them. The fix required a structural migration, not a patch. We ran the same process we run for clients, on ourselves, and documented every decision.</p>
               <div style={{display:'flex', gap:'1px', background:'var(--border)', marginBottom:'36px', flexWrap:'wrap'}}>
                 <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
@@ -170,7 +170,7 @@ export default function ADA() {
                   <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Concept to live</div>
                 </div>
                 <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>1 → 16 pages</div>
+                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>1 → 29 pages</div>
                   <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Indexed by Google</div>
                 </div>
                 <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
