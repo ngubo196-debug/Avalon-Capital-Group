@@ -478,7 +478,7 @@ export default function CaseStudyClient() {
           <SectionLabel num="08" text="The Results" />
           <h2 className="cs-section-h2">The build worked.<br /><em>Here is the proof.</em></h2>
           <p className="cs-body">
-            Seven weeks after migration, with no paid ads and no Google Business Profile, the site went from invisible to ranking across forty-five commercial searches. Every number below is a live screenshot from Google Search Console.
+            Seven weeks after migration, with no paid ads and no Google Business Profile, the site went from invisible to ranking across forty-five commercial searches. Every number below is a live screenshot from Google Search Console. These are the results we build for clients through our <Link href="/ada/seo-agency-durban">SEO services in Durban</Link>.
           </p>
 
           {/* Block 1 — Indexing */}
@@ -576,6 +576,7 @@ export default function CaseStudyClient() {
             <a className="cs-btn-gold" href="https://wa.me/27712205313?text=Hi%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA">Start a Project</a>
             <Link className="cs-btn-outline" href="/audit">Try the Audit Tool</Link>
           </div>
+          <p style={{fontSize:'12px', color:muted, marginTop:'20px', letterSpacing:'0.05em'}}>Prefer a written brief? <Link href="/contact" style={{color:gold, textDecoration:'none'}}>Send us a message.</Link></p>
         </div>
 
         <Footer />
