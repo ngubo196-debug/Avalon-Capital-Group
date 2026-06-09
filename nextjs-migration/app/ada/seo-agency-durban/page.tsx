@@ -97,6 +97,23 @@ export default function SeoAgencyDurban() {
           <div className="section-label">Case Study</div>
           <h2 className="section-title" id="proof-heading">How we built ACG&apos;s own search presence from scratch.</h2>
           <p className="section-body">Before we sell SEO, we practise it. Avalon Capital Group&apos;s own website was migrated to Next.js, structured for search, and submitted to Google Search Console. Every page indexed correctly within days. This is our process working on our own problem.</p>
+
+          <div className="seo-grid-2" style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'48px', marginBottom:'32px'}}>
+            {[
+              { stat: '29',      label: 'Indexed pages' },
+              { stat: '45+',     label: 'Unique search queries' },
+              { stat: '1,120',   label: 'Impressions (zero ad spend)' },
+              { stat: '16 days', label: 'Concept to live' },
+            ].map(({ stat, label }) => (
+              <div key={label} style={{background:'var(--surface)', padding:'36px'}}>
+                <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'48px', fontWeight:300, lineHeight:1, marginBottom:'10px'}}>{stat}</div>
+                <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, letterSpacing:'0.05em'}}>{label}</div>
+              </div>
+            ))}
+          </div>
+
+          <p className="section-body">From a site Google could not read at all — one indexed page, no search visibility — to ranking for 45 unique commercial queries across Durban and KwaZulu-Natal. No paid ads. Built and structured by ADA.</p>
+
           <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the ACG case study →</Link>
         </section>
 
