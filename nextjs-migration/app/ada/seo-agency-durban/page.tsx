@@ -11,6 +11,89 @@ export const metadata: Metadata = {
 export default function SeoAgencyDurban() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How long does SEO take to show results in South Africa?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'It depends on your starting point, your location, and how much competition you are up against. SEO is a high-value infrastructure investment, and it takes time because of how the system works. Google has to collect, organise, and rank an enormous volume of results, and earning a meaningful position in that system is a process, not an event. Depending on the search term, the area, and the competition, real organic results can take anywhere from three or four weeks to twelve months. The trade-off is worth it: once it ranks, it keeps working without you paying for every click.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How much does SEO cost in Durban and South Africa?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'It depends on the agency, and that is the honest problem. Some make promises they cannot keep while charging serious fees. For most providers, the price is still less than the value it delivers. At ADA, we price below what the work is worth, deliberately. Our engagements start at R18,500 for a Foundation build, with full SEO and search architecture built into our Growth revenue-system tier. You know the scope and the cost before anything begins. No open-ended retainers, no surprises.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the difference between SEO and Google Ads?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Google Ads is petrol in your tank. The moment it runs out, you pay again to keep moving. Stop paying and the traffic stops the same day. SEO is planting a tree. Nurtured properly, it grows into something that stands on its own, and the flow of visitors continues without you feeding it constantly. Ads buy you attention now. SEO builds you an asset that keeps paying back. The smartest businesses use both, but only one of them is still working for you a year later.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is SEO worth it for a small business in KZN?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'For a small business it matters even more, because the volume of competition is higher and you have to stand out in a crowded field. Here is the part most people miss: most small businesses never invest in digital infrastructure at a serious, professional level. That is the opening. When your foundation is built properly and theirs is not, it becomes far easier to win the searches that bring in real business. You are not competing on budget. You are competing on whether the work was done right, and most of the time it was not.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is local SEO and do I need it?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Local SEO is the part of search focused on location-based queries, the searches where someone wants a business near them. When a person searches "SEO agency Durban" or "near me," Google leans on local signals to decide who to show, and your Google Business Profile, your service area, and your local presence all feed into that. If your customers are in a specific place and you want to appear the moment they search, then yes, you need it. It is how you show up for the people who are closest to becoming clients.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do I need a Google Business Profile to rank locally?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'A Google Business Profile is a high-value ranking factor and one of the most important pieces of local search. It works off Google Maps, which is where Google can tie your business to a real location with real interactions from real people. It is a core part of your digital home on Google. If local visibility matters to your business, a complete and verified profile is not optional, it is foundational.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do you measure SEO results?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Business owners care about one thing: leads. That is the right thing to care about, but leads often arrive later than expected, and you only know when the phone rings. So while we build toward leads, we measure the work with detailed, specific performance data along the way, using Google Search Console and tools like it to track exactly what is improving and when. We do not hide behind vague reports. As proof, our own case study shows the full Search Console data behind our site's growth, screenshots and all. You can see exactly how we measure, because we show our own numbers.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Why choose ADA over a bigger agency?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Premium execution, AI-augmented, and built for where business is going, not where it has been. We operate with a high level of transparency, and we come from a bigger place than just selling a website or a ranking. ADA is built off the back of Avalon Capital Group, which means we understand business, not just marketing. We take the time to understand your business specifically and exactly what it needs, then we solve those problems precisely and build genuine value. You are not a ticket in a queue. You are the whole point of the engagement.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What does the free website audit include?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The free audit shows you where your site actually stands. It scores your search visibility, your messaging and structure, your technical performance, and whether Google and AI tools can properly understand your business. You get a clear scorecard with the key issues identified, usually within forty-eight hours. It is the fastest way to see what is costing you business before you commit to anything. No charge, no obligation.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <Nav />
       <div id="page-seo-agency-durban" className="page" role="main">
 
@@ -19,6 +102,7 @@ export default function SeoAgencyDurban() {
             .seo-grid-3 { grid-template-columns: 1fr !important; }
             .seo-grid-2 { grid-template-columns: 1fr !important; }
           }
+          details summary::-webkit-details-marker { display: none; }
         `}</style>
 
         <div className="inner-hero">
@@ -86,6 +170,16 @@ export default function SeoAgencyDurban() {
 
         <div className="divider"></div>
 
+        <section aria-labelledby="how-heading">
+          <div className="section-label">How It Works</div>
+          <h2 className="section-title" id="how-heading">What an SEO campaign actually involves.</h2>
+          <p className="section-body">SEO is not a switch you flip. It is infrastructure you build. The reason it takes time is the same reason it lasts: Google has to crawl, understand, and trust your site before it ranks you, and that trust is earned over weeks and months, not bought in a day.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>The work happens in layers. First the technical foundation, so Google can read every page cleanly and index it without confusion. Then the content and structure, so each page targets the searches your clients are actually making and answers them better than the competition. Then the local signals, the things that tie your business to Durban and KwaZulu-Natal specifically, so you show up when someone nearby is ready to act. Each layer compounds on the one before it.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>We know this because we did it to our own site. Avalon Capital Group went from one page Google could read to twenty-nine indexed pages ranking across forty-five commercial searches, in seven weeks, with no paid ads. That is not a promise on a slide. It is a documented result you can <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>read in full</Link>.</p>
+        </section>
+
+        <div className="divider"></div>
+
         <section style={{padding:'64px 0', textAlign:'center'}}>
           <p style={{fontFamily:'Montserrat', fontSize:'13px', letterSpacing:'0.1em', color:'var(--muted)', marginBottom:'24px', textTransform:'uppercase'}}>Seen enough?</p>
           <a className="btn-primary" href="/audit">Get Your Free Audit</a>
@@ -115,6 +209,67 @@ export default function SeoAgencyDurban() {
           <p className="section-body">From a site Google could not read at all, with one indexed page and no search visibility, to ranking for 45 unique commercial queries across Durban and KwaZulu-Natal. No paid ads. Built and structured by ADA.</p>
 
           <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the ACG case study →</Link>
+        </section>
+
+        <div className="divider"></div>
+
+        <section aria-labelledby="faq-heading">
+          <div className="section-label">Common Questions</div>
+          <h2 className="section-title" id="faq-heading">SEO in South Africa, answered straight.</h2>
+          <div style={{marginTop:'48px'}}>
+            {[
+              {
+                q: 'How long does SEO take to show results in South Africa?',
+                a: 'It depends on your starting point, your location, and how much competition you are up against. SEO is a high-value infrastructure investment, and it takes time because of how the system works. Google has to collect, organise, and rank an enormous volume of results, and earning a meaningful position in that system is a process, not an event. Depending on the search term, the area, and the competition, real organic results can take anywhere from three or four weeks to twelve months. The trade-off is worth it: once it ranks, it keeps working without you paying for every click.',
+              },
+              {
+                q: 'How much does SEO cost in Durban and South Africa?',
+                a: 'It depends on the agency, and that is the honest problem. Some make promises they cannot keep while charging serious fees. For most providers, the price is still less than the value it delivers. At ADA, we price below what the work is worth, deliberately. Our engagements start at R18,500 for a Foundation build, with full SEO and search architecture built into our Growth revenue-system tier. You know the scope and the cost before anything begins. No open-ended retainers, no surprises.',
+              },
+              {
+                q: 'What is the difference between SEO and Google Ads?',
+                a: 'Google Ads is petrol in your tank. The moment it runs out, you pay again to keep moving. Stop paying and the traffic stops the same day. SEO is planting a tree. Nurtured properly, it grows into something that stands on its own, and the flow of visitors continues without you feeding it constantly. Ads buy you attention now. SEO builds you an asset that keeps paying back. The smartest businesses use both, but only one of them is still working for you a year later.',
+              },
+              {
+                q: 'Is SEO worth it for a small business in KZN?',
+                a: 'For a small business it matters even more, because the volume of competition is higher and you have to stand out in a crowded field. Here is the part most people miss: most small businesses never invest in digital infrastructure at a serious, professional level. That is the opening. When your foundation is built properly and theirs is not, it becomes far easier to win the searches that bring in real business. You are not competing on budget. You are competing on whether the work was done right, and most of the time it was not.',
+              },
+              {
+                q: 'What is local SEO and do I need it?',
+                a: 'Local SEO is the part of search focused on location-based queries, the searches where someone wants a business near them. When a person searches "SEO agency Durban" or "near me," Google leans on local signals to decide who to show, and your Google Business Profile, your service area, and your local presence all feed into that. If your customers are in a specific place and you want to appear the moment they search, then yes, you need it. It is how you show up for the people who are closest to becoming clients.',
+              },
+              {
+                q: 'Do I need a Google Business Profile to rank locally?',
+                a: 'A Google Business Profile is a high-value ranking factor and one of the most important pieces of local search. It works off Google Maps, which is where Google can tie your business to a real location with real interactions from real people. It is a core part of your digital home on Google. If local visibility matters to your business, a complete and verified profile is not optional, it is foundational.',
+              },
+              {
+                q: 'How do you measure SEO results?',
+                a: "Business owners care about one thing: leads. That is the right thing to care about, but leads often arrive later than expected, and you only know when the phone rings. So while we build toward leads, we measure the work with detailed, specific performance data along the way, using Google Search Console and tools like it to track exactly what is improving and when. We do not hide behind vague reports. As proof, our own case study shows the full Search Console data behind our site's growth, screenshots and all. You can see exactly how we measure, because we show our own numbers.",
+              },
+              {
+                q: 'Why choose ADA over a bigger agency?',
+                a: 'Premium execution, AI-augmented, and built for where business is going, not where it has been. We operate with a high level of transparency, and we come from a bigger place than just selling a website or a ranking. ADA is built off the back of Avalon Capital Group, which means we understand business, not just marketing. We take the time to understand your business specifically and exactly what it needs, then we solve those problems precisely and build genuine value. You are not a ticket in a queue. You are the whole point of the engagement.',
+              },
+              {
+                q: 'What does the free website audit include?',
+                a: 'The free audit shows you where your site actually stands. It scores your search visibility, your messaging and structure, your technical performance, and whether Google and AI tools can properly understand your business. You get a clear scorecard with the key issues identified, usually within forty-eight hours. It is the fastest way to see what is costing you business before you commit to anything. No charge, no obligation.',
+              },
+            ].map(({ q, a }, i, arr) => (
+              <details
+                key={q}
+                style={{
+                  borderTop: '1px solid var(--border)',
+                  padding: '24px 0',
+                  ...(i === arr.length - 1 ? { borderBottom: '1px solid var(--border)' } : {}),
+                }}
+              >
+                <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                  {q}
+                </summary>
+                <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>{a}</p>
+              </details>
+            ))}
+          </div>
         </section>
 
         <div className="divider"></div>
