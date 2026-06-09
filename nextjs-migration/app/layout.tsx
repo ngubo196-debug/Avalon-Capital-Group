@@ -13,6 +13,10 @@ export const metadata: Metadata = {
     ],
     apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
   },
+  twitter: {
+    card: 'summary_large_image',
+    images: ['https://avaloncapitalgroup.co.za/og-image.jpg'],
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -29,12 +33,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta property="og:image" content="https://avaloncapitalgroup.co.za/og-image.jpg" />
         <meta property="og:locale" content="en_ZA" />
         <meta property="og:site_name" content="Avalon Capital Group" />
-
-        {/* Twitter Card */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Avalon Capital Group | South Africa" />
-        <meta name="twitter:description" content="Premium brokerage and AI-powered digital services. Vantara. Avalon Digital Agency." />
-        <meta name="twitter:image" content="https://avaloncapitalgroup.co.za/og-image.jpg" />
 
         {/* Favicon */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
