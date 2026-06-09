@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Nav from '../../components/Nav';
 import Footer from '../../components/Footer';
 
@@ -125,6 +126,7 @@ const styles = `
   .cs-stack-role { font-size:11.5px; color:${muted2}; line-height:1.6; }
 
   .cs-ongoing-grid { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:52px; }
+  .cs-img-pair { display:grid; grid-template-columns:1fr 1fr; gap:2px; margin-top:2px; }
   .cs-og-card { background:${box}; padding:32px 28px; border:1px solid ${border}; }
   .cs-og-card.ac { border-color:${goldLine}; background:${box2}; }
   .cs-og-badge { display:inline-block; font-size:9px; letter-spacing:0.14em; text-transform:uppercase; color:${gold}; background:${goldDim}; border:1px solid ${goldLine}; padding:2px 8px; margin-bottom:12px; }
@@ -150,7 +152,7 @@ const styles = `
   @media (max-width:768px) {
     .cs-hero { padding:60px 20px 60px; min-height:auto; padding-top:80px; }
     .cs-section { padding:60px 20px; }
-    .cs-problem-grid, .cs-path, .cs-stack-grid, .cs-ongoing-grid { grid-template-columns:1fr; }
+    .cs-problem-grid, .cs-path, .cs-stack-grid, .cs-ongoing-grid, .cs-img-pair { grid-template-columns:1fr; }
     .cs-strip { flex-direction:column; gap:28px; align-items:center; }
     .cs-strip-stat { border-right:none; border-bottom:1px solid ${border}; padding-bottom:28px; width:100%; max-width:100%; }
     .cs-strip-stat:last-child { border-bottom:none; }
@@ -411,7 +413,7 @@ export default function CaseStudyClient() {
             <DelRow delay={250} num="006" title="Digital Business Cards" body="Founder digital business cards deployed at clean URLs. Tap or scan to open. Matching ACG design language. WhatsApp, call, and email actions built in." status="Live" />
             <DelRow delay={300} num="007" title="AI-Powered Audit Tool - V1 and V2" body="13-step diagnostic tool. V1 launched questionnaire-driven, same week as site. V2 upgraded to live website crawl, PageSpeed API integration, and Supabase lead capture - all within days. Real data, not self-reported." status="Live" />
             <DelRow delay={350} num="008" title="Google Search Console Setup" body="Both sites verified in GSC. Sitemaps submitted. URL inspection and manual indexing executed. Structured data (LocalBusiness, FAQ, Review schema) validated." status="Live" />
-            <DelRow delay={400} num="009" title="Next.js 14 Migration" body="Full migration to App Router with TypeScript and Tailwind. Scaffolded in dedicated branch. Each SPA page becoming a server-rendered page.tsx. The structural fix that takes the site from 1 indexed page to full coverage." status="In Progress" />
+            <DelRow delay={400} num="009" title="Next.js 14 Migration" body="Full migration to App Router with TypeScript and Tailwind. Scaffolded in dedicated branch. Each SPA page becoming a server-rendered page.tsx. The structural fix that took the site from 1 indexed page to 29." status="Live" />
           </div>
         </div>
 
@@ -450,16 +452,17 @@ export default function CaseStudyClient() {
             <div className="cs-og-card ac">
               <div className="cs-og-badge">Complete</div>
               <div className="cs-og-title">Next.js migration - merging to main</div>
-              <div className="cs-og-body">Migration shipped. Next.js App Router with TypeScript and Tailwind is now live on avaloncapitalgroup.co.za. Google went from 1 indexed page to 16 pages in the sitemap within hours of deployment.</div>
+              <div className="cs-og-body">Migration shipped. Next.js App Router with TypeScript and Tailwind is now live on avaloncapitalgroup.co.za. Google went from 1 indexed page to 29 pages indexed within weeks of deployment.</div>
             </div>
             <div className="cs-og-card ac">
               <div className="cs-og-badge">Active</div>
               <div className="cs-og-title">Audit tool - live data expansion</div>
               <div className="cs-og-body">The crawl pipeline is live. Next integration pulls Google Places data - real review counts, ratings, profile completeness. Every dimension of the audit becomes evidence-based rather than self-reported.</div>
             </div>
-            <div className="cs-og-card">
-              <div className="cs-og-title">GSC indexing - full coverage request</div>
-              <div className="cs-og-body">Sitemap resubmitted with 16 routes. URL inspection requested across all key pages. Google is now crawling the server-rendered build for the first time.</div>
+            <div className="cs-og-card ac">
+              <div className="cs-og-badge">Complete</div>
+              <div className="cs-og-title">GSC indexing - full coverage</div>
+              <div className="cs-og-body">29 pages indexed. Sitemap resubmitted, URL inspection completed across all key pages. The server-rendered build is being read and ranked by Google across 45 unique search queries.</div>
             </div>
             <div className="cs-og-card">
               <div className="cs-og-title">Desktop conversion analysis</div>
@@ -470,9 +473,90 @@ export default function CaseStudyClient() {
 
         <div className="cs-divider" />
 
-        {/* 08 CLOSE */}
+        {/* 08 RESULTS */}
+        <div className="cs-section">
+          <SectionLabel num="08" text="The Results" />
+          <h2 className="cs-section-h2">The build worked.<br /><em>Here is the proof.</em></h2>
+          <p className="cs-body">
+            Seven weeks after migration, with no paid ads and no Google Business Profile, the site went from invisible to ranking across forty-five commercial searches. Every number below is a live screenshot from Google Search Console.
+          </p>
+
+          {/* Block 1 — Indexing */}
+          <div className="cs-strip" style={{marginTop:'52px'}}>
+            {[
+              ['1 → 29',  'Pages indexed by Google'],
+              ['15 days', 'To first re-index after migration'],
+              ['R0',      'Spent on ads'],
+            ].map(([n, l]) => (
+              <div key={l} className="cs-strip-stat">
+                <span className="cs-strip-num">{n}</span>
+                <span className="cs-strip-label">{l}</span>
+              </div>
+            ))}
+          </div>
+          <div className="cs-img-pair">
+            <div style={{background:box, border:`1px solid ${border}`, padding:'2px'}}>
+              <Image src="/case-study/gsc-indexing-before.png" alt="GSC indexing before migration" width={964} height={347} style={{width:'100%', height:'auto', display:'block'}} />
+              <p style={{fontSize:'11px', color:muted, padding:'10px 12px', fontStyle:'italic', margin:0}}>Before migration: 1 page indexed, 19 blocked as duplicates.</p>
+            </div>
+            <div style={{background:box, border:`1px solid ${border}`, padding:'2px'}}>
+              <Image src="/case-study/gsc-indexing-after.png" alt="GSC indexing after migration" width={901} height={421} style={{width:'100%', height:'auto', display:'block'}} />
+              <p style={{fontSize:'11px', color:muted, padding:'10px 12px', fontStyle:'italic', margin:0}}>Seven weeks later: 29 pages indexed and climbing.</p>
+            </div>
+          </div>
+
+          {/* Block 2 — Performance */}
+          <div className="cs-strip" style={{marginTop:'64px'}}>
+            {[
+              ['1,120', 'Impressions'],
+              ['45',    'Unique search queries'],
+              ['33',    'Clicks, zero ad spend'],
+            ].map(([n, l]) => (
+              <div key={l} className="cs-strip-stat">
+                <span className="cs-strip-num">{n}</span>
+                <span className="cs-strip-label">{l}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{marginTop:'2px'}}>
+            <div style={{background:box, border:`1px solid ${border}`, padding:'2px'}}>
+              <Image src="/case-study/gsc-performance-after.png" alt="GSC performance overview" width={951} height={370} style={{width:'100%', height:'auto', display:'block'}} />
+              <p style={{fontSize:'11px', color:muted, padding:'10px 12px', fontStyle:'italic', margin:0}}>Google Search Console, 13 April to 3 June 2026.</p>
+            </div>
+            <div style={{background:box, border:`1px solid ${border}`, padding:'2px', marginTop:'2px'}}>
+              <Image src="/case-study/gsc-performance-early.png" alt="GSC performance early period" width={951} height={356} style={{width:'100%', height:'auto', display:'block'}} />
+              <p style={{fontSize:'11px', color:muted, padding:'10px 12px', fontStyle:'italic', margin:0}}>Two weeks in: 79 impressions. The starting line.</p>
+            </div>
+          </div>
+          <p className="cs-body" style={{marginTop:'28px'}}>
+            Average position moved from 5.1 to 20.2 over this period. That is not a decline. Early on the site ranked for two or three branded searches where appearing first is automatic. It now appears for forty-five queries, including competitive commercial terms. More queries, harder queries, real visibility — and all of it before a Google Business Profile is even in place.
+          </p>
+
+          {/* Block 3 — Sustained */}
+          <div className="cs-strip" style={{marginTop:'64px'}}>
+            {[
+              ['20–60',   'Daily impressions, holding'],
+              ['7 weeks', 'Live and compounding'],
+            ].map(([n, l]) => (
+              <div key={l} className="cs-strip-stat">
+                <span className="cs-strip-num">{n}</span>
+                <span className="cs-strip-label">{l}</span>
+              </div>
+            ))}
+          </div>
+          <div style={{marginTop:'2px'}}>
+            <div style={{background:box, border:`1px solid ${border}`, padding:'2px'}}>
+              <Image src="/case-study/gsc-daily.png" alt="GSC daily impressions" width={940} height={526} style={{width:'100%', height:'auto', display:'block'}} />
+              <p style={{fontSize:'11px', color:muted, padding:'10px 12px', fontStyle:'italic', margin:0}}>Daily impressions holding steady through late May and early June.</p>
+            </div>
+          </div>
+        </div>
+
+        <div className="cs-divider" />
+
+        {/* 09 CLOSE */}
         <div className="cs-section cs-close">
-          <SectionLabel num="08" text="The Point" center />
+          <SectionLabel num="09" text="The Point" center />
           <h2 className="cs-close-h2">
             This is our process<br />
             working on our own problem.<br />
