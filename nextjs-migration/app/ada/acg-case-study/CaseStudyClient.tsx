@@ -529,7 +529,7 @@ export default function CaseStudyClient() {
             </div>
           </div>
           <p className="cs-body" style={{marginTop:'28px'}}>
-            Average position moved from 5.1 to 20.2 over this period. That is not a decline. Early on the site ranked for two or three branded searches where appearing first is automatic. It now appears for forty-five queries, including competitive commercial terms. More queries, harder queries, real visibility — and all of it before a Google Business Profile is even in place.
+            Average position moved from 5.1 to 20.2 over this period. That is not a decline. Early on the site ranked for two or three branded searches where appearing first is automatic. It now appears for forty-five queries, including competitive commercial terms. More queries, harder queries, real visibility. And all of it before a Google Business Profile is even in place.
           </p>
 
           {/* Block 3 — Sustained */}

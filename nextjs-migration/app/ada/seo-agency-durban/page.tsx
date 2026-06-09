@@ -112,7 +112,7 @@ export default function SeoAgencyDurban() {
             ))}
           </div>
 
-          <p className="section-body">From a site Google could not read at all — one indexed page, no search visibility — to ranking for 45 unique commercial queries across Durban and KwaZulu-Natal. No paid ads. Built and structured by ADA.</p>
+          <p className="section-body">From a site Google could not read at all, with one indexed page and no search visibility, to ranking for 45 unique commercial queries across Durban and KwaZulu-Natal. No paid ads. Built and structured by ADA.</p>
 
           <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the ACG case study →</Link>
         </section>
