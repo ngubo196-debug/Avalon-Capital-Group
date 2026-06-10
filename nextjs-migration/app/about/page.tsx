@@ -12,6 +12,65 @@ export const metadata: Metadata = {
 export default function About() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What is Avalon Capital Group?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. Avalon Digital Agency builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Who is behind ACG?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Avalon Capital Group was founded by Luyanda Ngubo, a KwaZulu-Natal operator with a background spanning automotive dealership operations, commodity brokerage, and direct business development. Avalon was built on the thesis that a deal ecosystem - where each venture feeds the next - is more resilient and more valuable than a single business. Luyanda runs both divisions directly, which means every client engagement at Vantara and ADA has the same person accountable for the outcome.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long has ACG been operating?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Avalon Capital Group was registered in March 2025 and has been operating since. Both divisions - Vantara and ADA - have active client engagements and completed transactions since launch. The ACG website itself is the primary proof of concept for ADA's methodology: built, migrated, and grown to 29 indexed pages and over 1,100 impressions in seven weeks with no paid advertising.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is ACG a registered business?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Avalon Capital Group is a registered South African private company. Registration number 2025/671885/07. Registered and operating in KwaZulu-Natal.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What kinds of businesses does ADA work with?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ADA works with businesses that are serious about growth and understand that their digital presence is either an asset or a liability - there is no neutral. The typical ADA client is an established service business: professional services firms, construction and civil companies, fleet and logistics operators, medical and specialist practices, or B2B businesses with a real offer and a real market. What they share is not a category but a mindset - they have stopped accepting that their website exists without generating anything, and they want that fixed properly. Most are based in KwaZulu-Natal or broader South Africa. Geography is not the filter. Seriousness is.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do I know which division is relevant to me?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'If you are looking to acquire an asset - a vehicle, a property, or a structured deal where you need someone working in your interest - Vantara is the entry point. If your business needs a website that ranks on Google, converts visitors into clients, or digital infrastructure that generates consistent leads, ADA is the entry point. If you are not sure, one conversation is enough to know. The divisions are different businesses but the standard of work is the same, and the question of fit usually answers itself within the first few minutes.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <Nav />
       <div id="page-about" className="page" role="main">
         <div className="inner-hero">
@@ -33,6 +92,7 @@ export default function About() {
         <section aria-labelledby="about-heading">
           <div className="section-label">Who We Are</div>
           <h2 className="section-title" id="about-heading">A group built on<br /><em>doing the work.</em></h2>
+          <p className="section-body">Avalon Capital Group is a KwaZulu-Natal business group with two operating divisions: Vantara for high-value acquisition brokerage, and Avalon Digital Agency for SEO, web design, and AI-powered digital infrastructure. Registered, active, and built to deliver measurable outcomes for clients across South Africa.</p>
           <p className="section-body">Avalon Capital Group is a South African business group operating through two focused portfolio companies. We are not a consultancy. We are not a holding company in name only. Every division operates in its market, executes real transactions, and delivers measurable outcomes for clients.</p>
           <p className="section-body" style={{marginTop:'20px'}}>Our structure is deliberate. Vantara handles the physical world: acquisitions, brokerage, deal-making. Avalon Digital Agency handles the digital world: systems, automation, visibility. Together they create a group with multiple entry points, multiple revenue streams, and a single unifying standard of service.</p>
 
@@ -72,6 +132,7 @@ export default function About() {
           </div>
 
           <div className="content-col">
+            <div className="section-label">The Founder</div>
             <p className="overline">Founder &amp; Principal</p>
             <h2 className="founder-name">Luyanda<span>Ngubo</span></h2>
             <div className="title-tags">
@@ -110,6 +171,7 @@ export default function About() {
         <section aria-labelledby="divisions-heading">
           <div className="section-label">Our Divisions</div>
           <h2 className="section-title" id="divisions-heading">Two businesses.<br /><em>One group.</em></h2>
+          <p className="section-body">ACG operates through two focused businesses. Vantara works exclusively for buyers in vehicle and property transactions. Avalon Digital Agency builds digital revenue systems for South African businesses serious about growth. Each division operates independently in its market, with the same standard of execution across both.</p>
 
           <div className="divisions-list">
             <Link className="division-row" href="/vantara">
@@ -128,6 +190,51 @@ export default function About() {
               <div className="division-desc">AI-powered digital infrastructure for businesses. Websites that convert. Automation that reduces manual work. SEO that compounds. Systems that grow the business while the owner focuses on what matters.</div>
               <div className="division-arrow">→</div>
             </Link>
+          </div>
+        </section>
+
+        <div className="divider"></div>
+
+        <section aria-labelledby="faq-about-heading">
+          <div className="section-label">Common Questions</div>
+          <h2 className="section-title" id="faq-about-heading">About Avalon Capital Group.</h2>
+          <div style={{marginTop:'48px'}}>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What is Avalon Capital Group?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. Avalon Digital Agency builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                Who is behind ACG?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Avalon Capital Group was founded by Luyanda Ngubo, a KwaZulu-Natal operator with a background spanning automotive dealership operations, commodity brokerage, and direct business development. Avalon was built on the thesis that a deal ecosystem - where each venture feeds the next - is more resilient and more valuable than a single business. Luyanda runs both divisions directly, which means every client engagement at Vantara and ADA has the same person accountable for the outcome.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                How long has ACG been operating?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Avalon Capital Group was registered in March 2025 and has been operating since. Both divisions - Vantara and ADA - have active client engagements and completed transactions since launch. The ACG website itself is the primary proof of concept for ADA&apos;s methodology: built, migrated, and grown to 29 indexed pages and over 1,100 impressions in seven weeks with no paid advertising.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                Is ACG a registered business?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Yes. Avalon Capital Group is a registered South African private company. Registration number 2025/671885/07. Registered and operating in KwaZulu-Natal.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What kinds of businesses does ADA work with?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>ADA works with businesses that are serious about growth and understand that their digital presence is either an asset or a liability - there is no neutral. The typical ADA client is an established service business: professional services firms, construction and civil companies, fleet and logistics operators, medical and specialist practices, or B2B businesses with a real offer and a real market. What they share is not a category but a mindset - they have stopped accepting that their website exists without generating anything, and they want that fixed properly. Most are based in KwaZulu-Natal or broader South Africa. Geography is not the filter. Seriousness is.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0', borderBottom:'1px solid var(--border)'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                How do I know which division is relevant to me?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>If you are looking to acquire an asset - a vehicle, a property, or a structured deal where you need someone working in your interest - Vantara is the entry point. If your business needs a website that ranks on Google, converts visitors into clients, or digital infrastructure that generates consistent leads, ADA is the entry point. If you are not sure, one conversation is enough to know. The divisions are different businesses but the standard of work is the same, and the question of fit usually answers itself within the first few minutes.</p>
+            </details>
           </div>
         </section>
 
