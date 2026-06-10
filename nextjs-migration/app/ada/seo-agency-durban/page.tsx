@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Nav from '../../components/Nav';
+import ScrollReveal from '../../components/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -169,6 +170,7 @@ export default function SeoAgencyDurban() {
           </div>
         </section>
 
+        <ScrollReveal delay={0}>
         <div className="divider"></div>
 
         <section aria-labelledby="how-heading">
@@ -178,6 +180,7 @@ export default function SeoAgencyDurban() {
           <p className="section-body" style={{marginTop:'20px'}}>The work happens in layers. First the technical foundation, so Google can read every page cleanly and index it without confusion. Then the content and structure, so each page targets the searches your clients are actually making and answers them better than the competition. Then the local signals, the things that tie your business to Durban and KwaZulu-Natal specifically, so you show up when someone nearby is ready to act. Each layer compounds on the one before it.</p>
           <p className="section-body" style={{marginTop:'20px'}}>We know this because we did it to our own site. Avalon Capital Group went from one page Google could read to twenty-nine indexed pages ranking across forty-five commercial searches, in seven weeks, with no paid ads. That is not a promise on a slide. It is a documented result you can <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>read in full</Link>.</p>
         </section>
+        </ScrollReveal>
 
         <div className="divider"></div>
 
@@ -212,6 +215,7 @@ export default function SeoAgencyDurban() {
           <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Read the ACG case study →</Link>
         </section>
 
+        <ScrollReveal delay={150}>
         <div className="divider"></div>
 
         <section aria-labelledby="faq-heading">
@@ -272,6 +276,7 @@ export default function SeoAgencyDurban() {
             ))}
           </div>
         </section>
+        </ScrollReveal>
 
         <div className="divider"></div>
 

@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import Nav from '../components/Nav';
+import ScrollReveal from '../components/ScrollReveal';
 
 const pillars = [
   {name:'Copy & messaging', score:5.5, finding:'Pronoun errors, placeholder text, and generic phrasing on a patient-facing dental practice site.'},
@@ -342,6 +343,7 @@ export default function OffersContent() {
 
         <div className="divider"></div>
 
+        <ScrollReveal delay={0}>
         <section aria-labelledby="faq-offers-heading">
           <div className="section-label">Common Questions</div>
           <h2 className="section-title" id="faq-offers-heading">About the audit and what comes next.</h2>
@@ -396,6 +398,7 @@ export default function OffersContent() {
             </details>
           </div>
         </section>
+        </ScrollReveal>
 
         <div className="divider"></div>
 

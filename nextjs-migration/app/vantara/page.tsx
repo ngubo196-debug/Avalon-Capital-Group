@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Nav from '../components/Nav';
+import ScrollReveal from '../components/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -172,6 +173,7 @@ export default function Vantara() {
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(22px,3.5vw,38px)', fontStyle:'italic', fontWeight:400, lineHeight:1.4, color:'var(--text-primary)', maxWidth:'820px'}}>&ldquo;Most people negotiate against a professional on the other side. Vantara puts a professional on your side.&rdquo;</p>
         </section>
 
+        <ScrollReveal delay={0}>
         <div className="divider"></div>
 
         <section aria-labelledby="reality-heading">
@@ -182,6 +184,7 @@ export default function Vantara() {
           <p className="section-body" style={{marginTop:'20px'}}>That is not an accident. Information asymmetry is how these markets work. The dealer&apos;s training, the agent&apos;s incentive, the finance desk&apos;s structure - all of it is designed to move a transaction forward on their terms, not yours. Most buyers only realise this after the deal is done, when the monthly payment is higher than it needed to be, or the yield is lower than the listing suggested, or the trade-in was worth more than they accepted.</p>
           <p className="section-body" style={{marginTop:'20px'}}>Vantara exists to close that gap. Not by fighting the market, but by knowing it well enough to work it properly. We bring the same depth of information to your side of the table that the other side has always had. You make the final call. You just make it with full information, not under pressure, not half-blind.</p>
         </section>
+        </ScrollReveal>
 
         <div className="divider"></div>
 
@@ -323,6 +326,7 @@ export default function Vantara() {
           <p style={{fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', marginTop:'32px'}}>Written by Luyanda, from the inside of every deal. If something raises a question, <a href="https://wa.me/27712205313" target="_blank" rel="noopener noreferrer" style={{color:'var(--gold)', textDecoration:'none'}}>start a conversation</a>.</p>
         </section>
 
+        <ScrollReveal delay={150}>
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-faq-heading">
           <div className="section-label">FAQ</div>
           <h2 className="section-title" id="vantara-faq-heading">Common questions.<br /><em>Straight answers.</em></h2>
@@ -355,6 +359,7 @@ export default function Vantara() {
             </div>
           </div>
         </section>
+        </ScrollReveal>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-engage-heading">
           <div className="section-label">How We Engage</div>

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import HowWeWork from './HowWeWork';
+import ScrollReveal from '../components/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -410,6 +411,7 @@ export default function ADA() {
 
         <div className="divider"></div>
 
+        <ScrollReveal delay={0}>
         <section aria-labelledby="faq-ada-heading">
           <div className="section-label">Common Questions</div>
           <h2 className="section-title" id="faq-ada-heading">ADA, answered straight.</h2>
@@ -464,6 +466,7 @@ export default function ADA() {
             </details>
           </div>
         </section>
+        </ScrollReveal>
 
         <div className="divider"></div>
 

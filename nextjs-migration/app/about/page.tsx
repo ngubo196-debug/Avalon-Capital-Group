@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Nav from '../components/Nav';
 import Footer from '../components/Footer';
+import ScrollReveal from '../components/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -195,6 +196,7 @@ export default function About() {
 
         <div className="divider"></div>
 
+        <ScrollReveal delay={0}>
         <section aria-labelledby="faq-about-heading">
           <div className="section-label">Common Questions</div>
           <h2 className="section-title" id="faq-about-heading">About Avalon Capital Group.</h2>
@@ -237,6 +239,7 @@ export default function About() {
             </details>
           </div>
         </section>
+        </ScrollReveal>
 
         <section style={{paddingTop:0, textAlign:'center'}}>
           <div style={{border:'1px solid var(--border)', padding:'64px 40px', maxWidth:'600px', margin:'0 auto'}}>
