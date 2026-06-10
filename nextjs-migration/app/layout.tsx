@@ -59,6 +59,40 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           }}
         />
 
+        {/* Person JSON-LD */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Luyanda Ngubo',
+              jobTitle: 'Founder and Principal',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'Avalon Capital Group',
+                url: 'https://www.avaloncapitalgroup.co.za',
+              },
+              url: 'https://www.avaloncapitalgroup.co.za/about',
+              sameAs: [
+                'https://www.linkedin.com/in/luyanda-ngubo',
+              ],
+              knowsAbout: [
+                'SEO and organic search strategy',
+                'Web design and conversion architecture',
+                'Digital agency services, South Africa',
+                'Vehicle acquisition brokerage',
+                'Automotive industry, South Africa',
+                'Property deal structuring and investment analysis',
+                'AI-augmented business operations',
+                'KwaZulu-Natal business market',
+                'Cold outreach and client acquisition',
+              ],
+              description: 'Luyanda Ngubo is the founder and principal of Avalon Capital Group, a KwaZulu-Natal business group operating through Vantara (vehicle and property acquisition brokerage) and Avalon Digital Agency (SEO, web design, and AI-augmented digital systems for South African businesses).',
+            }),
+          }}
+        />
+
         {/* LocalBusiness JSON-LD */}
         <script
           type="application/ld+json"
