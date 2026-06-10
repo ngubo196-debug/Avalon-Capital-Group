@@ -50,6 +50,7 @@ export default function ADA() {
         <section aria-labelledby="the-shift-heading">
           <div className="section-label">The shift</div>
           <h2 className="section-title" id="the-shift-heading">Websites changed.<br /><em>Most businesses didn&apos;t get the memo.</em></h2>
+          <p className="section-body">Websites are no longer passive brochures - they are the primary tool a business uses to earn trust, qualify prospects, and convert attention into revenue.</p>
           <p className="section-body">For twenty years, a website was a checkbox. You built it, you put your number on it, and that was enough. It lived online the way a business card lives in a drawer, technically there, practically invisible.</p>
           <p className="section-body" style={{marginTop:'20px'}}>That era is over. AI has changed how people search, how they evaluate, and how they decide. When someone looks for a service today, they&apos;re not browsing, they&apos;re already deciding. By the time they land on your website, they&apos;re halfway to yes or halfway out the door. Your site has one job: convert that moment into a conversation.</p>
           <p className="section-body" style={{marginTop:'20px'}}>Most business websites aren&apos;t built to do that. They&apos;re built to exist. No clear offer, no conversion path, no reason to act now. Visitors land, look around, and leave, not because the service is bad, but because the website doesn&apos;t translate value into action. That&apos;s silent revenue loss, every single day.</p>
@@ -63,6 +64,7 @@ export default function ADA() {
         <section aria-labelledby="what-we-do-heading">
           <div className="section-label">What we do</div>
           <h2 className="section-title" id="what-we-do-heading">We don&apos;t build websites.<br /><em>We build the system behind them.</em></h2>
+          <p className="section-body">ADA builds websites as conversion infrastructure - every page, every section, and every element designed around one question: what is this supposed to make someone do?</p>
           <p className="section-body">There&apos;s no shortage of people who can make a website look good. That&apos;s not the problem. The problem is that most websites are designed without ever asking the only question that matters: what is this page supposed to make someone do?</p>
           <p className="section-body" style={{marginTop:'20px'}}>At ADA, our digital agency in Durban, we approach every project as conversion infrastructure. That means understanding your offer, your audience, and the specific moment a visitor decides to reach out, or walk away. We then build around that moment. Clear messaging. A logical flow. Trust signals placed where decisions actually happen. Every element earns its place or it doesn&apos;t make the cut.</p>
           <p className="section-body" style={{marginTop:'20px'}}>The result isn&apos;t just a better-looking website. It&apos;s a website that works while you&apos;re not, qualifying visitors, building credibility, and moving people toward a conversation with you.</p>
@@ -99,6 +101,7 @@ export default function ADA() {
         <section id="section-our-work" aria-labelledby="our-work-heading">
           <div className="section-label">Our work</div>
           <h2 className="section-title" id="our-work-heading">Proof, not promises.</h2>
+          <p className="section-body">ADA has built revenue systems for civil construction companies, automotive service businesses, and the agency&apos;s own digital presence - each one documented as a case study.</p>
           <p className="section-body">Every project starts with a problem and ends with a system. Here&apos;s what that looks like in practice.</p>
 
           <div style={{display:'flex', flexDirection:'column', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
@@ -200,6 +203,7 @@ export default function ADA() {
         <section aria-labelledby="how-we-work-heading">
           <div className="section-label">How we work</div>
           <h2 className="section-title" id="how-we-work-heading">A system, not a service.</h2>
+          <p className="section-body">ADA runs a four-step process across every engagement: audit, strategy, build, and grow - each stage with a defined output and a clear brief before anything moves.</p>
           <p className="section-body">We don&apos;t take a brief, disappear for six weeks, and hand over a website. Every engagement follows a clear process: one built around your business, your offer, and the specific outcome you&apos;re trying to achieve. You know what&apos;s happening at every stage.</p>
 
           <HowWeWork />
@@ -263,6 +267,7 @@ export default function ADA() {
         <section id="section-insights" aria-labelledby="insights-heading">
           <div className="section-label">Insights</div>
           <h2 className="section-title" id="insights-heading">We share how we think.</h2>
+          <p className="section-body">ADA publishes market intelligence and case studies on web design, SEO, and AI automation for South African businesses.</p>
           <p className="section-body">Not to fill a content calendar. To show you, before we&apos;ve spoken, that we understand what&apos;s happening in the market and what it means for your business.</p>
 
           <div style={{marginTop:'56px', borderTop:'1px solid var(--border)'}}>
