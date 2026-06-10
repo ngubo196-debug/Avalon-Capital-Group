@@ -12,6 +12,81 @@ export const metadata: Metadata = {
 export default function ADA() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What does ADA actually build - websites, SEO, or both?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ADA builds revenue systems. The deliverable is digital infrastructure - a website that ranks on Google, converts the visitors it attracts, and keeps working while you focus on running your business. Web design and SEO are components of that system, not separate services. A website without search visibility is a brochure nobody finds. Search visibility without a converting website is traffic that leaves. ADA builds both as one coherent system because that is the only way either one actually works.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How long does a website project take?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'It depends entirely on the scope. A focused credibility build can be live in two to three days. A full revenue system with SEO architecture, multiple conversion paths, and content infrastructure takes four to six weeks. Every project is scoped before anything begins, so you know the timeline before we start, not after. ADA does not disappear for months and reappear with a finished product. You know what is being built, when each stage completes, and what comes next.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What does a website from ADA cost?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ADA has three fixed-price tiers. Foundation starts at R18,500 for a credibility build - a fast, conversion-ready website with search visibility and a Google presence that works around the clock. Growth is R34,000 once-off or R12,500 per month on a three-month minimum, covering a full revenue system with SEO architecture, competitor analysis, social infrastructure, schema markup, and analytics. Authority is scoped per client for businesses ready to dominate their category. Foundation and Growth are fixed scope and fixed price - you know exactly what you are getting before anything begins.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is AI automation and does my business need it?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'AI automation means giving repetitive tasks in your business to a system that executes them the same way, every time, without fatigue, error, or the need for management. The work you do the same way on Monday as you do on Friday - qualifying leads, following up with prospects, generating documents, routing enquiries, compiling reports - can be handled by an automated system built specifically around your process. If you are doing the same thing more than three times a week, there is a version of that task an AI system can handle better than a person can. The question is not whether your business needs it. The question is which parts of your operation are costing you time that could be running automatically right now.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How is ADA different from a standard web design agency?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Most agencies build websites. ADA builds the system behind the website. The difference is what the work is measured against. A standard agency measures success by whether the site looks good and launches on time. ADA measures success by what the site generates after it launches - enquiries, ranked search positions, qualified leads. Every decision in the build is made against that standard, not against an aesthetic preference or a template. The second difference is how we operate. ADA is AI-augmented, which means the speed and depth of work a traditional agency delivers with a full team, we deliver leaner and faster. You are not paying for headcount. You are paying for outcomes. The third difference is where we come from. ADA is built off the back of Avalon Capital Group, which means we understand business structure, deal dynamics, and what operators actually need from their digital presence - not just what looks good in a portfolio.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Do you work with businesses outside Durban and KZN?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. ADA works with businesses across South Africa and internationally. The geographic positioning around Durban and KwaZulu-Natal is deliberate - it is where we have the deepest market knowledge and where local SEO work compounds fastest. But the work itself has no borders. If you are a South African business in Johannesburg, Cape Town, or Pretoria, or an international operator who needs a team that understands the South African market, the engagement works the same way.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What happens after the website launches?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The launch is the beginning, not the delivery. Once the foundation is live, ADA stays in the build. The first thirty days focus on indexing confirmation, search console monitoring, and any conversion adjustments based on how real visitors are moving through the site. From there, the engagement moves into the growth layer - SEO content, targeted outreach, or campaign support, depending on what your business needs most to generate momentum. You are not handed a website and wished good luck. Every client gets a clear handover brief, ongoing support for technical issues, and a roadmap for what comes next. The relationship does not end at launch. That is when the compounding starts.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Where do I start if I am not sure what I need?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Start with a conversation. You do not need a brief, a budget, or a clear idea of what you want. Tell us what your business does, what is not working about your current digital presence, and what you are trying to achieve. We will ask the right questions, tell you honestly what we think the problem is, and map out what it would take to fix it. If we are the right fit, you will know within the first conversation. If we are not, we will tell you that too. The free website audit is also a clean starting point - thirteen questions, a scored report across six dimensions, and a clear picture of where your site stands. No obligation, no pitch.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <Nav />
       <div id="page-ada" className="page" role="main">
         <style suppressHydrationWarning>{`
@@ -331,6 +406,63 @@ export default function ADA() {
           </div>
 
           <p style={{marginTop:'32px', fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', opacity:0.7}}>Every piece here is worth your time. That&apos;s the only standard we publish to.</p>
+        </section>
+
+        <div className="divider"></div>
+
+        <section aria-labelledby="faq-ada-heading">
+          <div className="section-label">Common Questions</div>
+          <h2 className="section-title" id="faq-ada-heading">ADA, answered straight.</h2>
+          <div style={{marginTop:'48px'}}>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What does ADA actually build - websites, SEO, or both?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>ADA builds revenue systems. The deliverable is digital infrastructure - a website that ranks on Google, converts the visitors it attracts, and keeps working while you focus on running your business. Web design and SEO are components of that system, not separate services. A website without search visibility is a brochure nobody finds. Search visibility without a converting website is traffic that leaves. ADA builds both as one coherent system because that is the only way either one actually works.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                How long does a website project take?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>It depends entirely on the scope. A focused credibility build can be live in two to three days. A full revenue system with SEO architecture, multiple conversion paths, and content infrastructure takes four to six weeks. Every project is scoped before anything begins, so you know the timeline before we start, not after. ADA does not disappear for months and reappear with a finished product. You know what is being built, when each stage completes, and what comes next.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What does a website from ADA cost?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>ADA has three fixed-price tiers. Foundation starts at R18,500 for a credibility build - a fast, conversion-ready website with search visibility and a Google presence that works around the clock. Growth is R34,000 once-off or R12,500 per month on a three-month minimum, covering a full revenue system with SEO architecture, competitor analysis, social infrastructure, schema markup, and analytics. Authority is scoped per client for businesses ready to dominate their category. Foundation and Growth are fixed scope and fixed price - you know exactly what you are getting before anything begins.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What is AI automation and does my business need it?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>AI automation means giving repetitive tasks in your business to a system that executes them the same way, every time, without fatigue, error, or the need for management. The work you do the same way on Monday as you do on Friday - qualifying leads, following up with prospects, generating documents, routing enquiries, compiling reports - can be handled by an automated system built specifically around your process. If you are doing the same thing more than three times a week, there is a version of that task an AI system can handle better than a person can. The question is not whether your business needs it. The question is which parts of your operation are costing you time that could be running automatically right now.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                How is ADA different from a standard web design agency?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Most agencies build websites. ADA builds the system behind the website. The difference is what the work is measured against. A standard agency measures success by whether the site looks good and launches on time. ADA measures success by what the site generates after it launches - enquiries, ranked search positions, qualified leads. Every decision in the build is made against that standard, not against an aesthetic preference or a template. The second difference is how we operate. ADA is AI-augmented, which means the speed and depth of work a traditional agency delivers with a full team, we deliver leaner and faster. You are not paying for headcount. You are paying for outcomes. The third difference is where we come from. ADA is built off the back of Avalon Capital Group, which means we understand business structure, deal dynamics, and what operators actually need from their digital presence - not just what looks good in a portfolio.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                Do you work with businesses outside Durban and KZN?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Yes. ADA works with businesses across South Africa and internationally. The geographic positioning around Durban and KwaZulu-Natal is deliberate - it is where we have the deepest market knowledge and where local SEO work compounds fastest. But the work itself has no borders. If you are a South African business in Johannesburg, Cape Town, or Pretoria, or an international operator who needs a team that understands the South African market, the engagement works the same way.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What happens after the website launches?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>The launch is the beginning, not the delivery. Once the foundation is live, ADA stays in the build. The first thirty days focus on indexing confirmation, search console monitoring, and any conversion adjustments based on how real visitors are moving through the site. From there, the engagement moves into the growth layer - SEO content, targeted outreach, or campaign support, depending on what your business needs most to generate momentum. You are not handed a website and wished good luck. Every client gets a clear handover brief, ongoing support for technical issues, and a roadmap for what comes next. The relationship does not end at launch. That is when the compounding starts.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0', borderBottom:'1px solid var(--border)'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                Where do I start if I am not sure what I need?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Start with a conversation. You do not need a brief, a budget, or a clear idea of what you want. Tell us what your business does, what is not working about your current digital presence, and what you are trying to achieve. We will ask the right questions, tell you honestly what we think the problem is, and map out what it would take to fix it. If we are the right fit, you will know within the first conversation. If we are not, we will tell you that too. The free website audit is also a clean starting point - thirteen questions, a scored report across six dimensions, and a clear picture of where your site stands. No obligation, no pitch.</p>
+            </details>
+          </div>
         </section>
 
         <div className="divider"></div>
