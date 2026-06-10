@@ -77,6 +77,81 @@ export default function OffersContent() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What does the free audit actually show me?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The free audit shows you where your business is losing money online. It scores your digital presence across six dimensions - search visibility, AEO readiness, messaging and structure, technical performance, conversion flow, and landing page quality - and identifies the specific gaps that are costing you enquiries. Most business owners are surprised by what it surfaces, because the problems are almost never visible from the front end.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is the difference between the free audit and the paid R2,500 audit?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The free audit is automated and immediate - it scores your digital presence across six dimensions and shows you where the problems are. The R2,500 audit is human-led and goes deeper. It includes a full manual review of your site, a competitor comparison benchmarking you against two or three businesses in your category, a prioritised action plan telling you exactly what to fix first and what can wait, and a thirty-minute strategy walkthrough where we break it all down with you. The free audit shows you the diagnosis. The paid audit shows you the prescription, with the reasoning behind every recommendation.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How quickly will I get my audit results?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The free audit results are immediate - you complete the questions and your scored report generates on the spot. The paid deep-dive audit has a forty-eight hour turnaround from the time you book. Both come with no waiting list, though paid audit slots are limited per week to maintain the quality of the work.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What if my website was built recently - do I still need an audit?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Age of the website is not the variable that matters. A site built last month can have the same structural problems as one built five years ago - weak messaging, no schema markup, poor conversion flow, invisible to Google. Most recently built websites were designed to look good at launch, not to generate leads consistently. If your site went live without a conversion strategy, a search architecture, and structured data, it needs an audit regardless of when it was built.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is the free audit genuinely free or is there a catch?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Genuinely free. No credit card, no trial period, no obligation. You answer the questions, you get a scored report with specific findings, and you leave with real information about your digital presence. The catch that people expect is not there. If you want to take the next step after reading your results, that conversation is available - but nothing is required.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What happens after the audit - am I being sold something?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'After the audit you have something more valuable than a sales pitch - you have a clear picture of exactly where your digital presence is losing you business. What you do with that information is entirely up to you. Some people fix it themselves. Some come back to ADA. Either way, the audit has done its job: you know where the problem is, and that knowledge is worth more than whatever the problem was costing you silently.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Which package is right for my business - Foundation or Growth?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Foundation is right if your business has no serious digital presence yet - no site that works, no search visibility, no Google infrastructure. It builds the credibility layer from scratch and gets you live with something that actually functions. Growth is right if you already have a presence but it is not generating consistent leads - you need a full revenue system with SEO architecture, competitor analysis, and analytics configured so you can see exactly what is working. If you are unsure which applies, start with the free audit. The score tells you which tier your situation calls for.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Can I see an example of what an audit looks like?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. Further up this page is a real audit output from a dental practice in Umhlanga, scored across eight pillars with specific findings on each. You can also read the full ACG self-build case study, which documents the complete diagnostic process we ran on our own site before rebuilding it. That is the same methodology applied to a real problem, with the results documented live.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <Nav />
       <div id="page-offers" className="page" role="main">
 
@@ -159,7 +234,7 @@ export default function OffersContent() {
         <div className="divider"></div>
 
         {/* 02 Scorecard demo */}
-        <section aria-labelledby="offers-scorecard">
+        <section id="offers-scorecard" aria-labelledby="offers-scorecard">
           <div className="section-label">What we typically find</div>
           <div style={{background:'var(--surface)', border:'1px solid var(--border)', padding:'44px', maxWidth:'780px'}}>
             <p style={{fontSize:'12px', color:'#787470', fontStyle:'italic', marginBottom:'24px', letterSpacing:'0.04em'}}>Coastal Smile Dental &middot; Umhlanga, KZN &middot; Audited April 2026</p>
@@ -218,7 +293,7 @@ export default function OffersContent() {
         <section aria-labelledby="offers-diag">
           <div className="section-label">Does this sound familiar?</div>
           <h2 className="section-title" id="offers-diag">If any of this applies, your<br />website has a problem.</h2>
-          <p className="section-body" style={{marginBottom:0}}>And it&rsquo;s probably costing you more than you realise.</p>
+          <p className="section-body">If any of these apply, your website has a structural problem that is costing you clients every week - not because your service is wrong, but because your digital presence is not doing its job.</p>
           <ul className="offers-diag" style={{margin:'28px 0 32px', padding:0}}>
             <li>You&rsquo;re getting traffic but no enquiries</li>
             <li>You rely on referrals because your website doesn&rsquo;t deliver</li>
@@ -235,7 +310,7 @@ export default function OffersContent() {
         <section aria-labelledby="offers-tiers">
           <div className="section-label">ADA &middot; Build your digital presence</div>
           <h2 className="section-title" id="offers-tiers">If the audit shows what&rsquo;s broken,<br /><em>ADA builds the version that works.</em></h2>
-          <p className="section-body" style={{marginBottom:0}}>Your website shouldn&rsquo;t just exist. It should be bringing in business consistently.</p>
+          <p className="section-body">ADA builds the version of your website that actually brings in business - conversion-ready, search-visible, and built around what your specific clients need to see before they trust you enough to reach out.</p>
           <div className="offers-tiers-grid" style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', margin:'40px 0 16px'}}>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div className="offers-tier-name">Foundation</div>
@@ -263,6 +338,63 @@ export default function OffersContent() {
             </div>
           </div>
           <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px'}}>Foundation and Growth are fixed-scope, fixed-price engagements. You know exactly what you are getting and what it costs before anything begins. Authority is scoped per client and the investment reflects the ambition. If you are looking for the cheapest option, we are probably not the right fit. If you are looking for the most valuable one, let&apos;s talk.</p>
+        </section>
+
+        <div className="divider"></div>
+
+        <section aria-labelledby="faq-offers-heading">
+          <div className="section-label">Common Questions</div>
+          <h2 className="section-title" id="faq-offers-heading">About the audit and what comes next.</h2>
+          <div style={{marginTop:'48px'}}>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What does the free audit actually show me?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>The free audit shows you where your business is losing money online. It scores your digital presence across six dimensions - search visibility, AEO readiness, messaging and structure, technical performance, conversion flow, and landing page quality - and identifies the specific gaps that are costing you enquiries. Most business owners are surprised by what it surfaces, because the problems are almost never visible from the front end.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What is the difference between the free audit and the paid R2,500 audit?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>The free audit is automated and immediate - it scores your digital presence across six dimensions and shows you where the problems are. The R2,500 audit is human-led and goes deeper. It includes a full manual review of your site, a competitor comparison benchmarking you against two or three businesses in your category, a prioritised action plan telling you exactly what to fix first and what can wait, and a thirty-minute strategy walkthrough where we break it all down with you. The free audit shows you the diagnosis. The paid audit shows you the prescription, with the reasoning behind every recommendation.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                How quickly will I get my audit results?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>The free audit results are immediate - you complete the questions and your scored report generates on the spot. The paid deep-dive audit has a forty-eight hour turnaround from the time you book. Both come with no waiting list, though paid audit slots are limited per week to maintain the quality of the work.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What if my website was built recently - do I still need an audit?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Age of the website is not the variable that matters. A site built last month can have the same structural problems as one built five years ago - weak messaging, no schema markup, poor conversion flow, invisible to Google. Most recently built websites were designed to look good at launch, not to generate leads consistently. If your site went live without a conversion strategy, a search architecture, and structured data, it needs an audit regardless of when it was built.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                Is the free audit genuinely free or is there a catch?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Genuinely free. No credit card, no trial period, no obligation. You answer the questions, you get a scored report with specific findings, and you leave with real information about your digital presence. The catch that people expect is not there. If you want to take the next step after reading your results, that conversation is available - but nothing is required.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                What happens after the audit - am I being sold something?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>After the audit you have something more valuable than a sales pitch - you have a clear picture of exactly where your digital presence is losing you business. What you do with that information is entirely up to you. Some people fix it themselves. Some come back to ADA. Either way, the audit has done its job: you know where the problem is, and that knowledge is worth more than whatever the problem was costing you silently.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                Which package is right for my business - Foundation or Growth?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Foundation is right if your business has no serious digital presence yet - no site that works, no search visibility, no Google infrastructure. It builds the credibility layer from scratch and gets you live with something that actually functions. Growth is right if you already have a presence but it is not generating consistent leads - you need a full revenue system with SEO architecture, competitor analysis, and analytics configured so you can see exactly what is working. If you are unsure which applies, start with the free audit. The score tells you which tier your situation calls for.</p>
+            </details>
+            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0', borderBottom:'1px solid var(--border)'}}>
+              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
+                Can I see an example of what an audit looks like?
+              </summary>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Yes. <a href="#offers-scorecard" style={{color:'var(--gold)', textDecoration:'none'}}>Further up this page</a> is a real audit output from a dental practice in Umhlanga, scored across eight pillars with specific findings on each. You can also read the full <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>ACG self-build case study</Link>, which documents the complete diagnostic process we ran on our own site before rebuilding it. That is the same methodology applied to a real problem, with the results documented live.</p>
+            </details>
+          </div>
         </section>
 
         <div className="divider"></div>
