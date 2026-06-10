@@ -11,6 +11,65 @@ export const metadata: Metadata = {
 export default function Vantara() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'What does it cost to use Vantara for a vehicle acquisition?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Nothing additional out of your pocket. You give us your budget and your criteria. We source the right vehicle, negotiate the deal, and manage the transaction to delivery. Our fee is built into the deal, you pay within your budget, not on top of it. You never pay more than you would have going alone. In most cases, you pay less.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do you find the vehicles you source?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "We use every available channel: dealer networks, online platforms, private listings. What we bring that the platforms don't is over half a decade of insider experience in the automotive industry. We've worked every department of a dealership: sales, stock control, workshop, finance, reconditioning, and vehicle listings. We know what a car is actually worth, what dealers don't disclose, and where the margin is. That knowledge isn't on Autotrader. We are.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What do I actually have to do as the buyer?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Tell us your budget, your requirements, and what matters to you. From there, we handle everything: sourcing, shortlisting, negotiating, finance structuring if needed, and delivery coordination. The only time you need to move is to sign the deal and take delivery. Everything else is handled.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Is the property acquisition side active?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Yes. Vantara identifies high-yield property opportunities, conducts full investment and feasibility analysis, and structures deals for private investors - at a level most standard property brokers never reach. We identify high-yield opportunities, conduct full investment and feasibility analysis, and structure deals for private investors. We don't list properties. We package deals. If you are looking to deploy capital into property and want institutional-grade analysis before you commit, that is what we do.",
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'What is strategic deal structuring and how do I know if it applies to me?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Strategic deal structuring covers transactions that do not fit a standard category - supply arrangements, business transactions, and partnerships that need proper architecture before they can close. A supply arrangement, a business transaction, a partnership that needs structuring, if there is a deal to be made and you need someone who can see the structure, make the right connections, and execute cleanly, that is what strategic brokerage covers. We engage selectively. If you have something worth exploring, bring it to us and we will tell you honestly whether we can add value.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How do I engage Vantara?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Start with a conversation. Tell us what you are looking to acquire, structure, or explore. We will respond directly, ask the right questions, and tell you honestly what we can do. No forms, no waiting. WhatsApp is the fastest way to reach us.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
       <Nav />
       <div id="page-vantara" className="page" role="main">
         <style suppressHydrationWarning>{`
@@ -78,6 +137,7 @@ export default function Vantara() {
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-difference">
           <div className="section-label">01 - The Difference</div>
           <h2 className="section-title" id="vantara-difference">Advisory-first.<br /><em>Always.</em></h2>
+          <p className="section-body">Vantara works exclusively for the buyer. In every vehicle purchase, property deal, and strategic transaction, the other side of the table is a professional whose income depends on closing on their terms. Vantara puts the same level of expertise on your side.</p>
           <p className="section-body" style={{maxWidth:'560px'}}>The dealer wants to move stock. The agent wants to close the listing. The finance desk wants to maximise rate. None of them are working for you - and most buyers only realise that after the deal is done. Vantara carries none of that conflict. We work on mandate, for the client, and our position is simple: the right deal, or no deal.</p>
 
           <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'48px'}}>
@@ -114,9 +174,21 @@ export default function Vantara() {
 
         <div className="divider"></div>
 
+        <section aria-labelledby="reality-heading">
+          <div className="section-label">The Reality</div>
+          <h2 className="section-title" id="reality-heading">The buyer is always the least informed person in the room.</h2>
+          <p className="section-body">The dealer knows the car&apos;s true cost, the margin built into the sticker price, the finance rate they are earning a kickback on, and exactly how much room they have to move before the deal stops making sense for them. The seller knows why the property is on the market, what the real yield looks like after costs, and which numbers in the listing were chosen carefully. The other side of every deal is a professional. They do this every day.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>The buyer walks in once. Maybe twice in a lifetime for a property. They don&apos;t know what they don&apos;t know, and what they don&apos;t know is often the difference between a good deal and an expensive mistake they will be paying off for years.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>That is not an accident. Information asymmetry is how these markets work. The dealer&apos;s training, the agent&apos;s incentive, the finance desk&apos;s structure - all of it is designed to move a transaction forward on their terms, not yours. Most buyers only realise this after the deal is done, when the monthly payment is higher than it needed to be, or the yield is lower than the listing suggested, or the trade-in was worth more than they accepted.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>Vantara exists to close that gap. Not by fighting the market, but by knowing it well enough to work it properly. We bring the same depth of information to your side of the table that the other side has always had. You make the final call. You just make it with full information, not under pressure, not half-blind.</p>
+        </section>
+
+        <div className="divider"></div>
+
         <section style={{padding:'80px 60px'}} aria-labelledby="vantara-how">
           <div className="section-label">02 - How We Work</div>
           <h2 className="section-title" id="vantara-how">Clarity. Structure.<br /><em>Execution.</em></h2>
+          <p className="section-body">Vantara runs every mandate through four stages: brief and objectives, market intelligence, structured analysis, and negotiation through to close. Each stage has a defined output. Nothing moves until the previous stage is complete.</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(4,1fr)', gap:'1px', background:'var(--border)', marginTop:'48px'}}>
             <div style={{background:'var(--surface)', padding:'44px 36px'}}>
               <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'52px', fontWeight:300, color:'var(--border)', lineHeight:1, marginBottom:'22px', fontStyle:'italic'}}>01</p>
@@ -271,11 +343,11 @@ export default function Vantara() {
             </div>
             <div style={{padding:'32px 0', borderBottom:'1px solid var(--border)'}}>
               <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', marginBottom:'14px'}}>Is the property acquisition side active?</p>
-              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)'}}>Yes, and it operates at a different level to standard property brokerage. We identify high-yield opportunities, conduct full investment and feasibility analysis, and structure deals for private investors. We don&apos;t list properties. We package deals. If you are looking to deploy capital into property and want institutional-grade analysis before you commit, that is what we do.</p>
+              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)'}}>Yes. Vantara identifies high-yield property opportunities, conducts full investment and feasibility analysis, and structures deals for private investors - at a level most standard property brokers never reach. We identify high-yield opportunities, conduct full investment and feasibility analysis, and structure deals for private investors. We don&apos;t list properties. We package deals. If you are looking to deploy capital into property and want institutional-grade analysis before you commit, that is what we do.</p>
             </div>
             <div style={{padding:'32px 0', borderBottom:'1px solid var(--border)'}}>
               <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', marginBottom:'14px'}}>What is strategic deal structuring and how do I know if it applies to me?</p>
-              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)'}}>Some opportunities don&apos;t sit neatly in a category. A supply arrangement, a business transaction, a partnership that needs structuring, if there is a deal to be made and you need someone who can see the structure, make the right connections, and execute cleanly, that is what strategic brokerage covers. We engage selectively. If you have something worth exploring, bring it to us and we will tell you honestly whether we can add value.</p>
+              <p style={{fontSize:'14px', lineHeight:1.85, color:'var(--text-secondary)'}}>Strategic deal structuring covers transactions that do not fit a standard category - supply arrangements, business transactions, and partnerships that need proper architecture before they can close. A supply arrangement, a business transaction, a partnership that needs structuring, if there is a deal to be made and you need someone who can see the structure, make the right connections, and execute cleanly, that is what strategic brokerage covers. We engage selectively. If you have something worth exploring, bring it to us and we will tell you honestly whether we can add value.</p>
             </div>
             <div style={{padding:'32px 0', borderBottom:'1px solid var(--border)'}}>
               <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:400, color:'var(--text-primary)', marginBottom:'14px'}}>How do I engage Vantara?</p>
