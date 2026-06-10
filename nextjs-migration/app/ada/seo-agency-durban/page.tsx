@@ -130,6 +130,7 @@ export default function SeoAgencyDurban() {
         <section aria-labelledby="what-heading">
           <div className="section-label">What We Do</div>
           <h2 className="section-title" id="what-heading">SEO built on foundations that last.</h2>
+          <p className="section-body">ADA&apos;s SEO service covers three layers: the technical foundation that lets Google read your site, the content and keyword strategy that targets the searches your clients are making, and the local signals that tie your business to Durban and KwaZulu-Natal specifically.</p>
           <div className="seo-grid-3" style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'36px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Technical SEO</div>
@@ -151,7 +152,7 @@ export default function SeoAgencyDurban() {
         <section aria-labelledby="for-heading">
           <div className="section-label">Who It&apos;s For</div>
           <h2 className="section-title" id="for-heading">Built for KwaZulu-Natal businesses that want consistent organic leads.</h2>
-          <p className="section-body">Whether you are a professional services firm, a construction company, a fleet operator, or a retailer, organic search visibility is the most cost-effective lead generation channel available.</p>
+          <p className="section-body">Organic search visibility is the most cost-effective lead generation channel available to any South African service business. Whether you are a professional services firm, a construction company, a fleet operator, or a retailer, the principle is the same: the businesses that own their search presence own their pipeline.</p>
           <div className="seo-grid-2" style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'36px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Professional Services Firms</div>
@@ -173,7 +174,7 @@ export default function SeoAgencyDurban() {
         <section aria-labelledby="how-heading">
           <div className="section-label">How It Works</div>
           <h2 className="section-title" id="how-heading">What an SEO campaign actually involves.</h2>
-          <p className="section-body">SEO is not a switch you flip. It is infrastructure you build. The reason it takes time is the same reason it lasts: Google has to crawl, understand, and trust your site before it ranks you, and that trust is earned over weeks and months, not bought in a day.</p>
+          <p className="section-body">SEO works by building technical, content, and local signals that help Google understand, trust, and rank your pages for the searches your clients are making. It is infrastructure, not a switch - the reason it takes time is the same reason it lasts.</p>
           <p className="section-body" style={{marginTop:'20px'}}>The work happens in layers. First the technical foundation, so Google can read every page cleanly and index it without confusion. Then the content and structure, so each page targets the searches your clients are actually making and answers them better than the competition. Then the local signals, the things that tie your business to Durban and KwaZulu-Natal specifically, so you show up when someone nearby is ready to act. Each layer compounds on the one before it.</p>
           <p className="section-body" style={{marginTop:'20px'}}>We know this because we did it to our own site. Avalon Capital Group went from one page Google could read to twenty-nine indexed pages ranking across forty-five commercial searches, in seven weeks, with no paid ads. That is not a promise on a slide. It is a documented result you can <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>read in full</Link>.</p>
         </section>
