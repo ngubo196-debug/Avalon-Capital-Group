@@ -15,6 +15,7 @@ export default function Footer() {
         <p style={{fontSize:'11px', color:'var(--text-dim)', marginBottom:'8px'}}>Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa &middot; <a href="mailto:hello@avaloncapitalgroup.co.za" style={{color:'var(--text-dim)', textDecoration:'none'}}>hello@avaloncapitalgroup.co.za</a></p>
         <p style={{fontSize:'12px', color:'var(--text-dim)', lineHeight:1.7, marginBottom:'12px'}}>Avalon Capital Group does not provide financial, investment, or legal advice. All information shared is for general informational purposes only. Clients are encouraged to consult with licensed professionals before making any investment or business decisions.</p>
         <p style={{fontSize:'11px'}}><a href="/privacy-policy" style={{color:'var(--gold)', textDecoration:'none', marginRight:'24px'}}>Privacy Policy</a><a href="/terms-of-service" style={{color:'var(--gold)', textDecoration:'none'}}>Terms of Service</a></p>
+        <p style={{fontSize:'11px', color:'var(--text-dim)', marginTop:'12px'}}>A product of <a href="https://avaloncapitalgroup.co.za" target="_blank" rel="noopener noreferrer" style={{color:'var(--text-dim)', textDecoration:'none'}}>ADA</a> &mdash; a division of <a href="https://avaloncapitalgroup.co.za" target="_blank" rel="noopener noreferrer" style={{color:'var(--text-dim)', textDecoration:'none'}}>Avalon Capital Group</a></p>
       </div>
     </footer>
   );
