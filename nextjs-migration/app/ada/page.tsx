@@ -2,6 +2,7 @@ import Link from 'next/link';
 import Nav from '../components/Nav';
 import HowWeWork from './HowWeWork';
 import ScrollReveal from '../components/ScrollReveal';
+import PortfolioStrip from './PortfolioStrip';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -115,35 +116,14 @@ export default function ADA() {
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:10}}>Back to Avalon Capital Group</Link>
-          <img src="/assets/ada-logo-full.png" alt="ADA - Asset. Development. Automation." style={{width:'160px', height:'auto', marginBottom:'24px', display:'block', objectFit:'contain', position:'relative', zIndex:2, maxWidth:'100%'}} />
-          <p style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'28px'}}>ADA · Asset. Development. Automation. · Durban, KwaZulu-Natal</p>
+          <img src="/assets/ada-logo-full.png" alt="ADA - Asset. Development. Automation." style={{height:'80px', width:'auto', marginBottom:'24px', display:'block', objectFit:'contain', position:'relative', zIndex:2, maxWidth:'100%', mixBlendMode:'screen'}} />
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Your website should be closing deals. Is it?</h1>
           <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Most business websites exist. They look fine, they have a contact page, and they do nothing. We rebuild them into revenue systems: websites that attract the right people, build trust fast, and convert visitors into clients. We work with businesses across Durban, KwaZulu-Natal, and South Africa.</p>
           <a href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." className="btn-primary" style={{display:'inline-block', position:'relative', zIndex:9999, cursor:'pointer', marginBottom:'28px'}}>Let&apos;s talk</a>
           <p style={{fontSize:'11px', color:'var(--text-muted)', lineHeight:1.8, opacity:0.7}}><Link href="/ada/afripact-civils" style={{color:'var(--gold)', textDecoration:'none'}}>Afripact Civils</Link> - civil construction, KZN · from invisible to credible &nbsp;·&nbsp; <Link href="/ada/canopy-courier" style={{color:'var(--gold)', textDecoration:'none'}}>Canopy Courier</Link> - fleet revenue system &nbsp;·&nbsp; <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>Avalon Capital Group</Link> - self build &nbsp;·&nbsp; Durban · KwaZulu-Natal</p>
         </div>
 
-        <div style={{borderTop:'1px solid var(--border)', borderBottom:'1px solid var(--border)', padding:'48px 60px', background:'var(--black)'}}>
-          <p style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', textAlign:'center', marginBottom:'40px'}}>Our Portfolio</p>
-          <div style={{display:'flex', alignItems:'flex-start', justifyContent:'center', gap:'48px', flexWrap:'wrap'}}>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'12px'}}>
-              <img src="/assets/afripact-logo.jpeg" alt="Afripact Civils" style={{height:'60px', width:'auto', objectFit:'contain'}} />
-              <span style={{fontSize:'9px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--text-muted)', textAlign:'center'}}>Civil construction</span>
-            </div>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'12px'}}>
-              <img src="/assets/vantara-logo.png" alt="Vantara" style={{height:'60px', width:'auto', objectFit:'contain'}} />
-              <span style={{fontSize:'9px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--text-muted)', textAlign:'center'}}>Acquisitions</span>
-            </div>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'12px'}}>
-              <img src="/assets/pitchd-logo.png" alt="Pitchd" style={{height:'60px', width:'auto', objectFit:'contain'}} />
-              <span style={{fontSize:'9px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--text-muted)', textAlign:'center'}}>Proposal platform</span>
-            </div>
-            <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'12px'}}>
-              <img src="/assets/vuma-logo.png" alt="Vuma" style={{height:'60px', width:'auto', objectFit:'contain'}} />
-              <span style={{fontSize:'9px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--text-muted)', textAlign:'center'}}>Business documents</span>
-            </div>
-          </div>
-        </div>
+        <PortfolioStrip />
 
         <section aria-labelledby="the-shift-heading">
           <div className="section-label">The shift</div>
