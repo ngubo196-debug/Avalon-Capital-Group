@@ -96,7 +96,7 @@ export default function PortfolioStrip() {
             style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'12px', cursor:'pointer'}}
             onClick={() => setPitchdModalOpen(true)}
           >
-            <img src="/assets/pitchd-logo.png" alt="Pitchd" style={{height:'60px', width:'auto', objectFit:'contain', mixBlendMode:'multiply'}} />
+            <img src="/assets/pitchd-logo.png" alt="Pitchd" style={{height:'60px', width:'auto', objectFit:'contain'}} />
             <span style={{fontSize:'9px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--text-muted)', textAlign:'center'}}>Proposal platform</span>
           </div>
           <div
