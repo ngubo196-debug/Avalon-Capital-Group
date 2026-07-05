@@ -145,8 +145,8 @@ export default function PortfolioStrip() {
                 <cite style={{display:'block', marginTop:'10px', fontSize:'11px', color:'var(--text-muted)', fontStyle:'normal', letterSpacing:'0.08em'}}>- Client, Afripact Civils</cite>
               </blockquote>
               <div style={{display:'flex', gap:'16px', flexWrap:'wrap'}}>
-                <a href="https://afripact.net" target="_blank" rel="noopener noreferrer" style={{fontSize:'12px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--gold)', textDecoration:'none', border:'1px solid var(--gold)', padding:'10px 24px'}}>Visit site →</a>
-                <a href="/ada/afripact-civils" style={{fontSize:'12px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', textDecoration:'none', border:'1px solid var(--border)', padding:'10px 24px'}}>Full case study →</a>
+                <a href="https://afripact.net" target="_blank" rel="noopener noreferrer" style={{display:'inline-block', padding:'12px 28px', background:'var(--gold)', color:'var(--black)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', textDecoration:'none', fontWeight:500, transition:'opacity 200ms ease'}} onMouseEnter={e => (e.currentTarget.style.opacity='0.8')} onMouseLeave={e => (e.currentTarget.style.opacity='1')}>Visit Site →</a>
+                <button onClick={() => setModalOpen(false)} style={{padding:'12px 28px', background:'transparent', color:'var(--text-muted)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', border:'1px solid var(--border)', cursor:'pointer', transition:'border-color 200ms ease'}} onMouseEnter={e => (e.currentTarget.style.borderColor='var(--gold)')} onMouseLeave={e => (e.currentTarget.style.borderColor='var(--border)')}>Close</button>
               </div>
             </div>
           </div>
@@ -187,8 +187,8 @@ export default function PortfolioStrip() {
                 </div>
               </div>
               <div style={{display:'flex', gap:'12px', flexWrap:'wrap'}}>
-                <a href="/vantara" style={{display:'inline-block', padding:'12px 28px', background:'var(--gold)', color:'var(--black)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', textDecoration:'none', fontWeight:500}}>Visit Vantara</a>
-                <button onClick={() => setVantaraModalOpen(false)} style={{padding:'12px 28px', background:'transparent', color:'var(--text-muted)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', border:'1px solid var(--border)', cursor:'pointer'}}>Close</button>
+                <a href="/vantara" style={{display:'inline-block', padding:'12px 28px', background:'var(--gold)', color:'var(--black)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', textDecoration:'none', fontWeight:500, transition:'opacity 200ms ease'}} onMouseEnter={e => (e.currentTarget.style.opacity='0.8')} onMouseLeave={e => (e.currentTarget.style.opacity='1')}>Visit Site →</a>
+                <button onClick={() => setVantaraModalOpen(false)} style={{padding:'12px 28px', background:'transparent', color:'var(--text-muted)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', border:'1px solid var(--border)', cursor:'pointer', transition:'border-color 200ms ease'}} onMouseEnter={e => (e.currentTarget.style.borderColor='var(--gold)')} onMouseLeave={e => (e.currentTarget.style.borderColor='var(--border)')}>Close</button>
               </div>
             </div>
           </div>
@@ -229,7 +229,8 @@ export default function PortfolioStrip() {
                 </div>
               </div>
               <div style={{display:'flex', gap:'12px', flexWrap:'wrap'}}>
-                <button onClick={() => setPitchdModalOpen(false)} style={{padding:'12px 28px', background:'transparent', color:'var(--text-muted)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', border:'1px solid var(--border)', cursor:'pointer'}}>Close</button>
+                <a href="https://pitchd.online/" target="_blank" rel="noopener noreferrer" style={{display:'inline-block', padding:'12px 28px', background:'var(--gold)', color:'var(--black)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', textDecoration:'none', fontWeight:500, transition:'opacity 200ms ease'}} onMouseEnter={e => (e.currentTarget.style.opacity='0.8')} onMouseLeave={e => (e.currentTarget.style.opacity='1')}>Visit Site →</a>
+                <button onClick={() => setPitchdModalOpen(false)} style={{padding:'12px 28px', background:'transparent', color:'var(--text-muted)', fontSize:'11px', letterSpacing:'0.15em', textTransform:'uppercase', border:'1px solid var(--border)', cursor:'pointer', transition:'border-color 200ms ease'}} onMouseEnter={e => (e.currentTarget.style.borderColor='var(--gold)')} onMouseLeave={e => (e.currentTarget.style.borderColor='var(--border)')}>Close</button>
               </div>
             </div>
           </div>
