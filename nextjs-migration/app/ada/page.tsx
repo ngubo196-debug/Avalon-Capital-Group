@@ -111,6 +111,10 @@ export default function ADA() {
           .ada-audit-cta:hover {
             box-shadow: 0 0 24px rgba(201,168,76,0.35);
           }
+          .ada-audit-cta:hover {
+            box-shadow: 0 0 20px rgba(201,168,76,0.5);
+            opacity: 0.92;
+          }
         `}</style>
         <div className="inner-hero">
           <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +128,7 @@ export default function ADA() {
           <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:10}}>Back to Avalon Capital Group</Link>
           <img src="/assets/ada-logo-full.png" alt="ADA - Asset. Development. Automation." style={{height:'80px', width:'auto', marginBottom:'24px', display:'block', objectFit:'contain', position:'relative', zIndex:2, maxWidth:'100%', mixBlendMode:'screen'}} />
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Your website should be closing deals. Is it?</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Most business websites exist. They look fine, they have a contact page, and they do nothing. We rebuild them into revenue systems: websites that attract the right people, build trust fast, and convert visitors into clients. We work with businesses across Durban, KwaZulu-Natal, and South Africa.</p>
+          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Your website is either sending clients to you or sending them to your competitors. Most are doing the latter - quietly, every day, without you knowing.</p>
           <a href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." className="btn-primary" style={{display:'inline-block', position:'relative', zIndex:9999, cursor:'pointer', marginBottom:'28px'}}>Let&apos;s talk</a>
           <p style={{fontSize:'11px', color:'var(--text-muted)', lineHeight:1.8, opacity:0.7}}><Link href="/ada/afripact-civils" style={{color:'var(--gold)', textDecoration:'none'}}>Afripact Civils</Link> - civil construction, KZN · from invisible to credible &nbsp;·&nbsp; <Link href="/ada/canopy-courier" style={{color:'var(--gold)', textDecoration:'none'}}>Canopy Courier</Link> - fleet revenue system &nbsp;·&nbsp; <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>Avalon Capital Group</Link> - self build &nbsp;·&nbsp; Durban · KwaZulu-Natal</p>
         </div>
@@ -322,6 +326,10 @@ export default function ADA() {
             <cite style={{display:'block', marginTop:'20px', fontSize:'12px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>- Client, Afripact Civils · Civil construction, KZN</cite>
             <p style={{marginTop:'16px', fontSize:'12px', color:'var(--text-dim)', lineHeight:1.8, maxWidth:'480px', fontStyle:'normal'}}>Afripact Civils engaged ADA to build a professional digital presence that established credibility with new prospects. Phase two, revenue generation, is currently underway.</p>
           </blockquote>
+          <div style={{marginTop:'40px', display:'flex', flexDirection:'column', gap:'12px', alignItems:'flex-start'}}>
+            <a href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{display:'inline-block'}}>Start a project</a>
+            <span style={{fontSize:'12px', color:'var(--text-muted)', letterSpacing:'0.03em'}}>One conversation is enough to know if we&apos;re the right fit.</span>
+          </div>
         </section>
 
         <div className="divider"></div>
@@ -386,6 +394,11 @@ export default function ADA() {
           <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>One well-built revenue system pays for itself. Usually faster than people expect.</p>
           </blockquote>
+          <div style={{marginTop:'40px', borderTop:'1px solid var(--border)', paddingTop:'32px', display:'flex', flexDirection:'column', gap:'12px', alignItems:'flex-start'}}>
+            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'480px', margin:'0'}}>Not sure which tier fits your business? The audit shows you exactly where your site stands before you commit to anything.</p>
+            <a href="/audit" className="ada-audit-cta" style={{display:'inline-block', marginTop:'8px', background:'var(--gold)', color:'var(--black)', padding:'14px 28px', fontSize:'11px', fontWeight:'600', letterSpacing:'0.12em', textTransform:'uppercase', textDecoration:'none'}}>Find out what it&apos;s costing you</a>
+            <span style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em'}}>Free. No commitment. Takes 4 minutes.</span>
+          </div>
         </section>
 
         <div className="divider"></div>
