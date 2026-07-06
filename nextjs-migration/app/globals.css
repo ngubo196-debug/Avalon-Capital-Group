@@ -119,6 +119,8 @@
     left: 0;
     right: 0;
     height: auto;
+    max-height: calc(100vh - 72px);
+    overflow-y: auto;
     background: rgba(10,10,10,0.96);
     z-index: 10000;
     flex-direction: column;

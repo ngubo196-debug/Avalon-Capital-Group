@@ -105,6 +105,12 @@ export default function ADA() {
           .ada-insight-link:hover {
             transform: translateY(-4px);
           }
+          .ada-audit-cta {
+            transition: box-shadow 200ms ease;
+          }
+          .ada-audit-cta:hover {
+            box-shadow: 0 0 24px rgba(201,168,76,0.35);
+          }
         `}</style>
         <div className="inner-hero">
           <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
@@ -128,6 +134,48 @@ export default function ADA() {
         <section aria-labelledby="the-shift-heading">
           <div className="section-label">The shift</div>
           <h2 className="section-title" id="the-shift-heading">Websites changed.<br /><em>Most businesses didn&apos;t get the memo.</em></h2>
+          <div style={{
+            borderTop: '1px solid var(--border)',
+            borderBottom: '1px solid var(--border)',
+            padding: '32px 0',
+            margin: '32px 0',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: '16px'
+          }}>
+            <p style={{
+              fontSize: '1rem',
+              color: 'var(--text-muted)',
+              lineHeight: '1.7',
+              maxWidth: '540px',
+              margin: '0'
+            }}>
+              Every visitor who leaves your website without getting in touch is a client that paid someone else.
+            </p>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-start' }}>
+              <a href="/audit" className="ada-audit-cta" style={{
+                display: 'inline-block',
+                background: 'var(--gold)',
+                color: 'var(--black)',
+                padding: '14px 28px',
+                fontSize: '11px',
+                fontWeight: '600',
+                letterSpacing: '0.12em',
+                textTransform: 'uppercase',
+                textDecoration: 'none',
+                cursor: 'pointer'
+              }}>
+                Find out what it&apos;s costing you
+              </a>
+              <span style={{
+                fontSize: '11px',
+                color: 'var(--text-muted)',
+                letterSpacing: '0.05em'
+              }}>
+                Free. No commitment. Takes 4 minutes.
+              </span>
+            </div>
+          </div>
           <p className="section-body">Websites are no longer passive brochures - they are the primary tool a business uses to earn trust, qualify prospects, and convert attention into revenue.</p>
           <p className="section-body">For twenty years, a website was a checkbox. You built it, you put your number on it, and that was enough. It lived online the way a business card lives in a drawer, technically there, practically invisible.</p>
           <p className="section-body" style={{marginTop:'20px'}}>That era is over. AI has changed how people search, how they evaluate, and how they decide. When someone looks for a service today, they&apos;re not browsing, they&apos;re already deciding. By the time they land on your website, they&apos;re halfway to yes or halfway out the door. Your site has one job: convert that moment into a conversation.</p>

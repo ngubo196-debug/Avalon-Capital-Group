@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 
 export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [adaOpen, setAdaOpen] = useState(false);
   const pathname = usePathname();
 
   function activeStyle(href: string) {
@@ -43,11 +44,28 @@ export default function Nav() {
         </div>
       </nav>
 
-      <nav className={`mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu" aria-label="Mobile navigation">
+      <nav className={`mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu" aria-label="Mobile navigation" style={{overflowY: 'auto'}}>
         <Link href="/" style={activeStyle('/')} onClick={() => setMenuOpen(false)}>Home</Link>
         <Link href="/about" style={activeStyle('/about')} onClick={() => setMenuOpen(false)}>About</Link>
         <Link href="/vantara" style={activeStyle('/vantara')} onClick={() => setMenuOpen(false)}>Vantara</Link>
-        <Link href="/ada" style={activeStyle('/ada')} onClick={() => setMenuOpen(false)}>ADA</Link>
+        <div style={{display:'flex', flexDirection:'column'}}>
+          <div style={{display:'flex', alignItems:'center', justifyContent:'space-between'}}>
+            <Link href="/ada" style={activeStyle('/ada')} onClick={() => setMenuOpen(false)}>ADA</Link>
+            <span
+              onClick={() => setAdaOpen(!adaOpen)}
+              style={{cursor:'pointer', padding:'0 12px', fontSize:'18px', color:'var(--gold)', userSelect:'none'}}
+            >
+              {adaOpen ? '−' : '+'}
+            </span>
+          </div>
+          {adaOpen && (
+            <div style={{display:'flex', flexDirection:'column', paddingLeft:'16px', borderLeft:'1px solid var(--border)', marginTop:'8px', gap:'12px'}}>
+              <Link href="/ada/insights" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Insights</Link>
+              <Link href="/ada/case-studies" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Case Studies</Link>
+              <Link href="/ada/get-your-assistant" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Get Your Assistant</Link>
+            </div>
+          )}
+        </div>
         <Link href="/contact" style={activeStyle('/contact')} onClick={() => setMenuOpen(false)}>Contact / Enquire</Link>
         <Link href="/offers" style={activeStyle('/offers')} onClick={() => setMenuOpen(false)}>Offers</Link>
         <a href="/audit" style={{color:'var(--gold)'}} onClick={() => setMenuOpen(false)}>Free Audit</a>
