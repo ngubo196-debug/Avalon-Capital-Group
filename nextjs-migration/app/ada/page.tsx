@@ -1,8 +1,7 @@
 import Link from 'next/link';
 import Nav from '../components/Nav';
-import HowWeWork from './HowWeWork';
-import ScrollReveal from '../components/ScrollReveal';
-import PortfolioStrip from './PortfolioStrip';
+import AdaParticleMesh from '../components/AdaParticleMesh';
+import AdaReveal from '../components/AdaReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,6 +9,8 @@ export const metadata: Metadata = {
   description: 'ADA builds conversion-ready websites for South African businesses. Design, SEO, and the full system - so your site ranks on Google and turns visitors into paying clients.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada' },
 };
+
+const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA.";
 
 export default function ADA() {
   return (
@@ -90,491 +91,275 @@ export default function ADA() {
         }}
       />
       <Nav />
-      <div id="page-ada" className="page" role="main">
-        <style suppressHydrationWarning>{`
-          .ada-case-card {
-            transition: transform 200ms ease, box-shadow 200ms ease;
-          }
-          .ada-case-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-          }
-          .ada-insight-link {
-            transition: transform 200ms ease;
-          }
-          .ada-insight-link:hover {
-            transform: translateY(-4px);
-          }
-          .ada-audit-cta {
-            transition: box-shadow 200ms ease;
-          }
-          .ada-audit-cta:hover {
-            box-shadow: 0 0 24px rgba(201,168,76,0.35);
-          }
-          .ada-audit-cta:hover {
-            box-shadow: 0 0 20px rgba(201,168,76,0.5);
-            opacity: 0.92;
-          }
-        `}</style>
-        <div className="inner-hero">
-          <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
-              <polygon points="290,20 560,640 20,640"/>
-              <polygon points="290,80 510,600 70,600"/>
-              <polygon points="290,140 460,560 120,560"/>
-            </g>
-          </svg>
-          <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:10}}>Back to Avalon Capital Group</Link>
-          <img src="/assets/ada-logo-full.png" alt="ADA - Asset. Development. Automation." style={{height:'80px', width:'auto', marginBottom:'24px', display:'block', objectFit:'contain', position:'relative', zIndex:2, maxWidth:'100%', mixBlendMode:'screen'}} />
-          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Your website should be closing deals. Is it?</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Your website is either sending clients to you or sending them to your competitors. Most are doing the latter - quietly, every day, without you knowing.</p>
-          <a href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." className="btn-primary" style={{display:'inline-block', position:'relative', zIndex:9999, cursor:'pointer', marginBottom:'28px'}}>Let&apos;s talk</a>
-          <p style={{fontSize:'11px', color:'var(--text-muted)', lineHeight:1.8, opacity:0.7}}><Link href="/ada/afripact-civils" style={{color:'var(--gold)', textDecoration:'none'}}>Afripact Civils</Link> - civil construction, KZN · from invisible to credible &nbsp;·&nbsp; <Link href="/ada/canopy-courier" style={{color:'var(--gold)', textDecoration:'none'}}>Canopy Courier</Link> - fleet revenue system &nbsp;·&nbsp; <Link href="/ada/acg-case-study" style={{color:'var(--gold)', textDecoration:'none'}}>Avalon Capital Group</Link> - self build &nbsp;·&nbsp; Durban · KwaZulu-Natal</p>
-        </div>
+      <div id="page-ada" className="page ada-section" role="main">
 
-        <PortfolioStrip />
-
-        <section aria-labelledby="the-shift-heading">
-          <div className="section-label">The shift</div>
-          <h2 className="section-title" id="the-shift-heading">Websites changed.<br /><em>Most businesses didn&apos;t get the memo.</em></h2>
-          <div style={{
-            borderTop: '1px solid var(--border)',
-            borderBottom: '1px solid var(--border)',
-            padding: '32px 0',
-            margin: '32px 0',
-            display: 'flex',
-            flexDirection: 'column',
-            gap: '16px'
-          }}>
-            <p style={{
-              fontSize: '1rem',
-              color: 'var(--text-muted)',
-              lineHeight: '1.7',
-              maxWidth: '540px',
-              margin: '0'
-            }}>
-              Every visitor who leaves your website without getting in touch is a client that paid someone else.
-            </p>
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '8px', alignItems: 'flex-start' }}>
-              <a href="/audit" className="ada-audit-cta" style={{
-                display: 'inline-block',
-                background: 'var(--gold)',
-                color: 'var(--black)',
-                padding: '14px 28px',
-                fontSize: '11px',
-                fontWeight: '600',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                textDecoration: 'none',
-                cursor: 'pointer'
-              }}>
-                Find out what it&apos;s costing you
-              </a>
-              <span style={{
-                fontSize: '11px',
-                color: 'var(--text-muted)',
-                letterSpacing: '0.05em'
-              }}>
-                Free. No commitment. Takes 4 minutes.
-              </span>
-            </div>
-          </div>
-          <p className="section-body">Websites are no longer passive brochures - they are the primary tool a business uses to earn trust, qualify prospects, and convert attention into revenue.</p>
-          <p className="section-body">For twenty years, a website was a checkbox. You built it, you put your number on it, and that was enough. It lived online the way a business card lives in a drawer, technically there, practically invisible.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>That era is over. AI has changed how people search, how they evaluate, and how they decide. When someone looks for a service today, they&apos;re not browsing, they&apos;re already deciding. By the time they land on your website, they&apos;re halfway to yes or halfway out the door. Your site has one job: convert that moment into a conversation.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Most business websites aren&apos;t built to do that. They&apos;re built to exist. No clear offer, no conversion path, no reason to act now. Visitors land, look around, and leave, not because the service is bad, but because the website doesn&apos;t translate value into action. That&apos;s silent revenue loss, every single day.</p>
-          <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>This is where most businesses are falling behind. The ones pulling ahead aren&apos;t louder, they&apos;re clearer.</p>
-          </blockquote>
-        </section>
-
-        <div className="divider"></div>
-
-        <section aria-labelledby="what-we-do-heading">
-          <div className="section-label">What we do</div>
-          <h2 className="section-title" id="what-we-do-heading">We don&apos;t build websites.<br /><em>We build the system behind them.</em></h2>
-          <p className="section-body">ADA builds websites as conversion infrastructure - every page, every section, and every element designed around one question: what is this supposed to make someone do?</p>
-          <p className="section-body">There&apos;s no shortage of people who can make a website look good. That&apos;s not the problem. The problem is that most websites are designed without ever asking the only question that matters: what is this page supposed to make someone do?</p>
-          <p className="section-body" style={{marginTop:'20px'}}>At ADA, our digital agency in Durban, we approach every project as conversion infrastructure. That means understanding your offer, your audience, and the specific moment a visitor decides to reach out, or walk away. We then build around that moment. Clear messaging. A logical flow. Trust signals placed where decisions actually happen. Every element earns its place or it doesn&apos;t make the cut.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>The result isn&apos;t just a better-looking website. It&apos;s a website that works while you&apos;re not, qualifying visitors, building credibility, and moving people toward a conversation with you.</p>
-
-          <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Offer clarity</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Visitors know exactly what you do, who it&apos;s for, and why you&apos;re the right choice, within seconds.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Conversion flow</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Every section guides a decision. No dead ends, no confusion, no reason to leave without acting.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Trust architecture</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Proof, credibility, and social signals built into the structure, not bolted on as an afterthought.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Revenue focus</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>We measure success by what your website generates, not by how it looks on a portfolio screenshot.</div>
-            </div>
-          </div>
-
-          <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>If your website isn&apos;t actively working for your business, it&apos;s quietly working against it.</p>
-          </blockquote>
-          <a href="/ada/web-design-durban" style={{display:'inline-block', marginTop:'24px', fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)'}}>Web design in Durban →</a>
-          <a href="/ada/website-not-generating-leads" style={{display:'inline-block', marginTop:'12px', fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)'}}>Turning website visitors into leads →</a>
-          <a href="/ada/ai-automation-south-africa" style={{display:'inline-block', marginTop:'12px', fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)'}}>AI automation for your business →</a>
-        </section>
-
-        <div className="divider"></div>
-
-        <section id="section-our-work" aria-labelledby="our-work-heading">
-          <div className="section-label">Our work</div>
-          <h2 className="section-title" id="our-work-heading">Proof, not promises.</h2>
-          <p className="section-body">ADA has built revenue systems for civil construction companies, automotive service businesses, and the agency&apos;s own digital presence - each one documented as a case study.</p>
-          <p className="section-body">Every project starts with a problem and ends with a system. Here&apos;s what that looks like in practice.</p>
-
-          <div style={{display:'flex', flexDirection:'column', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-
-            <div className="ada-case-card" style={{background:'var(--surface)', padding:'48px'}}>
-              <div style={{display:'flex', gap:'12px', marginBottom:'32px', flexWrap:'wrap'}}>
-                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', border:'1px solid var(--border)', padding:'5px 12px'}}>Civil construction</span>
-                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', border:'1px solid var(--border)', padding:'5px 12px'}}>KwaZulu-Natal</span>
-              </div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(28px,3.5vw,44px)', fontWeight:300, lineHeight:1.1, marginBottom:'10px'}}>Afripact Civils</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'28px'}}>From invisible to credible</div>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'20px'}}>Afripact Civils had the capability and the track record. What they didn&apos;t have was a digital presence that matched. Without it, every new prospect had to take their word for it, and in construction, that&apos;s a hard sell. We built them a website focused on one thing: making Afripact look like exactly what they are. A legitimate, professional civil construction business worth doing business with.</p>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'36px'}}>The client put it best: the website shows people who have never done business with them that Afripact is not a scam: it&apos;s an actual business. That&apos;s trust infrastructure working exactly as it should. Phase two is already in motion: turning that credibility into a lead generation engine targeting the private construction sector.</p>
-              <div style={{display:'flex', gap:'1px', background:'var(--border)', marginBottom:'36px', flexWrap:'wrap'}}>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>Civil construction</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Industry</div>
-                </div>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>Trust + visibility</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Primary objective</div>
-                </div>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>Phase 2 active</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Revenue engine next</div>
-                </div>
-              </div>
-              <Link href="/ada/afripact-civils" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', textDecoration:'none'}}>Full case study →</Link>
-            </div>
-
-            <div className="ada-case-card" style={{background:'var(--surface)', padding:'48px'}}>
-              <div style={{display:'flex', gap:'12px', marginBottom:'32px', flexWrap:'wrap'}}>
-                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', border:'1px solid var(--border)', padding:'5px 12px'}}>Automotive services</span>
-                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', border:'1px solid var(--border)', padding:'5px 12px'}}>KwaZulu-Natal</span>
-              </div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(28px,3.5vw,44px)', fontWeight:300, lineHeight:1.1, marginBottom:'10px'}}>Canopy Courier</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'28px'}}>From a retail shop to a fleet revenue system</div>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'20px'}}>Canopy Courier had a clean website and a strong service. But the site was built for walk-in retail customers, and the real money was sitting completely untouched in fleet. Construction firms, logistics companies, security fleets: high-volume, recurring, predictable revenue. None of it was being captured because nothing on the site spoke to it.</p>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'36px'}}>We rebuilt the entire digital presence around a dual strategy: retail and fleet running in parallel. Dedicated pages, separate conversion paths, a structured fleet offer, and an SEO architecture built to rank for high-intent searches across Durban and KZN. Eight deliverables. One coherent system.</p>
-              <div style={{display:'flex', gap:'1px', background:'var(--border)', marginBottom:'36px', flexWrap:'wrap'}}>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>8 deliverables</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Scope of build</div>
-                </div>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>Retail + fleet</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Dual revenue path</div>
-                </div>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>R1M–R2M</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Projected annual upside</div>
-                </div>
-              </div>
-              <Link href="/ada/canopy-courier" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', textDecoration:'none'}}>Full case study →</Link>
-            </div>
-
-            <div className="ada-case-card" style={{background:'var(--surface)', padding:'48px'}}>
-              <div style={{display:'flex', gap:'12px', marginBottom:'32px', flexWrap:'wrap'}}>
-                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)', border:'1px solid var(--border)', padding:'5px 12px'}}>Our own build</span>
-                <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)', border:'1px solid var(--border)', padding:'5px 12px'}}>KwaZulu-Natal</span>
-              </div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(28px,3.5vw,44px)', fontWeight:300, lineHeight:1.1, marginBottom:'10px'}}>Avalon Capital Group</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'28px'}}>From 1 indexed page to 16 in a server-rendered Next.js build</div>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'20px'}}>We built this. The full story of how ADA built, diagnosed, and migrated avaloncapitalgroup.co.za - from a plain HTML SPA with 1 indexed page to a server-rendered Next.js site with 29 indexed pages. Documented live.</p>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px', marginBottom:'36px'}}>The diagnosis was a hard one: 17 pages built, 1 visible to Google. The SPA was serving identical HTML for every route. Googlebot correctly concluded they were duplicates and refused to index them. The fix required a structural migration, not a patch. We ran the same process we run for clients, on ourselves, and documented every decision.</p>
-              <div style={{display:'flex', gap:'1px', background:'var(--border)', marginBottom:'36px', flexWrap:'wrap'}}>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>14 days</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Concept to live</div>
-                </div>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>1 → 29 pages</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Indexed by Google</div>
-                </div>
-                <div style={{background:'var(--black)', padding:'16px 24px', flex:1, minWidth:'160px'}}>
-                  <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'16px', marginBottom:'4px'}}>Next.js 14</div>
-                  <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Migration stack</div>
-                </div>
-              </div>
-              <Link href="/ada/acg-case-study" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', textDecoration:'none'}}>Read the case study →</Link>
-            </div>
-
+        {/* HERO */}
+        <section className="ada2-hero">
+          <AdaParticleMesh />
+          <div className="ada2-hero-copy">
+            <div className="ada2-label">ADA — Asset Development Automation</div>
+            <h1 className="ada2-h1 ada-display">Your website should bring you clients.<br />We build ones that do.</h1>
+            <p className="ada2-body">No jargon, no dashboard talk. A website either gets you enquiries or it doesn&apos;t. If yours isn&apos;t, that&apos;s what we fix.</p>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada2-cta" style={{ marginTop: '32px', display: 'inline-block' }}>Start a conversation →</a>
           </div>
         </section>
 
-        <div className="divider"></div>
+        {/* WHAT WE DO */}
+        <section id="process" className="ada2-section ada2-section--white ada2-section--rule" aria-labelledby="process-heading">
+          <div className="ada2-inner">
+            <div className="ada2-label">What we do</div>
+            <h2 className="ada2-h2 ada-display" id="process-heading">Websites that actually work.</h2>
+            <p className="ada2-body">We build websites that look professional and turn visitors into enquiries. Clear message. Easy to use. Built to rank on Google and convert.</p>
 
-        <section>
-          <div className="section-label">Client feedback</div>
-          <blockquote style={{marginTop:'40px', paddingLeft:'28px', borderLeft:'2px solid var(--gold)', maxWidth:'640px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(22px,2.8vw,34px)', fontWeight:300, fontStyle:'italic', lineHeight:1.45, color:'var(--text)'}}>&ldquo;The website shows people I have never done business with that Afripact is not a scam but an actual business.&rdquo;</p>
-            <cite style={{display:'block', marginTop:'20px', fontSize:'12px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>- Client, Afripact Civils · Civil construction, KZN</cite>
-            <p style={{marginTop:'16px', fontSize:'12px', color:'var(--text-dim)', lineHeight:1.8, maxWidth:'480px', fontStyle:'normal'}}>Afripact Civils engaged ADA to build a professional digital presence that established credibility with new prospects. Phase two, revenue generation, is currently underway.</p>
-          </blockquote>
-          <div style={{marginTop:'40px', display:'flex', flexDirection:'column', gap:'12px', alignItems:'flex-start'}}>
-            <a href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." target="_blank" rel="noopener noreferrer" className="btn-primary" style={{display:'inline-block'}}>Start a project</a>
-            <span style={{fontSize:'12px', color:'var(--text-muted)', letterSpacing:'0.03em'}}>One conversation is enough to know if we&apos;re the right fit.</span>
+            <AdaReveal className="ada2-numbered-list">
+              <div className="ada2-numbered-row">
+                <span className="ada2-num ada-display">01</span>
+                <div>
+                  <h3>Audit.</h3>
+                  <p>We look at what you have and where it&apos;s losing people.</p>
+                </div>
+              </div>
+              <div className="ada2-numbered-row">
+                <span className="ada2-num ada-display">02</span>
+                <div>
+                  <h3>Strategy.</h3>
+                  <p>We decide what each page needs to do before we design anything.</p>
+                </div>
+              </div>
+              <div className="ada2-numbered-row">
+                <span className="ada2-num ada-display">03</span>
+                <div>
+                  <h3>Build.</h3>
+                  <p>Copy and design, built together, so the site does its job.</p>
+                </div>
+              </div>
+              <div className="ada2-numbered-row">
+                <span className="ada2-num ada-display">04</span>
+                <div>
+                  <h3>Grow.</h3>
+                  <p>We check it&apos;s indexed, watch what&apos;s working, and build on it.</p>
+                </div>
+              </div>
+            </AdaReveal>
           </div>
         </section>
 
-        <div className="divider"></div>
-
-        <section aria-labelledby="how-we-work-heading">
-          <div className="section-label">How we work</div>
-          <h2 className="section-title" id="how-we-work-heading">A system, not a service.</h2>
-          <p className="section-body">ADA runs a four-step process across every engagement: audit, strategy, build, and grow - each stage with a defined output and a clear brief before anything moves.</p>
-          <p className="section-body">We don&apos;t take a brief, disappear for six weeks, and hand over a website. Every engagement follows a clear process: one built around your business, your offer, and the specific outcome you&apos;re trying to achieve. You know what&apos;s happening at every stage.</p>
-
-          <HowWeWork />
-
-          <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'1px'}}>
-            <div style={{background:'var(--black)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>No retainer traps</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Every engagement is scoped clearly upfront. You know what you&apos;re getting, what it costs, and what success looks like before we start.</div>
-            </div>
-            <div style={{background:'var(--black)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Built for your stage</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Whether you need a full rebuild or a focused intervention, the system adapts to where your business actually is, not a fixed package that fits no one perfectly.</div>
-            </div>
-          </div>
-
-          <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>We work with businesses that are serious about growth. If that&apos;s you, the process works fast.</p>
-          </blockquote>
-        </section>
-
-        <div className="divider"></div>
-
-        <section aria-labelledby="investment-heading">
-          <div className="section-label">Investment</div>
-          <h2 className="section-title" id="investment-heading">We don&apos;t sell cheap.<br /><em>We sell value.</em></h2>
-          <p className="section-body">Every engagement is scoped to your business: there&apos;s no fixed menu. What we can tell you is the kind of work we do, the outcomes it&apos;s built around, and what that level of thinking is worth to a business serious about growth.</p>
-
-          <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'40px', display:'flex', flexDirection:'column'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'20px'}}>Foundation</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:300, marginBottom:'16px'}}>Credibility build</div>
-              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>Your digital presence should reflect the quality of what you actually deliver. Foundation builds the infrastructure that makes that possible: a fast, conversion-ready website, search visibility where it counts, and a Google presence that works for you around the clock.</p>
-              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: established businesses with no serious digital foundation.<br />R18,500 once-off</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px', display:'flex', flexDirection:'column', border:'1px solid var(--border-hover)', margin:'-1px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'20px'}}>Growth</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:300, marginBottom:'16px'}}>Revenue system build</div>
-              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>A full digital revenue system built around your specific business. Website, SEO and AEO architecture, competitor analysis, social media infrastructure handed to you ready to run, schema markup, and analytics configured so you can see exactly what is working.</p>
-              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: businesses ready to make their website and digital presence generate consistent revenue.<br />R34,000 once-off · R12,500/month on a 3-month minimum retainer</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px', display:'flex', flexDirection:'column'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'20px'}}>Authority</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'26px', fontWeight:300, marginBottom:'16px'}}>By enquiry only</div>
-              <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, flex:1}}>For businesses that want to dominate their category. Authority is a custom strategic engagement, scoped specifically around your market position, your competitors, and where you want to be. No two Authority builds are the same. If you are serious about owning your space digitally, this is the conversation to have.</p>
-              <div style={{marginTop:'28px', paddingTop:'20px', borderTop:'1px solid var(--border)', fontSize:'11px', color:'var(--text-muted)', lineHeight:1.6}}>Right for: businesses ready to dominate their category.<br />Enquire directly</div>
-            </div>
-          </div>
-
-          <div style={{background:'var(--surface2)', border:'1px solid var(--border)', padding:'48px', marginTop:'1px', maxWidth:'100%'}}>
-            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'16px'}}>A straightforward note on pricing</div>
-            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'640px'}}>Foundation and Growth are fixed-scope, fixed-price engagements. You know exactly what you are getting and what it costs before anything begins. Authority is scoped per client and the investment reflects the ambition. If you are looking for the cheapest option, we are probably not the right fit. If you are looking for the most valuable one, let&apos;s talk.</p>
-          </div>
-
-          <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>One well-built revenue system pays for itself. Usually faster than people expect.</p>
-          </blockquote>
-          <div style={{marginTop:'40px', borderTop:'1px solid var(--border)', paddingTop:'32px', display:'flex', flexDirection:'column', gap:'12px', alignItems:'flex-start'}}>
-            <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'480px', margin:'0'}}>Not sure which tier fits your business? The audit shows you exactly where your site stands before you commit to anything.</p>
-            <a href="/audit" className="ada-audit-cta" style={{display:'inline-block', marginTop:'8px', background:'var(--gold)', color:'var(--black)', padding:'14px 28px', fontSize:'11px', fontWeight:'600', letterSpacing:'0.12em', textTransform:'uppercase', textDecoration:'none'}}>Find out what it&apos;s costing you</a>
-            <span style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em'}}>Free. No commitment. Takes 4 minutes.</span>
-          </div>
-        </section>
-
-        <div className="divider"></div>
-
-        <section id="section-insights" aria-labelledby="insights-heading">
-          <div className="section-label">Insights</div>
-          <h2 className="section-title" id="insights-heading">We share how we think.</h2>
-          <p className="section-body">ADA publishes market intelligence and case studies on web design, SEO, and AI automation for South African businesses.</p>
-          <p className="section-body">Not to fill a content calendar. To show you, before we&apos;ve spoken, that we understand what&apos;s happening in the market and what it means for your business.</p>
-
-          <div style={{marginTop:'56px', borderTop:'1px solid var(--border)'}}>
-
-            <Link href="/ada/insights/ai-awareness" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
-              <div style={{flex:1}}>
-                <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'10px', flexWrap:'wrap'}}>
-                  <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Market insight</span>
-                  <span style={{fontSize:'9px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--black)', background:'var(--gold)', padding:'2px 8px'}}>Anchor piece</span>
-                </div>
-                <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:300, lineHeight:1.3, marginBottom:'8px'}}>The AI awareness cycle - why your website is about to become your most valuable business asset</div>
-                <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>AI hasn&apos;t changed how websites are built. It&apos;s changed what websites are responsible for. Here&apos;s what that shift means for any business that wants to stay competitive over the next three years.</div>
-              </div>
-              <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </Link>
-
-            <Link href="/ada/insights/why-websites-fail" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
-              <div style={{flex:1}}>
-                <div style={{marginBottom:'10px'}}>
-                  <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>The problem</span>
-                </div>
-                <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:300, lineHeight:1.3, marginBottom:'8px'}}>Why most business websites don&apos;t make money</div>
-                <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>It&apos;s not the design. It&apos;s not the traffic. It&apos;s the fact that most websites were never built to convert. Here&apos;s what a website that doesn&apos;t perform actually costs you, and why the problem is more common than most business owners realise.</div>
-              </div>
-              <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </Link>
-
-            <Link href="/ada/insights/revenue-website" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
-              <div style={{flex:1}}>
-                <div style={{marginBottom:'10px'}}>
-                  <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>The solution</span>
-                </div>
-                <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:300, lineHeight:1.3, marginBottom:'8px'}}>What a revenue-driven website actually looks like</div>
-                <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>Most business owners have never seen one up close. Here&apos;s a breakdown of the specific elements that separate a website that performs from one that just exists: offer clarity, conversion flow, and trust architecture.</div>
-              </div>
-              <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </Link>
-
-            <Link href="/ada/insights/ai-websites" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
-              <div style={{flex:1}}>
-                <div style={{marginBottom:'10px'}}>
-                  <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Authority piece</span>
-                </div>
-                <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:300, lineHeight:1.3, marginBottom:'8px'}}>Why AI won&apos;t replace websites - it will make them more valuable</div>
-                <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>Everyone&apos;s asking whether AI makes websites obsolete. The answer is the opposite. Here&apos;s why the businesses that invest in strong digital infrastructure now will be the ones AI points people toward, and what that means for yours.</div>
-              </div>
-              <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </Link>
-
-            <Link href="/ada/insights/canopy-deep-dive" className="ada-insight-link" style={{padding:'28px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'24px', textDecoration:'none', color:'inherit'}}>
-              <div style={{flex:1}}>
-                <div style={{marginBottom:'10px'}}>
-                  <span style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Case study deep-dive</span>
-                </div>
-                <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontWeight:300, lineHeight:1.3, marginBottom:'8px'}}>The Canopy Courier rebuild - how we turned a retail website into a fleet revenue system</div>
-                <div style={{fontSize:'12px', color:'var(--text-muted)', lineHeight:1.8, maxWidth:'620px'}}>A ground-level breakdown of a real project. What we found, what we built, and the specific decisions that turned a functional website into a business development tool with R1M+ annual revenue potential.</div>
-              </div>
-              <div style={{fontSize:'18px', color:'var(--gold)', flexShrink:0, paddingTop:'4px'}}>→</div>
-            </Link>
-
-          </div>
-
-          <p style={{marginTop:'32px', fontSize:'12px', fontStyle:'italic', color:'var(--text-muted)', opacity:0.7}}>Every piece here is worth your time. That&apos;s the only standard we publish to.</p>
-        </section>
-
-        <div className="divider"></div>
-
-        <ScrollReveal delay={0}>
-        <section aria-labelledby="faq-ada-heading">
-          <div className="section-label">Common Questions</div>
-          <h2 className="section-title" id="faq-ada-heading">ADA, answered straight.</h2>
-          <div style={{marginTop:'48px'}}>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                What does ADA actually build - websites, SEO, or both?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>ADA builds revenue systems. The deliverable is digital infrastructure - a website that ranks on Google, converts the visitors it attracts, and keeps working while you focus on running your business. Web design and SEO are components of that system, not separate services. A website without search visibility is a brochure nobody finds. Search visibility without a converting website is traffic that leaves. ADA builds both as one coherent system because that is the only way either one actually works.</p>
-            </details>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                How long does a website project take?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>It depends entirely on the scope. A focused credibility build can be live in two to three days. A full revenue system with SEO architecture, multiple conversion paths, and content infrastructure takes four to six weeks. Every project is scoped before anything begins, so you know the timeline before we start, not after. ADA does not disappear for months and reappear with a finished product. You know what is being built, when each stage completes, and what comes next.</p>
-            </details>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                What does a website from ADA cost?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>ADA has three fixed-price tiers. Foundation starts at R18,500 for a credibility build - a fast, conversion-ready website with search visibility and a Google presence that works around the clock. Growth is R34,000 once-off or R12,500 per month on a three-month minimum, covering a full revenue system with SEO architecture, competitor analysis, social infrastructure, schema markup, and analytics. Authority is scoped per client for businesses ready to dominate their category. Foundation and Growth are fixed scope and fixed price - you know exactly what you are getting before anything begins.</p>
-            </details>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                What is AI automation and does my business need it?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>AI automation means giving repetitive tasks in your business to a system that executes them the same way, every time, without fatigue, error, or the need for management. The work you do the same way on Monday as you do on Friday - qualifying leads, following up with prospects, generating documents, routing enquiries, compiling reports - can be handled by an automated system built specifically around your process. If you are doing the same thing more than three times a week, there is a version of that task an AI system can handle better than a person can. The question is not whether your business needs it. The question is which parts of your operation are costing you time that could be running automatically right now.</p>
-            </details>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                How is ADA different from a standard web design agency?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Most agencies build websites. ADA builds the system behind the website. The difference is what the work is measured against. A standard agency measures success by whether the site looks good and launches on time. ADA measures success by what the site generates after it launches - enquiries, ranked search positions, qualified leads. Every decision in the build is made against that standard, not against an aesthetic preference or a template. The second difference is how we operate. ADA is AI-augmented, which means the speed and depth of work a traditional agency delivers with a full team, we deliver leaner and faster. You are not paying for headcount. You are paying for outcomes. The third difference is where we come from. ADA is built off the back of Avalon Capital Group, which means we understand business structure, deal dynamics, and what operators actually need from their digital presence - not just what looks good in a portfolio.</p>
-            </details>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                Do you work with businesses outside Durban and KZN?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Yes. ADA works with businesses across South Africa and internationally. The geographic positioning around Durban and KwaZulu-Natal is deliberate - it is where we have the deepest market knowledge and where local SEO work compounds fastest. But the work itself has no borders. If you are a South African business in Johannesburg, Cape Town, or Pretoria, or an international operator who needs a team that understands the South African market, the engagement works the same way.</p>
-            </details>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                What happens after the website launches?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>The launch is the beginning, not the delivery. Once the foundation is live, ADA stays in the build. The first thirty days focus on indexing confirmation, search console monitoring, and any conversion adjustments based on how real visitors are moving through the site. From there, the engagement moves into the growth layer - SEO content, targeted outreach, or campaign support, depending on what your business needs most to generate momentum. You are not handed a website and wished good luck. Every client gets a clear handover brief, ongoing support for technical issues, and a roadmap for what comes next. The relationship does not end at launch. That is when the compounding starts.</p>
-            </details>
-            <details style={{borderTop:'1px solid var(--border)', padding:'24px 0', borderBottom:'1px solid var(--border)'}}>
-              <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
-                Where do I start if I am not sure what I need?
-              </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Start with a conversation. You do not need a brief, a budget, or a clear idea of what you want. Tell us what your business does, what is not working about your current digital presence, and what you are trying to achieve. We will ask the right questions, tell you honestly what we think the problem is, and map out what it would take to fix it. If we are the right fit, you will know within the first conversation. If we are not, we will tell you that too. The free website audit is also a clean starting point - thirteen questions, a scored report across six dimensions, and a clear picture of where your site stands. No obligation, no pitch.</p>
-            </details>
-          </div>
-        </section>
-        </ScrollReveal>
-
-        <div className="divider"></div>
-
-        <section aria-labelledby="lets-work-heading">
-          <div className="section-label">Let&apos;s work</div>
-          <h2 className="section-title" id="lets-work-heading">Your website should be the hardest working part<br />of <em>your business.</em></h2>
-          <p className="section-body">Right now, somewhere in South Africa, a potential client is looking for exactly what you offer. The question is whether your digital presence is ready to meet them, or whether it&apos;s quietly sending them somewhere else.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>We build the systems that make sure it&apos;s the former. One conversation is all it takes to know if we&apos;re the right fit. No pressure, no hard sell, just an honest look at where your business is and what it would take to get it where you want it.</p>
-
-          <div className="divider" style={{margin:'48px 0'}}></div>
-
-          <div style={{display:'flex', gap:'16px', flexWrap:'wrap'}}>
-            <a className="btn-primary" href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." target="_blank" rel="noopener noreferrer" style={{position:'relative', zIndex:9999}}>Start a project</a>
-            <a className="btn-ghost" href="#our-work-heading">View our work</a>
-          </div>
-
-          <div className="ada-contact-grid">
-            <div style={{background:'var(--surface)', padding:'32px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'12px'}}>Email</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'18px', fontWeight:300, marginBottom:'8px', overflowWrap:'break-word', wordBreak:'break-all'}}><a href="mailto:projects@avaloncapitalgroup.co.za" style={{color:'inherit', textDecoration:'none'}}>projects@avaloncapitalgroup.co.za</a></div>
-              <div style={{fontSize:'11px', color:'var(--text-muted)'}}>We respond within one business day</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'32px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--text-muted)', marginBottom:'12px'}}>Based in</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'18px', fontWeight:300, marginBottom:'8px'}}>Durban, KwaZulu-Natal</div>
-              <div style={{fontSize:'11px', color:'var(--text-muted)'}}>Working with businesses across South Africa</div>
+        {/* WHO THIS IS FOR */}
+        <section className="ada2-section ada2-section--wash" aria-labelledby="who-heading">
+          <div className="ada2-inner">
+            <div className="ada2-label">Who this is for</div>
+            <h2 className="ada2-h2 ada-display" id="who-heading">Built for businesses ready to be found.<br />Not for everyone.</h2>
+            <div className="ada2-callout">
+              <ul>
+                <li>Fixed price on Foundation and Growth. You know the cost upfront.</li>
+                <li>No retainer traps. Every project is scoped before it starts.</li>
+                <li>We don&apos;t promise a specific ranking or a specific number of leads. We promise a site built to earn both over time.</li>
+                <li>If you want the cheapest option, we&apos;re probably not it. If you want a site that pays for itself, we are.</li>
+                <li>It&apos;s just us. No agency overhead, no account managers. You work directly with the person doing the work.</li>
+              </ul>
             </div>
           </div>
         </section>
 
-        <footer style={{borderTop:'1px solid var(--border)', padding:'40px 60px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'24px'}}>
-          <div>
-            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'18px', fontWeight:300}}>ADA - Asset. Development. Automation. - A division of Avalon Capital Group</div>
+        {/* OUR WORK */}
+        <section id="work" className="ada2-section ada2-section--white" aria-labelledby="work-heading">
+          <div className="ada2-inner">
+            <div className="ada2-label">Our work</div>
+            <h2 className="ada2-h2 ada-display" id="work-heading">Proof, not promises.</h2>
+
+            <div className="ada2-cards">
+              <div className="ada2-card">
+                <h3 className="ada-display">Afripact Civils</h3>
+                <p>Civil construction, KZN. Afripact had the track record. Nothing online matched it. Within weeks of launch, the site was bringing in inspection requests from people who had never heard of Afripact before.</p>
+                <Link href="/ada/afripact-civils">Read the full case study →</Link>
+              </div>
+              <div className="ada2-card">
+                <h3 className="ada-display">Avalon Capital Group</h3>
+                <p>Our own site. 1 page indexed. Now 29. We ran our own process on ourselves and documented every decision.</p>
+                <Link href="/ada/acg-case-study">Read the full case study →</Link>
+              </div>
+            </div>
           </div>
-          <div style={{display:'flex', gap:'28px', flexWrap:'wrap'}}>
-            <a href="#our-work-heading" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>Work</a>
-            <a href="#insights-heading" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>Insights</a>
-            <Link href="/ada" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>FAQ</Link>
-            <Link href="/contact" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>Contact</Link>
-            <a href="/privacy-policy" style={{fontSize:'11px', color:'var(--gold)', textDecoration:'none', letterSpacing:'0.05em'}}>Privacy Policy</a>
-            <a href="/terms-of-service" style={{fontSize:'11px', color:'var(--gold)', textDecoration:'none', letterSpacing:'0.05em'}}>Terms of Service</a>
+        </section>
+
+        {/* WHAT WE'D BUILD */}
+        <section className="ada2-section ada2-section--wash" aria-labelledby="build-heading">
+          <div className="ada2-inner">
+            <div className="ada2-label">What we&apos;d build</div>
+            <h2 className="ada2-h2 ada-display" id="build-heading">Canopy Courier — a concept, not a client yet.</h2>
+            <p className="ada2-body">This one&apos;s honest: it never went live. We built the full plan anyway, to show what a fleet-focused digital rebuild actually looks like.</p>
+            <p className="ada2-body">The idea: split retail and fleet into two paths. A one-off repair job and a 50-vehicle fleet contract aren&apos;t the same business, so the site shouldn&apos;t treat them the same way. We designed eight components: repositioned messaging, a dual-path homepage, a dedicated fleet page, four service pages, four SEO landing pages, and a mobile-first conversion layer.</p>
+            <p className="ada2-body">Projected upside modelled for this concept: R1M to R2M per year, combining fleet contracts, SEO traffic, and improved retail conversion at conservative volumes. That is a projection from the pitch, not a measured result. We are saying so plainly.</p>
           </div>
-          <div style={{width:'100%', paddingTop:'20px', borderTop:'1px solid var(--border)', marginTop:'4px'}}>
-            <p style={{fontSize:'11px', color:'var(--text-dim)', marginBottom:'8px'}}>Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa</p>
-            <p style={{fontSize:'12px', color:'var(--text-dim)', lineHeight:1.7}}>Avalon Capital Group does not provide financial, investment, or legal advice. All information shared is for general informational purposes only. Clients are encouraged to consult with licensed professionals before making any investment or business decisions.</p>
+        </section>
+
+        {/* INVESTMENT */}
+        <section id="investment" className="ada2-section ada2-section--white" aria-labelledby="investment-heading">
+          <div className="ada2-inner">
+            <div className="ada2-label">Investment</div>
+            <h2 className="ada2-h2 ada-display" id="investment-heading">We don&apos;t sell cheap. We sell what works.</h2>
+
+            <div className="ada2-pricing-grid">
+              <div className="ada2-pricing-card">
+                <div className="ada2-pricing-tier">Foundation</div>
+                <div className="ada2-pricing-price ada-display">R18,500 once-off</div>
+                <p>For businesses that need a site as good as the work they do.</p>
+              </div>
+              <div className="ada2-pricing-card">
+                <div className="ada2-pricing-tier">Growth</div>
+                <div className="ada2-pricing-price ada-display">R34,000 once-off, or R12,500/month (3-month minimum)</div>
+                <p>Website plus SEO plus a system built to keep bringing in enquiries.</p>
+              </div>
+              <div className="ada2-pricing-card">
+                <div className="ada2-pricing-tier">Authority</div>
+                <div className="ada2-pricing-price ada-display">Custom, by enquiry</div>
+                <p>For businesses ready to lead their category.</p>
+              </div>
+            </div>
+            <p className="ada2-note">Payment can be split. Terms confirmed on the call.</p>
+          </div>
+        </section>
+
+        {/* INSIGHTS - structure and links unchanged */}
+        <section id="insights" className="ada2-section ada2-section--wash" aria-labelledby="insights-heading">
+          <div className="ada2-inner">
+            <div className="ada2-label">Insights</div>
+            <h2 className="ada2-h2 ada-display" id="insights-heading">We share how we think.</h2>
+            <p className="ada2-body">ADA publishes market intelligence and case studies on web design, SEO, and AI automation for South African businesses.</p>
+            <p className="ada2-body">Not to fill a content calendar. To show you, before we&apos;ve spoken, that we understand what&apos;s happening in the market and what it means for your business.</p>
+
+            <div style={{ marginTop: '48px', borderTop: '1px solid var(--ada-line)' }}>
+
+              <Link href="/ada/insights/ai-awareness" style={{ padding: '28px 0', borderBottom: '1px solid var(--ada-line)', display: 'flex', alignItems: 'flex-start', gap: '24px', textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '10px', flexWrap: 'wrap' }}>
+                    <span style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ada-accent)' }}>Market insight</span>
+                    <span style={{ fontSize: '9px', letterSpacing: '0.15em', textTransform: 'uppercase', color: 'var(--ada-white)', background: 'var(--ada-accent)', padding: '2px 8px' }}>Anchor piece</span>
+                  </div>
+                  <div className="ada-display" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.3, marginBottom: '8px' }}>The AI awareness cycle - why your website is about to become your most valuable business asset</div>
+                  <div style={{ fontSize: '12px', color: 'var(--ada-ink-muted)', lineHeight: 1.8, maxWidth: '620px' }}>AI hasn&apos;t changed how websites are built. It&apos;s changed what websites are responsible for. Here&apos;s what that shift means for any business that wants to stay competitive over the next three years.</div>
+                </div>
+                <div style={{ fontSize: '18px', color: 'var(--ada-accent)', flexShrink: 0, paddingTop: '4px' }}>→</div>
+              </Link>
+
+              <Link href="/ada/insights/why-websites-fail" style={{ padding: '28px 0', borderBottom: '1px solid var(--ada-line)', display: 'flex', alignItems: 'flex-start', gap: '24px', textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ marginBottom: '10px' }}>
+                    <span style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ada-ink-muted)' }}>The problem</span>
+                  </div>
+                  <div className="ada-display" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.3, marginBottom: '8px' }}>Why most business websites don&apos;t make money</div>
+                  <div style={{ fontSize: '12px', color: 'var(--ada-ink-muted)', lineHeight: 1.8, maxWidth: '620px' }}>It&apos;s not the design. It&apos;s not the traffic. It&apos;s the fact that most websites were never built to convert. Here&apos;s what a website that doesn&apos;t perform actually costs you, and why the problem is more common than most business owners realise.</div>
+                </div>
+                <div style={{ fontSize: '18px', color: 'var(--ada-accent)', flexShrink: 0, paddingTop: '4px' }}>→</div>
+              </Link>
+
+              <Link href="/ada/insights/revenue-website" style={{ padding: '28px 0', borderBottom: '1px solid var(--ada-line)', display: 'flex', alignItems: 'flex-start', gap: '24px', textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ marginBottom: '10px' }}>
+                    <span style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ada-ink-muted)' }}>The solution</span>
+                  </div>
+                  <div className="ada-display" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.3, marginBottom: '8px' }}>What a revenue-driven website actually looks like</div>
+                  <div style={{ fontSize: '12px', color: 'var(--ada-ink-muted)', lineHeight: 1.8, maxWidth: '620px' }}>Most business owners have never seen one up close. Here&apos;s a breakdown of the specific elements that separate a website that performs from one that just exists: offer clarity, conversion flow, and trust architecture.</div>
+                </div>
+                <div style={{ fontSize: '18px', color: 'var(--ada-accent)', flexShrink: 0, paddingTop: '4px' }}>→</div>
+              </Link>
+
+              <Link href="/ada/insights/ai-websites" style={{ padding: '28px 0', borderBottom: '1px solid var(--ada-line)', display: 'flex', alignItems: 'flex-start', gap: '24px', textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ marginBottom: '10px' }}>
+                    <span style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ada-ink-muted)' }}>Authority piece</span>
+                  </div>
+                  <div className="ada-display" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.3, marginBottom: '8px' }}>Why AI won&apos;t replace websites - it will make them more valuable</div>
+                  <div style={{ fontSize: '12px', color: 'var(--ada-ink-muted)', lineHeight: 1.8, maxWidth: '620px' }}>Everyone&apos;s asking whether AI makes websites obsolete. The answer is the opposite. Here&apos;s why the businesses that invest in strong digital infrastructure now will be the ones AI points people toward, and what that means for yours.</div>
+                </div>
+                <div style={{ fontSize: '18px', color: 'var(--ada-accent)', flexShrink: 0, paddingTop: '4px' }}>→</div>
+              </Link>
+
+              <Link href="/ada/insights/canopy-deep-dive" style={{ padding: '28px 0', borderBottom: '1px solid var(--ada-line)', display: 'flex', alignItems: 'flex-start', gap: '24px', textDecoration: 'none', color: 'inherit' }}>
+                <div style={{ flex: 1 }}>
+                  <div style={{ marginBottom: '10px' }}>
+                    <span style={{ fontSize: '9px', letterSpacing: '0.2em', textTransform: 'uppercase', color: 'var(--ada-ink-muted)' }}>Case study deep-dive</span>
+                  </div>
+                  <div className="ada-display" style={{ fontSize: '20px', fontWeight: 400, lineHeight: 1.3, marginBottom: '8px' }}>The Canopy Courier rebuild - how we turned a retail website into a fleet revenue system</div>
+                  <div style={{ fontSize: '12px', color: 'var(--ada-ink-muted)', lineHeight: 1.8, maxWidth: '620px' }}>A ground-level breakdown of a real project. What we found, what we built, and the specific decisions that turned a functional website into a business development tool with R1M+ annual revenue potential.</div>
+                </div>
+                <div style={{ fontSize: '18px', color: 'var(--ada-accent)', flexShrink: 0, paddingTop: '4px' }}>→</div>
+              </Link>
+
+            </div>
+
+            <p style={{ marginTop: '32px', fontSize: '12px', fontStyle: 'italic', color: 'var(--ada-ink-muted)' }}>Every piece here is worth your time. That&apos;s the only standard we publish to.</p>
+          </div>
+        </section>
+
+        {/* FAQ */}
+        <section id="faq" className="ada2-section ada2-section--white" aria-labelledby="faq-ada-heading">
+          <div className="ada2-inner">
+            <div className="ada2-label">Common Questions</div>
+            <h2 className="ada2-h2 ada-display" id="faq-ada-heading">ADA, answered straight.</h2>
+
+            <AdaReveal className="ada2-faq">
+              <details>
+                <summary>What does ADA actually build - websites, SEO, or both?</summary>
+                <p>ADA builds revenue systems. The deliverable is digital infrastructure - a website that ranks on Google, converts the visitors it attracts, and keeps working while you focus on running your business. Web design and SEO are components of that system, not separate services. A website without search visibility is a brochure nobody finds. Search visibility without a converting website is traffic that leaves. ADA builds both as one coherent system because that is the only way either one actually works.</p>
+              </details>
+              <details>
+                <summary>How long does a website project take?</summary>
+                <p>It depends entirely on the scope. A focused credibility build can be live in two to three days. A full revenue system with SEO architecture, multiple conversion paths, and content infrastructure takes four to six weeks. Every project is scoped before anything begins, so you know the timeline before we start, not after. ADA does not disappear for months and reappear with a finished product. You know what is being built, when each stage completes, and what comes next.</p>
+              </details>
+              <details>
+                <summary>What does a website from ADA cost?</summary>
+                <p>ADA has three fixed-price tiers. Foundation starts at R18,500 for a credibility build - a fast, conversion-ready website with search visibility and a Google presence that works around the clock. Growth is R34,000 once-off or R12,500 per month on a three-month minimum, covering a full revenue system with SEO architecture, competitor analysis, social infrastructure, schema markup, and analytics. Authority is scoped per client for businesses ready to dominate their category. Foundation and Growth are fixed scope and fixed price - you know exactly what you are getting before anything begins.</p>
+              </details>
+              <details>
+                <summary>What is AI automation and does my business need it?</summary>
+                <p>AI automation means giving repetitive tasks in your business to a system that executes them the same way, every time, without fatigue, error, or the need for management. The work you do the same way on Monday as you do on Friday - qualifying leads, following up with prospects, generating documents, routing enquiries, compiling reports - can be handled by an automated system built specifically around your process. If you are doing the same thing more than three times a week, there is a version of that task an AI system can handle better than a person can. The question is not whether your business needs it. The question is which parts of your operation are costing you time that could be running automatically right now.</p>
+              </details>
+              <details>
+                <summary>How is ADA different from a standard web design agency?</summary>
+                <p>Most agencies build websites. ADA builds the system behind the website. The difference is what the work is measured against. A standard agency measures success by whether the site looks good and launches on time. ADA measures success by what the site generates after it launches - enquiries, ranked search positions, qualified leads. Every decision in the build is made against that standard, not against an aesthetic preference or a template. The second difference is how we operate. ADA is AI-augmented, which means the speed and depth of work a traditional agency delivers with a full team, we deliver leaner and faster. You are not paying for headcount. You are paying for outcomes. The third difference is where we come from. ADA is built off the back of Avalon Capital Group, which means we understand business structure, deal dynamics, and what operators actually need from their digital presence - not just what looks good in a portfolio.</p>
+              </details>
+              <details>
+                <summary>Do you work with businesses outside Durban and KZN?</summary>
+                <p>Yes. ADA works with businesses across South Africa and internationally. The geographic positioning around Durban and KwaZulu-Natal is deliberate - it is where we have the deepest market knowledge and where local SEO work compounds fastest. But the work itself has no borders. If you are a South African business in Johannesburg, Cape Town, or Pretoria, or an international operator who needs a team that understands the South African market, the engagement works the same way.</p>
+              </details>
+              <details>
+                <summary>What happens after the website launches?</summary>
+                <p>The launch is the beginning, not the delivery. Once the foundation is live, ADA stays in the build. The first thirty days focus on indexing confirmation, search console monitoring, and any conversion adjustments based on how real visitors are moving through the site. From there, the engagement moves into the growth layer - SEO content, targeted outreach, or campaign support, depending on what your business needs most to generate momentum. You are not handed a website and wished good luck. Every client gets a clear handover brief, ongoing support for technical issues, and a roadmap for what comes next. The relationship does not end at launch. That is when the compounding starts.</p>
+              </details>
+              <details>
+                <summary>Where do I start if I am not sure what I need?</summary>
+                <p>Start with a conversation. You do not need a brief, a budget, or a clear idea of what you want. Tell us what your business does, what is not working about your current digital presence, and what you are trying to achieve. We will ask the right questions, tell you honestly what we think the problem is, and map out what it would take to fix it. If we are the right fit, you will know within the first conversation. If we are not, we will tell you that too. The free website audit is also a clean starting point - thirteen questions, a scored report across six dimensions, and a clear picture of where your site stands. No obligation, no pitch.</p>
+              </details>
+            </AdaReveal>
+          </div>
+        </section>
+
+        {/* CLOSING CTA */}
+        <section className="ada2-section ada2-section--wash" aria-labelledby="closing-heading">
+          <div className="ada2-inner" style={{ textAlign: 'center' }}>
+            <h2 className="ada2-h2 ada-display" id="closing-heading">Ready when you are.</h2>
+            <p className="ada2-body" style={{ margin: '0 auto 8px' }}>One conversation is enough to know if this is the right fit.</p>
+            <p className="ada2-body" style={{ margin: '0 auto 32px' }}>No pressure, no hard sell, an honest look at where your business is.</p>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada2-cta">Start a conversation →</a>
+          </div>
+        </section>
+
+        <footer style={{ borderTop: '1px solid var(--ada-line)', padding: '40px 24px', background: 'var(--ada-white)' }}>
+          <div className="ada2-inner" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '24px' }}>
+            <div className="ada-display" style={{ fontSize: '16px' }}>ADA - Asset Development Automation - A division of Avalon Capital Group</div>
+            <div style={{ display: 'flex', gap: '24px', flexWrap: 'wrap' }}>
+              <a href="#work" style={{ fontSize: '11px', color: 'var(--ada-ink-muted)', letterSpacing: '0.05em', textDecoration: 'none' }}>Work</a>
+              <a href="#insights" style={{ fontSize: '11px', color: 'var(--ada-ink-muted)', letterSpacing: '0.05em', textDecoration: 'none' }}>Insights</a>
+              <a href="#faq" style={{ fontSize: '11px', color: 'var(--ada-ink-muted)', letterSpacing: '0.05em', textDecoration: 'none' }}>FAQ</a>
+              <Link href="/contact" style={{ fontSize: '11px', color: 'var(--ada-ink-muted)', letterSpacing: '0.05em', textDecoration: 'none' }}>Contact</Link>
+              <a href="/privacy-policy" style={{ fontSize: '11px', color: 'var(--ada-accent)', textDecoration: 'none', letterSpacing: '0.05em' }}>Privacy Policy</a>
+              <a href="/terms-of-service" style={{ fontSize: '11px', color: 'var(--ada-accent)', textDecoration: 'none', letterSpacing: '0.05em' }}>Terms of Service</a>
+            </div>
+            <div style={{ width: '100%', paddingTop: '20px', borderTop: '1px solid var(--ada-line)', marginTop: '4px' }}>
+              <p style={{ fontSize: '11px', color: 'var(--ada-ink-muted)', marginBottom: '8px' }}>Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa</p>
+              <p style={{ fontSize: '12px', color: 'var(--ada-ink-muted)', lineHeight: 1.7 }}>Avalon Capital Group does not provide financial, investment, or legal advice. All information shared is for general informational purposes only. Clients are encouraged to consult with licensed professionals before making any investment or business decisions.</p>
+            </div>
           </div>
         </footer>
       </div>

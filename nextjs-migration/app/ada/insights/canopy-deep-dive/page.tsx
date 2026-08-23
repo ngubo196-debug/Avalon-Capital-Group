@@ -4,8 +4,8 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Website Redesign Case Study: From Retail Site to Fleet Revenue System | Avalon Digital Agency',
-  description: 'A ground-level breakdown of a real website rebuild in Durban, KwaZulu-Natal. What we found, what we built, and how a focused redesign unlocked R1M+ in annual revenue potential for Canopy Courier.',
+  title: 'Canopy Courier: A Concept Fleet Revenue System | Avalon Digital Agency',
+  description: 'A ground-level breakdown of a concept rebuild for a real KwaZulu-Natal business. It never went live - the R1M+ annual revenue potential is a projection from the pitch, not a measured result.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/canopy-deep-dive' },
 };
 
@@ -24,10 +24,11 @@ export default function CanopyDeepDive() {
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
-          <div className="section-label">Case study deep-dive</div>
-          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>The Canopy Courier rebuild: how we turned a retail website into a fleet revenue system</h1>
+          <div style={{display:'inline-block', fontSize:'10px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--black)', background:'var(--gold)', padding:'6px 14px', marginBottom:'16px'}}>Concept build - not a delivered engagement</div>
+          <div className="section-label">Deep-dive</div>
+          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>The Canopy Courier rebuild: a fleet revenue system that never went live</h1>
           <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · Avalon Digital Agency · Durban, KZN</p>
-          <p style={{maxWidth:'560px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>A ground-level breakdown of a real project. What we found, what we built, and the specific decisions that turned a functional website into a business development tool with R1M+ annual revenue potential.</p>
+          <p style={{maxWidth:'560px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>This one&apos;s honest: it never went live. A ground-level breakdown of the concept we built for a real business, Canopy Courier, and the specific decisions behind it. The R1M+ annual revenue potential is a projection from the pitch, not a measured result.</p>
         </div>
 
         <div className="divider"></div>
@@ -77,8 +78,8 @@ export default function CanopyDeepDive() {
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="cdd-build">
-          <h2 className="section-title" id="cdd-build">The build: decision by decision</h2>
-          <p className="section-body">Eight deliverables. Here&apos;s the thinking behind the ones that mattered most.</p>
+          <h2 className="section-title" id="cdd-build">The plan: decision by decision</h2>
+          <p className="section-body">Eight components, designed but never built. Here&apos;s the thinking behind the ones that mattered most.</p>
           <div style={{marginTop:'56px', borderTop:'1px solid var(--border)'}}>
             <div style={{padding:'32px 0', borderBottom:'1px solid var(--border)', display:'flex', alignItems:'flex-start', gap:'32px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'32px', fontWeight:300, color:'var(--gold)', flexShrink:0, lineHeight:1, width:'48px'}}>01</div>
@@ -121,11 +122,11 @@ export default function CanopyDeepDive() {
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="cdd-outcome">
-          <h2 className="section-title" id="cdd-outcome">The outcome</h2>
-          <p className="section-body">Canopy Courier now has a website that does more than exist. It qualifies visitors, separates retail from fleet, builds trust before the phone rings, and drives enquiries around the clock. The business looks like it operates at the level it actually operates at.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>The revenue modelling tells the real story. A single retail customer is worth R3,000–R8,000. A single fleet client: one company with ten vehicles on a maintenance contract: is worth R240,000 per year. Five fleet clients is R1.2M annually. The website we built is the infrastructure that makes those fleet relationships possible.</p>
+          <h2 className="section-title" id="cdd-outcome">The intended outcome</h2>
+          <p className="section-body">If this plan were built, Canopy Courier would have a website that does more than exist. It would qualify visitors, separate retail from fleet, build trust before the phone rings, and drive enquiries around the clock. This is what the business would look like operating at the level it actually operates at.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>The revenue modelling tells the story we pitched, not a measured result. A single retail customer is worth R3,000–R8,000. A single fleet client: one company with ten vehicles on a maintenance contract: would be worth R240,000 per year. Five fleet clients would be R1.2M annually. The website concept is the infrastructure that would make those fleet relationships possible.</p>
           <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>One fleet client more than covers the entire cost of the project. Every fleet client after that is compounding return on a one-time investment.</p>
+            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>One fleet client would more than cover the entire cost of a project like this. Every fleet client after that would be compounding return on a one-time investment.</p>
           </blockquote>
         </section>
 

@@ -1037,3 +1037,334 @@
       padding: 32px 20px !important;
     }
   }
+
+  /* ADA section */
+  .ada-section {
+    --ada-ink: #111111;
+    --ada-ink-soft: #444444;
+    --ada-ink-muted: #7A7A7A;
+    --ada-line: #CFCFCF;
+    --ada-rule: #111111;
+    --ada-wash: #F4F4F2;
+    --ada-white: #FFFFFF;
+    --ada-accent: #1B3A8F;
+
+    background: var(--ada-white);
+    color: var(--ada-ink);
+    font-family: 'DM Sans', 'Montserrat', sans-serif;
+  }
+
+  .ada-section a { color: inherit; }
+
+  .ada-display {
+    font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
+  }
+
+  .ada-reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 500ms cubic-bezier(0.22, 1, 0.36, 1), transform 500ms cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .ada-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .ada2-hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 152px 24px 80px;
+    overflow: hidden;
+    background: var(--ada-white);
+  }
+
+  .ada2-hero-copy {
+    position: relative;
+    z-index: 2;
+    max-width: 680px;
+    text-align: left;
+  }
+
+  .ada2-label {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ada-ink-muted);
+    margin-bottom: 20px;
+  }
+
+  .ada2-h1 {
+    font-weight: 400;
+    font-size: clamp(34px, 5vw, 58px);
+    line-height: 1.12;
+    letter-spacing: -0.01em;
+    color: var(--ada-ink);
+    margin-bottom: 24px;
+  }
+
+  .ada2-h2 {
+    font-weight: 400;
+    font-size: clamp(28px, 3.6vw, 44px);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    color: var(--ada-ink);
+    margin-bottom: 24px;
+  }
+
+  .ada2-body {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ada-ink-soft);
+    max-width: 560px;
+  }
+
+  .ada2-body + .ada2-body { margin-top: 16px; }
+
+  .ada2-cta {
+    display: inline-block;
+    background: var(--ada-accent);
+    color: var(--ada-white);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    padding: 15px 30px;
+    text-decoration: none;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+
+  .ada2-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+  .ada2-section {
+    padding: 96px 24px;
+    position: relative;
+  }
+
+  .ada2-section--wash { background: var(--ada-wash); }
+  .ada2-section--white { background: var(--ada-white); }
+  .ada2-section--rule { border-top: 2px solid var(--ada-rule); }
+
+  .ada2-inner {
+    max-width: 980px;
+    margin: 0 auto;
+  }
+
+  .ada2-numbered-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 48px;
+  }
+
+  .ada2-numbered-row {
+    display: grid;
+    grid-template-columns: 64px 1fr;
+    gap: 20px;
+    align-items: baseline;
+    padding-top: 24px;
+    border-top: 1px solid var(--ada-line);
+  }
+
+  .ada2-numbered-row:first-child { border-top: none; padding-top: 0; }
+
+  .ada2-num {
+    font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
+    font-size: 28px;
+    color: var(--ada-accent);
+    line-height: 1;
+  }
+
+  .ada2-numbered-row h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    color: var(--ada-ink);
+  }
+
+  .ada2-numbered-row p {
+    font-size: 14px;
+    line-height: 1.75;
+    color: var(--ada-ink-soft);
+  }
+
+  .ada2-callout {
+    border-left: 4px solid var(--ada-accent);
+    padding: 8px 0 8px 28px;
+    margin-top: 40px;
+  }
+
+  .ada2-callout ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .ada2-callout li {
+    font-size: 15px;
+    line-height: 1.7;
+    color: var(--ada-ink-soft);
+  }
+
+  .ada2-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--ada-line);
+    margin-top: 48px;
+  }
+
+  .ada2-card {
+    background: var(--ada-white);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ada2-card h3 {
+    font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 24px;
+    margin-bottom: 16px;
+    color: var(--ada-ink);
+  }
+
+  .ada2-card p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ada-ink-soft);
+    flex: 1;
+  }
+
+  .ada2-card a {
+    margin-top: 20px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--ada-accent);
+    text-decoration: none;
+  }
+
+  .ada2-card a:hover { text-decoration: underline; }
+
+  .ada2-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: var(--ada-line);
+    margin-top: 48px;
+  }
+
+  .ada2-pricing-card {
+    background: var(--ada-white);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ada2-pricing-tier {
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--ada-accent);
+    margin-bottom: 16px;
+  }
+
+  .ada2-pricing-price {
+    font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
+    font-size: 26px;
+    color: var(--ada-ink);
+    margin-bottom: 16px;
+  }
+
+  .ada2-pricing-card p {
+    font-size: 13.5px;
+    line-height: 1.75;
+    color: var(--ada-ink-soft);
+    flex: 1;
+  }
+
+  .ada2-note {
+    margin-top: 32px;
+    font-size: 13px;
+    color: var(--ada-ink-muted);
+    line-height: 1.7;
+  }
+
+  .ada2-faq { margin-top: 40px; }
+
+  .ada2-faq details {
+    border-bottom: 1px solid var(--ada-line);
+    padding: 22px 0;
+  }
+
+  .ada2-faq summary {
+    font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
+    font-size: 18px;
+    cursor: pointer;
+    list-style: none;
+    color: var(--ada-ink);
+  }
+
+  .ada2-faq summary::-webkit-details-marker { display: none; }
+
+  .ada2-faq summary::after {
+    content: '+';
+    float: right;
+    color: var(--ada-accent);
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  .ada2-faq details[open] summary::after { content: '\2212'; }
+
+  .ada2-faq p {
+    font-size: 14px;
+    line-height: 1.8;
+    color: var(--ada-ink-soft);
+    margin-top: 14px;
+  }
+
+  .ada2-subnav {
+    position: sticky;
+    top: 72px;
+    z-index: 500;
+    background: var(--ada-white);
+    border-bottom: 1px solid var(--ada-line);
+    display: flex;
+    gap: 28px;
+    padding: 14px 24px;
+    opacity: 0;
+    transform: translateY(-8px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .ada2-subnav.is-active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .ada2-subnav a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    color: var(--ada-ink-muted);
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+
+  .ada2-subnav a:hover { color: var(--ada-accent); }
+
+  @media (max-width: 768px) {
+    .ada2-hero { min-height: auto; padding: 140px 20px 64px; }
+    .ada2-section { padding: 64px 20px; }
+    .ada2-cards { grid-template-columns: 1fr; }
+    .ada2-pricing-grid { grid-template-columns: 1fr; }
+    .ada2-numbered-row { grid-template-columns: 40px 1fr; }
+    .ada2-subnav { gap: 18px; padding: 12px 16px; overflow-x: auto; }
+  }

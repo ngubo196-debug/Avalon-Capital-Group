@@ -4,8 +4,8 @@ import Footer from '../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Canopy Courier: Case Study | Avalon Digital Agency',
-  description: 'How ADA built a fleet revenue system for Canopy Courier. Durban, KwaZulu-Natal.',
+  title: 'Canopy Courier: Concept Build | Avalon Digital Agency',
+  description: 'A concept fleet revenue system ADA designed for Canopy Courier. Never went live - a pitch, not a delivered engagement. Durban, KwaZulu-Natal.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/canopy-courier' },
 };
 
@@ -24,9 +24,10 @@ export default function CanopyCourier() {
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
-          <div className="section-label">Case study - Canopy Courier</div>
+          <div style={{display:'inline-block', fontSize:'10px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--black)', background:'var(--gold)', padding:'6px 14px', marginBottom:'16px'}}>Concept build - not a delivered engagement</div>
+          <div className="section-label">Canopy Courier</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>From a retail shop to a fleet revenue system.</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>Canopy Courier had a strong service, a loyal customer base, and a website that was leaving most of their revenue potential completely untouched. This is the story of what we found, what we built, and what it means for the business going forward.</p>
+          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>This one&apos;s honest: it never went live. Canopy Courier was never a client. We built the full plan anyway, to show what a fleet-focused digital rebuild actually looks like. Every figure on this page is a projection from the pitch, not a measured result.</p>
           <div style={{display:'flex', gap:'1px', background:'var(--border)', flexWrap:'wrap', maxWidth:'640px'}}>
             <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>8 deliverables</div>
@@ -70,9 +71,9 @@ export default function CanopyCourier() {
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="canopy-built">
-          <div className="section-label">What we built</div>
-          <h2 className="section-title" id="canopy-built">Eight deliverables.<br /><em>One coherent system.</em></h2>
-          <p className="section-body">Eight deliverables. One coherent system. Everything was built around a single strategic principle: a business with two distinct customer types needs two distinct conversion paths running in parallel.</p>
+          <div className="section-label">The plan</div>
+          <h2 className="section-title" id="canopy-built">Eight components.<br /><em>One coherent system.</em></h2>
+          <p className="section-body">Eight components. One coherent system. Everything was designed around a single strategic principle: a business with two distinct customer types needs two distinct conversion paths running in parallel.</p>
           <div style={{display:'grid', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>01</div>
@@ -120,9 +121,9 @@ export default function CanopyCourier() {
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px'}} aria-labelledby="canopy-outcome">
-          <div className="section-label">The outcome</div>
-          <h2 className="section-title" id="canopy-outcome">A website that does<br /><em>more than exist.</em></h2>
-          <p className="section-body">Canopy Courier now has a website that does more than exist. It qualifies leads, separates retail from fleet, builds trust before the phone rings, and drives enquiries around the clock. The business looks like it operates at the level it actually operates at.</p>
+          <div className="section-label">The intended outcome</div>
+          <h2 className="section-title" id="canopy-outcome">A website that would do<br /><em>more than exist.</em></h2>
+          <p className="section-body">If this plan were built, Canopy Courier would have a website that does more than exist. It would qualify leads, separate retail from fleet, build trust before the phone rings, and drive enquiries around the clock. This is what the business would look like operating at the level it actually operates at.</p>
           <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
             <div style={{background:'var(--surface)', padding:'40px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Immediate credibility</div>
@@ -143,8 +144,8 @@ export default function CanopyCourier() {
 
         <section style={{padding:'80px 60px'}}>
           <div style={{background:'var(--surface)', border:'1px solid var(--border)', padding:'48px', maxWidth:'100%'}}>
-            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(22px,2.5vw,30px)', fontWeight:300, lineHeight:1.3, marginBottom:'20px', maxWidth:'580px'}}>One fleet client more than covers the cost of the entire project. Every month after that is compounding return.</div>
-            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'580px', marginBottom:'36px'}}>This is what we mean by conversion infrastructure. Not a website that looks good in a screenshot. A system that generates revenue while you&apos;re focused on the work.</p>
+            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(22px,2.5vw,30px)', fontWeight:300, lineHeight:1.3, marginBottom:'20px', maxWidth:'580px'}}>One fleet client would more than cover the cost of a project like this. Every month after that would be compounding return.</div>
+            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'580px', marginBottom:'36px'}}>This is what we mean by conversion infrastructure. Not a website that looks good in a screenshot. A system built to generate revenue while you&apos;re focused on the work.</p>
             <a className="btn-primary" href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." target="_blank" rel="noopener noreferrer" style={{position:'relative', zIndex:9999, display:'inline-block'}}>Start a project</a>
           </div>
         </section>

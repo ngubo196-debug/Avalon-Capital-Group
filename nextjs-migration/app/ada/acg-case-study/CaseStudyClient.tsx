@@ -290,7 +290,7 @@ export default function CaseStudyClient() {
           <SectionLabel num="01" text="The Brief" />
           <h2 className="cs-section-h2">No website. No presence.<br /><em>No room for excuses.</em></h2>
           <p className="cs-body">
-            Avalon Capital Group launched with conviction but no digital foundation. ACG operates two divisions - Vantara, an acquisition brokerage operating across vehicles, property, and assets, and ADA, Avalon Digital Agency. Neither had a live presence. No page to send a prospect to. No credibility signal for inbound leads. No way for Google to find us.
+            Avalon Capital Group launched with conviction but no digital foundation. ACG operates two divisions - Vantara, an acquisition brokerage operating across vehicles, property, and assets, and ADA, Asset Development Automation. Neither had a live presence. No page to send a prospect to. No credibility signal for inbound leads. No way for Google to find us.
           </p>
           <p className="cs-body">
             The brief was simple and self-imposed: build the ACG digital ecosystem from scratch, document every decision, and use the process to sharpen ADA&apos;s own methodology. This site would become both our home base and our most detailed proof of work.

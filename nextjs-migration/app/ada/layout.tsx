@@ -1,8 +1,38 @@
-import type { Metadata } from 'next';
+'use client';
+
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function AdaLayout({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
+  const isHub = pathname === '/ada';
+  const [subnavVisible, setSubnavVisible] = useState(false);
+
+  useEffect(() => {
+    if (!isHub) return;
+    const hero = document.querySelector('.ada2-hero');
+    if (!hero) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => setSubnavVisible(!entry.isIntersecting),
+      { threshold: 0, rootMargin: '-72px 0px 0px 0px' }
+    );
+    observer.observe(hero);
+    return () => observer.disconnect();
+  }, [isHub]);
+
   return (
     <>
+      {isHub && (
+        <nav
+          className={`ada2-subnav${subnavVisible ? ' is-active' : ''}`}
+          aria-label="ADA section navigation"
+        >
+          <a href="#work">Work</a>
+          <a href="#process">Process</a>
+          <a href="#investment">Pricing</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+      )}
       {children}
       <a
         href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA."

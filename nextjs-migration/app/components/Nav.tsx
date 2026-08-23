@@ -60,9 +60,14 @@ export default function Nav() {
           </div>
           {adaOpen && (
             <div style={{display:'flex', flexDirection:'column', paddingLeft:'16px', borderLeft:'1px solid var(--border)', marginTop:'8px', gap:'12px'}}>
-              <Link href="/ada/insights" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Insights</Link>
-              <Link href="/ada/case-studies" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Case Studies</Link>
-              <Link href="/ada/get-your-assistant" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Get Your Assistant</Link>
+              <Link href="/ada#work" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Our Work</Link>
+              <Link href="/ada#investment" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Pricing</Link>
+              <Link href="/ada/afripact-civils" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Afripact Civils</Link>
+              <Link href="/ada/acg-case-study" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>ACG Case Study</Link>
+              <div style={{display:'flex', flexDirection:'column', gap:'12px', marginTop:'4px', paddingTop:'12px', borderTop:'1px solid var(--border)'}}>
+                <Link href="/ada/insights" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Insights</Link>
+                <Link href="/ada/get-your-assistant" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Get Your Assistant</Link>
+              </div>
             </div>
           )}
         </div>
