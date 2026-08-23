@@ -26,7 +26,7 @@ export default function AfripactCivils() {
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
           <div className="section-label">Case study - Afripact Civils</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Building credibility before the conversation starts.</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>Within weeks of launch, the site was bringing in inspection requests from people who had never heard of Afripact before.</p>
+          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>Afripact had completed real projects for real clients. Nothing online showed it. We rebuilt the site around the credibility they had already earned. Within weeks of launch, inspection requests were coming from people who had never heard of Afripact before.</p>
           <div style={{display:'flex', gap:'1px', background:'var(--border)', flexWrap:'wrap', maxWidth:'640px'}}>
             <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
               <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>Civil construction</div>

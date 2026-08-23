@@ -7,6 +7,7 @@ interface Node {
   y: number;
   vx: number;
   vy: number;
+  r: number;
 }
 
 export default function AdaParticleMesh() {
@@ -19,8 +20,13 @@ export default function AdaParticleMesh() {
     if (!ctx) return;
 
     const isMobile = window.innerWidth < 768;
-    const nodeCount = isMobile ? 25 : 45;
+    const nodeCount = isMobile ? 25 : 55;
     const mouseEnabled = !isMobile;
+    const connectionDistance = 130;
+    const repelRadius = 130;
+    const repelForce = 0.065;
+    const maxVelocity = 0.65;
+    const damping = 0.99;
 
     let width = 0;
     let height = 0;
@@ -39,8 +45,9 @@ export default function AdaParticleMesh() {
     const nodes: Node[] = Array.from({ length: nodeCount }, () => ({
       x: Math.random() * width,
       y: Math.random() * height,
-      vx: (Math.random() - 0.5),
-      vy: (Math.random() - 0.5),
+      vx: (Math.random() - 0.5) * maxVelocity * 2,
+      vy: (Math.random() - 0.5) * maxVelocity * 2,
+      r: 1.2 + Math.random() * 1.2,
     }));
 
     function handleMouseMove(e: MouseEvent) {
@@ -60,15 +67,17 @@ export default function AdaParticleMesh() {
           const dx = n.x - mouse.x;
           const dy = n.y - mouse.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 110 && dist > 0.01) {
-            const force = (110 - dist) / 110;
-            n.vx += (dx / dist) * force * 0.07;
-            n.vy += (dy / dist) * force * 0.07;
+          if (dist < repelRadius && dist > 0.01) {
+            const force = (repelRadius - dist) / repelRadius;
+            n.vx += (dx / dist) * force * repelForce;
+            n.vy += (dy / dist) * force * repelForce;
           }
         }
 
-        n.vx = Math.max(-0.5, Math.min(0.5, n.vx));
-        n.vy = Math.max(-0.5, Math.min(0.5, n.vy));
+        n.vx *= damping;
+        n.vy *= damping;
+        n.vx = Math.max(-maxVelocity, Math.min(maxVelocity, n.vx));
+        n.vy = Math.max(-maxVelocity, Math.min(maxVelocity, n.vy));
 
         n.x += n.vx;
         n.y += n.vy;
@@ -86,9 +95,9 @@ export default function AdaParticleMesh() {
           const dx = a.x - b.x;
           const dy = a.y - b.y;
           const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 90) {
-            const opacity = 0.12 * (1 - dist / 90);
-            ctx!.strokeStyle = `rgba(17,17,17,${opacity})`;
+          if (dist < connectionDistance) {
+            const alpha = 0.2 * (1 - dist / connectionDistance);
+            ctx!.strokeStyle = `rgba(27,58,143,${alpha})`;
             ctx!.lineWidth = 1;
             ctx!.beginPath();
             ctx!.moveTo(a.x, a.y);
@@ -98,10 +107,10 @@ export default function AdaParticleMesh() {
         }
       }
 
-      ctx!.fillStyle = 'rgba(17,17,17,0.13)';
+      ctx!.fillStyle = 'rgba(27,58,143,0.20)';
       for (const n of nodes) {
         ctx!.beginPath();
-        ctx!.arc(n.x, n.y, 1.8, 0, Math.PI * 2);
+        ctx!.arc(n.x, n.y, n.r, 0, Math.PI * 2);
         ctx!.fill();
       }
 
