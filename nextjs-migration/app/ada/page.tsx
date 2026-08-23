@@ -42,7 +42,7 @@ export default function ADA() {
           .adaw-tag--onDark { color: rgba(255,255,255,0.4); }
           .adaw-tag--onDark::before { background: rgba(255,255,255,0.4); }
 
-          .adaw-hero { position: relative; min-height: calc(100vh - 68px); padding: 5rem 3.5rem; display: flex; align-items: center; overflow: hidden; }
+          .adaw-hero { position: relative; min-height: calc(100vh - 68px); padding: calc(68px + 5rem) 3.5rem 5rem; display: flex; align-items: center; overflow: hidden; }
           .adaw-hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: center; width: 100%; max-width: 1160px; margin: 0 auto; }
 
           .adaw-trust-strip { display: flex; border-top: 1px solid var(--ada-line); margin-top: 2.75rem; padding-top: 2rem; gap: 0; }
@@ -51,7 +51,8 @@ export default function ADA() {
           .adaw-trust-value { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-size: 18px; color: var(--ada-ink); }
           .adaw-trust-label { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ada-ink-muted); margin-top: 4px; }
 
-          .adaw-photo-mask { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; margin-top: -114px; -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%); mask-image: linear-gradient(to bottom, black 50%, transparent 100%); }
+          .adaw-photo-mask { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; margin-top: -114px; border: none; box-shadow: none; background: none; -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%); mask-image: linear-gradient(to bottom, black 50%, transparent 100%); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+          .adaw-hero .ada2-cta { border-radius: 100px; }
 
           .adaw-founder-pill { display: flex; align-items: center; gap: 12px; margin-top: -24px; position: relative; z-index: 3; background: #FFFFFF; border: 1px solid var(--ada-line); border-radius: 50px; padding: 10px 18px 10px 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); text-decoration: none; transition: box-shadow 0.25s ease, transform 0.25s ease; }
           .adaw-founder-pill:hover { box-shadow: 0 0 0 4px rgba(27,58,143,0.14), 0 8px 28px rgba(27,58,143,0.18); transform: translateY(-2px); }
@@ -105,7 +106,7 @@ export default function ADA() {
           .adaw-pricing-card--featured .adaw-pricing-desc { color: rgba(255,255,255,0.75); }
 
           .adaw-closing { background: var(--ada-accent); padding: 8rem 3.5rem; text-align: center; }
-          .adaw-closing-btn { display: inline-block; background: #FFFFFF; color: var(--ada-accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 16px 36px; border-radius: 8px; text-decoration: none; margin-top: 28px; transition: background 0.2s ease, color 0.2s ease; }
+          .adaw-closing-btn { display: inline-block; background: #FFFFFF; color: var(--ada-accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 16px 36px; border-radius: 100px; text-decoration: none; margin-top: 28px; transition: background 0.2s ease, color 0.2s ease; }
           .adaw-closing-btn:hover { background: transparent; color: #FFFFFF; box-shadow: inset 0 0 0 1px #FFFFFF; }
 
           .adaw-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
@@ -137,7 +138,7 @@ export default function ADA() {
           <div className="adaw-hero-grid">
             <div>
               <SectionTag>Asset Development Automation</SectionTag>
-              <h1 className="ada-display" style={{ fontWeight: 400, fontSize: 'clamp(38px, 4.4vw, 62px)', lineHeight: 1.12, color: 'var(--ada-ink)', marginBottom: '24px' }}>
+              <h1 className="ada-display" style={{ fontWeight: 400, fontSize: 'clamp(38px, 4.4vw, 62px)', lineHeight: 1.12, color: 'var(--ada-ink)', marginBottom: '24px', maxWidth: '520px' }}>
                 We build great websites<br />
                 that grow your <em style={{ fontStyle: 'italic', color: 'var(--ada-accent)' }}>business.</em>
               </h1>
@@ -165,7 +166,7 @@ export default function ADA() {
               </div>
             </div>
 
-            <div>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <div className="adaw-photo-mask">
                 <Image src={FOUNDER_PHOTO} alt="Luyanda Ngubo, founder of ADA" fill sizes="(max-width: 900px) 100vw, 280px" style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
               </div>
@@ -184,7 +185,7 @@ export default function ADA() {
         </section>
 
         {/* WHAT WE DO */}
-        <section id="process" className="ada2-section ada2-section--white ada2-section--rule" aria-labelledby="process-heading">
+        <section id="process" className="ada2-section ada2-section--white" aria-labelledby="process-heading">
           <div className="ada2-inner">
             <SectionTag>What we do</SectionTag>
             <h2 className="ada2-h2 ada-display" id="process-heading">Websites that actually work.</h2>
