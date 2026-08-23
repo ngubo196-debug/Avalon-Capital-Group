@@ -143,7 +143,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     },
     {
-      url: `${BASE}/ada/seo-agency-durban`,
+      url: `${BASE}/ada/website-not-generating-leads`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.9,

@@ -55,7 +55,7 @@ export default function Home() {
         <section aria-labelledby="portfolio-heading">
           <div className="section-label">The Group</div>
           <h2 className="section-title" id="portfolio-heading">Two divisions.<br /><em>One standard.</em></h2>
-          <p className="section-body">Avalon Capital Group operates through focused, independent businesses, each built to generate value in its market while sharing the group&apos;s commitment to precision, professionalism, and results. From <Link href="/ada/seo-agency-durban">search visibility in Durban</Link> to structured acquisition brokerage, the work is built to compound.</p>
+          <p className="section-body">Avalon Capital Group operates through focused, independent businesses, each built to generate value in its market while sharing the group&apos;s commitment to precision, professionalism, and results. From <Link href="/ada/website-not-generating-leads">turning traffic into leads</Link> to structured acquisition brokerage, the work is built to compound.</p>
 
           <div className="structure-grid">
             <Link className="structure-cell" href="/vantara" style={{cursor:'pointer'}}>

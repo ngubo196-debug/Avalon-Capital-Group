@@ -13,6 +13,7 @@ const nextConfig = {
       { source: '/blog-canopy-deep-dive',  destination: '/ada/insights/canopy-deep-dive',  permanent: true },
       { source: '/blog-revenue-website',   destination: '/ada/insights/revenue-website',   permanent: true },
       { source: '/blog-why-websites-fail', destination: '/ada/insights/why-websites-fail', permanent: true },
+      { source: '/ada/seo-agency-durban', destination: '/ada/website-not-generating-leads', permanent: true },
     ];
   },
 };
