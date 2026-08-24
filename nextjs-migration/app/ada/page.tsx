@@ -55,6 +55,8 @@ export default function ADA() {
           .adaw-photo-mask { position: relative; width: 100%; aspect-ratio: 1/1; border-radius: 20px; overflow: hidden; margin-top: -114px; border: none !important; box-shadow: none !important; background: transparent !important; background-color: transparent !important; -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
           .adaw-photo-mask img { object-fit: cover !important; object-position: center top !important; background: transparent !important; }
           .adaw-hero .ada2-cta { border-radius: 100px; }
+          .adaw-see-work-link { display: inline-block; transition: color 0.2s ease, transform 0.2s ease; }
+          .adaw-see-work-link:hover { color: var(--ada-ink); transform: translateY(-1px); }
 
           .adaw-process-layout { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: center; }
           .adaw-process-illustration { display: flex; align-items: center; justify-content: center; }
@@ -137,7 +139,7 @@ export default function ADA() {
               </h1>
               <div style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginTop: '32px' }}>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada2-cta">Start a conversation →</a>
-                <a href="#work" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', fontWeight: 500, color: 'var(--ada-ink-soft)', textDecoration: 'none' }}>See our work →</a>
+                <a href="#work" className="adaw-see-work-link" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', fontWeight: 500, color: 'var(--ada-ink-soft)', textDecoration: 'none' }}>See our work →</a>
               </div>
 
               <div className="adaw-trust-strip">
