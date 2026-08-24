@@ -99,7 +99,7 @@ export default function ADA() {
           .adaw-pricing-card--featured .adaw-pricing-desc { color: rgba(255,255,255,0.75); }
 
           .adaw-closing { background: var(--ada-accent); padding: 8rem 3.5rem; text-align: center; }
-          .adaw-closing-btn { display: inline-block; background: #FFFFFF; color: var(--ada-accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 16px 36px; border-radius: 100px; text-decoration: none; margin-top: 28px; transition: background 0.2s ease, color 0.2s ease; }
+          .adaw-closing-btn { display: inline-block; background: #FFFFFF; color: var(--ada-accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 8px 16px; border-radius: 100px; text-decoration: none; margin-top: 28px; transition: background 0.2s ease, color 0.2s ease; }
           .adaw-closing-btn:hover { background: transparent; color: #FFFFFF; box-shadow: inset 0 0 0 1px #FFFFFF; }
 
           .adaw-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
