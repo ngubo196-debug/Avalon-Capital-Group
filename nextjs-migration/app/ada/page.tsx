@@ -320,8 +320,8 @@ export default function ADA() {
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '16px', color: 'rgba(255,255,255,0.75)', maxWidth: '480px', margin: '0 auto' }}>One conversation is enough to know if this is the right fit.</p>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="adaw-closing-btn" style={{ display: 'inline-flex', alignItems: 'center' }}>
             Start a conversation →
-            <span style={{ position: 'relative', width: '28px', height: '28px', marginLeft: '10px', border: '2px solid rgba(255,255,255,0.4)', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
-              <Image src={FOUNDER_PHOTO} alt="" fill sizes="28px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+            <span style={{ position: 'relative', width: '48px', height: '48px', marginLeft: '10px', border: '2px solid rgba(255,255,255,0.4)', borderRadius: '8px', overflow: 'hidden', flexShrink: 0 }}>
+              <Image src={FOUNDER_PHOTO} alt="" fill sizes="48px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
             </span>
           </a>
         </section>
