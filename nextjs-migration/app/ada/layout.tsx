@@ -31,15 +31,6 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           backdrop-filter: blur(14px);
           border-bottom: 1px solid #E2E2DC;
         }
-        .ada-nav-logo {
-          font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
-          font-size: 17px;
-          font-weight: 600;
-          letter-spacing: 0.14em;
-          color: #111111;
-          text-decoration: none;
-        }
-        .ada-nav-logo span { color: #1B3A8F; }
         .ada-nav-links {
           display: flex;
           align-items: center;
@@ -86,7 +77,9 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
       `}</style>
 
       <nav className="ada-nav" aria-label="ADA section navigation">
-        <Link href="/ada" className="ada-nav-logo">ADA<span>.</span></Link>
+        <Link href="/ada" style={{ display: 'flex', alignItems: 'center' }}>
+          <Image src="/assets/ada-logo-full.png" alt="ADA" width={80} height={32} style={{ objectFit: 'contain' }} />
+        </Link>
         <ul className="ada-nav-links">
           <li><a href="#work">Work</a></li>
           <li><a href="#process">Process</a></li>
