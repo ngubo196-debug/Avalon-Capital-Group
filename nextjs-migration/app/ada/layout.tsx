@@ -78,7 +78,7 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
 
       <nav className="ada-nav" aria-label="ADA section navigation">
         <Link href="/ada" style={{ display: 'flex', alignItems: 'center' }}>
-          <Image src="/assets/ada-logo-full.png" alt="ADA" width={80} height={32} style={{ objectFit: 'contain' }} />
+          <Image src="/assets/ada-logo-full.png" alt="ADA" width={80} height={32} style={{ objectFit: 'contain', filter: 'invert(1)' }} />
         </Link>
         <ul className="ada-nav-links">
           <li><a href="#work">Work</a></li>
