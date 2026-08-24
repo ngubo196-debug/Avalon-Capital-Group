@@ -125,6 +125,7 @@ export default function ADA() {
           }
           @media (max-width: 768px) {
             .adaw-hero { padding: 140px 20px 60px; min-height: auto; }
+            .adaw-hero-right { display: none; }
             .adaw-process-grid, .adaw-who-grid, .adaw-work-grid, .adaw-pricing-grid { grid-template-columns: 1fr; }
             .adaw-trust-strip { flex-direction: column; gap: 16px; }
             .adaw-trust-item { border-left: none; padding-left: 0; }
@@ -167,7 +168,7 @@ export default function ADA() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '6rem' }}>
+            <div className="adaw-hero-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '6rem' }}>
               <div className="adaw-photo-mask">
                 <Image src={FOUNDER_PHOTO} alt="Luyanda Ngubo, founder of ADA" fill sizes="(max-width: 900px) 100vw, 386px" style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
               </div>
