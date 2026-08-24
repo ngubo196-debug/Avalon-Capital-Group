@@ -115,7 +115,7 @@ export default function ADA() {
           }
           @media (max-width: 768px) {
             .adaw-hero { padding: 140px 20px 60px; min-height: auto; }
-            .adaw-hero-right { display: none; }
+            .adaw-hero-right { display: none !important; }
             .adaw-process-layout { grid-template-columns: 1fr; }
             .adaw-process-illustration { display: none; }
             .adaw-process-grid, .adaw-who-grid, .adaw-work-grid, .adaw-pricing-grid { grid-template-columns: 1fr; }
