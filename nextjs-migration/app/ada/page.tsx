@@ -55,14 +55,6 @@ export default function ADA() {
           .adaw-photo-mask img { object-fit: cover !important; object-position: center top !important; background: transparent !important; }
           .adaw-hero .ada2-cta { border-radius: 100px; }
 
-          .adaw-founder-pill { display: flex; align-items: center; gap: 12px; margin-top: -24px; position: relative; z-index: 3; background: #FFFFFF; border: 1px solid var(--ada-line); border-radius: 50px; padding: 10px 18px 10px 10px; box-shadow: 0 2px 12px rgba(0,0,0,0.07); text-decoration: none; transition: box-shadow 0.25s ease, transform 0.25s ease; }
-          .adaw-founder-pill:hover { box-shadow: 0 0 0 4px rgba(27,58,143,0.14), 0 8px 28px rgba(27,58,143,0.18); transform: translateY(-2px); }
-          .adaw-founder-avatar { position: relative; width: 36px; height: 36px; border-radius: 50%; overflow: hidden; flex-shrink: 0; }
-          .adaw-founder-name { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 600; color: var(--ada-ink); }
-          .adaw-founder-role { font-family: 'DM Sans', sans-serif; font-size: 11px; color: var(--ada-ink-muted); }
-          .adaw-founder-arrow { margin-left: auto; color: var(--ada-accent); transition: transform 0.2s ease; flex-shrink: 0; }
-          .adaw-founder-pill:hover .adaw-founder-arrow { transform: translateX(3px); }
-
           .adaw-process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ada-line); border: 1px solid var(--ada-line); border-radius: 16px; overflow: hidden; margin-top: 3.5rem; }
           .adaw-process-cell { background: var(--ada-white); padding: 2.5rem; transition: background 0.2s ease; }
           .adaw-process-cell:hover { background: var(--ada-wash); }
@@ -121,7 +113,6 @@ export default function ADA() {
           @media (max-width: 900px) {
             .adaw-hero-grid { grid-template-columns: 1fr; }
             .adaw-photo-mask { margin-top: 0; aspect-ratio: 16 / 10; }
-            .adaw-founder-pill { margin-top: 16px; }
           }
           @media (max-width: 768px) {
             .adaw-hero { padding: 140px 20px 60px; min-height: auto; }
@@ -139,7 +130,6 @@ export default function ADA() {
           <AdaParticleMesh />
           <div className="adaw-hero-grid">
             <div>
-              <SectionTag>Asset Development Automation</SectionTag>
               <h1 className="ada-display" style={{ fontWeight: 400, fontSize: 'clamp(38px, 4.4vw, 62px)', lineHeight: 1.12, color: 'var(--ada-ink)', marginBottom: '24px', maxWidth: '520px' }}>
                 We build great websites<br />
                 that grow your <em style={{ fontStyle: 'italic', color: 'var(--ada-accent)' }}>business.</em>
@@ -148,12 +138,7 @@ export default function ADA() {
                 You&apos;ve spent years building a business with real projects, real credentials, and real results. Most established contractors we speak to have one problem: <strong style={{ fontWeight: 600 }}>their website doesn&apos;t show any of it.</strong> That&apos;s the gap we close.
               </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginTop: '32px' }}>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada2-cta" style={{ display: 'inline-flex', alignItems: 'center' }}>
-                  Start a conversation →
-                  <span style={{ position: 'relative', width: '28px', height: '28px', marginLeft: '10px', border: '2px solid rgba(255,255,255,0.4)', borderRadius: '50%', overflow: 'hidden', flexShrink: 0 }}>
-                    <Image src={FOUNDER_PHOTO} alt="" fill sizes="28px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
-                  </span>
-                </a>
+                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada2-cta">Start a conversation →</a>
                 <a href="#work" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', fontWeight: 500, color: 'var(--ada-ink-soft)', textDecoration: 'none' }}>See our work →</a>
               </div>
 
@@ -177,16 +162,6 @@ export default function ADA() {
               <div className="adaw-photo-mask">
                 <Image src={FOUNDER_PHOTO} alt="Luyanda Ngubo, founder of ADA" fill sizes="(max-width: 900px) 100vw, 386px" style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
               </div>
-              <Link href="/about" className="adaw-founder-pill">
-                <div className="adaw-founder-avatar">
-                  <Image src={FOUNDER_PHOTO} alt="" fill sizes="36px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
-                </div>
-                <div>
-                  <div className="adaw-founder-name">Luyanda Ngubo</div>
-                  <div className="adaw-founder-role">Founder, ADA</div>
-                </div>
-                <span className="adaw-founder-arrow">→</span>
-              </Link>
             </div>
           </div>
         </section>

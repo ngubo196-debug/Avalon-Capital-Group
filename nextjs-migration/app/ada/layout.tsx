@@ -1,8 +1,10 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 
 const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA.";
+const FOUNDER_PHOTO = "/assets/luyanda-ngubo.jpg";
 
 export default function AdaLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -54,6 +56,8 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
         }
         .ada-nav-links a:hover { color: #111111; }
         .ada-nav-cta {
+          display: inline-flex;
+          align-items: center;
           font-family: 'DM Sans', sans-serif;
           font-size: 13px;
           font-weight: 500;
@@ -65,6 +69,16 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           transition: opacity 0.2s ease;
         }
         .ada-nav-cta:hover { opacity: 0.88; }
+        .ada-nav-cta-avatar {
+          position: relative;
+          width: 28px;
+          height: 28px;
+          margin-left: 10px;
+          border: 2px solid rgba(255,255,255,0.35);
+          border-radius: 50%;
+          overflow: hidden;
+          flex-shrink: 0;
+        }
         @media (max-width: 768px) {
           .ada-nav { padding: 0 20px; }
           .ada-nav-links { display: none; }
@@ -78,7 +92,12 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           <li><a href="#process">Process</a></li>
           <li><a href="#pricing">Pricing</a></li>
         </ul>
-        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada-nav-cta">Start a conversation</a>
+        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada-nav-cta">
+          Start a conversation
+          <span className="ada-nav-cta-avatar">
+            <Image src={FOUNDER_PHOTO} alt="" fill sizes="28px" style={{ objectFit: 'cover', objectPosition: 'center top' }} />
+          </span>
+        </a>
       </nav>
 
       {children}
