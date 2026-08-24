@@ -3,7 +3,7 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Retail & E-commerce South Africa | Avalon Digital Agency',
+  title: 'Web Design for Retail & E-commerce South Africa | ADA',
   description: 'Website design for retail and e-commerce businesses across South Africa. Built to rank on Google, load fast, and turn visitors into paying customers.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-retail-ecommerce' },
 };

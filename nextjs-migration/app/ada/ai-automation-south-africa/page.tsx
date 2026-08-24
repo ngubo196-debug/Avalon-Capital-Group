@@ -3,8 +3,8 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'AI Automation South Africa | AI-Powered Business Systems | Avalon Digital Agency',
-  description: 'AI automation for South African businesses. Avalon Digital Agency builds AI-powered systems that generate leads, qualify prospects, and reduce manual work across your operation.',
+  title: 'AI Automation South Africa | AI-Powered Business Systems | ADA',
+  description: 'AI automation for South African businesses. ADA builds AI-powered systems that generate leads, qualify prospects, and reduce manual work across your operation.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/ai-automation-south-africa' },
 };
 
@@ -96,7 +96,7 @@ export default function AiAutomationSouthAfrica() {
         <section aria-labelledby="proof-heading">
           <div className="section-label">Built by ADA</div>
           <h2 className="section-title" id="proof-heading">We built our own AI systems before we sold them.</h2>
-          <p className="section-body">Avalon Digital Agency&apos;s audit tool generates a fully scored, AI-powered diagnostic report from a 13-step intake form. It runs on the same infrastructure we build for clients. We do not sell what we have not proven on ourselves first.</p>
+          <p className="section-body">ADA&apos;s audit tool generates a fully scored, AI-powered diagnostic report from a 13-step intake form. It runs on the same infrastructure we build for clients. We do not sell what we have not proven on ourselves first.</p>
           <Link href="/audit" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>Try the free audit tool →</Link>
         </section>
 

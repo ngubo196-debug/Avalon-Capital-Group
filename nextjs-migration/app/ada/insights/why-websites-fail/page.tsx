@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Why Your Website Isn't Generating Leads (And What to Do About It) | Avalon Digital Agency",
+  title: "Why Your Website Isn't Generating Leads (And What to Do About It) | ADA",
   description: 'Most South African business websites were never built to convert visitors into clients. Here\'s the real reason yours isn\'t generating leads - and how to fix it.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/why-websites-fail' },
 };
@@ -26,7 +26,7 @@ export default function WhyWebsitesFail() {
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
           <div className="section-label">The problem</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>Why most business websites don&apos;t make money</h1>
-          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · Avalon Digital Agency · Durban, KZN</p>
+          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · ADA · Durban, KZN</p>
           <p style={{maxWidth:'560px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>It&apos;s not the design. It&apos;s not the traffic. It&apos;s the fact that most websites were never built to convert. Here&apos;s what a website that doesn&apos;t perform actually costs you, and why the problem is more common than most business owners realise.</p>
         </div>
 

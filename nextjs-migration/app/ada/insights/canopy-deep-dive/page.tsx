@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Canopy Courier: A Concept Fleet Revenue System | Avalon Digital Agency',
+  title: 'Canopy Courier: A Concept Fleet Revenue System | ADA',
   description: 'A ground-level breakdown of a concept rebuild for a real KwaZulu-Natal business. It never went live - the R1M+ annual revenue potential is a projection from the pitch, not a measured result.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/canopy-deep-dive' },
 };
@@ -27,7 +27,7 @@ export default function CanopyDeepDive() {
           <div style={{display:'inline-block', fontSize:'10px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--black)', background:'var(--gold)', padding:'6px 14px', marginBottom:'16px'}}>Concept build - not a delivered engagement</div>
           <div className="section-label">Deep-dive</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>The Canopy Courier rebuild: a fleet revenue system that never went live</h1>
-          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · Avalon Digital Agency · Durban, KZN</p>
+          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · ADA · Durban, KZN</p>
           <p style={{maxWidth:'560px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>This one&apos;s honest: it never went live. A ground-level breakdown of the concept we built for a real business, Canopy Courier, and the specific decisions behind it. The R1M+ annual revenue potential is a projection from the pitch, not a measured result.</p>
         </div>
 

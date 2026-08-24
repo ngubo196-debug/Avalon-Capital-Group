@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Do You Still Need a Website in 2026? Yes - Here\'s Why It Matters More Than Ever | Avalon Digital Agency',
+  title: 'Do You Still Need a Website in 2026? Yes - Here\'s Why It Matters More Than Ever | ADA',
   description: 'With AI changing how people search and decide, South African businesses are asking whether websites still matter. They do - more than ever. Here\'s why.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/ai-websites' },
 };
@@ -26,7 +26,7 @@ export default function AIWebsites() {
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
           <div className="section-label">Authority piece</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>Why AI won&apos;t replace websites: it will make them more valuable</h1>
-          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · Avalon Digital Agency · Durban, KZN</p>
+          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · ADA · Durban, KZN</p>
           <p style={{maxWidth:'560px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Everyone&apos;s asking whether AI makes websites obsolete. The answer is the opposite. Here&apos;s why the businesses that invest in strong digital infrastructure now will be the ones AI points people toward, and what that means for yours.</p>
         </div>
 

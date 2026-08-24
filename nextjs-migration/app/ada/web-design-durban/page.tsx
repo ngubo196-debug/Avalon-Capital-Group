@@ -3,7 +3,7 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design Durban | Websites That Rank & Convert | Avalon Digital Agency',
+  title: 'Web Design Durban | Websites That Rank & Convert | ADA',
   description: 'Professional web design in Durban that ranks on Google and actually generates leads. Next.js sites built for conversion, speed & long-term results. Free audit available.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-durban' },
 };

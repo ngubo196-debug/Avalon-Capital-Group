@@ -3,7 +3,7 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Fleet Companies South Africa | Avalon Digital Agency',
+  title: 'Web Design for Fleet Companies South Africa | ADA',
   description: 'Website design built for fleet operators, transport companies, and logistics businesses across South Africa. Look credible, rank on Google, and win more contracts.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-fleet-companies' },
 };

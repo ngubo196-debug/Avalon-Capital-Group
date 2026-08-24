@@ -3,7 +3,7 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Construction Companies KZN | Avalon Digital Agency',
+  title: 'Web Design for Construction Companies KZN | ADA',
   description: 'Website design built specifically for construction and civil engineering companies in KwaZulu-Natal. Rank on Google, win more tenders, and build credibility before the first meeting.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-construction-kzn' },
 };

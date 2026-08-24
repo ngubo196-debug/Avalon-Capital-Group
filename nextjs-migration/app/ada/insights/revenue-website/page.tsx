@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'What a Business Website That Actually Generates Leads Looks Like | Avalon Digital Agency',
+  title: 'What a Business Website That Actually Generates Leads Looks Like | ADA',
   description: "Most business owners have never seen a website built to convert. Here's the anatomy of a revenue-driven website - the specific elements that turn visitors into paying clients in South Africa.",
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/revenue-website' },
 };
@@ -26,7 +26,7 @@ export default function RevenueWebsite() {
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
           <div className="section-label">The solution</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>What a revenue-driven website actually looks like</h1>
-          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · Avalon Digital Agency · Durban, KZN</p>
+          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · ADA · Durban, KZN</p>
           <p style={{maxWidth:'560px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>Most business owners have never seen one up close. Here&apos;s a breakdown of the specific elements, offer clarity, conversion flow, trust architecture, that separate a website that performs from one that just exists.</p>
         </div>
 

@@ -4,7 +4,7 @@ import Footer from '../../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Will AI Make Your Website Obsolete? The Opposite Is True | Avalon Digital Agency',
+  title: 'Will AI Make Your Website Obsolete? The Opposite Is True | ADA',
   description: "AI hasn't made websites less important for South African businesses - it's made them more critical. Here's why the businesses investing in digital infrastructure now will win.",
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/insights/ai-awareness' },
 };
@@ -26,7 +26,7 @@ export default function AIAwareness() {
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
           <div className="section-label">Market insight · Anchor piece</div>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(32px,4.5vw,58px)', fontWeight:300, lineHeight:1.15, marginBottom:'20px', maxWidth:'700px'}}>The AI awareness cycle: why your website is about to become your most valuable business asset</h1>
-          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · Avalon Digital Agency · Durban, KZN</p>
+          <p style={{fontSize:'11px', letterSpacing:'0.1em', color:'var(--text-dim)', marginBottom:'32px'}}>By Luyanda Ngubo · ADA · Durban, KZN</p>
           <p style={{maxWidth:'560px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9}}>An AI awareness cycle isn&apos;t what developers are excited about, what Twitter is hyping, or what engineers are building. It isn&apos;t the latest AI tool available on the market. It is the moment business owners finally realise: this affects my revenue now. That&apos;s when money moves.</p>
         </div>
 

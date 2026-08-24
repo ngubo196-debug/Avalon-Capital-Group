@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Afripact Civils Case Study | Digital Agency KwaZulu-Natal | Avalon Digital Agency',
+  title: 'Afripact Civils Case Study | Digital Agency KwaZulu-Natal | ADA',
   description: 'How ADA took Afripact Civils from invisible to credible. Civil construction, KwaZulu-Natal.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/afripact-civils' },
 };

@@ -3,7 +3,7 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Professional Services Durban | Avalon Digital Agency',
+  title: 'Web Design for Professional Services Durban | ADA',
   description: 'Website design for accountants, lawyers, consultants, and professional service firms in Durban and KwaZulu-Natal. Built to rank on Google and convert visitors into clients.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-professional-services-durban' },
 };

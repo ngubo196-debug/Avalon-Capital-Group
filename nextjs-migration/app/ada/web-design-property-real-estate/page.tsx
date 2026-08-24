@@ -3,7 +3,7 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Property & Real Estate South Africa | Avalon Digital Agency',
+  title: 'Web Design for Property & Real Estate South Africa | ADA',
   description: 'Website design for property developers, estate agents, and real estate businesses across South Africa. Built to rank on Google and convert browsers into buyers and tenants.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-property-real-estate' },
 };

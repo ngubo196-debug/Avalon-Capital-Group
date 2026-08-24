@@ -4,7 +4,7 @@ import Footer from '../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Canopy Courier: Concept Build | Avalon Digital Agency',
+  title: 'Canopy Courier: Concept Build | ADA',
   description: 'A concept fleet revenue system ADA designed for Canopy Courier. Never went live - a pitch, not a delivered engagement. Durban, KwaZulu-Natal.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/canopy-courier' },
 };

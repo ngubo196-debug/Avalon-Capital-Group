@@ -3,7 +3,7 @@ import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design Pietermaritzburg | Avalon Digital Agency',
+  title: 'Web Design Pietermaritzburg | ADA',
   description: 'Professional web design in Pietermaritzburg built for search and conversion. Rank on Google, attract local clients, and grow your business in the PMB market.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-pietermaritzburg' },
 };
