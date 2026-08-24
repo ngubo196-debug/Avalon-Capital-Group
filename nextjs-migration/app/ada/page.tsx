@@ -167,7 +167,7 @@ export default function ADA() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '2rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '4rem' }}>
               <div className="adaw-photo-mask">
                 <Image src={FOUNDER_PHOTO} alt="Luyanda Ngubo, founder of ADA" fill sizes="(max-width: 900px) 100vw, 280px" style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
               </div>
