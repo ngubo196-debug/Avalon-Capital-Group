@@ -55,6 +55,8 @@ export default function ADA() {
           .adaw-photo-mask img { object-fit: cover !important; object-position: center top !important; background: transparent !important; }
           .adaw-hero .ada2-cta { border-radius: 100px; }
 
+          .adaw-process-layout { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: center; }
+          .adaw-process-illustration { display: flex; align-items: center; justify-content: center; }
           .adaw-process-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ada-line); border: 1px solid var(--ada-line); border-radius: 16px; overflow: hidden; margin-top: 3.5rem; }
           .adaw-process-cell { background: var(--ada-white); padding: 2.5rem; transition: background 0.2s ease; }
           .adaw-process-cell:hover { background: var(--ada-wash); }
@@ -117,6 +119,8 @@ export default function ADA() {
           @media (max-width: 768px) {
             .adaw-hero { padding: 140px 20px 60px; min-height: auto; }
             .adaw-hero-right { display: none; }
+            .adaw-process-layout { grid-template-columns: 1fr; }
+            .adaw-process-illustration { display: none; }
             .adaw-process-grid, .adaw-who-grid, .adaw-work-grid, .adaw-pricing-grid { grid-template-columns: 1fr; }
             .adaw-trust-strip { flex-direction: column; gap: 16px; }
             .adaw-trust-item { border-left: none; padding-left: 0; }
@@ -166,30 +170,37 @@ export default function ADA() {
         {/* WHAT WE DO */}
         <section id="process" className="ada2-section ada2-section--white" aria-labelledby="process-heading">
           <div className="ada2-inner">
-            <SectionTag>What we do</SectionTag>
-            <h2 className="ada2-h2 ada-display" id="process-heading">Websites that actually work.</h2>
-            <p className="ada2-body">We build websites that look professional and turn visitors into enquiries. Clear message. Easy to use. Built to rank on Google and convert.</p>
+            <div className="adaw-process-layout">
+              <div>
+                <SectionTag>What we do</SectionTag>
+                <h2 className="ada2-h2 ada-display" id="process-heading">Websites that actually work.</h2>
+                <p className="ada2-body">We build websites that look professional and turn visitors into enquiries. Clear message. Easy to use. Built to rank on Google and convert.</p>
 
-            <div className="adaw-process-grid">
-              <div className="adaw-process-cell">
-                <div className="adaw-process-num">01</div>
-                <div className="adaw-process-title">Audit</div>
-                <div className="adaw-process-desc">We look at what you have and where it&apos;s losing people. No assumptions, just data.</div>
+                <div className="adaw-process-grid">
+                  <div className="adaw-process-cell">
+                    <div className="adaw-process-num">01</div>
+                    <div className="adaw-process-title">Audit</div>
+                    <div className="adaw-process-desc">We look at what you have and where it&apos;s losing people. No assumptions, just data.</div>
+                  </div>
+                  <div className="adaw-process-cell">
+                    <div className="adaw-process-num">02</div>
+                    <div className="adaw-process-title">Strategy</div>
+                    <div className="adaw-process-desc">We decide what each page needs to do before we design anything. Structure first.</div>
+                  </div>
+                  <div className="adaw-process-cell">
+                    <div className="adaw-process-num">03</div>
+                    <div className="adaw-process-title">Build</div>
+                    <div className="adaw-process-desc">Copy and design, built together, so the site does its job from day one.</div>
+                  </div>
+                  <div className="adaw-process-cell">
+                    <div className="adaw-process-num">04</div>
+                    <div className="adaw-process-title">Grow</div>
+                    <div className="adaw-process-desc">We confirm indexing, watch what&apos;s working, and build the next layer on top.</div>
+                  </div>
+                </div>
               </div>
-              <div className="adaw-process-cell">
-                <div className="adaw-process-num">02</div>
-                <div className="adaw-process-title">Strategy</div>
-                <div className="adaw-process-desc">We decide what each page needs to do before we design anything. Structure first.</div>
-              </div>
-              <div className="adaw-process-cell">
-                <div className="adaw-process-num">03</div>
-                <div className="adaw-process-title">Build</div>
-                <div className="adaw-process-desc">Copy and design, built together, so the site does its job from day one.</div>
-              </div>
-              <div className="adaw-process-cell">
-                <div className="adaw-process-num">04</div>
-                <div className="adaw-process-title">Grow</div>
-                <div className="adaw-process-desc">We confirm indexing, watch what&apos;s working, and build the next layer on top.</div>
+              <div className="adaw-process-illustration">
+                <Image src="/illustrations/undraw_building-websites_k2zp.svg" width={420} height={320} alt="Building websites that work" style={{ width: '100%', height: 'auto', opacity: 0.9 }} />
               </div>
             </div>
           </div>
@@ -228,6 +239,10 @@ export default function ADA() {
                 <div className="adaw-who-check">✓</div>
                 <div className="adaw-who-text"><strong>Diagnosis before design.</strong> We find the gap first. Everything else follows from that.</div>
               </div>
+            </div>
+
+            <div style={{ marginTop: '4rem', textAlign: 'center' }}>
+              <Image src="/illustrations/undraw_under-construction_hdrn.svg" width={600} height={200} alt="Built for construction businesses" style={{ width: '100%', maxWidth: '600px', height: 'auto', opacity: 0.15, filter: 'brightness(10)' }} />
             </div>
           </div>
         </section>
@@ -313,6 +328,7 @@ export default function ADA() {
 
         {/* CLOSING CTA */}
         <section className="adaw-closing" aria-labelledby="closing-heading">
+          <Image src="/illustrations/undraw_referral_ihsd.svg" width={200} height={175} alt="" style={{ width: '180px', height: 'auto', opacity: 0.25, filter: 'brightness(10)', marginBottom: '2rem' }} />
           <h2 className="ada-display" id="closing-heading" style={{ fontWeight: 400, fontSize: 'clamp(28px, 3.6vw, 44px)', color: '#FFFFFF', marginBottom: '16px' }}>Ready when you are.</h2>
           <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '16px', color: 'rgba(255,255,255,0.75)', maxWidth: '480px', margin: '0 auto' }}>One conversation is enough to know if this is the right fit.</p>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="adaw-closing-btn" style={{ display: 'inline-flex', alignItems: 'center' }}>
