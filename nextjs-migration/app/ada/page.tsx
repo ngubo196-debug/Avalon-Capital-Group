@@ -134,9 +134,6 @@ export default function ADA() {
                 We build great websites<br />
                 that grow your <em style={{ fontStyle: 'italic', color: 'var(--ada-accent)' }}>business.</em>
               </h1>
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '17px', fontWeight: 300, lineHeight: 1.75, color: 'var(--ada-ink-soft)', maxWidth: '460px' }}>
-                You&apos;ve spent years building a business with real projects, real credentials, and real results. Most established contractors we speak to have one problem: <strong style={{ fontWeight: 600 }}>their website doesn&apos;t show any of it.</strong> That&apos;s the gap we close.
-              </p>
               <div style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginTop: '32px' }}>
                 <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada2-cta">Start a conversation →</a>
                 <a href="#work" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', fontWeight: 500, color: 'var(--ada-ink-soft)', textDecoration: 'none' }}>See our work →</a>
