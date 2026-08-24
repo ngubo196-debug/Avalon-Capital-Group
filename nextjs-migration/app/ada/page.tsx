@@ -51,7 +51,7 @@ export default function ADA() {
           .adaw-trust-value { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-size: 18px; color: var(--ada-ink); }
           .adaw-trust-label { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ada-ink-muted); margin-top: 4px; }
 
-          .adaw-photo-mask { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; margin-top: -114px; border: none !important; box-shadow: none !important; background: transparent !important; background-color: transparent !important; -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+          .adaw-photo-mask { position: relative; width: 100%; aspect-ratio: 1/1; border-radius: 20px; overflow: hidden; margin-top: -114px; border: none !important; box-shadow: none !important; background: transparent !important; background-color: transparent !important; -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
           .adaw-photo-mask img { object-fit: cover !important; object-position: center top !important; background: transparent !important; }
           .adaw-hero .ada2-cta { border-radius: 100px; }
 
