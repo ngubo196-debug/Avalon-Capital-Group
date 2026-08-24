@@ -43,7 +43,7 @@ export default function ADA() {
           .adaw-tag--onDark::before { background: rgba(255,255,255,0.4); }
 
           .adaw-hero { position: relative; min-height: calc(100vh - 68px); padding: calc(68px + 5rem) 3.5rem 5rem; display: flex; align-items: center; overflow: hidden; }
-          .adaw-hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 280px; gap: 4rem; align-items: center; width: 100%; max-width: 1160px; margin: 0 auto; }
+          .adaw-hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 322px; gap: 4rem; align-items: center; width: 100%; max-width: 1160px; margin: 0 auto; }
 
           .adaw-trust-strip { display: flex; border-top: 1px solid var(--ada-line); margin-top: 2.75rem; padding-top: 2rem; gap: 0; }
           .adaw-trust-item { padding: 0 24px; border-left: 1px solid var(--ada-line); }
@@ -167,9 +167,9 @@ export default function ADA() {
               </div>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '4rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '6rem' }}>
               <div className="adaw-photo-mask">
-                <Image src={FOUNDER_PHOTO} alt="Luyanda Ngubo, founder of ADA" fill sizes="(max-width: 900px) 100vw, 280px" style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
+                <Image src={FOUNDER_PHOTO} alt="Luyanda Ngubo, founder of ADA" fill sizes="(max-width: 900px) 100vw, 322px" style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
               </div>
               <Link href="/about" className="adaw-founder-pill">
                 <div className="adaw-founder-avatar">
