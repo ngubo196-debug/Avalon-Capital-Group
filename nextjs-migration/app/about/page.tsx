@@ -6,7 +6,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Avalon Capital Group | Digital Agency & Acquisition Brokerage | KZN',
-  description: 'ACG is a KZN-based holding group with two operating divisions - Vantara for high-value acquisition brokerage and Avalon Digital Agency for digital growth. Registered, local, and built to deliver.',
+  description: 'ACG is a KZN-based holding group with two operating divisions - Vantara for high-value acquisition brokerage and ADA for digital growth. Registered, local, and built to deliver.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/about' },
 };
 
@@ -25,7 +25,7 @@ export default function About() {
                 name: 'What is Avalon Capital Group?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. Avalon Digital Agency builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.',
+                  text: 'Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. ADA builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.',
                 },
               },
               {
@@ -93,9 +93,9 @@ export default function About() {
         <section aria-labelledby="about-heading">
           <div className="section-label">Who We Are</div>
           <h2 className="section-title" id="about-heading">A group built on<br /><em>doing the work.</em></h2>
-          <p className="section-body">Avalon Capital Group is a KwaZulu-Natal business group with two operating divisions: Vantara for high-value acquisition brokerage, and Avalon Digital Agency for SEO, web design, and AI-powered digital infrastructure. Registered, active, and built to deliver measurable outcomes for clients across South Africa.</p>
+          <p className="section-body">Avalon Capital Group is a KwaZulu-Natal business group with two operating divisions: Vantara for high-value acquisition brokerage, and ADA for SEO, web design, and AI-powered digital infrastructure. Registered, active, and built to deliver measurable outcomes for clients across South Africa.</p>
           <p className="section-body">Avalon Capital Group is a South African business group operating through two focused portfolio companies. We are not a consultancy. We are not a holding company in name only. Every division operates in its market, executes real transactions, and delivers measurable outcomes for clients.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Our structure is deliberate. Vantara handles the physical world: acquisitions, brokerage, deal-making. Avalon Digital Agency handles the digital world: systems, automation, visibility. Together they create a group with multiple entry points, multiple revenue streams, and a single unifying standard of service.</p>
+          <p className="section-body" style={{marginTop:'20px'}}>Our structure is deliberate. Vantara handles the physical world: acquisitions, brokerage, deal-making. ADA handles the digital world: systems, automation, visibility. Together they create a group with multiple entry points, multiple revenue streams, and a single unifying standard of service.</p>
 
           <div className="philosophy-grid" style={{marginTop:'72px'}}>
             <div className="philosophy-item">
@@ -172,7 +172,7 @@ export default function About() {
         <section aria-labelledby="divisions-heading">
           <div className="section-label">Our Divisions</div>
           <h2 className="section-title" id="divisions-heading">Two businesses.<br /><em>One group.</em></h2>
-          <p className="section-body">ACG operates through two focused businesses. Vantara works exclusively for buyers in vehicle and property transactions. Avalon Digital Agency builds digital revenue systems for South African businesses serious about growth. Each division operates independently in its market, with the same standard of execution across both.</p>
+          <p className="section-body">ACG operates through two focused businesses. Vantara works exclusively for buyers in vehicle and property transactions. ADA builds digital revenue systems for South African businesses serious about growth. Each division operates independently in its market, with the same standard of execution across both.</p>
 
           <div className="divisions-list">
             <Link className="division-row" href="/vantara">
@@ -186,7 +186,7 @@ export default function About() {
             <Link className="division-row" href="/ada">
               <div>
                 <div className="division-role">Digital &amp; AI Services</div>
-                <div className="division-name">Avalon Digital Agency</div>
+                <div className="division-name">ADA</div>
               </div>
               <div className="division-desc">AI-powered digital infrastructure for businesses. Websites that convert. Automation that reduces manual work. SEO that compounds. Systems that grow the business while the owner focuses on what matters.</div>
               <div className="division-arrow">→</div>
@@ -205,7 +205,7 @@ export default function About() {
               <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
                 What is Avalon Capital Group?
               </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. Avalon Digital Agency builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.</p>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. ADA builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.</p>
             </details>
             <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
               <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>

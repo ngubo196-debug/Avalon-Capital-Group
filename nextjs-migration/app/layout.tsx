@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'Avalon Capital Group | Investment, Brokerage & Digital Services | South Africa',
   description:
-    'Avalon Capital Group is a South African business ecosystem operating through Vantara (premium acquisition brokerage) and Avalon Digital Agency (AI-powered digital infrastructure). We structure deals, build digital systems, and create compounding value.',
+    'Avalon Capital Group is a South African business ecosystem operating through Vantara (premium acquisition brokerage) and ADA (AI-powered digital infrastructure). We structure deals, build digital systems, and create compounding value.',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Avalon Capital Group',
-              description: 'ACG operates through two divisions: Vantara structures vehicle and property acquisitions for buyers who want the right deal, not just any deal. Avalon Digital Agency builds websites and search visibility that generate consistent leads. Based in KwaZulu-Natal, built to compound.',
+              description: 'ACG operates through two divisions: Vantara structures vehicle and property acquisitions for buyers who want the right deal, not just any deal. ADA builds websites and search visibility that generate consistent leads. Based in KwaZulu-Natal, built to compound.',
               url: 'https://www.avaloncapitalgroup.co.za',
               logo: 'https://www.avaloncapitalgroup.co.za/assets/acg-logo.jpg',
               image: 'https://www.avaloncapitalgroup.co.za/og-image.jpg',
@@ -88,7 +88,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'KwaZulu-Natal business market',
                 'Cold outreach and client acquisition',
               ],
-              description: 'Luyanda Ngubo is the founder and principal of Avalon Capital Group, a KwaZulu-Natal business group operating through Vantara (vehicle and property acquisition brokerage) and Avalon Digital Agency (SEO, web design, and AI-augmented digital systems for South African businesses).',
+              description: 'Luyanda Ngubo is the founder and principal of Avalon Capital Group, a KwaZulu-Natal business group operating through Vantara (vehicle and property acquisition brokerage) and ADA (SEO, web design, and AI-augmented digital systems for South African businesses).',
             }),
           }}
         />
@@ -101,7 +101,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Avalon Capital Group',
-              description: 'ACG operates through two divisions: Vantara structures vehicle and property acquisitions for buyers who want the right deal, not just any deal. Avalon Digital Agency builds websites and search visibility that generate consistent leads. Based in KwaZulu-Natal, built to compound.',
+              description: 'ACG operates through two divisions: Vantara structures vehicle and property acquisitions for buyers who want the right deal, not just any deal. ADA builds websites and search visibility that generate consistent leads. Based in KwaZulu-Natal, built to compound.',
               url: 'https://www.avaloncapitalgroup.co.za',
               telephone: '+27712205313',
               email: 'hello@avaloncapitalgroup.co.za',

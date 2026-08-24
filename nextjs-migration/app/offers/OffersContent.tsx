@@ -198,7 +198,7 @@ export default function OffersContent() {
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>Back to ADA</Link>
-          <p style={{fontSize:'10px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px', position:'relative', zIndex:2}}>Avalon Digital Agency &middot; Durban, KZN</p>
+          <p style={{fontSize:'10px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px', position:'relative', zIndex:2}}>ADA &middot; Durban, KZN</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(38px,5.5vw,72px)', fontWeight:300, lineHeight:1.08, maxWidth:'700px', marginBottom:'28px', position:'relative', zIndex:2}}>
             If your website isn&rsquo;t<br />generating leads,<br /><em style={{fontStyle:'italic', color:'var(--gold-light)'}}>it&rsquo;s not doing its job.</em>
           </h1>

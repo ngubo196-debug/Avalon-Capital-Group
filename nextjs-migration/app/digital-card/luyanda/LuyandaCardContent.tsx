@@ -18,7 +18,7 @@ export default function LuyandaCardContent() {
       'EMAIL:luyanda@avaloncapitalgroup.co.za',
       'URL:https://avaloncapitalgroup.co.za',
       'ADR;TYPE=WORK:;;Durban;KwaZulu-Natal;;;ZA',
-      'NOTE:Founder, Avalon Capital Group. Divisions: Vantara | Avalon Digital Agency (ADA)',
+      'NOTE:Founder, Avalon Capital Group. Divisions: Vantara | ADA',
       'END:VCARD'
     ].join('\n');
 
@@ -357,7 +357,7 @@ export default function LuyandaCardContent() {
             </a>
             <a className="division-pill" href="https://www.avaloncapitalgroup.co.za/ada">
               <div className="division-pill-label">Division</div>
-              <div className="division-pill-name">Avalon Digital Agency</div>
+              <div className="division-pill-name">ADA</div>
               <div className="division-pill-tag">AI-Powered Digital</div>
             </a>
           </div>

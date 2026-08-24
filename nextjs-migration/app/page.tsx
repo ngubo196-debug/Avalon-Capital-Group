@@ -6,12 +6,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Avalon Capital Group | Investment, Brokerage & Digital Services | South Africa',
-  description: 'South African business group behind Vantara and Avalon Digital Agency, structuring deals, building digital systems, and creating compounding value.',
+  description: 'South African business group behind Vantara and ADA, structuring deals, building digital systems, and creating compounding value.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za' },
   twitter: {
     card: 'summary_large_image',
     title: 'Avalon Capital Group | Investment, Brokerage & Digital Services | South Africa',
-    description: 'South African business group behind Vantara and Avalon Digital Agency, structuring deals, building digital systems, and creating compounding value.',
+    description: 'South African business group behind Vantara and ADA, structuring deals, building digital systems, and creating compounding value.',
   },
 };
 
@@ -66,7 +66,7 @@ export default function Home() {
             </Link>
             <Link className="structure-cell" href="/ada" style={{cursor:'pointer'}}>
               <div className="cell-type">Digital &amp; AI Services</div>
-              <div className="cell-name">Avalon Digital Agency</div>
+              <div className="cell-name">ADA</div>
               <div className="cell-desc">AI-powered websites, automation systems, and digital infrastructure that attract, convert, and retain customers, without constant manual intervention.</div>
               <span className="cell-link">Explore ADA</span>
             </Link>

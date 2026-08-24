@@ -138,7 +138,7 @@ export default function ContactContent() {
                 </Link>
                 <div className="contact-block-sub">Premium acquisition brokerage</div>
                 <Link href="/ada" style={{display:'block', textDecoration:'none'}}>
-                  <div className="contact-block-value" style={{marginTop:'18px', cursor:'pointer'}}>Avalon Digital Agency</div>
+                  <div className="contact-block-value" style={{marginTop:'18px', cursor:'pointer'}}>ADA</div>
                 </Link>
                 <div className="contact-block-sub">AI-powered digital infrastructure</div>
               </div>

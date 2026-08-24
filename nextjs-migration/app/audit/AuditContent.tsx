@@ -210,7 +210,7 @@ function scoreClass(s: number) {
 }
 
 function sysPrompt() {
-  return `You are the ADA Growth Diagnostic System — a diagnostic engine built by Avalon Digital Agency (ADA), a division of Avalon Capital Group, based in KwaZulu-Natal, South Africa.
+  return `You are the ADA Growth Diagnostic System — a diagnostic engine built by ADA, a division of Avalon Capital Group, based in KwaZulu-Natal, South Africa.
 
 Your function is to process a South African business's self-reported digital inputs and produce a calculated diagnostic report. You do not write like a consultant offering opinions. You output like a system that has processed inputs and returned a verdict.
 
@@ -787,7 +787,7 @@ export default function AuditContent() {
         <div className="audit-inner" style={{maxWidth:'720px'}}>
           <div className="audit-intro-header">
             <Link href="/ada" className="back-btn-audit audit-intro-back">← Back to ADA</Link>
-            <div className="section-label">Avalon Digital Agency - Free Audit</div>
+            <div className="section-label">ADA - Free Audit</div>
           </div>
           <h1 className="section-title">How visible is your<br />business <em>online?</em></h1>
           <p className="section-body">Answer 13 questions and receive a personalised digital presence report, scored across 6 dimensions and built around your specific situation in South Africa.</p>
@@ -1010,7 +1010,7 @@ export default function AuditContent() {
                 </svg>
                 Chat on WhatsApp
               </a>
-              <p className="cta-sub">+27 71 220 5313 - Avalon Digital Agency, Durban KZN</p>
+              <p className="cta-sub">+27 71 220 5313 - ADA, Durban KZN</p>
             </div>
 
             <div className="restart-row">

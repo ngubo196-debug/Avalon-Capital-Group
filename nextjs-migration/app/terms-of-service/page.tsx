@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Terms of Service | Avalon Capital Group',
-  description: 'Terms of Service for Avalon Capital Group (Pty) Ltd, Avalon Digital Agency, and Vantara.',
+  description: 'Terms of Service for Avalon Capital Group (Pty) Ltd, ADA, a division of Avalon Capital Group, and Vantara.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/terms-of-service' },
 };
 
@@ -30,7 +30,7 @@ export default function TermsOfService() {
           {[
             {
               num: '1. Overview',
-              body: 'These Terms of Service govern your use of the services provided by Avalon Capital Group (Pty) Ltd (Registration No. 2025/671885/07) and its divisions, Avalon Digital Agency (“ADA”) and Vantara. By engaging our services, you agree to these terms.'
+              body: 'These Terms of Service govern your use of the services provided by Avalon Capital Group (Pty) Ltd (Registration No. 2025/671885/07) and its divisions, Asset Development Automation (“ADA”) and Vantara. By engaging our services, you agree to these terms.'
             },
             {
               num: '2. Scope of services',
