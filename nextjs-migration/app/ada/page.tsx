@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import AdaParticleMesh from '../components/AdaParticleMesh';
+import BrowserMockup from '../components/BrowserMockup';
 import AdaFaq from '../components/AdaFaq';
 import { FAQS } from '../components/adaFaqData';
 import type { Metadata } from 'next';
@@ -73,10 +74,6 @@ export default function ADA() {
           .adaw-work-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem; }
           .adaw-work-card { border: 1px solid var(--ada-line); border-radius: 16px; overflow: hidden; background: var(--ada-white); transition: transform 0.25s ease, box-shadow 0.25s ease; }
           .adaw-work-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.09); }
-          .adaw-card-header { height: 180px; display: flex; align-items: center; justify-content: center; }
-          .adaw-card-header-afripact { background: linear-gradient(135deg, #0F1F4A 0%, #1B3A8F 60%, #2952CC 100%); }
-          .adaw-card-header-acg { background: linear-gradient(135deg, #1A1A18 0%, #2C2C28 60%, #3A3A34 100%); }
-          .adaw-card-logo { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-size: 24px; font-weight: 600; color: #fff; letter-spacing: 0.1em; }
           .adaw-card-body { padding: 2rem; }
           .adaw-card-tag { font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ada-accent); margin-bottom: 12px; }
           .adaw-card-title { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 600; color: var(--ada-ink); margin-bottom: 12px; }
@@ -255,25 +252,21 @@ export default function ADA() {
 
             <div className="adaw-work-grid">
               <div className="adaw-work-card">
-                <div className="adaw-card-header adaw-card-header-afripact">
-                  <span className="adaw-card-logo">AFRIPACT</span>
-                </div>
+                <BrowserMockup src="/work/afripact-full.webp" url="afripact.net" alt="Afripact Civils website" width={1400} height={8677} speedMultiplier={1.45} />
                 <div className="adaw-card-body">
                   <div className="adaw-card-tag">Civil Construction, KZN</div>
                   <div className="adaw-card-title">From invisible to credible.</div>
                   <p className="adaw-card-desc">Afripact had completed real projects for real clients. Nothing online showed it. We rebuilt the site around the credibility they&apos;d already earned. Within weeks, inspection requests were coming from people who had never heard of them before.</p>
-                  <Link href="/ada/afripact-civils" className="adaw-card-link">Read the case study →</Link>
+                  <Link href="/ada/afripact-civils" className="adaw-card-link">Read the full case study →</Link>
                 </div>
               </div>
               <div className="adaw-work-card">
-                <div className="adaw-card-header adaw-card-header-acg">
-                  <span className="adaw-card-logo">ACG</span>
-                </div>
+                <BrowserMockup src="/work/acg-full.webp" url="avaloncapitalgroup.co.za" alt="Avalon Capital Group website" width={1400} height={3429} />
                 <div className="adaw-card-body">
                   <div className="adaw-card-tag">Holding Group, Pietermaritzburg</div>
                   <div className="adaw-card-title">We ran our own process on ourselves.</div>
                   <p className="adaw-card-desc">1 page indexed on Google. Now 29. We found the problem, fixed it, and documented every decision.</p>
-                  <Link href="/ada/acg-case-study" className="adaw-card-link">Read the case study →</Link>
+                  <Link href="/ada/acg-case-study" className="adaw-card-link">Read the full case study →</Link>
                 </div>
               </div>
             </div>
