@@ -11,6 +11,15 @@
     --text: #F0EDE8;
     --text-muted: #8A8680;
     --text-dim: #555250;
+    --ada-ink: #111111;
+    --ada-ink-soft: #3A3A3A;
+    --ada-ink-muted: #7A7A7A;
+    --ada-line: #E2E2DC;
+    --ada-rule: #111111;
+    --ada-wash: #F7F7F5;
+    --ada-white: #FFFFFF;
+    --ada-accent: #1B3A8F;
+    --ada-accent-light: #EEF2FF;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -1040,16 +1049,6 @@
 
   /* ADA section */
   .ada-section {
-    --ada-ink: #111111;
-    --ada-ink-soft: #3A3A3A;
-    --ada-ink-muted: #7A7A7A;
-    --ada-line: #E2E2DC;
-    --ada-rule: #111111;
-    --ada-wash: #F7F7F5;
-    --ada-white: #FFFFFF;
-    --ada-accent: #1B3A8F;
-    --ada-accent-light: #EEF2FF;
-
     background: var(--ada-white);
     color: var(--ada-ink);
     font-family: 'DM Sans', 'Montserrat', sans-serif;
