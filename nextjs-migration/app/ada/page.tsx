@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import AdaParticleMesh from '../components/AdaParticleMesh';
+import AdaHeroMassive from '../components/AdaHeroMassive';
+import AdaFounderSection from '../components/AdaFounderSection';
+import AdaTrustBar from '../components/AdaTrustBar';
 import BrowserMockup from '../components/BrowserMockup';
 import AdaFaq from '../components/AdaFaq';
 import { FAQS } from '../components/adaFaqData';
@@ -42,21 +44,6 @@ export default function ADA() {
           .adaw-tag::before { content: ''; width: 24px; height: 1px; background: var(--ada-accent); display: inline-block; }
           .adaw-tag--onDark { color: rgba(255,255,255,0.4); }
           .adaw-tag--onDark::before { background: rgba(255,255,255,0.4); }
-
-          .adaw-hero { position: relative; min-height: calc(100vh - 68px); padding: calc(68px + 5rem) 3.5rem 5rem; display: flex; align-items: center; overflow: hidden; }
-          .adaw-hero-grid { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 386px; gap: 4rem; align-items: center; width: 100%; max-width: 1160px; margin: 0 auto; }
-
-          .adaw-trust-strip { display: flex; border-top: 1px solid var(--ada-line); margin-top: 2.75rem; padding-top: 2rem; gap: 0; }
-          .adaw-trust-item { padding: 0 24px; border-left: 1px solid var(--ada-line); }
-          .adaw-trust-item:first-child { padding-left: 0; border-left: none; }
-          .adaw-trust-value { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-size: 18px; color: var(--ada-ink); }
-          .adaw-trust-label { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ada-ink-muted); margin-top: 4px; }
-
-          .adaw-photo-mask { position: relative; width: 100%; aspect-ratio: 1/1; border-radius: 20px; overflow: hidden; margin-top: -114px; border: none !important; box-shadow: none !important; background: transparent !important; background-color: transparent !important; -webkit-mask-image: linear-gradient(to bottom, black 55%, transparent 100%); mask-image: linear-gradient(to bottom, black 55%, transparent 100%); -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
-          .adaw-photo-mask img { object-fit: cover !important; object-position: center top !important; background: transparent !important; }
-          .adaw-hero .ada2-cta { border-radius: 100px; }
-          .adaw-see-work-link { display: inline-block; transition: color 0.2s ease, transform 0.2s ease; }
-          .adaw-see-work-link:hover { color: var(--ada-ink); transform: translateY(-1px); }
 
           .adaw-process-layout { display: grid; grid-template-columns: 3fr 2fr; gap: 3rem; align-items: center; }
           .adaw-process-illustration { display: flex; align-items: center; justify-content: center; }
@@ -111,58 +98,84 @@ export default function ADA() {
           .adaw-footer-links a:hover { color: #fff; }
           .adaw-footer-reg { font-family: 'DM Sans', sans-serif; font-size: 12px; color: rgba(255,255,255,0.3); }
 
-          @media (max-width: 900px) {
-            .adaw-hero-grid { grid-template-columns: 1fr; }
-            .adaw-photo-mask { margin-top: 0; aspect-ratio: 16 / 10; }
-          }
           @media (max-width: 768px) {
-            .adaw-hero { padding: 140px 20px 60px; min-height: auto; }
-            .adaw-hero-right { display: none !important; }
             .adaw-process-layout { grid-template-columns: 1fr; }
             .adaw-process-illustration { display: none; }
             .adaw-process-grid, .adaw-who-grid, .adaw-work-grid, .adaw-pricing-grid { grid-template-columns: 1fr; }
-            .adaw-trust-strip { flex-direction: column; gap: 16px; }
-            .adaw-trust-item { border-left: none; padding-left: 0; }
             .adaw-closing { padding: 4.5rem 20px; }
             .adaw-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
           }
         `}</style>
 
-        {/* HERO */}
-        <section className="adaw-hero">
-          <AdaParticleMesh />
-          <div className="adaw-hero-grid">
-            <div>
-              <h1 className="ada-display" style={{ fontWeight: 400, fontSize: 'clamp(38px, 4.4vw, 62px)', lineHeight: 1.12, color: 'var(--ada-ink)', marginBottom: '24px', maxWidth: '520px' }}>
-                We build great websites<br />
-                that grow your <em style={{ fontStyle: 'italic', color: 'var(--ada-accent)' }}>business.</em>
-              </h1>
-              <div style={{ display: 'flex', alignItems: 'center', gap: '24px', flexWrap: 'wrap', marginTop: '32px' }}>
-                <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada2-cta">Start a conversation →</a>
-                <a href="#work" className="adaw-see-work-link" style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '14px', fontWeight: 500, color: 'var(--ada-ink-soft)', textDecoration: 'none' }}>See our work →</a>
-              </div>
+        <AdaHeroMassive />
 
-              <div className="adaw-trust-strip">
-                <div className="adaw-trust-item">
-                  <div className="adaw-trust-value ada-display">KZN &amp; SA</div>
-                  <div className="adaw-trust-label">Where we work</div>
+        <AdaFounderSection />
+
+        <AdaTrustBar />
+
+        {/* OUR WORK */}
+        <section id="work" className="ada2-section ada2-section--white" aria-labelledby="work-heading">
+          <div className="ada2-inner">
+            <SectionTag>Our work</SectionTag>
+            <h2 className="ada2-h2 ada-display" id="work-heading">Real work. Real results.</h2>
+
+            <div className="adaw-work-grid">
+              <div className="adaw-work-card">
+                <BrowserMockup src="/work/afripact-full.webp" url="afripact.net" alt="Afripact Civils website" width={1400} height={8677} speedMultiplier={1.45} />
+                <div className="adaw-card-body">
+                  <div className="adaw-card-tag">Civil Construction, KZN</div>
+                  <div className="adaw-card-title">From invisible to credible.</div>
+                  <p className="adaw-card-desc">Afripact had completed real projects for real clients. Nothing online showed it. We rebuilt the site around the credibility they&apos;d already earned. Within weeks, inspection requests were coming from people who had never heard of them before.</p>
+                  <Link href="/ada/afripact-civils" className="adaw-card-link">Read the full case study →</Link>
                 </div>
-                <div className="adaw-trust-item">
-                  <div className="adaw-trust-value ada-display">Diagnosis first.</div>
-                  <div className="adaw-trust-label">Always</div>
-                </div>
-                <div className="adaw-trust-item">
-                  <div className="adaw-trust-value ada-display">One contact.</div>
-                  <div className="adaw-trust-label">No middlemen</div>
+              </div>
+              <div className="adaw-work-card">
+                <BrowserMockup src="/work/acg-full.webp" url="avaloncapitalgroup.co.za" alt="Avalon Capital Group website" width={1400} height={3429} />
+                <div className="adaw-card-body">
+                  <div className="adaw-card-tag">Holding Group, Pietermaritzburg</div>
+                  <div className="adaw-card-title">We ran our own process on ourselves.</div>
+                  <p className="adaw-card-desc">1 page indexed on Google. Now 29. We found the problem, fixed it, and documented every decision.</p>
+                  <Link href="/ada/acg-case-study" className="adaw-card-link">Read the full case study →</Link>
                 </div>
               </div>
             </div>
 
-            <div className="adaw-hero-right" style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginRight: '6rem' }}>
-              <div className="adaw-photo-mask">
-                <Image src={FOUNDER_PHOTO} alt="Luyanda Ngubo, founder of ADA" fill sizes="(max-width: 900px) 100vw, 386px" style={{ objectFit: 'cover', objectPosition: 'center top' }} priority />
+            <div className="adaw-concept-card">
+              <div className="adaw-concept-badge">⚠ Concept build, not a delivered engagement</div>
+              <div className="adaw-card-title">Canopy Courier — what we&apos;d build for a fleet business.</div>
+              <p className="adaw-card-desc">This never went live. We built the full strategic and design package to show what a fleet-focused rebuild looks like. Eight components, dual retail and fleet paths, four SEO landing pages. Projected upside modelled at R1M to R2M per year. That is a projection from the pitch, not a measured result.</p>
+              <Link href="/ada/canopy-courier" className="adaw-card-link">See the concept →</Link>
+            </div>
+          </div>
+        </section>
+
+        {/* PRICING */}
+        <section id="pricing" style={{ background: 'var(--ada-wash)', padding: '6rem 0' }} aria-labelledby="pricing-heading">
+          <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 3.5rem' }}>
+            <SectionTag>Investment</SectionTag>
+            <h2 className="ada2-h2 ada-display" id="pricing-heading">We don&apos;t sell cheap.<br />We sell what works.</h2>
+
+            <div className="adaw-pricing-grid">
+              <div className="adaw-pricing-card">
+                <div className="adaw-pricing-tier">Foundation</div>
+                <div className="adaw-pricing-price ada-display">R18,500</div>
+                <div className="adaw-pricing-terms">Once-off</div>
+                <p className="adaw-pricing-desc">For businesses that need a site as good as the work they do.</p>
+              </div>
+              <div className="adaw-pricing-card adaw-pricing-card--featured">
+                <div className="adaw-pricing-tier">Growth</div>
+                <div className="adaw-pricing-price ada-display">R34,000</div>
+                <div className="adaw-pricing-terms">Once-off, or R12,500/month (3-month min)</div>
+                <p className="adaw-pricing-desc">Website plus SEO plus a system built to keep bringing in enquiries.</p>
+              </div>
+              <div className="adaw-pricing-card">
+                <div className="adaw-pricing-tier">Authority</div>
+                <div className="adaw-pricing-price ada-display">Custom</div>
+                <div className="adaw-pricing-terms">By enquiry</div>
+                <p className="adaw-pricing-desc">For businesses ready to lead their category. Scope confirmed on the call.</p>
               </div>
             </div>
+            <p style={{ textAlign: 'center', marginTop: '2rem', fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'var(--ada-ink-muted)' }}>Payment can be split. Terms confirmed on the call.</p>
           </div>
         </section>
 
@@ -243,72 +256,6 @@ export default function ADA() {
             <div style={{ marginTop: '4rem', textAlign: 'center' }}>
               <Image src="/illustrations/undraw_under-construction_hdrn.svg" width={600} height={200} alt="Built for construction businesses" style={{ width: '100%', maxWidth: '600px', height: 'auto', opacity: 0.15, filter: 'brightness(10)' }} />
             </div>
-          </div>
-        </section>
-
-        {/* OUR WORK */}
-        <section id="work" className="ada2-section ada2-section--white" aria-labelledby="work-heading">
-          <div className="ada2-inner">
-            <SectionTag>Our work</SectionTag>
-            <h2 className="ada2-h2 ada-display" id="work-heading">Real work. Real results.</h2>
-
-            <div className="adaw-work-grid">
-              <div className="adaw-work-card">
-                <BrowserMockup src="/work/afripact-full.webp" url="afripact.net" alt="Afripact Civils website" width={1400} height={8677} speedMultiplier={1.45} />
-                <div className="adaw-card-body">
-                  <div className="adaw-card-tag">Civil Construction, KZN</div>
-                  <div className="adaw-card-title">From invisible to credible.</div>
-                  <p className="adaw-card-desc">Afripact had completed real projects for real clients. Nothing online showed it. We rebuilt the site around the credibility they&apos;d already earned. Within weeks, inspection requests were coming from people who had never heard of them before.</p>
-                  <Link href="/ada/afripact-civils" className="adaw-card-link">Read the full case study →</Link>
-                </div>
-              </div>
-              <div className="adaw-work-card">
-                <BrowserMockup src="/work/acg-full.webp" url="avaloncapitalgroup.co.za" alt="Avalon Capital Group website" width={1400} height={3429} />
-                <div className="adaw-card-body">
-                  <div className="adaw-card-tag">Holding Group, Pietermaritzburg</div>
-                  <div className="adaw-card-title">We ran our own process on ourselves.</div>
-                  <p className="adaw-card-desc">1 page indexed on Google. Now 29. We found the problem, fixed it, and documented every decision.</p>
-                  <Link href="/ada/acg-case-study" className="adaw-card-link">Read the full case study →</Link>
-                </div>
-              </div>
-            </div>
-
-            <div className="adaw-concept-card">
-              <div className="adaw-concept-badge">⚠ Concept build, not a delivered engagement</div>
-              <div className="adaw-card-title">Canopy Courier — what we&apos;d build for a fleet business.</div>
-              <p className="adaw-card-desc">This never went live. We built the full strategic and design package to show what a fleet-focused rebuild looks like. Eight components, dual retail and fleet paths, four SEO landing pages. Projected upside modelled at R1M to R2M per year. That is a projection from the pitch, not a measured result.</p>
-              <Link href="/ada/canopy-courier" className="adaw-card-link">See the concept →</Link>
-            </div>
-          </div>
-        </section>
-
-        {/* PRICING */}
-        <section id="pricing" style={{ background: 'var(--ada-wash)', padding: '6rem 0' }} aria-labelledby="pricing-heading">
-          <div style={{ maxWidth: '1160px', margin: '0 auto', padding: '0 3.5rem' }}>
-            <SectionTag>Investment</SectionTag>
-            <h2 className="ada2-h2 ada-display" id="pricing-heading">We don&apos;t sell cheap.<br />We sell what works.</h2>
-
-            <div className="adaw-pricing-grid">
-              <div className="adaw-pricing-card">
-                <div className="adaw-pricing-tier">Foundation</div>
-                <div className="adaw-pricing-price ada-display">R18,500</div>
-                <div className="adaw-pricing-terms">Once-off</div>
-                <p className="adaw-pricing-desc">For businesses that need a site as good as the work they do.</p>
-              </div>
-              <div className="adaw-pricing-card adaw-pricing-card--featured">
-                <div className="adaw-pricing-tier">Growth</div>
-                <div className="adaw-pricing-price ada-display">R34,000</div>
-                <div className="adaw-pricing-terms">Once-off, or R12,500/month (3-month min)</div>
-                <p className="adaw-pricing-desc">Website plus SEO plus a system built to keep bringing in enquiries.</p>
-              </div>
-              <div className="adaw-pricing-card">
-                <div className="adaw-pricing-tier">Authority</div>
-                <div className="adaw-pricing-price ada-display">Custom</div>
-                <div className="adaw-pricing-terms">By enquiry</div>
-                <p className="adaw-pricing-desc">For businesses ready to lead their category. Scope confirmed on the call.</p>
-              </div>
-            </div>
-            <p style={{ textAlign: 'center', marginTop: '2rem', fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'var(--ada-ink-muted)' }}>Payment can be split. Terms confirmed on the call.</p>
           </div>
         </section>
 
