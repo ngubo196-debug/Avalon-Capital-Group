@@ -7,13 +7,13 @@ export default function AdaFounderSection() {
   return (
     <section className="ada-founder">
       <style suppressHydrationWarning>{`
-        .ada-founder { background: #FFFFFF; padding: 7rem 3.5rem; }
+        .ada-founder { background: var(--ada-white); padding: 7rem 3.5rem; }
         .ada-founder-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
         .ada-founder-photo { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%); }
-        .ada-founder-label { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: #1B3A8F; margin-bottom: 16px; }
-        .ada-founder-h2 { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(36px, 4vw, 54px); line-height: 1.15; color: #111111; margin: 0 0 24px; }
-        .ada-founder-body { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 300; line-height: 1.75; color: #3A3A3A; margin: 0 0 32px; max-width: 460px; }
-        .ada-founder-cta { display: inline-flex; align-items: center; background: #1B3A8F; color: #FFFFFF; border-radius: 100px; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 0.2s ease, transform 0.2s ease; }
+        .ada-founder-label { font-family: 'DM Sans', sans-serif; font-size: 11px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--ada-accent); margin-bottom: 16px; }
+        .ada-founder-h2 { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(36px, 4vw, 54px); line-height: 1.15; color: var(--ada-ink); margin: 0 0 24px; }
+        .ada-founder-body { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 300; line-height: 1.75; color: var(--ada-ink-soft); margin: 0 0 32px; max-width: 460px; }
+        .ada-founder-cta { display: inline-flex; align-items: center; background: var(--ada-accent); color: var(--ada-white); border-radius: 100px; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 0.2s ease, transform 0.2s ease; }
         .ada-founder-cta:hover { opacity: 0.88; transform: translateY(-1px); }
         @media (max-width: 900px) {
           .ada-founder-inner { grid-template-columns: 1fr; gap: 2.5rem; }

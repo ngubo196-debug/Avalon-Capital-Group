@@ -53,7 +53,7 @@ export default function AdaTrustBar() {
   return (
     <div className="ada-trustbar" role="group" aria-label="Client results and trust indicators">
       <style suppressHydrationWarning>{`
-        .ada-trustbar { background: #111111; width: 100%; height: 72px; overflow: hidden; display: flex; align-items: center; }
+        .ada-trustbar { background: var(--ada-ink); width: 100%; height: 72px; overflow: hidden; display: flex; align-items: center; }
         .ada-trustbar-track { display: flex; align-items: center; width: max-content; animation: ada-trustbar-scroll 35s linear infinite; }
         .ada-trustbar-strip { display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
         .ada-trustbar-text { font-family: 'DM Sans', sans-serif; font-size: 13px; font-weight: 500; color: rgba(255,255,255,0.75); letter-spacing: 0.04em; white-space: nowrap; }
