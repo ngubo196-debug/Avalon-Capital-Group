@@ -15,6 +15,7 @@ export default function AdaFounderSection() {
         .ada-founder-body { font-family: 'DM Sans', sans-serif; font-size: 18px; font-weight: 300; line-height: 1.75; color: var(--ada-ink-soft); margin: 0 0 32px; max-width: 460px; }
         .ada-founder-cta { display: inline-flex; align-items: center; background: var(--ada-accent); color: var(--ada-white); border-radius: 100px; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 0.2s ease, transform 0.2s ease; }
         .ada-founder-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+        .ada-founder-inner .ada-founder-cta { color: var(--ada-white); }
         @media (max-width: 900px) {
           .ada-founder-inner { grid-template-columns: 1fr; gap: 2.5rem; }
           .ada-founder-photo { aspect-ratio: 1 / 1; }

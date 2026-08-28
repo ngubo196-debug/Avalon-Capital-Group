@@ -15,6 +15,7 @@ export default function AdaHeroMassive() {
         .ada-hero-massive-ctas { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; margin-top: 3rem; }
         .ada-hero-massive-primary { display: inline-flex; align-items: center; background: var(--ada-accent); color: var(--ada-white); border-radius: 100px; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; transition: opacity 0.2s ease, transform 0.2s ease; }
         .ada-hero-massive-primary:hover { opacity: 0.88; transform: translateY(-1px); }
+        .ada-hero-massive-ctas .ada-hero-massive-primary { color: var(--ada-white); }
         .ada-hero-massive-ghost { font-family: 'DM Sans', sans-serif; font-size: 14px; color: var(--ada-ink-muted); text-decoration: none; border-bottom: 1px solid var(--ada-line); padding-bottom: 2px; transition: color 0.2s ease, border-color 0.2s ease; }
         .ada-hero-massive-ghost:hover { color: var(--ada-ink); border-color: var(--ada-ink); }
         .ada-hero-massive-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--ada-ink-muted); font-family: 'DM Sans', sans-serif; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; }
