@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import CaseStudyClient from './CaseStudyClient';
 
 export const metadata: Metadata = {
-  title: 'How We Built ACG: Next.js Migration Case Study | ADA, Pietermaritzburg',
-  description: 'The full story of how ADA migrated avaloncapitalgroup.co.za from a plain HTML SPA to a server-rendered Next.js site, documented live by a digital agency in Pietermaritzburg, South Africa.',
+  title: 'We Built Our Own Site First. Here Is What Happened. | ADA',
+  description: '1 page indexed on Google. 17 pages built but invisible. We found the problem, fixed it, and documented everything. Now 29 pages indexed.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/acg-case-study' },
 };
 
