@@ -86,6 +86,9 @@ export default function ADA() {
           .adaw-pricing-desc { font-family: 'DM Sans', sans-serif; font-size: 13.5px; line-height: 1.7; color: var(--ada-ink-soft); }
           .adaw-pricing-card--featured .adaw-pricing-desc { color: rgba(255,255,255,0.75); }
 
+          .adaw-pricing-cta { display: block; margin: 2rem auto 0; text-align: center; width: fit-content; background: var(--ada-accent); color: #FFFFFF !important; border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 2px solid var(--ada-accent); transition: background 0.2s ease, color 0.2s ease; }
+          .adaw-pricing-cta:hover { background: #FFFFFF; color: var(--ada-accent) !important; }
+
           .adaw-closing { background: var(--ada-accent); padding: 8rem 3.5rem; text-align: center; }
           .adaw-closing-btn { display: inline-block; background: #FFFFFF; color: var(--ada-accent); font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; padding: 8px 16px; border-radius: 100px; text-decoration: none; margin-top: 28px; transition: background 0.2s ease, color 0.2s ease; }
           .adaw-closing-btn:hover { background: transparent; color: #FFFFFF; box-shadow: inset 0 0 0 1px #FFFFFF; }
@@ -176,6 +179,7 @@ export default function ADA() {
               </div>
             </div>
             <p style={{ textAlign: 'center', marginTop: '2rem', fontFamily: "'DM Sans', sans-serif", fontSize: '13px', color: 'var(--ada-ink-muted)' }}>Payment can be split. Terms confirmed on the call.</p>
+            <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="adaw-pricing-cta">Start a conversation →</a>
           </div>
         </section>
 

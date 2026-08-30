@@ -84,6 +84,7 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           <li><a href="#work">Work</a></li>
           <li><a href="#process">Process</a></li>
           <li><a href="#pricing">Pricing</a></li>
+          <li><Link href="/ada/contact">Contact</Link></li>
         </ul>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada-nav-cta">
           Start a conversation
