@@ -81,9 +81,9 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           <Image src="/assets/ada-logo-full.png" alt="ADA" width={80} height={32} style={{ objectFit: 'contain', filter: 'invert(1)' }} />
         </Link>
         <ul className="ada-nav-links">
-          <li><a href="#work">Work</a></li>
-          <li><a href="#process">Process</a></li>
-          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="/ada#work">Work</a></li>
+          <li><a href="/ada#process">Process</a></li>
+          <li><a href="/ada#pricing">Pricing</a></li>
           <li><Link href="/ada/contact">Contact</Link></li>
         </ul>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada-nav-cta">
