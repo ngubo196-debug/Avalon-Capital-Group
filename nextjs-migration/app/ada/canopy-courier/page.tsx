@@ -1,159 +1,190 @@
 import Link from 'next/link';
-import Nav from '../../components/Nav';
-import Footer from '../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Canopy Courier: Concept Build | ADA',
-  description: 'A concept fleet revenue system ADA designed for Canopy Courier. Never went live - a pitch, not a delivered engagement. Durban, KwaZulu-Natal.',
+  title: 'Canopy Courier — Concept Build | ADA',
+  description: 'ADA designed a full fleet revenue system for Canopy Courier. It never went live. This is the concept, documented honestly.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/canopy-courier' },
 };
 
+const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA.";
+
 export default function CanopyCourier() {
   return (
-    <>
-      <Nav />
-      <div id="page-canopy-courier" className="page" role="main">
-        <div className="inner-hero">
-          <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
-              <polygon points="290,20 560,640 20,640"/>
-              <polygon points="290,80 510,600 70,600"/>
-              <polygon points="290,140 460,560 120,560"/>
-            </g>
-          </svg>
-          <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
-          <div style={{display:'inline-block', fontSize:'10px', letterSpacing:'0.15em', textTransform:'uppercase', color:'var(--black)', background:'var(--gold)', padding:'6px 14px', marginBottom:'16px'}}>Concept build - not a delivered engagement</div>
-          <div className="section-label">Canopy Courier</div>
-          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>From a retail shop to a fleet revenue system.</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>This one&apos;s honest: it never went live. Canopy Courier was never a client. We built the full plan anyway, to show what a fleet-focused digital rebuild actually looks like. Every figure on this page is a projection from the pitch, not a measured result.</p>
-          <div style={{display:'flex', gap:'1px', background:'var(--border)', flexWrap:'wrap', maxWidth:'640px'}}>
-            <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>8 deliverables</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Scope of build</div>
+    <div id="page-canopy-courier" className="page ada-section" role="main">
+      <style suppressHydrationWarning>{`
+        .wds-back { font-family: DM Sans, sans-serif; font-size: 13px; color: var(--ada-accent); text-decoration: none; display: inline-block; margin-bottom: 32px; }
+        .wds-back:hover { text-decoration: underline; }
+        .wds-label { font-family: DM Sans, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ada-accent); margin-bottom: 20px; }
+        .wds-label-bar { display: inline-block; width: 20px; height: 2px; background: var(--ada-accent); vertical-align: middle; margin-right: 10px; }
+        .wds-h1 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 400; font-size: clamp(38px, 4.4vw, 62px); line-height: 1.12; color: var(--ada-ink); max-width: 820px; margin: 0; }
+        .wds-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); line-height: 1.15; color: var(--ada-ink); margin: 0 0 24px; }
+        .wds-body { font-family: DM Sans, sans-serif; font-size: 17px; font-weight: 300; line-height: 1.75; color: var(--ada-ink-soft); max-width: 720px; margin: 0; }
+        .wds-body strong { font-weight: 600; color: var(--ada-ink); }
+        .wds-body + .wds-body { margin-top: 20px; }
+        .wds-hero { background: var(--ada-white); padding: calc(68px + 6rem) 3.5rem 6rem; }
+        .wds-section { padding: 6rem 3.5rem; }
+        .wds-section--white { background: var(--ada-white); }
+        .wds-section--wash { background: var(--ada-wash); }
+        .wds-inner { max-width: 1160px; margin: 0 auto; }
+
+        .wds-badge { display: flex; width: fit-content; align-items: center; background: #FEF3C7; border: 1px solid #F59E0B; color: #92400E; border-radius: 100px; padding: 5px 16px; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.5rem; }
+        .wds-hero-intro { max-width: 600px; margin-top: 24px; }
+        .wds-stats { display: flex; flex-wrap: wrap; gap: 2rem; padding-top: 2rem; border-top: 1px solid var(--ada-line); margin-top: 2rem; }
+        .wds-stat-value { display: block; font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 22px; font-weight: 500; color: var(--ada-ink); }
+        .wds-disclaimer { font-family: DM Sans, sans-serif; font-size: 12px; font-style: italic; color: var(--ada-ink-muted); margin-top: 1rem; }
+        .wds-disclaimer--lg { font-size: 14px; margin-top: 2rem; max-width: 560px; }
+
+        .wds-plan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--ada-line); border: 1px solid var(--ada-line); margin-top: 56px; }
+        .wds-plan-item { background: var(--ada-white); padding: 2.25rem; }
+        .wds-plan-num { display: block; font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 32px; font-weight: 400; color: var(--ada-accent); opacity: 0.4; margin-bottom: 12px; }
+        .wds-plan-title { display: block; font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 600; color: var(--ada-ink); margin-bottom: 8px; }
+        .wds-plan-desc { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 300; line-height: 1.7; color: var(--ada-ink-soft); margin: 0; }
+
+        .wds-outcome-block { border-left: 3px solid var(--ada-accent); padding-left: 1.5rem; margin-bottom: 2rem; }
+        .wds-outcome-block:last-of-type { margin-bottom: 0; }
+        .wds-outcome-title { display: block; font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 600; color: var(--ada-ink); margin-bottom: 0.5rem; }
+        .wds-outcome-body { font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--ada-ink-soft); margin: 0; }
+
+        .wds-cta-btn { display: inline-block; background: var(--ada-accent); color: #FFFFFF !important; border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 2px solid var(--ada-accent); transition: background 0.2s ease, color 0.2s ease; }
+        .wds-cta-btn:hover { background: var(--ada-white); color: var(--ada-accent) !important; }
+
+        .wds-closing { background: var(--ada-accent); padding: 6rem 3.5rem; text-align: center; }
+        .wds-closing-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); color: var(--ada-white); margin: 0 0 16px; }
+        .wds-closing-body { font-family: DM Sans, sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
+        .wds-closing-btn { display: inline-block; background: var(--ada-white); color: var(--ada-accent); border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ada-white); transition: background 0.2s ease, color 0.2s ease; }
+        .wds-closing-btn:hover { background: transparent; color: var(--ada-white); }
+
+        .wds-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+        .wds-footer-logo { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 600; color: var(--ada-white); text-decoration: none; }
+        .wds-footer-logo span { color: var(--ada-accent); }
+        .wds-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .wds-footer-links a { font-family: DM Sans, sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s ease; }
+        .wds-footer-links a:hover { color: var(--ada-white); }
+        .wds-footer-reg { font-family: DM Sans, sans-serif; font-size: 12px; color: rgba(255,255,255,0.3); width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4px; }
+
+        @media (max-width: 768px) {
+          .wds-hero { padding: calc(68px + 4rem) 1.5rem 4rem; }
+          .wds-section, .wds-closing { padding: 4rem 1.5rem; }
+          .wds-plan-grid { grid-template-columns: 1fr; }
+          .wds-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
+        }
+      `}</style>
+
+      <section className="wds-hero">
+        <div className="wds-inner">
+          <Link href="/ada" className="wds-back">← Back to ADA</Link>
+          <div className="wds-badge">Concept build — not a delivered engagement</div>
+          <div className="wds-label"><span className="wds-label-bar" />Canopy Courier</div>
+          <h1 className="wds-h1">From a retail shop to a fleet revenue system.</h1>
+          <p className="wds-body wds-hero-intro">This is not a case study. Canopy Courier is not a client. What exists is a full strategic and design concept ADA built to show what a fleet-focused digital rebuild actually looks like. The figures below are projections from the pitch. None of them are measured results. We are saying so plainly.</p>
+
+          <div className="wds-stats">
+            <span className="wds-stat-value">8 deliverables designed</span>
+            <span className="wds-stat-value">Retail + fleet, dual path</span>
+            <span className="wds-stat-value">R1M–R2M projected upside*</span>
+          </div>
+          <p className="wds-disclaimer">*Projection from the pitch. Not a measured result.</p>
+        </div>
+      </section>
+
+      <section className="wds-section wds-section--wash" aria-labelledby="situation-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />The Situation</div>
+          <h2 className="wds-h2" id="situation-heading">Strong service. The wrong website for the biggest opportunity.</h2>
+          <p className="wds-body">Canopy Courier has a clean site and a real service. But the site is built entirely for walk-in retail customers. Fleet clients, the ones worth R100,000 to R500,000 a year each, are not addressed anywhere on the site. Not a page, not a CTA, not a single line of copy.</p>
+          <p className="wds-body">The retail job is worth R3,000 to R8,000. The fleet contract is worth R100,000 to R500,000 per year. Five fleet clients at conservative volumes: R1.2M annually. None of that is being captured.</p>
+        </div>
+      </section>
+
+      <section className="wds-section wds-section--white" aria-labelledby="plan-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />The Concept</div>
+          <h2 className="wds-h2" id="plan-heading">Eight components. One coherent system.</h2>
+
+          <div className="wds-plan-grid">
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">01</span>
+              <span className="wds-plan-title">Brand repositioning</span>
+              <p className="wds-plan-desc">Reframe from retail shop to fleet-capable operation.</p>
             </div>
-            <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>Retail + fleet</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Dual revenue path</div>
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">02</span>
+              <span className="wds-plan-title">Dual-path homepage</span>
+              <p className="wds-plan-desc">Retail and fleet routed separately from the first screen.</p>
             </div>
-            <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>R1M – R2M</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Projected annual upside</div>
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">03</span>
+              <span className="wds-plan-title">Fleet money page</span>
+              <p className="wds-plan-desc">Dedicated page built to convert fleet decision-makers.</p>
+            </div>
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">04</span>
+              <span className="wds-plan-title">Fleet Performance Package</span>
+              <p className="wds-plan-desc">A structured, priced fleet offer.</p>
+            </div>
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">05</span>
+              <span className="wds-plan-title">Service pages</span>
+              <p className="wds-plan-desc">Individual pages for each core service, built for search.</p>
+            </div>
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">06</span>
+              <span className="wds-plan-title">SEO architecture</span>
+              <p className="wds-plan-desc">Four landing pages targeting high-intent KZN fleet searches.</p>
+            </div>
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">07</span>
+              <span className="wds-plan-title">Mobile-first conversion</span>
+              <p className="wds-plan-desc">Site rebuilt to convert on a phone, not just a desktop.</p>
+            </div>
+            <div className="wds-plan-item">
+              <span className="wds-plan-num">08</span>
+              <span className="wds-plan-title">Lead capture system</span>
+              <p className="wds-plan-desc">Qualification flow separating fleet from retail enquiries.</p>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="divider"></div>
+      <section className="wds-section wds-section--wash" aria-labelledby="outcome-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />If This Were Built</div>
+          <h2 className="wds-h2" id="outcome-heading">What the concept is designed to produce.</h2>
 
-        <section style={{padding:'80px 60px'}} aria-labelledby="canopy-situation">
-          <div className="section-label">The situation</div>
-          <h2 className="section-title" id="canopy-situation">Strong service.<br /><em>Silent on the biggest opportunity.</em></h2>
-          <p className="section-body">Canopy Courier is a KZN-based canopy specialist: installations, repairs, fitment, parts. Fast turnaround. Experienced team. Nationwide delivery capability. Trusted by hundreds of customers over many years. By every operational measure, a strong business.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>But when we looked at the digital presence, the story was different. The website was built entirely around the retail walk-in customer, someone who already knew they needed a canopy and just needed a number to call. That customer is real and valuable. The problem is they represent only one slice of the revenue available to a business like this.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Fleet clients, construction firms, logistics companies, security businesses, municipal vehicles, represent recurring, high-volume, predictable income. One fleet contract alone can mean 10 to 50 installations, ongoing maintenance, and a relationship that compounds over years. None of that was being captured. The website had no fleet page, no fleet offer, no language that spoke to a fleet manager. That revenue was invisible because the business was invisible to the people holding it.</p>
-        </section>
-
-        <div className="divider"></div>
-
-        <section style={{padding:'80px 60px'}} aria-labelledby="canopy-numbers">
-          <div className="section-label">The problem in numbers</div>
-          <h2 className="section-title" id="canopy-numbers">A strategy problem<br /><em>that design had to solve.</em></h2>
-          <p className="section-body">The gap between where Canopy Courier was and where the business could be wasn&apos;t a design problem. It was a strategy problem that design had to solve.</p>
-          <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>A single retail customer is worth R3,000–R8,000. A single fleet client is worth R100,000–R500,000 per year. Five fleet clients alone represents R1.2M in annual recurring revenue.</p>
-            <cite style={{display:'block', marginTop:'14px', fontSize:'11px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>Revenue modelling: ADA strategy analysis</cite>
-          </blockquote>
-          <p className="section-body" style={{marginTop:'40px'}}>The website was optimised for the smaller opportunity and silent on the larger one. Every week without fleet positioning was revenue left on the table, not because the service wasn&apos;t there, but because the digital infrastructure wasn&apos;t.</p>
-          <p style={{marginTop:'32px', fontSize:'12px', fontStyle:'italic', color:'var(--text-dim)', lineHeight:1.8}}>Past performance is not indicative of future results. All figures shown are for illustrative purposes and may vary based on market conditions and individual circumstances. This does not constitute financial or investment advice.</p>
-        </section>
-
-        <div className="divider"></div>
-
-        <section style={{padding:'80px 60px'}} aria-labelledby="canopy-built">
-          <div className="section-label">The plan</div>
-          <h2 className="section-title" id="canopy-built">Eight components.<br /><em>One coherent system.</em></h2>
-          <p className="section-body">Eight components. One coherent system. Everything was designed around a single strategic principle: a business with two distinct customer types needs two distinct conversion paths running in parallel.</p>
-          <div style={{display:'grid', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>01</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Brand repositioning</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>From generic canopy shop to KZN&apos;s trusted canopy specialist. Clear speed and reliability promise.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>02</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Dual-path homepage</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Retail path: same-day quote. Fleet path: book a fleet assessment. Two buyers, two offers, one page.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>03</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Fleet money page</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>A dedicated page built to sell a contract, not inform. Opens on fleet downtime costs. Closes on the Fleet Performance Package.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>04</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Fleet Performance Package</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>A structured commercial offer: priority turnaround, dedicated contact, bulk pricing, scheduled maintenance, emergency support.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>05</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Service pages</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Canopies, repairs, fitment, fleet: each with its own page, its own intent, its own conversion path.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>06</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>SEO architecture</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Four dedicated landing pages targeting high-intent searches: canopy repairs Durban, bakkie canopies KZN, fitment Durban, fleet solutions SA.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>07</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Mobile-first conversion</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Sticky call bar, floating WhatsApp button, urgency triggers. Built for how 70%+ of SA web traffic actually behaves.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>08</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Lead capture system</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Fleet-optimised enquiry form: vehicle count, urgency, company name. No more cold, unqualified leads.</div>
-            </div>
+          <div className="wds-outcome-block">
+            <span className="wds-outcome-title">Fleet pipeline open.</span>
+            <p className="wds-outcome-body">A dedicated path for fleet clients with a clear offer and a conversion flow built for that buyer, not the retail customer.</p>
           </div>
-        </section>
-
-        <div className="divider"></div>
-
-        <section style={{padding:'80px 60px'}} aria-labelledby="canopy-outcome">
-          <div className="section-label">The intended outcome</div>
-          <h2 className="section-title" id="canopy-outcome">A website that would do<br /><em>more than exist.</em></h2>
-          <p className="section-body">If this plan were built, Canopy Courier would have a website that does more than exist. It would qualify leads, separate retail from fleet, build trust before the phone rings, and drive enquiries around the clock. This is what the business would look like operating at the level it actually operates at.</p>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Immediate credibility</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Premium positioning aligned with the quality of the actual service.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Fleet pipeline open</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>The infrastructure to attract and convert high-value fleet clients is live.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>SEO foundation built</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Ranking for high-intent KZN searches as the pages index and build authority.</div>
-            </div>
+          <div className="wds-outcome-block">
+            <span className="wds-outcome-title">SEO foundation laid.</span>
+            <p className="wds-outcome-body">Four pages targeting searches like &quot;fleet maintenance Durban&quot; and &quot;vehicle servicing KZN,&quot; searches with commercial intent the existing site captures none of.</p>
           </div>
-        </section>
-
-        <div className="divider"></div>
-
-        <section style={{padding:'80px 60px'}}>
-          <div style={{background:'var(--surface)', border:'1px solid var(--border)', padding:'48px', maxWidth:'100%'}}>
-            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(22px,2.5vw,30px)', fontWeight:300, lineHeight:1.3, marginBottom:'20px', maxWidth:'580px'}}>One fleet client would more than cover the cost of a project like this. Every month after that would be compounding return.</div>
-            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'580px', marginBottom:'36px'}}>This is what we mean by conversion infrastructure. Not a website that looks good in a screenshot. A system built to generate revenue while you&apos;re focused on the work.</p>
-            <a className="btn-primary" href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." target="_blank" rel="noopener noreferrer" style={{position:'relative', zIndex:9999, display:'inline-block'}}>Start a project</a>
+          <div className="wds-outcome-block">
+            <span className="wds-outcome-title">Credibility gap closed.</span>
+            <p className="wds-outcome-body">A site that shows Canopy Courier as a serious fleet operator, not a walk-in shop that also does fleet work on the side.</p>
           </div>
-        </section>
 
-        <div className="divider"></div>
+          <p className="wds-disclaimer wds-disclaimer--lg">Projected upside modelled at R1M to R2M per year across fleet contracts, SEO traffic, and improved retail conversion at conservative volumes. This is a projection from the pitch. Not a measured result.</p>
+        </div>
+      </section>
 
-        <Footer />
-      </div>
-    </>
+      <section className="wds-closing" aria-labelledby="closing-heading">
+        <h2 className="wds-closing-h2" id="closing-heading">This is the thinking ADA brings to every project.</h2>
+        <p className="wds-closing-body">The diagnostic and concept work done for Canopy Courier is the same process applied to every engagement. Find the gap. Fix the foundation. Build on top of what the business has actually earned.</p>
+        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="wds-closing-btn">Start a conversation →</a>
+      </section>
+
+      <footer className="wds-footer">
+        <Link href="/ada" className="wds-footer-logo">ADA<span>.</span></Link>
+        <div className="wds-footer-links">
+          <Link href="/ada">Our work</Link>
+          <Link href="/ada#pricing">Pricing</Link>
+          <Link href="/ada/afripact-civils">Case study</Link>
+          <Link href="/ada/contact">Contact</Link>
+        </div>
+        <div className="wds-footer-reg">Avalon Capital Group (Pty) Ltd · Reg. 2025/671885/07</div>
+      </footer>
+    </div>
   );
 }
