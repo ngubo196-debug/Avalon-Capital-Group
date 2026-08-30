@@ -15,6 +15,7 @@ const nextConfig = {
       { source: '/blog-why-websites-fail', destination: '/ada/insights/why-websites-fail', permanent: true },
       { source: '/ada/seo-agency-durban', destination: '/ada/website-not-generating-leads', permanent: true },
       { source: '/ada/ai-automation-south-africa', destination: '/ada/business-automation', permanent: true },
+      { source: '/ada/get-your-assistant', destination: '/ada/ai-assistant-for-business', permanent: true },
     ];
   },
 };
