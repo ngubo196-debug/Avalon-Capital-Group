@@ -1,136 +1,114 @@
 import Link from 'next/link';
-import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Web Design for Logistics & Transport Companies South Africa | ADA',
-  description: 'Website design built for logistics and transport businesses across South Africa. Rank on Google, build credibility with corporate clients, and win more contracts.',
+  title: 'Websites for Logistics & Transport Companies in South Africa | ADA',
+  description: 'Your logistics operation has the capacity. Your website should prove it. ADA builds sites that win procurement trust before the first call.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/web-design-logistics-transport' },
 };
 
+const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA.";
+
 export default function WebDesignLogisticsTransport() {
   return (
-    <>
-      <Nav />
-      <div id="page-web-design-logistics" className="page" role="main">
+    <div id="page-web-design-logistics-transport" className="page ada-section" role="main">
+      <style suppressHydrationWarning>{`
+        .wds-back { font-family: DM Sans, sans-serif; font-size: 13px; color: var(--ada-accent); text-decoration: none; display: inline-block; margin-bottom: 32px; }
+        .wds-back:hover { text-decoration: underline; }
+        .wds-label { font-family: DM Sans, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ada-accent); margin-bottom: 20px; }
+        .wds-label-bar { display: inline-block; width: 20px; height: 2px; background: var(--ada-accent); vertical-align: middle; margin-right: 10px; }
+        .wds-h1 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 400; font-size: clamp(38px, 4.4vw, 62px); line-height: 1.12; color: var(--ada-ink); max-width: 820px; margin: 0; }
+        .wds-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); line-height: 1.15; color: var(--ada-ink); margin: 0 0 24px; }
+        .wds-body { font-family: DM Sans, sans-serif; font-size: 17px; font-weight: 300; line-height: 1.75; color: var(--ada-ink-soft); max-width: 720px; margin: 0; }
+        .wds-body strong { font-weight: 600; color: var(--ada-ink); }
+        .wds-body + .wds-body { margin-top: 20px; }
+        .wds-hero { background: var(--ada-white); padding: calc(68px + 6rem) 3.5rem 6rem; }
+        .wds-section { padding: 6rem 3.5rem; }
+        .wds-section--white { background: var(--ada-white); }
+        .wds-section--wash { background: var(--ada-wash); }
+        .wds-inner { max-width: 1160px; margin: 0 auto; }
+        .wds-case-link { display: block; margin-top: 1.5rem; font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 600; color: var(--ada-accent); text-decoration: none; }
+        .wds-case-link:hover { text-decoration: underline; }
+        .wds-closing { background: var(--ada-accent); padding: 6rem 3.5rem; text-align: center; }
+        .wds-closing-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); color: var(--ada-white); margin: 0 0 16px; }
+        .wds-closing-body { font-family: DM Sans, sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
+        .wds-closing-btn { display: inline-block; background: var(--ada-white); color: var(--ada-accent); border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ada-white); transition: background 0.2s ease, color 0.2s ease; }
+        .wds-closing-btn:hover { background: transparent; color: var(--ada-white); }
+        .wds-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+        .wds-footer-logo { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 600; color: #FFFFFF !important; text-decoration: none; }
+        .wds-footer-logo span { color: var(--ada-accent); }
+        .wds-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .wds-footer-links a { font-family: DM Sans, sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s ease; }
+        .wds-footer-links a:hover { color: var(--ada-white); }
+        .wds-footer-reg { font-family: DM Sans, sans-serif; font-size: 12px; color: rgba(255,255,255,0.3); width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4px; }
+        @media (max-width: 768px) {
+          .wds-hero { padding: calc(68px + 4rem) 1.5rem 4rem; }
+          .wds-section, .wds-closing { padding: 4rem 1.5rem; }
+          .wds-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
+        }
+      `}</style>
 
-        <style>{`
-          @media (max-width: 768px) {
-            .wdl-grid-3 { grid-template-columns: 1fr !important; }
-            .wdl-grid-2 { grid-template-columns: 1fr !important; }
-          }
-        `}</style>
-
-        <div className="inner-hero">
-          <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
-              <polygon points="290,20 560,640 20,640"/>
-              <polygon points="290,80 510,600 70,600"/>
-              <polygon points="290,140 460,560 120,560"/>
-            </g>
-          </svg>
-          <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/ada/web-design-durban" style={{cursor:'pointer', position:'relative', zIndex:10}}>Web Design Durban</Link>
-          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Web Design for Logistics &amp; Transport Companies in South Africa</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'36px'}}>Logistics is a trust business. Your website is where that trust starts.</p>
+      <section className="wds-hero">
+        <div className="wds-inner">
+          <Link href="/ada" className="wds-back">← Back to ADA</Link>
+          <div className="wds-label"><span className="wds-label-bar" />ADA — Asset Development Automation</div>
+          <h1 className="wds-h1">Your logistics operation is capable of bigger contracts. Your website should be winning them.</h1>
         </div>
+      </section>
 
-        <section aria-labelledby="problem-heading">
-          <div className="section-label">The Problem</div>
-          <h2 className="section-title" id="problem-heading">Logistics companies with weak websites lose contracts to competitors who look more established.</h2>
-          <p className="section-body">Supply chain managers and procurement teams research suppliers before making contact. A poorly built or outdated website signals operational risk. In logistics, that perception costs you contracts worth millions.</p>
-        </section>
+      <section className="wds-section wds-section--wash" aria-labelledby="problem-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />The Problem</div>
+          <h2 className="wds-h2" id="problem-heading">Supply chain buyers vet logistics partners online before they call anyone.</h2>
+          <p className="wds-body">A supply chain manager needs a new freight partner. A retailer is sourcing a distribution operator for regional delivery. A manufacturer wants to add a logistics provider to their approved supplier list.</p>
+          <p className="wds-body">The first thing they do is search. If your company does not appear, or appears but looks smaller and less established than it is, you are not on the shortlist. Someone else gets the call.</p>
+          <p className="wds-body">If your average logistics contract is worth R250,000 a year and you miss even two qualified enquiries a month, that is R500,000 in annual contract value going to a competitor. Not because their operation is better. Because their website is.</p>
+        </div>
+      </section>
 
-        <div className="divider"></div>
+      <section className="wds-section wds-section--white" aria-labelledby="changes-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />What Changes</div>
+          <h2 className="wds-h2" id="changes-heading">A site that proves capability before the first conversation.</h2>
+          <p className="wds-body">Route coverage documented. Fleet and warehouse capacity visible. Compliance and service reach across South Africa structured so procurement teams find you and trust you before they pick up the phone.</p>
+          <p className="wds-body">The result: enquiries from buyers who have already decided you are credible, because the site handled that verification for them.</p>
+        </div>
+      </section>
 
-        <section aria-labelledby="what-heading">
-          <div className="section-label">What We Build</div>
-          <h2 className="section-title" id="what-heading">A website built for the credibility demands of logistics clients.</h2>
-          <div className="wdl-grid-3" style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Service and route showcases</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Display coverage areas, service types, capacity, and operational reach in a format that corporate clients and freight managers trust.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>Compliance and credential pages</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Company registration, insurance, compliance documentation, and BEE credentials structured for corporate procurement vetting.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'12px'}}>National and regional search visibility</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Rank for logistics and transport searches across South Africa. Be found by supply chain managers when they are actively looking.</div>
-            </div>
-          </div>
-        </section>
+      <section className="wds-section wds-section--wash" aria-labelledby="proof-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />Our Work</div>
+          <h2 className="wds-h2" id="proof-heading">We have done this for established KZN operators. Here is the evidence.</h2>
+          <p className="wds-body">Afripact Civils had the completed projects and the credentials. Nothing online showed it. Within weeks of the rebuild, inspection requests were coming from people who had never heard of them before. The same gap exists in logistics. The same fix applies.</p>
+          <Link href="/ada/afripact-civils" className="wds-case-link">Read the Afripact case study →</Link>
+        </div>
+      </section>
 
-        <div className="divider"></div>
+      <section className="wds-section wds-section--white" aria-labelledby="for-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />Who This Is For</div>
+          <h2 className="wds-h2" id="for-heading">Built for established logistics and transport operators. Not for everyone.</h2>
+          <p className="wds-body">Five or more years operating. Real contracts. Real operational capacity. Looking to win larger or better-quality clients. If that is not you, this is not the right fit.</p>
+          <p className="wds-body">Foundation starts at R18,500. Scope confirmed on the call.</p>
+        </div>
+      </section>
 
-        <section aria-labelledby="for-heading">
-          <div className="section-label">Who It&apos;s For</div>
-          <h2 className="section-title" id="for-heading">Built for logistics and transport operators across South Africa.</h2>
-          <p className="section-body">Whether you move freight, manage last-mile delivery, or operate a full supply chain, your website should reflect the reliability of your operation.</p>
-          <div className="wdl-grid-2" style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Freight &amp; Cargo Companies</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Last-Mile Delivery Operators</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Supply Chain Businesses</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'36px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px'}}>Courier &amp; Express Services</div>
-            </div>
-          </div>
-        </section>
+      <section className="wds-closing" aria-labelledby="closing-heading">
+        <h2 className="wds-closing-h2" id="closing-heading">Ready when you are.</h2>
+        <p className="wds-closing-body">One conversation is enough to know if this is the right fit.</p>
+        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="wds-closing-btn">Start a conversation →</a>
+      </section>
 
-        <div className="divider"></div>
-
-        <section style={{padding:'64px 0', textAlign:'center'}}>
-          <p style={{fontFamily:'Montserrat', fontSize:'13px', letterSpacing:'0.1em', color:'var(--text-muted)', marginBottom:'24px', textTransform:'uppercase'}}>Seen enough?</p>
-          <a className="btn-primary" href="/audit">Get Your Free Audit</a>
-        </section>
-
-        <div className="divider"></div>
-
-        <section aria-labelledby="proof-heading">
-          <div className="section-label">Our Work</div>
-          <h2 className="section-title" id="proof-heading">Built for industries that compete on credibility.</h2>
-          <p className="section-body">We have built digital presences for construction firms and fleet operators across South Africa that went from zero online visibility to fully indexed and ranking within weeks. The same process applies to logistics.</p>
-          <Link href="/ada/web-design-fleet-companies" style={{fontSize:'12px', letterSpacing:'0.1em', color:'var(--gold)', marginTop:'24px', display:'inline-block'}}>See how we work with fleet companies →</Link>
-        </section>
-
-        <div className="divider"></div>
-
-        <section aria-labelledby="cta-heading">
-          <div className="section-label">Get Started</div>
-          <h2 className="section-title" id="cta-heading">Let&apos;s build something that wins you contracts.</h2>
-          <p className="section-body">Start with a free digital audit. We will show you exactly what your current presence is costing you before you spend a cent.</p>
-          <div style={{display:'flex', gap:'16px', flexWrap:'wrap', marginTop:'36px'}}>
-            <Link className="btn-primary" href="/audit">Get Your Free Audit</Link>
-            <Link className="btn-ghost" href="/contact">Start a Conversation</Link>
-          </div>
-        </section>
-
-        <footer style={{borderTop:'1px solid var(--border)', padding:'40px 60px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'24px'}}>
-          <div>
-            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'18px', fontWeight:300}}>ADA - A division of Avalon Capital Group</div>
-          </div>
-          <div style={{display:'flex', gap:'28px', flexWrap:'wrap'}}>
-            <a href="#our-work-heading" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>Work</a>
-            <a href="#insights-heading" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>Insights</a>
-            <Link href="/ada" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>FAQ</Link>
-            <Link href="/contact" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>Contact</Link>
-            <a href="/privacy-policy" style={{fontSize:'11px', color:'var(--gold)', textDecoration:'none', letterSpacing:'0.05em'}}>Privacy Policy</a>
-            <a href="/terms-of-service" style={{fontSize:'11px', color:'var(--gold)', textDecoration:'none', letterSpacing:'0.05em'}}>Terms of Service</a>
-          </div>
-          <div style={{width:'100%', paddingTop:'20px', borderTop:'1px solid var(--border)', marginTop:'4px'}}>
-            <p style={{fontSize:'11px', color:'var(--text-dim)', marginBottom:'8px'}}>Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa</p>
-            <p style={{fontSize:'12px', color:'var(--text-dim)', lineHeight:1.7}}>Avalon Capital Group does not provide financial, investment, or legal advice. All information shared is for general informational purposes only. Clients are encouraged to consult with licensed professionals before making any investment or business decisions.</p>
-          </div>
-        </footer>
-
-      </div>
-    </>
+      <footer className="wds-footer">
+        <Link href="/ada" className="wds-footer-logo">ADA<span>.</span></Link>
+        <div className="wds-footer-links">
+          <Link href="/ada">Our work</Link>
+          <Link href="/ada#pricing">Pricing</Link>
+          <Link href="/ada/afripact-civils">Case study</Link>
+          <Link href="/ada/contact">Contact</Link>
+        </div>
+        <div className="wds-footer-reg">Avalon Capital Group (Pty) Ltd · Reg. 2025/671885/07</div>
+      </footer>
+    </div>
   );
 }

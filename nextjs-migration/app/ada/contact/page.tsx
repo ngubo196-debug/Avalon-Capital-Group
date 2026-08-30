@@ -60,7 +60,7 @@ export default function AdaContact() {
       <section className="wds-section wds-section--wash" aria-labelledby="contact-heading">
         <div className="wds-inner">
           <p className="wds-body">No forms sitting in an inbox. No account manager. You message directly and you get the person doing the work.</p>
-          <p className="wds-body">Before you send anything, know this: ADA builds for established businesses that want their online presence to match what they have already built. Foundation starts at R18,500. If that is the wrong number for where you are right now, we are not the right fit, and that is fine.</p>
+          <p className="wds-body">Before you send anything, know this: ADA builds for established businesses. Foundation starts at R18,500. If you are ready to invest in a site that earns its keep, the first conversation is worth having.</p>
           <p className="wds-body">If it is the right number, the first conversation covers three things: what you are trying to win, what is currently in the way, and whether ADA is the right way to fix it.</p>
           <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="wds-cta-btn">Start a conversation →</a>
           <span className="wds-cta-note">Direct to WhatsApp. Response within business hours.</span>
