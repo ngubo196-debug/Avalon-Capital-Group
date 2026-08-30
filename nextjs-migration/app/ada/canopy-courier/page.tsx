@@ -56,7 +56,7 @@ export default function CanopyCourier() {
         .wds-closing-btn:hover { background: transparent; color: var(--ada-white); }
 
         .wds-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-        .wds-footer-logo { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 600; color: var(--ada-white); text-decoration: none; }
+        .wds-footer-logo { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 600; color: #FFFFFF !important; text-decoration: none; }
         .wds-footer-logo span { color: var(--ada-accent); }
         .wds-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
         .wds-footer-links a { font-family: DM Sans, sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s ease; }
