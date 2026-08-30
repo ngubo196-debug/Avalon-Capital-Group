@@ -13,12 +13,12 @@ export default function WebDesignConstructionKZN() {
   return (
     <div id="page-web-design-construction-kzn" className="page ada-section" role="main">
       <style suppressHydrationWarning>{`
-        .wds-back { font-family: 'DM Sans', sans-serif; font-size: 13px; color: var(--ada-accent); text-decoration: none; display: inline-block; margin-bottom: 32px; }
+        .wds-back { font-family: DM Sans, sans-serif; font-size: 13px; color: var(--ada-accent); text-decoration: none; display: inline-block; margin-bottom: 32px; }
         .wds-back:hover { text-decoration: underline; }
-        .wds-label { font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ada-accent); margin-bottom: 20px; }
-        .wds-h1 { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(38px, 4.4vw, 62px); line-height: 1.12; color: var(--ada-ink); max-width: 820px; margin: 0; }
-        .wds-h2 { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); line-height: 1.2; color: var(--ada-ink); margin: 0 0 24px; }
-        .wds-body { font-family: 'DM Sans', sans-serif; font-size: 17px; font-weight: 300; line-height: 1.75; color: var(--ada-ink-soft); max-width: 720px; margin: 0; }
+        .wds-label { font-family: DM Sans, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ada-accent); margin-bottom: 20px; }
+        .wds-h1 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 400; font-size: clamp(38px, 4.4vw, 62px); line-height: 1.12; color: var(--ada-ink); max-width: 820px; margin: 0; }
+        .wds-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); line-height: 1.2; color: var(--ada-ink); margin: 0 0 24px; }
+        .wds-body { font-family: DM Sans, sans-serif; font-size: 17px; font-weight: 300; line-height: 1.75; color: var(--ada-ink-soft); max-width: 720px; margin: 0; }
         .wds-body strong { font-weight: 600; color: var(--ada-ink); }
         .wds-body + .wds-body { margin-top: 20px; }
         .wds-hero { background: var(--ada-white); padding: calc(68px + 6rem) 3.5rem 6rem; }
@@ -26,20 +26,20 @@ export default function WebDesignConstructionKZN() {
         .wds-section--white { background: var(--ada-white); }
         .wds-section--wash { background: var(--ada-wash); }
         .wds-inner { max-width: 1160px; margin: 0 auto; }
-        .wds-case-link { display: block; margin-top: 1.5rem; font-family: 'DM Sans', sans-serif; font-size: 14px; font-weight: 600; color: var(--ada-accent); text-decoration: none; }
+        .wds-case-link { display: block; margin-top: 1.5rem; font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 600; color: var(--ada-accent); text-decoration: none; }
         .wds-case-link:hover { text-decoration: underline; }
         .wds-closing { background: var(--ada-accent); padding: 6rem 3.5rem; text-align: center; }
-        .wds-closing-h2 { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); color: var(--ada-white); margin: 0 0 16px; }
-        .wds-closing-body { font-family: 'DM Sans', sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
-        .wds-closing-btn { display: inline-block; background: var(--ada-white); color: var(--ada-accent); border-radius: 100px; padding: 14px 32px; font-family: 'DM Sans', sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ada-white); transition: background 0.2s ease, color 0.2s ease; }
+        .wds-closing-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); color: var(--ada-white); margin: 0 0 16px; }
+        .wds-closing-body { font-family: DM Sans, sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
+        .wds-closing-btn { display: inline-block; background: var(--ada-white); color: var(--ada-accent); border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ada-white); transition: background 0.2s ease, color 0.2s ease; }
         .wds-closing-btn:hover { background: transparent; color: var(--ada-white); }
         .wds-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-        .wds-footer-logo { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-size: 16px; font-weight: 600; color: var(--ada-white); text-decoration: none; }
+        .wds-footer-logo { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 600; color: var(--ada-white); text-decoration: none; }
         .wds-footer-logo span { color: var(--ada-accent); }
         .wds-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-        .wds-footer-links a { font-family: 'DM Sans', sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s ease; }
+        .wds-footer-links a { font-family: DM Sans, sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s ease; }
         .wds-footer-links a:hover { color: var(--ada-white); }
-        .wds-footer-reg { font-family: 'DM Sans', sans-serif; font-size: 12px; color: rgba(255,255,255,0.3); width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4px; }
+        .wds-footer-reg { font-family: DM Sans, sans-serif; font-size: 12px; color: rgba(255,255,255,0.3); width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4px; }
         @media (max-width: 768px) {
           .wds-hero { padding: calc(68px + 4rem) 1.5rem 4rem; }
           .wds-section, .wds-closing { padding: 4rem 1.5rem; }

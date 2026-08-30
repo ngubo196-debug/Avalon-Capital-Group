@@ -91,7 +91,7 @@ export default function AdaSectorCards() {
         }
         .asc-card-name {
           display: block;
-          font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
+          font-family: Bodoni Moda, Cormorant Garamond, serif;
           font-size: 22px;
           font-weight: 500;
           color: #FFFFFF;
@@ -99,7 +99,7 @@ export default function AdaSectorCards() {
         }
         .asc-card-desc {
           display: block;
-          font-family: 'DM Sans', sans-serif;
+          font-family: DM Sans, sans-serif;
           font-size: 13px;
           color: rgba(255,255,255,0.75);
           margin-bottom: 0.85rem;
@@ -116,7 +116,7 @@ export default function AdaSectorCards() {
           display: inline-flex;
           align-items: center;
           gap: 4px;
-          font-family: 'DM Sans', sans-serif;
+          font-family: DM Sans, sans-serif;
           font-size: 13px;
           font-weight: 600;
           color: rgba(255,255,255,0.5);
