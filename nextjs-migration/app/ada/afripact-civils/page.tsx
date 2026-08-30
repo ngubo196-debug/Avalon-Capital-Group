@@ -1,131 +1,176 @@
 import Link from 'next/link';
-import Nav from '../../components/Nav';
-import Footer from '../../components/Footer';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Afripact Civils Case Study | Digital Agency KwaZulu-Natal | ADA',
-  description: 'How ADA took Afripact Civils from invisible to credible. Civil construction, KwaZulu-Natal.',
+  title: 'Afripact Civils — From Invisible to Credible | ADA',
+  description: 'Afripact was losing trust before the first call. The site fixed that. Within weeks, inspection requests came from people who had never heard of them.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/afripact-civils' },
 };
 
+const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA.";
+
 export default function AfripactCivils() {
   return (
-    <>
-      <Nav />
-      <div id="page-afripact-civils" className="page" role="main">
-        <div className="inner-hero">
-          <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
-              <polygon points="290,20 560,640 20,640"/>
-              <polygon points="290,80 510,600 70,600"/>
-              <polygon points="290,140 460,560 120,560"/>
-            </g>
-          </svg>
-          <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/ada" style={{position:'relative', zIndex:10}}>← Back to ADA</Link>
-          <div className="section-label">Case study - Afripact Civils</div>
-          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(36px,5vw,64px)', fontWeight:300, lineHeight:1.15, marginBottom:'24px', maxWidth:'640px'}}>Building credibility before the conversation starts.</h1>
-          <p style={{maxWidth:'520px', fontSize:'14px', color:'var(--text-muted)', lineHeight:1.9, marginBottom:'48px'}}>Afripact had completed real projects for real clients. Nothing online showed it. We rebuilt the site around the credibility they had already earned. Within weeks of launch, inspection requests were coming from people who had never heard of Afripact before.</p>
-          <div style={{display:'flex', gap:'1px', background:'var(--border)', flexWrap:'wrap', maxWidth:'640px'}}>
-            <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>Civil construction</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Industry</div>
+    <div id="page-afripact-civils" className="page ada-section" role="main">
+      <style suppressHydrationWarning>{`
+        .wds-back { font-family: DM Sans, sans-serif; font-size: 13px; color: var(--ada-accent); text-decoration: none; display: inline-block; margin-bottom: 32px; }
+        .wds-back:hover { text-decoration: underline; }
+        .wds-label { font-family: DM Sans, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ada-accent); margin-bottom: 20px; }
+        .wds-label-bar { display: inline-block; width: 20px; height: 2px; background: var(--ada-accent); vertical-align: middle; margin-right: 10px; }
+        .wds-h1 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 400; font-size: clamp(38px, 4.4vw, 62px); line-height: 1.12; color: var(--ada-ink); max-width: 820px; margin: 0; }
+        .wds-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); line-height: 1.15; color: var(--ada-ink); margin: 0 0 24px; }
+        .wds-body { font-family: DM Sans, sans-serif; font-size: 17px; font-weight: 300; line-height: 1.75; color: var(--ada-ink-soft); max-width: 720px; margin: 0; }
+        .wds-body strong { font-weight: 600; color: var(--ada-ink); }
+        .wds-body + .wds-body { margin-top: 20px; }
+        .wds-hero { background: var(--ada-white); padding: calc(68px + 6rem) 3.5rem 6rem; }
+        .wds-section { padding: 6rem 3.5rem; }
+        .wds-section--white { background: var(--ada-white); }
+        .wds-section--wash { background: var(--ada-wash); }
+        .wds-inner { max-width: 1160px; margin: 0 auto; }
+
+        .wds-badge { display: flex; width: fit-content; align-items: center; background: #DCFCE7; border: 1px solid #16A34A; color: #14532D; border-radius: 100px; padding: 5px 16px; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.5rem; }
+        .wds-hero-intro { max-width: 600px; margin-top: 24px; }
+        .wds-stats { display: flex; flex-wrap: wrap; gap: 2rem; padding-top: 2rem; border-top: 1px solid var(--ada-line); margin-top: 2rem; }
+        .wds-stat-value { display: block; font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 22px; font-weight: 500; color: var(--ada-ink); margin-bottom: 4px; }
+        .wds-stat-label { display: block; font-family: DM Sans, sans-serif; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ada-ink-muted); }
+
+        .wds-quote { background: var(--ada-wash); border-left: 4px solid var(--ada-accent); padding: 1.5rem 2rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; max-width: 720px; }
+        .wds-quote-text { font-family: Bodoni Moda, Cormorant Garamond, serif; font-style: italic; font-size: clamp(18px, 2.5vw, 24px); font-weight: 400; color: var(--ada-ink); line-height: 1.5; margin: 0; }
+        .wds-quote-cite { display: block; margin-top: 14px; font-family: DM Sans, sans-serif; font-size: 13px; color: var(--ada-ink-muted); font-style: normal; }
+
+        .wds-outcome-block { border-left: 3px solid var(--ada-accent); padding-left: 1.5rem; margin-bottom: 2rem; }
+        .wds-outcome-block:last-of-type { margin-bottom: 0; }
+        .wds-outcome-title { display: block; font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 600; color: var(--ada-ink); margin-bottom: 0.5rem; }
+        .wds-outcome-body { font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--ada-ink-soft); margin: 0; }
+
+        .wds-callout { background: var(--ada-accent); border-radius: 12px; padding: 1.5rem 2rem; margin-top: 2rem; }
+        .wds-callout-text { font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 500; color: #FFFFFF; margin: 0; }
+
+        .wds-external-link { display: block; margin-top: 1.5rem; font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 600; color: var(--ada-accent); text-decoration: none; }
+        .wds-external-link:hover { text-decoration: underline; }
+
+        .wds-cta-btn { display: inline-block; background: var(--ada-accent); color: #FFFFFF !important; border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 2px solid var(--ada-accent); transition: background 0.2s ease, color 0.2s ease; }
+        .wds-cta-btn:hover { background: var(--ada-white); color: var(--ada-accent) !important; }
+
+        .wds-closing { background: var(--ada-accent); padding: 6rem 3.5rem; text-align: center; }
+        .wds-closing-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(28px, 3vw, 42px); color: var(--ada-white); margin: 0 0 16px; }
+        .wds-closing-body { font-family: DM Sans, sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
+        .wds-closing-btn { display: inline-block; background: var(--ada-white); color: var(--ada-accent); border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ada-white); transition: background 0.2s ease, color 0.2s ease; }
+        .wds-closing-btn:hover { background: transparent; color: var(--ada-white); }
+
+        .wds-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
+        .wds-footer-logo { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 600; color: #FFFFFF !important; text-decoration: none; }
+        .wds-footer-logo span { color: var(--ada-accent); }
+        .wds-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
+        .wds-footer-links a { font-family: DM Sans, sans-serif; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; transition: color 0.2s ease; }
+        .wds-footer-links a:hover { color: var(--ada-white); }
+        .wds-footer-reg { font-family: DM Sans, sans-serif; font-size: 12px; color: rgba(255,255,255,0.3); width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4px; }
+
+        @media (max-width: 768px) {
+          .wds-hero { padding: calc(68px + 4rem) 1.5rem 4rem; }
+          .wds-section, .wds-closing { padding: 4rem 1.5rem; }
+          .wds-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
+        }
+      `}</style>
+
+      <section className="wds-hero">
+        <div className="wds-inner">
+          <Link href="/ada" className="wds-back">← Back to ADA</Link>
+          <div className="wds-badge">Live client — delivered engagement</div>
+          <div className="wds-label"><span className="wds-label-bar" />Afripact Civils — Civil Construction, KZN</div>
+          <h1 className="wds-h1">Building credibility before the conversation starts.</h1>
+          <p className="wds-body wds-hero-intro">Afripact Civils had completed real projects for real clients across KwaZulu-Natal. Nothing online reflected that. New prospects had no way to verify them before the first call. The site needed to close that gap.</p>
+
+          <div className="wds-stats">
+            <div>
+              <span className="wds-stat-value">Civil construction</span>
+              <span className="wds-stat-label">Industry</span>
             </div>
-            <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>Trust + visibility</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--text-muted)'}}>Phase one objective</div>
+            <div>
+              <span className="wds-stat-value">Trust + visibility</span>
+              <span className="wds-stat-label">Phase one objective</span>
             </div>
-            <div style={{background:'var(--black)', padding:'20px 28px', flex:1, minWidth:'160px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', fontWeight:300, marginBottom:'6px'}}>Phase 2 active</div>
-              <div style={{fontSize:'9px', letterSpacing:'0.2em', textTransform:'uppercase', color:'var(--gold)'}}>Revenue engine in progress</div>
+            <div>
+              <span className="wds-stat-value">Phase two active</span>
+              <span className="wds-stat-label">Pipeline underway</span>
             </div>
           </div>
         </div>
+      </section>
 
-        <div className="divider"></div>
+      <section className="wds-section wds-section--wash" aria-labelledby="situation-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />The Situation</div>
+          <h2 className="wds-h2" id="situation-heading">Real capability. No proof online.</h2>
+          <p className="wds-body">Afripact had the track record, the credentials, and the completed work. What they did not have was a digital presence that showed any of it. A new prospect searching online would find nothing that matched the quality of the business behind the name.</p>
+          <p className="wds-body">That gap costs work. Not because the business is weak, but because trust is built or lost before the first conversation.</p>
+        </div>
+      </section>
 
-        <section style={{padding:'80px 60px'}} aria-labelledby="afripact-situation">
-          <div className="section-label">The situation</div>
-          <h2 className="section-title" id="afripact-situation">Reputation without reach.<br /><em>Trust without proof.</em></h2>
-          <p className="section-body">Afripact Civils operates in civil construction, an industry where reputation carries enormous weight and where new clients almost always do their homework before picking up the phone. The question every prospect asks before reaching out is some version of the same thing: is this a real business I can trust with my project?</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Without a digital presence that answered that question clearly, Afripact was relying entirely on word of mouth and personal relationships. That works, until it doesn&apos;t. The moment a prospect outside that network searched for them, or was referred and went to verify, there was nothing there to confirm what they&apos;d heard.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>The website we inherited wasn&apos;t strategic. It was a starting point. Our job was to turn it into something that worked: a digital presence that made Afripact look like exactly what they are: a legitimate, capable, professional construction business worth doing serious work with.</p>
-        </section>
-
-        <div className="divider"></div>
-
-        <section style={{padding:'80px 60px'}} aria-labelledby="afripact-client">
-          <div className="section-label">What the client told us</div>
-          <h2 className="section-title" id="afripact-client">The clearest brief<br /><em>we&apos;ve ever received.</em></h2>
-          <p className="section-body">Midway through the engagement we asked the client directly: where are you seeing the biggest benefit from having a custom-built website? His answer was more precise than most clients give.</p>
-          <blockquote style={{marginTop:'48px', paddingLeft:'24px', borderLeft:'2px solid var(--gold)', maxWidth:'560px'}}>
-            <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(18px,2vw,24px)', fontWeight:300, fontStyle:'italic', lineHeight:1.5, color:'var(--text)'}}>The website shows people I have never done business with that Afripact is not a scam but an actual business.</p>
-            <cite style={{display:'block', marginTop:'14px', fontSize:'11px', letterSpacing:'0.1em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'normal'}}>Client, Afripact Civils</cite>
-          </blockquote>
-          <p className="section-body" style={{marginTop:'40px'}}>That&apos;s not a throwaway comment. That&apos;s the exact job a website is supposed to do in a trust-heavy industry, and confirmation that it was doing it. When someone with no prior relationship with Afripact lands on the site, the question of legitimacy is answered before the conversation even begins. That&apos;s trust infrastructure working exactly as designed.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>He also told us what comes next: the business needs a solid marketing strategy to penetrate the private construction sector and start ranking for construction-related searches. That brief became the foundation for phase two.</p>
-        </section>
-
-        <div className="divider"></div>
-
-        <section style={{padding:'80px 60px'}} aria-labelledby="afripact-build">
-          <div className="section-label">The build - phase one</div>
-          <h2 className="section-title" id="afripact-build">Every element in service<br /><em>of one objective.</em></h2>
-          <p className="section-body">Phase one had a focused objective: give Afripact a face in the digital space that matched the quality of the work they do. Every decision was made in service of that goal.</p>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(3,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Professional credibility</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Design, copy, and structure positioned to reflect a serious construction business, not a startup or a side operation.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Social proof architecture</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Trust signals, service clarity, and proof elements built in, so the site answers objections before the client raises them.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Clear service communication</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>What Afripact does, who they do it for, and why they&apos;re the right choice, communicated without ambiguity.</div>
-            </div>
+      <section className="wds-section wds-section--white" aria-labelledby="brief-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />The Brief</div>
+          <h2 className="wds-h2" id="brief-heading">The clearest brief we have ever received.</h2>
+          <p className="wds-body">The client said it directly:</p>
+          <div className="wds-quote">
+            <p className="wds-quote-text">The website shows people I have never done business with that Afripact is not a scam but an actual business.</p>
+            <span className="wds-quote-cite">— Client, Afripact Civils</span>
           </div>
-          <p className="section-body" style={{marginTop:'40px'}}>The original site was built on Bolt as a starting point. We took that foundation and evolved it, sharpening the messaging, strengthening the structure, and building it around the specific trust journey a construction client goes through before picking up the phone.</p>
-        </section>
+          <p className="wds-body">That one sentence defined the entire engagement. The site was not a marketing tool. It was trust infrastructure. Built to answer the question a new prospect asks before they pick up the phone.</p>
+        </div>
+      </section>
 
-        <div className="divider"></div>
+      <section className="wds-section wds-section--wash" aria-labelledby="phase-one-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />Phase One</div>
+          <h2 className="wds-h2" id="phase-one-heading">Every element in service of one objective.</h2>
 
-        <section style={{padding:'80px 60px'}} aria-labelledby="afripact-next">
-          <div className="section-label">What&apos;s next - phase two</div>
-          <h2 className="section-title" id="afripact-next">Credibility solved.<br /><em>Now we build the pipeline.</em></h2>
-          <p className="section-body">Phase one solved the credibility problem. Phase two solves the revenue problem. The site now confirms that Afripact is legitimate: the next job is making sure the right people find it.</p>
-          <div style={{display:'grid', gridTemplateColumns:'repeat(2,1fr)', gap:'1px', background:'var(--border)', marginTop:'56px'}}>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>In progress</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Private sector penetration</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>A targeted strategy to position Afripact in front of private construction clients, the segment with the highest project values and the most consistent pipeline.</div>
-            </div>
-            <div style={{background:'var(--surface)', padding:'40px'}}>
-              <div style={{fontSize:'9px', letterSpacing:'0.25em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'16px'}}>In progress</div>
-              <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'22px', marginBottom:'14px'}}>Search visibility</div>
-              <div style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}>Building the SEO foundation so Afripact appears when people search for construction services in KZN, turning the website from a verification tool into a lead source.</div>
-            </div>
+          <div className="wds-outcome-block">
+            <span className="wds-outcome-title">Professional credibility.</span>
+            <p className="wds-outcome-body">A site that looks and feels like the business Afripact actually is. Not a template. Not a placeholder. A presence that earns trust on arrival.</p>
           </div>
-          <p style={{marginTop:'32px', fontSize:'12px', fontStyle:'italic', color:'var(--text-dim)', lineHeight:1.8}}>Past performance is not indicative of future results. All figures shown are for illustrative purposes and may vary based on market conditions and individual circumstances. This does not constitute financial or investment advice.</p>
-          <p style={{marginTop:'24px', fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8}}><a href="https://afripact.net" target="_blank" rel="noopener noreferrer" style={{color:'var(--text-muted)'}}>Visit Afripact Civils →</a></p>
-        </section>
-
-        <div className="divider"></div>
-
-        <section style={{padding:'80px 60px'}}>
-          <div style={{background:'var(--surface)', border:'1px solid var(--border)', padding:'48px', maxWidth:'100%'}}>
-            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(22px,2.5vw,30px)', fontWeight:300, lineHeight:1.3, marginBottom:'20px', maxWidth:'580px'}}>Credibility is the entry point. Revenue is the destination. We&apos;re building both.</div>
-            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.9, maxWidth:'580px', marginBottom:'36px'}}>Afripact Civils is a business with real capability and a growing digital presence to match. Phase one answered the trust question. Phase two puts them in front of the clients who matter most.</p>
-            <a className="btn-primary" href="https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA." target="_blank" rel="noopener noreferrer" style={{position:'relative', zIndex:9999, display:'inline-block'}}>Start a project</a>
+          <div className="wds-outcome-block">
+            <span className="wds-outcome-title">Social proof architecture.</span>
+            <p className="wds-outcome-body">Completed projects visible. Credentials front and centre. Evidence that the business has done this before and done it well.</p>
           </div>
-        </section>
+          <div className="wds-outcome-block">
+            <span className="wds-outcome-title">Clear service communication.</span>
+            <p className="wds-outcome-body">What Afripact does, who they do it for, and where they operate, structured so the right prospect self-identifies immediately.</p>
+          </div>
 
-        <div className="divider"></div>
+          <div className="wds-callout">
+            <p className="wds-callout-text">Within weeks of launch, inspection requests were coming from people who had never heard of Afripact before.</p>
+          </div>
+        </div>
+      </section>
 
-        <Footer />
-      </div>
-    </>
+      <section className="wds-section wds-section--white" aria-labelledby="phase-two-heading">
+        <div className="wds-inner">
+          <div className="wds-label"><span className="wds-label-bar" />Phase Two</div>
+          <h2 className="wds-h2" id="phase-two-heading">Credibility solved. Pipeline next.</h2>
+          <p className="wds-body">The foundation is live and ranking. Phase two is already underway.</p>
+          <p className="wds-body">Google Business Profile verified and active. Project photography going up. Paid search launching within weeks, targeting KZN homeowners and commercial clients searching for a contractor they can trust.</p>
+          <p className="wds-body">The site gave Afripact something to point to. Phase two puts it in front of the right people at the right moment.</p>
+          <a href="https://afripact.net" target="_blank" rel="noopener noreferrer" className="wds-external-link">Visit Afripact Civils →</a>
+        </div>
+      </section>
+
+      <section className="wds-closing" aria-labelledby="closing-heading">
+        <h2 className="wds-closing-h2" id="closing-heading">This is what ADA builds for every client.</h2>
+        <p className="wds-closing-body">Credibility is the entry point. Revenue is the destination. The work starts with making your business look like what it actually is.</p>
+        <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="wds-closing-btn">Start a conversation →</a>
+      </section>
+
+      <footer className="wds-footer">
+        <Link href="/ada" className="wds-footer-logo">ADA<span>.</span></Link>
+        <div className="wds-footer-links">
+          <Link href="/ada">Our work</Link>
+          <Link href="/ada#pricing">Pricing</Link>
+          <Link href="/ada/afripact-civils">Case study</Link>
+          <Link href="/ada/contact">Contact</Link>
+        </div>
+        <div className="wds-footer-reg">Avalon Capital Group (Pty) Ltd · Reg. 2025/671885/07</div>
+      </footer>
+    </div>
   );
 }
