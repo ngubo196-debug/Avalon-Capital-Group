@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -7,6 +8,9 @@ const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20
 const FOUNDER_PHOTO = "/assets/luyanda-ngubo.jpg";
 
 export default function AdaLayout({ children }: { children: React.ReactNode }) {
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const closeMobile = () => setMobileOpen(false);
+
   return (
     <div className="ada-nav-scope">
       <style suppressHydrationWarning>{`
@@ -46,6 +50,49 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           transition: color 0.2s ease;
         }
         .ada-nav-links a:hover { color: #111111; }
+        .ada-nav-item-dropdown { position: relative; }
+        .ada-nav-trigger {
+          font-family: DM Sans, sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          color: #7A7A7A;
+          cursor: pointer;
+          transition: color 0.2s ease;
+        }
+        .ada-nav-item-dropdown:hover > a,
+        .ada-nav-item-dropdown:hover > .ada-nav-trigger { color: #111111; }
+        .ada-nav-chevron {
+          font-size: 10px;
+          margin-left: 4px;
+          display: inline-block;
+        }
+        .ada-nav-dropdown {
+          display: none;
+          position: absolute;
+          top: 100%;
+          left: 0;
+          background: #FFFFFF;
+          border: 1px solid var(--ada-line);
+          border-radius: 8px;
+          box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+          padding: 0.5rem 0;
+          min-width: 220px;
+          z-index: 200;
+        }
+        .ada-nav-item-dropdown:hover .ada-nav-dropdown { display: block; }
+        .ada-nav-dropdown a {
+          display: block;
+          padding: 0.6rem 1.25rem;
+          font-family: DM Sans, sans-serif;
+          font-size: 13px;
+          font-weight: 500;
+          color: var(--ada-ink-soft);
+          text-decoration: none;
+        }
+        .ada-nav-dropdown a:hover {
+          color: var(--ada-accent);
+          background: var(--ada-wash);
+        }
         .ada-nav-cta {
           display: inline-flex;
           align-items: center;
@@ -70,9 +117,60 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           overflow: hidden;
           flex-shrink: 0;
         }
+        .ada-nav-hamburger {
+          display: none;
+          background: none;
+          border: none;
+          cursor: pointer;
+          font-size: 22px;
+          line-height: 1;
+          color: #111111;
+          padding: 4px 10px;
+        }
+        .ada-mobile-menu {
+          display: none;
+        }
         @media (max-width: 768px) {
           .ada-nav { padding: 0 20px; }
           .ada-nav-links { display: none; }
+          .ada-nav-hamburger { display: flex; align-items: center; justify-content: center; }
+          .ada-mobile-menu {
+            display: block;
+            position: fixed;
+            top: 68px;
+            left: 0;
+            right: 0;
+            max-height: calc(100vh - 68px);
+            overflow-y: auto;
+            background: #FFFFFF;
+            border-bottom: 1px solid #E2E2DC;
+            padding: 20px;
+            z-index: 99;
+          }
+          .ada-mobile-link {
+            display: block;
+            font-family: DM Sans, sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            color: var(--ada-ink-soft);
+            text-decoration: none;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--ada-line);
+          }
+          .ada-mobile-divider {
+            border-top: 1px solid var(--ada-line);
+            margin-top: 1rem;
+          }
+          .ada-mobile-group-label {
+            display: block;
+            font-family: DM Sans, sans-serif;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--ada-ink-muted);
+            margin-top: 1rem;
+          }
         }
       `}</style>
 
@@ -81,11 +179,37 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           <Image src="/assets/ada-logo-full.png" alt="ADA" width={80} height={32} style={{ objectFit: 'contain', filter: 'invert(1)' }} />
         </Link>
         <ul className="ada-nav-links">
-          <li><a href="/ada#work">Work</a></li>
+          <li className="ada-nav-item-dropdown">
+            <a href="/ada#work">Work<span className="ada-nav-chevron">▾</span></a>
+            <div className="ada-nav-dropdown">
+              <Link href="/ada/afripact-civils">Afripact Civils</Link>
+              <Link href="/ada/acg-case-study">ACG Case Study</Link>
+              <Link href="/ada/canopy-courier">Canopy Courier</Link>
+            </div>
+          </li>
           <li><a href="/ada#process">Process</a></li>
+          <li className="ada-nav-item-dropdown">
+            <span className="ada-nav-trigger">Services<span className="ada-nav-chevron">▾</span></span>
+            <div className="ada-nav-dropdown">
+              <Link href="/ada/web-design-construction-kzn">Construction KZN</Link>
+              <Link href="/ada/web-design-fleet-companies">Fleet Companies</Link>
+              <Link href="/ada/web-design-logistics-transport">Logistics &amp; Transport</Link>
+              <Link href="/ada/business-automation">Business Automation</Link>
+              <Link href="/ada/ai-assistant-for-business">AI Assistant</Link>
+            </div>
+          </li>
           <li><a href="/ada#pricing">Pricing</a></li>
           <li><Link href="/ada/contact">Contact</Link></li>
         </ul>
+        <button
+          type="button"
+          className="ada-nav-hamburger"
+          aria-label="Open menu"
+          aria-expanded={mobileOpen}
+          onClick={() => setMobileOpen(!mobileOpen)}
+        >
+          ☰
+        </button>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="ada-nav-cta">
           Start a conversation
           <span className="ada-nav-cta-avatar">
@@ -93,6 +217,28 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           </span>
         </a>
       </nav>
+
+      {mobileOpen && (
+        <div className="ada-mobile-menu">
+          <a href="/ada#work" className="ada-mobile-link" onClick={closeMobile}>Work</a>
+          <a href="/ada#process" className="ada-mobile-link" onClick={closeMobile}>Process</a>
+          <a href="/ada#pricing" className="ada-mobile-link" onClick={closeMobile}>Pricing</a>
+          <Link href="/ada/contact" className="ada-mobile-link" onClick={closeMobile}>Contact</Link>
+
+          <div className="ada-mobile-divider"></div>
+          <span className="ada-mobile-group-label">Our Work</span>
+          <Link href="/ada/afripact-civils" className="ada-mobile-link" onClick={closeMobile}>Afripact Civils</Link>
+          <Link href="/ada/acg-case-study" className="ada-mobile-link" onClick={closeMobile}>ACG Case Study</Link>
+          <Link href="/ada/canopy-courier" className="ada-mobile-link" onClick={closeMobile}>Canopy Courier</Link>
+
+          <span className="ada-mobile-group-label">Services</span>
+          <Link href="/ada/web-design-construction-kzn" className="ada-mobile-link" onClick={closeMobile}>Construction KZN</Link>
+          <Link href="/ada/web-design-fleet-companies" className="ada-mobile-link" onClick={closeMobile}>Fleet Companies</Link>
+          <Link href="/ada/web-design-logistics-transport" className="ada-mobile-link" onClick={closeMobile}>Logistics &amp; Transport</Link>
+          <Link href="/ada/business-automation" className="ada-mobile-link" onClick={closeMobile}>Business Automation</Link>
+          <Link href="/ada/ai-assistant-for-business" className="ada-mobile-link" onClick={closeMobile}>AI Assistant</Link>
+        </div>
+      )}
 
       {children}
 

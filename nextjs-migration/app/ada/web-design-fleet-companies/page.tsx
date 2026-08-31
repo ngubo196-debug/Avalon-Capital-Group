@@ -34,6 +34,11 @@ export default function WebDesignFleetCompanies() {
         .wds-closing-body { font-family: DM Sans, sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
         .wds-closing-btn { display: inline-block; background: var(--ada-white); color: var(--ada-accent); border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ada-white); transition: background 0.2s ease, color 0.2s ease; }
         .wds-closing-btn:hover { background: transparent; color: var(--ada-white); }
+        .wds-related { padding: 3rem 3.5rem 0; }
+        .wds-related-divider { border-top: 1px solid var(--ada-line); margin-bottom: 2rem; }
+        .wds-related-links { display: flex; gap: 2rem; flex-wrap: wrap; padding-bottom: 3rem; }
+        .wds-related-links a { font-family: DM Sans, sans-serif; font-size: 13px; color: var(--ada-accent); text-decoration: none; }
+        .wds-related-links a:hover { text-decoration: underline; }
         .wds-footer { background: var(--ada-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
         .wds-footer-logo { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 600; color: #FFFFFF !important; text-decoration: none; }
         .wds-footer-logo span { color: var(--ada-accent); }
@@ -44,6 +49,8 @@ export default function WebDesignFleetCompanies() {
         @media (max-width: 768px) {
           .wds-hero { padding: calc(68px + 4rem) 1.5rem 4rem; }
           .wds-section, .wds-closing { padding: 4rem 1.5rem; }
+          .wds-related { padding: 2rem 1.5rem 0; }
+          .wds-related-links { flex-direction: column; gap: 0.75rem; }
           .wds-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
         }
       `}</style>
@@ -97,6 +104,17 @@ export default function WebDesignFleetCompanies() {
         <h2 className="wds-closing-h2" id="closing-heading">Ready when you are.</h2>
         <p className="wds-closing-body">One conversation is enough to know if this is the right fit.</p>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="wds-closing-btn">Start a conversation →</a>
+      </section>
+
+      <section className="wds-related">
+        <div className="wds-inner">
+          <div className="wds-related-divider"></div>
+          <div className="wds-label"><span className="wds-label-bar" />Explore More</div>
+          <div className="wds-related-links">
+            <Link href="/ada/canopy-courier">Canopy Courier — Concept Build</Link>
+            <Link href="/ada/web-design-logistics-transport">Web Design Logistics &amp; Transport</Link>
+          </div>
+        </div>
       </section>
 
       <footer className="wds-footer">

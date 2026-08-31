@@ -117,7 +117,7 @@ export default function WebDesignDurban() {
           <Link href="/ada">Our work</Link>
           <Link href="/ada#pricing">Pricing</Link>
           <Link href="/ada/afripact-civils">Case study</Link>
-          <Link href="/contact">Contact</Link>
+          <Link href="/ada/contact">Contact</Link>
         </div>
         <div className="wds-footer-reg">Avalon Capital Group (Pty) Ltd · Reg. 2025/671885/07</div>
       </footer>
