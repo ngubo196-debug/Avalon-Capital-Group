@@ -127,7 +127,7 @@ export default function ADA() {
                 <BrowserMockup src="/work/afripact-full.webp" url="afripact.net" alt="Afripact Civils website" width={1400} height={8677} speedMultiplier={1.45} />
                 <div className="adaw-card-body">
                   <div className="adaw-card-tag">Civil Construction, KZN</div>
-                  <div className="adaw-card-title">From invisible to credible.</div>
+                  <div className="adaw-card-title">Zero Search Presence to 100+ Ranking Queries.</div>
                   <p className="adaw-card-desc">Afripact had completed real projects for real clients. Nothing online showed it. We rebuilt the site around the credibility they&apos;d already earned. Within weeks, inspection requests were coming from people who had never heard of them before.</p>
                   <Link href="/ada/afripact-civils" className="adaw-card-link">Read the full case study →</Link>
                 </div>

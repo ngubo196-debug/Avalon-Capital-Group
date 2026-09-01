@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Afripact Civils — From Invisible to Credible | ADA',
+  title: 'Afripact Civils — Zero Search Presence to 100+ Ranking Queries | ADA',
   description: 'Afripact was losing trust before the first call. The site fixed that. Within weeks, inspection requests came from people who had never heard of them.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/afripact-civils' },
 };

@@ -14,7 +14,7 @@ const caseStudies = [
     category: 'Civil construction',
     location: 'KwaZulu-Natal',
     title: 'Afripact Civils',
-    subtitle: 'From invisible to credible',
+    subtitle: 'Zero Search Presence to 100+ Ranking Queries',
     description: 'Afripact Civils had the capability and the track record. What they did not have was a digital presence that matched. We built them a website focused on one thing: making Afripact look like exactly what they are - a legitimate, professional civil construction business worth doing business with.',
     stats: [
       { value: 'Civil construction', label: 'Industry' },
