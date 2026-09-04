@@ -65,7 +65,7 @@ export default function BusinessAutomation() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-label"><span className="wds-label-bar" />ADA — Asset Development Automation</div>
+          <div className="wds-label"><span className="wds-label-bar" />ADA: Asset Development Automation</div>
           <h1 className="wds-h1">KZN contractors lose R80,000 contracts every month to admin problems they have not fixed yet.</h1>
         </div>
       </section>

@@ -85,8 +85,8 @@ export default function CaseStudyClient() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-badge">Internal build — our own site</div>
-          <div className="wds-label"><span className="wds-label-bar" />ACG — Avalon Capital Group</div>
+          <div className="wds-badge">Internal build: our own site</div>
+          <div className="wds-label"><span className="wds-label-bar" />ACG: Avalon Capital Group</div>
           <h1 className="wds-h1">The agency without a presence cannot sell presence. So we built ours first.</h1>
           <p className="wds-body wds-hero-intro">This is not a client project. This is what ADA did to its own site. Documented honestly, including the mistakes.</p>
 

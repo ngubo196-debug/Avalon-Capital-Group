@@ -145,7 +145,7 @@ export default function ADA() {
 
             <div className="adaw-concept-card">
               <div className="adaw-concept-badge">⚠ Concept build, not a delivered engagement</div>
-              <div className="adaw-card-title">Canopy Courier — what we&apos;d build for a fleet business.</div>
+              <div className="adaw-card-title">Canopy Courier: what we&apos;d build for a fleet business.</div>
               <p className="adaw-card-desc">This never went live. We built the full strategic and design package to show what a fleet-focused rebuild looks like. Eight components, dual retail and fleet paths, four SEO landing pages. Projected upside modelled at R1M to R2M per year. That is a projection from the pitch, not a measured result.</p>
               <Link href="/ada/canopy-courier" className="adaw-card-link">See the concept →</Link>
             </div>

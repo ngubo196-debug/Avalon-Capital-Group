@@ -45,7 +45,7 @@ const serviceSchema = {
   description: 'A 90-minute in-person AI assistant session for Pietermaritzburg, Durban and KZN small businesses.',
   provider: {
     '@type': 'Organization',
-    name: 'ADA — Asset Development Automation',
+    name: 'Asset Development Automation',
     url: 'https://www.avaloncapitalgroup.co.za/ada',
     parentOrganization: {
       '@type': 'Organization',
@@ -159,10 +159,10 @@ export default function AiAssistantForBusiness() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-label"><span className="wds-label-bar" />ADA — Asset Development Automation</div>
+          <div className="wds-label"><span className="wds-label-bar" />ADA: Asset Development Automation</div>
           <h1 className="wds-h1">You are the bottleneck in your own business. An AI assistant fixes that in 90 minutes.</h1>
           <div className="wds-cta-row">
-            <a href={WHATSAPP_BOOKING_LINK} target="_blank" rel="noopener noreferrer" className="wds-cta-btn">Book the session — R1,950 →</a>
+            <a href={WHATSAPP_BOOKING_LINK} target="_blank" rel="noopener noreferrer" className="wds-cta-btn">Book the session, R1,950 →</a>
             <a href="#how-it-works" className="wds-ghost-link">See how it works →</a>
           </div>
           <p className="wds-footnote">Solo: R1,950 · Duo (same business): R2,950 · In person · Pietermaritzburg or Durban</p>

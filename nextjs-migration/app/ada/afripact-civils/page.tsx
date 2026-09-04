@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Afripact Civils — Zero Search Presence to 100+ Ranking Queries | ADA',
+  title: 'Afripact Civils: Zero Search Presence to 100+ Rankings | ADA',
   description: 'Afripact was losing trust before the first call. The site fixed that. Within weeks, inspection requests came from people who had never heard of them.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/afripact-civils' },
 };
@@ -76,8 +76,8 @@ export default function AfripactCivils() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-badge">Live client — delivered engagement</div>
-          <div className="wds-label"><span className="wds-label-bar" />Afripact Civils — Civil Construction, KZN</div>
+          <div className="wds-badge">Live client: delivered engagement</div>
+          <div className="wds-label"><span className="wds-label-bar" />Afripact Civils: Civil Construction, KZN</div>
           <h1 className="wds-h1">Building credibility before the conversation starts.</h1>
           <p className="wds-body wds-hero-intro">Afripact Civils had completed real projects for real clients across KwaZulu-Natal. Nothing online reflected that. New prospects had no way to verify them before the first call. The site needed to close that gap.</p>
 
@@ -114,7 +114,7 @@ export default function AfripactCivils() {
           <p className="wds-body">The client said it directly:</p>
           <div className="wds-quote">
             <p className="wds-quote-text">The website shows people I have never done business with that Afripact is not a scam but an actual business.</p>
-            <span className="wds-quote-cite">— Client, Afripact Civils</span>
+            <span className="wds-quote-cite">Client, Afripact Civils</span>
           </div>
           <p className="wds-body">That one sentence defined the entire engagement. The site was not a marketing tool. It was trust infrastructure. Built to answer the question a new prospect asks before they pick up the phone.</p>
         </div>

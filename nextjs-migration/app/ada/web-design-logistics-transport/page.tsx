@@ -58,7 +58,7 @@ export default function WebDesignLogisticsTransport() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-label"><span className="wds-label-bar" />ADA — Asset Development Automation</div>
+          <div className="wds-label"><span className="wds-label-bar" />ADA: Asset Development Automation</div>
           <h1 className="wds-h1">Your logistics operation is capable of bigger contracts. Your website should be winning them.</h1>
         </div>
       </section>

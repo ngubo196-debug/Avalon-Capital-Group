@@ -53,7 +53,7 @@ const serviceSchema = {
   description: 'Web design for established construction and contracting businesses in Pietermaritzburg, Hilton, Howick and the KZN Midlands, built for search visibility and lead generation.',
   provider: {
     '@type': 'Organization',
-    name: 'ADA — Asset Development Automation',
+    name: 'Asset Development Automation',
     url: 'https://www.avaloncapitalgroup.co.za/ada',
     parentOrganization: {
       '@type': 'Organization',
@@ -123,7 +123,7 @@ export default function WebDesignPietermaritzburg() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-label">ADA — Asset Development Automation</div>
+          <div className="wds-label">ADA: Asset Development Automation</div>
           <h1 className="wds-h1">Every week you are invisible online, a PMB competitor gets the contract instead.</h1>
         </div>
       </section>

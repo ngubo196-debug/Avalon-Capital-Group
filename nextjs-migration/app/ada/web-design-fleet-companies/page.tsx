@@ -58,7 +58,7 @@ export default function WebDesignFleetCompanies() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-label"><span className="wds-label-bar" />ADA — Asset Development Automation</div>
+          <div className="wds-label"><span className="wds-label-bar" />ADA: Asset Development Automation</div>
           <h1 className="wds-h1">Every week your fleet company is invisible online, a competitor wins the contract instead.</h1>
         </div>
       </section>
@@ -111,7 +111,7 @@ export default function WebDesignFleetCompanies() {
           <div className="wds-related-divider"></div>
           <div className="wds-label"><span className="wds-label-bar" />Explore More</div>
           <div className="wds-related-links">
-            <Link href="/ada/canopy-courier">Canopy Courier — Concept Build</Link>
+            <Link href="/ada/canopy-courier">Canopy Courier: Concept Build</Link>
             <Link href="/ada/web-design-logistics-transport">Web Design Logistics &amp; Transport</Link>
           </div>
         </div>

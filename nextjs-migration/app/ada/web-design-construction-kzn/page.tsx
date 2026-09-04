@@ -57,7 +57,7 @@ export default function WebDesignConstructionKZN() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-label">ADA — Asset Development Automation</div>
+          <div className="wds-label">ADA: Asset Development Automation</div>
           <h1 className="wds-h1">Every week your website doesn&apos;t rank, a competitor gets the call instead.</h1>
         </div>
       </section>

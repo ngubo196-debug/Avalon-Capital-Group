@@ -2,7 +2,7 @@ import Link from 'next/link';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Canopy Courier — Concept Build | ADA',
+  title: 'Canopy Courier: Concept Build | ADA',
   description: 'ADA designed a full fleet revenue system for Canopy Courier. It never went live. This is the concept, documented honestly.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/canopy-courier' },
 };
@@ -74,7 +74,7 @@ export default function CanopyCourier() {
       <section className="wds-hero">
         <div className="wds-inner">
           <Link href="/ada" className="wds-back">← Back to ADA</Link>
-          <div className="wds-badge">Concept build — not a delivered engagement</div>
+          <div className="wds-badge">Concept build: not a delivered engagement</div>
           <div className="wds-label"><span className="wds-label-bar" />Canopy Courier</div>
           <h1 className="wds-h1">From a retail shop to a fleet revenue system.</h1>
           <p className="wds-body wds-hero-intro">This is not a case study. Canopy Courier is not a client. What exists is a full strategic and design concept ADA built to show what a fleet-focused digital rebuild actually looks like. The figures below are projections from the pitch. None of them are measured results. We are saying so plainly.</p>
