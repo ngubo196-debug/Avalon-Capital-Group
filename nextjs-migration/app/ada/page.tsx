@@ -124,7 +124,7 @@ export default function ADA() {
 
             <div className="adaw-work-grid">
               <div className="adaw-work-card">
-                <BrowserMockup src="/work/afripact-full.webp" url="afripact.net" alt="Afripact Civils website" width={1400} height={8677} speedMultiplier={1.45} />
+                <BrowserMockup src="/work/afripact-full.webp" url="afripact.net" alt="Afripact Civils website" width={1400} height={7052} speedMultiplier={1.45} />
                 <div className="adaw-card-body">
                   <div className="adaw-card-tag">Civil Construction, KZN</div>
                   <div className="adaw-card-title">Zero Search Presence to 100+ Ranking Queries.</div>

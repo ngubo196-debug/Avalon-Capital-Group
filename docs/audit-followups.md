@@ -13,3 +13,7 @@
 - **`app/ada/get-your-assistant/page.tsx` line 336 uses a dark-theme token** — Uses `var(--gold)`, an old dark-theme token, on a page that should be in the white design system. Check whether this page was fully rebuilt or is partially pre-rebuild.
 
 - **`app/ada/afripact-civils/page.tsx` line 117 unattributed pull-quote** — Has an unattributed pull-quote cited only as "Client, Afripact Civils". Verify whether a real attributable quote exists or whether this should be removed, per the no-fabrication rule.
+
+## Screenshot replacement (2026-09-04)
+
+- **`app/ada/PortfolioStrip.tsx` — dead code, candidate for deletion** — Confirmed via full-repo search: this component is never imported anywhere, so it renders on no live page. It contains its own separate, unused reference to an Afripact screenshot (`/assets/afripact-screenshot.jpg`, a different, smaller image than the `BrowserMockup` one on the `/ada` hub) inside a click-to-open modal, plus old dark-theme styling (`var(--gold)`, `Cormorant Garamond`, `var(--surface)`, `var(--border)`). Since it's unreferenced, deleting the file is low-risk whenever someone picks this up — no import to update elsewhere. Flagged only, not deleted this session.
