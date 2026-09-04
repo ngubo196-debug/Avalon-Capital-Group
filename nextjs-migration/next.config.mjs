@@ -16,8 +16,6 @@ const nextConfig = {
       { source: '/ada/seo-agency-durban', destination: '/ada/website-not-generating-leads', permanent: true },
       { source: '/ada/ai-automation-south-africa', destination: '/ada/business-automation', permanent: true },
       { source: '/ada/get-your-assistant', destination: '/ada/ai-assistant-for-business', permanent: true },
-      { source: '/ada/web-design-retail-ecommerce', destination: '/ada/web-design-durban', permanent: true },
-      { source: '/ada/web-design-property-real-estate', destination: '/ada/web-design-durban', permanent: true },
       { source: '/ada/case-studies', destination: '/ada', permanent: true },
     ];
   },
