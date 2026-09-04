@@ -9,9 +9,70 @@ export const metadata: Metadata = {
 
 const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20like%20to%20discuss%20a%20project%20with%20ADA.";
 
+const faqItems = [
+  {
+    question: 'How much does a website cost in Pietermaritzburg?',
+    answer: 'The honest answer is that it depends on what your business actually needs. Most agencies will not tell you that upfront because they want you in a conversation before they name a number. At ADA, our Foundation build starts at R18,500 once-off. Our Growth revenue system, which includes full SEO architecture, is R34,000 once-off or R12,500 a month. Split payments are available on either tier. You know the scope and the cost before anything begins. No retainer traps, no hidden extras.',
+  },
+  {
+    question: 'How long does it take to build a website with ADA?',
+    answer: 'From brief to live, typically two to four weeks depending on how quickly content and approvals flow. We do not disappear for six weeks and resurface with something that needs reworking. The process is structured: audit, strategy, build, launch. You know what is happening at every stage, and we move fast because we have a clear system rather than a vague process.',
+  },
+  {
+    question: 'Will my new website rank on Google?',
+    answer: 'Only if it is built to. Most websites are not. We build every site with SEO architecture baked in from day one: proper page structure, schema markup, Core Web Vitals optimised, and Google Search Console configured at launch. Pietermaritzburg is a market where most businesses have weak digital foundations. A properly built site starts competing from the moment it goes live.',
+  },
+  {
+    question: 'Do I need a website if I already have a Facebook page?',
+    answer: 'Facebook is rented land. You do not control it, you do not own the audience, and if the algorithm changes or the platform shifts, your visibility goes with it. A website is an asset you own. It works around the clock, it builds credibility with every person who finds you, and unlike a Facebook page, it compounds in value over time. For most PMB businesses, their website is the highest-leverage piece of digital infrastructure they can invest in.',
+  },
+  {
+    question: 'What makes ADA different from other web designers in Pietermaritzburg?',
+    answer: 'We are not a design studio. We build revenue systems. Every decision, the structure, the copy, the conversion flow, the SEO architecture, is made around one question: what does this page need to make someone do? We also come from Avalon Capital Group, which means we understand business, not just marketing. And we are transparent: our own site\'s Search Console data is public in our case study, so you can see exactly how we measure what we build.',
+  },
+  {
+    question: 'Can ADA handle ongoing SEO after the website is built?',
+    answer: 'Yes. The website build is the foundation. What happens next, content, local SEO signals, ranking for more searches over time, is where our Growth and Authority tiers come in. We can run the full search visibility programme after launch, or hand over a site that is already structured correctly so you can build on it yourself. Either way, you are not starting from a broken foundation.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqItems.map((item) => ({
+    '@type': 'Question',
+    name: item.question,
+    acceptedAnswer: { '@type': 'Answer', text: item.answer },
+  })),
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Web Design for Construction Companies in Pietermaritzburg',
+  description: 'Web design for established construction and contracting businesses in Pietermaritzburg, Hilton, Howick and the KZN Midlands, built for search visibility and lead generation.',
+  provider: {
+    '@type': 'Organization',
+    name: 'ADA — Asset Development Automation',
+    url: 'https://www.avaloncapitalgroup.co.za/ada',
+    parentOrganization: {
+      '@type': 'Organization',
+      name: 'Avalon Capital Group',
+      url: 'https://www.avaloncapitalgroup.co.za',
+    },
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Pietermaritzburg' },
+    { '@type': 'State', name: 'KwaZulu-Natal' },
+  ],
+  serviceType: 'Web Design',
+};
+
 export default function WebDesignPietermaritzburg() {
   return (
     <div id="page-web-design-pietermaritzburg" className="page ada-section" role="main">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <style suppressHydrationWarning>{`
         .wds-back { font-family: DM Sans, sans-serif; font-size: 13px; color: var(--ada-accent); text-decoration: none; display: inline-block; margin-bottom: 32px; }
         .wds-back:hover { text-decoration: underline; }
@@ -33,6 +94,11 @@ export default function WebDesignPietermaritzburg() {
         .wds-closing-body { font-family: DM Sans, sans-serif; font-size: 16px; color: rgba(255,255,255,0.75); max-width: 480px; margin: 0 auto 32px; }
         .wds-closing-btn { display: inline-block; background: var(--ada-white); color: var(--ada-accent); border-radius: 100px; padding: 14px 32px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 1px solid var(--ada-white); transition: background 0.2s ease, color 0.2s ease; }
         .wds-closing-btn:hover { background: transparent; color: var(--ada-white); }
+        .wds-faq-item { border-top: 1px solid var(--ada-line); }
+        .wds-faq-item:last-child { border-bottom: 1px solid var(--ada-line); }
+        .wds-faq-summary { font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 500; color: var(--ada-ink); padding: 1.25rem 0; cursor: pointer; list-style: none; }
+        .wds-faq-summary::-webkit-details-marker { display: none; }
+        .wds-faq-answer { font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 300; color: var(--ada-ink-soft); padding-bottom: 1.25rem; line-height: 1.7; margin: 0; }
         .wds-related { padding: 3rem 3.5rem 0; }
         .wds-related-divider { border-top: 1px solid var(--ada-line); margin-bottom: 2rem; }
         .wds-related-links { display: flex; gap: 2rem; flex-wrap: wrap; padding-bottom: 3rem; }
@@ -99,8 +165,31 @@ export default function WebDesignPietermaritzburg() {
         </div>
       </section>
 
+      <section className="wds-section wds-section--wash" aria-labelledby="faq-heading">
+        <div className="wds-inner">
+          <div className="wds-label">Common Questions</div>
+          <h2 className="wds-h2" id="faq-heading">Web design in Pietermaritzburg, answered straight.</h2>
+          <div>
+            {faqItems.map((item) => (
+              <details key={item.question} className="wds-faq-item">
+                <summary className="wds-faq-summary">{item.question}</summary>
+                <p className="wds-faq-answer">{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="wds-section wds-section--white" aria-labelledby="cost-heading">
+        <div className="wds-inner">
+          <div className="wds-label">The Cost Of Waiting</div>
+          <h2 className="wds-h2" id="cost-heading">Every week this stays unresolved is another shortlist you did not make.</h2>
+          <p className="wds-body">R200,000 a month is what two missed enquiries cost a business your size. That number does not pause while you think about it.</p>
+        </div>
+      </section>
+
       <section className="wds-closing" aria-labelledby="closing-heading">
-        <h2 className="wds-closing-h2" id="closing-heading">Ready when you are.</h2>
+        <h2 className="wds-closing-h2" id="closing-heading">Ready to fix this before the next tender goes out?</h2>
         <p className="wds-closing-body">One conversation is enough to know if this is the right fit.</p>
         <a href={WHATSAPP_LINK} target="_blank" rel="noopener noreferrer" className="wds-closing-btn">Start a conversation →</a>
       </section>
