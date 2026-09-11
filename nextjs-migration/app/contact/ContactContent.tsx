@@ -23,6 +23,12 @@ export default function ContactContent() {
       });
       if (res.ok) {
         setSubmitted(true);
+        if (typeof window !== 'undefined' && window.gtag) {
+          window.gtag('event', 'qualify_lead', {
+            form_location: 'contact_page',
+            area_of_interest: data.get('interest') || 'not_specified',
+          });
+        }
       }
     } catch {
       // silently handle
