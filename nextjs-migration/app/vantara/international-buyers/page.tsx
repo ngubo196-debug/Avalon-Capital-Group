@@ -78,8 +78,8 @@ export default function InternationalBuyers() {
           outline-offset: 2px;
         }
 
-        .wds-back { font-family: DM Sans, sans-serif; font-size: 13px; color: var(--v-gold-deep); text-decoration: none; display: inline-block; margin-bottom: 32px; }
-        .wds-back:hover { text-decoration: underline; }
+        .wds-back { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 600; color: var(--v-gold-deep); text-decoration: underline; text-underline-offset: 3px; display: inline-block; margin-bottom: 32px; }
+        .wds-back:hover { color: var(--v-ink); }
         .wds-eyebrow { font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--v-gold-deep); margin-bottom: 20px; }
         .wds-h1 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 400; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.12; color: var(--v-ink); max-width: 820px; margin: 0; }
         .wds-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18; color: var(--v-ink); margin: 0 0 24px; }
@@ -88,7 +88,7 @@ export default function InternationalBuyers() {
         .wds-body strong { font-weight: 600; color: var(--v-ink); }
         .wds-body + .wds-body { margin-top: 18px; }
 
-        .wds-hero { position: relative; padding: calc(68px + 6rem) 3.5rem 6rem; overflow: hidden; background: var(--v-paper); }
+        .wds-hero { position: relative; padding: 3rem 3.5rem 6rem; overflow: hidden; background: var(--v-paper); }
         .wds-hero::before {
           content: ''; position: absolute; inset: 0; pointer-events: none;
           background-image: repeating-linear-gradient(115deg, rgba(201,168,76,0.10) 0px, rgba(201,168,76,0.10) 1px, transparent 1px, transparent 64px);
@@ -160,7 +160,7 @@ export default function InternationalBuyers() {
           .wds-contact-grid { grid-template-columns: 1fr; }
         }
         @media (max-width: 768px) {
-          .wds-hero { padding: calc(68px + 4rem) 1.5rem 4rem; }
+          .wds-hero { padding: 2.5rem 1.5rem 4rem; }
           .wds-section { padding: 4rem 1.5rem; }
           .wds-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
         }
