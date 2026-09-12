@@ -7,7 +7,7 @@ const WHATSAPP_LINK = "https://wa.me/27712205313?text=Hi%20Luyanda%2C%20I%27d%20
 export default function AdaHeroMassive() {
   return (
     <section className="ada-hero-massive">
-      <style suppressHydrationWarning>{`
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .ada-hero-massive { position: relative; min-height: 100vh; background: var(--ada-white); display: flex; align-items: center; justify-content: flex-start; padding: 68px 3.5rem 0; overflow: hidden; }
         .ada-hero-massive-inner { position: relative; z-index: 2; max-width: 1160px; margin: 0 auto; width: 100%; }
         .ada-hero-massive-h1 { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-weight: 400; font-size: clamp(72px, 9vw, 128px); line-height: 1.0; letter-spacing: -0.03em; color: var(--ada-ink); margin: 0; }
@@ -32,7 +32,7 @@ export default function AdaHeroMassive() {
           .ada-hero-massive-ctas { flex-direction: column; align-items: stretch; margin-top: 2.25rem; }
           .ada-hero-massive-primary, .ada-hero-massive-ghost { justify-content: center; text-align: center; }
         }
-      `}</style>
+      ` }} />
 
       <AdaParticleMesh />
 

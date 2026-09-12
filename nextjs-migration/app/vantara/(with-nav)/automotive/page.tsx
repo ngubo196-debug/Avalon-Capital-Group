@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Nav from '../../components/Nav';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -11,7 +10,6 @@ export const metadata: Metadata = {
 export default function VantaraAutomotive() {
   return (
     <>
-      <Nav />
       <div id="page-vantara-automotive" className="page" role="main">
         <div className="inner-hero">
           <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">

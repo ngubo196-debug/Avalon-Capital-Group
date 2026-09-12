@@ -39,7 +39,7 @@ export default function ADA() {
         }}
       />
       <div id="page-ada" className="page ada-section" role="main">
-        <style suppressHydrationWarning>{`
+        <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
           .adaw-tag { display: flex; align-items: center; gap: 12px; font-family: 'DM Sans', sans-serif; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ada-accent); margin-bottom: 20px; }
           .adaw-tag::before { content: ''; width: 24px; height: 1px; background: var(--ada-accent); display: inline-block; }
           .adaw-tag--onDark { color: rgba(255,255,255,0.4); }
@@ -108,7 +108,7 @@ export default function ADA() {
             .adaw-closing { padding: 4.5rem 20px; }
             .adaw-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
           }
-        `}</style>
+        ` }} />
 
         <AdaHeroMassive />
 

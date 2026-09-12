@@ -13,7 +13,7 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="ada-nav-scope">
-      <style suppressHydrationWarning>{`
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .ada-nav-scope nav {
           display: none !important;
         }
@@ -172,7 +172,7 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
             margin-top: 1rem;
           }
         }
-      `}</style>
+      ` }} />
 
       <nav className="ada-nav" aria-label="ADA section navigation">
         <Link href="/ada" style={{ display: 'flex', alignItems: 'center' }}>

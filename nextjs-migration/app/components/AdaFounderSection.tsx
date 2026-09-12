@@ -6,7 +6,7 @@ const FOUNDER_PHOTO = "/assets/luyanda-ngubo.jpg";
 export default function AdaFounderSection() {
   return (
     <section className="ada-founder">
-      <style suppressHydrationWarning>{`
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .ada-founder { background: var(--ada-white); padding: 7rem 3.5rem; }
         .ada-founder-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
         .ada-founder-photo { position: relative; width: 100%; aspect-ratio: 4 / 5; border-radius: 20px; overflow: hidden; -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%); mask-image: linear-gradient(to bottom, black 60%, transparent 100%); }
@@ -23,7 +23,7 @@ export default function AdaFounderSection() {
         @media (max-width: 768px) {
           .ada-founder { padding: 4.5rem 20px; }
         }
-      `}</style>
+      ` }} />
       <div className="ada-founder-inner">
         <div className="ada-founder-photo">
           <Image

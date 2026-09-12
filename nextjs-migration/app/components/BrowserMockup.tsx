@@ -41,7 +41,7 @@ export default function BrowserMockup({ src, url, alt, width = 1400, height = 30
 
   return (
     <div ref={wrapperRef} className={`browser-mockup bm-${uid}`}>
-      <style suppressHydrationWarning>{`
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .bm-${uid} { width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 24px 80px rgba(0,0,0,0.2); }
         .bm-${uid} .bm-chrome { height: 40px; background: #1E1E1E; display: flex; align-items: center; padding: 0 16px; gap: 16px; }
         .bm-${uid} .bm-dots { display: flex; gap: 6px; flex-shrink: 0; }
@@ -72,7 +72,7 @@ export default function BrowserMockup({ src, url, alt, width = 1400, height = 30
             to { transform: translateY(calc(-100% + 144px)); }
           }
         }
-      `}</style>
+      ` }} />
 
       <div className="bm-chrome">
         <div className="bm-dots">

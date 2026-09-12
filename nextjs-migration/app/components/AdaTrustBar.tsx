@@ -52,7 +52,7 @@ function TrustStrip({ hidden }: { hidden?: boolean }) {
 export default function AdaTrustBar() {
   return (
     <div className="ada-trustbar" role="group" aria-label="Client results and trust indicators">
-      <style suppressHydrationWarning>{`
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .ada-trustbar { background: var(--ada-ink); width: 100%; height: 72px; overflow: hidden; display: flex; align-items: center; }
         .ada-trustbar-track { display: flex; align-items: center; width: max-content; animation: ada-trustbar-scroll 35s linear infinite; }
         .ada-trustbar-strip { display: flex; align-items: center; white-space: nowrap; flex-shrink: 0; }
@@ -69,7 +69,7 @@ export default function AdaTrustBar() {
           .ada-trustbar-logo { height: 24px !important; }
           .ada-trustbar-dot { margin: 0 16px; }
         }
-      `}</style>
+      ` }} />
       <div className="ada-trustbar-track">
         <TrustStrip />
         <TrustStrip hidden />

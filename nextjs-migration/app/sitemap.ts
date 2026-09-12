@@ -53,19 +53,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.6,
     },
     {
-      url: `${BASE}/vantara/property`,
+      url: `${BASE}/vantara/international-buyers`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
-      priority: 0.6,
+      priority: 0.7,
     },
     {
       url: `${BASE}/vantara/insight-1`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${BASE}/vantara/insight-2`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,

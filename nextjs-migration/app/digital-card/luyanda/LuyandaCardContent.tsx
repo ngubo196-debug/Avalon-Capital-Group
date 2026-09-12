@@ -38,7 +38,7 @@ export default function LuyandaCardContent() {
 
   return (
     <>
-      <style suppressHydrationWarning>{`
+      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .card-root {
           background: #0A0A0A;
           min-height: 100vh;
@@ -263,7 +263,7 @@ export default function LuyandaCardContent() {
           z-index: 999;
         }
         .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
-      `}</style>
+      ` }} />
 
       <div className="card-root">
         <div className="card">
