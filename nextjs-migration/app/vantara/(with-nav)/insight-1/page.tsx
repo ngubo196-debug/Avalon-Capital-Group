@@ -20,7 +20,7 @@ export default function VantaraInsight1() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/vantara#insights" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
+          <Link className="back-btn" href="/vantara#vantara-insights-heading" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara Insights · Automotive</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>Insider Perspective</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,5vw,64px)', fontWeight:400, lineHeight:1.08, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>Why buying a car alone is the most expensive thing<br /><em style={{color:'var(--gold)'}}>you&apos;ll do this year.</em></h1>
@@ -31,7 +31,7 @@ export default function VantaraInsight1() {
 
         <section style={{padding:'80px 60px', maxWidth:'800px'}}>
           <p className="section-body" style={{marginBottom:'28px'}}>When you walk into a dealership, you are walking into someone else&apos;s environment. The salesperson sitting across from you has closed hundreds of deals. They know the invoice price, the holdback, the dealer incentives, the finance kickbacks, and exactly how much room they have to move. You know what you saw on Autotrader.</p>
-          <p className="section-body" style={{marginBottom:'28px'}}>That is not a criticism. It is just the reality of how the market works. Information in the automotive industry is deliberately asymmetric. Dealers are trained to control the process, the test drive, the trade-in conversation, the finance office, in a sequence designed to produce the maximum margin from every transaction.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>That&apos;s not a criticism. That&apos;s how the market works. Information in the automotive industry is deliberately asymmetric. Dealers are trained to control the process, the test drive, the trade-in conversation, the finance office, in a sequence designed to produce the maximum margin from every transaction.</p>
 
           <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>What you don&apos;t see<br /><em>when you&apos;re sitting at that desk.</em></h2>
           <p className="section-body" style={{marginBottom:'28px'}}>The price on the windscreen is not the price. It is the opening position. Every dealership has a floor price, the minimum they will accept and still make their margin. Between the advertised price and the floor, there is room. How much room depends on the car, the month, the dealer&apos;s stock pressure, and whether they need to hit a target.</p>
@@ -42,7 +42,7 @@ export default function VantaraInsight1() {
           <p className="section-body" style={{marginBottom:'28px'}}>Over half a decade in the automotive industry, across sales, stock control, workshop, finance, reconditioning, and vehicle listings, gives you a different view of every transaction. You know which cars have been reconditioned to move and which have underlying issues that a valet won&apos;t fix. You know which dealers are under stock pressure and which have been sitting on a unit for 90 days. You know what a PDI should find and what gets signed off anyway.</p>
           <p className="section-body" style={{marginBottom:'28px'}}>That knowledge changes the negotiation entirely. It is not about being aggressive. It is about knowing the actual floor before you start, and having the relationships and the language to operate in that environment professionally.</p>
 
-          <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>The advisor is free.<br /><em>The mistake is not.</em></h2>
+          <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>Getting it right is cheap.<br /><em>Getting it wrong isn&apos;t.</em></h2>
           <p className="section-body" style={{marginBottom:'28px'}}>Vantara&apos;s vehicle acquisition model is simple. You tell us your budget and what you are looking for. We source the vehicle, negotiate the deal, structure the finance if needed, and manage everything through to delivery. Our fee is built into the transaction, you pay within your budget, not on top of it.</p>
           <p className="section-body" style={{marginBottom:'40px'}}>The only time you need to move is to sign the deal and take delivery. Everything else is handled. The alternative is walking into a dealership alone, against a professional, with incomplete information. That gap has a price. Most people pay it without ever knowing they did.</p>
 

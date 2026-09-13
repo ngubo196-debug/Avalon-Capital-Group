@@ -155,12 +155,20 @@ export default function Vantara() {
         .wds-body { font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--v-ink-soft); max-width: 700px; margin: 0; }
         .wds-body + .wds-body { margin-top: 18px; }
 
-        .wds-hero { position: relative; padding: calc(72px + 6rem) 3.5rem 6rem; overflow: hidden; background: var(--v-paper); }
+        .wds-hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: calc(72px + 3rem) 3.5rem 3rem; overflow: hidden; background: var(--v-paper); }
         .wds-hero::before {
           content: ''; position: absolute; inset: 0; pointer-events: none;
-          background-image: repeating-linear-gradient(115deg, rgba(201,168,76,0.12) 0px, rgba(201,168,76,0.12) 1px, transparent 1px, transparent 54px);
+          background-image: repeating-linear-gradient(115deg, rgba(201,168,76,0.15) 0px, rgba(201,168,76,0.15) 1px, transparent 1px, transparent 46px);
         }
         .wds-hero-inner { position: relative; z-index: 1; }
+
+        /* Introduction: mirrors the hero's line-motif so wide viewports don't read as unfinished */
+        .wds-intro-section { position: relative; overflow: hidden; }
+        .wds-intro-section::before {
+          content: ''; position: absolute; inset: 0; pointer-events: none;
+          background-image: repeating-linear-gradient(115deg, rgba(201,168,76,0.10) 0px, rgba(201,168,76,0.10) 1px, transparent 1px, transparent 46px);
+        }
+        .wds-intro-section .wds-intro-grid { position: relative; z-index: 1; }
 
         .wds-section { padding: 5.5rem 3.5rem; }
         .wds-section--paper { background: var(--v-paper); }
@@ -194,7 +202,7 @@ export default function Vantara() {
         .wds-diff-card { background: var(--v-paper); padding: 2.5rem 2.25rem; }
         .wds-diff-card--muted { opacity: 0.7; }
         .wds-diff-card-label { font-family: DM Sans, sans-serif; font-size: 11px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--v-gold-deep); margin-bottom: 16px; }
-        .wds-diff-card-title { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 24px; font-weight: 400; color: var(--v-ink); line-height: 1.25; margin-bottom: 16px; }
+        .wds-diff-card-title { font-family: DM Sans, sans-serif; font-size: 17px; font-weight: 600; color: var(--v-ink); line-height: 1.4; margin-bottom: 14px; }
         .wds-diff-list { display: flex; flex-direction: column; border-top: 1px solid var(--v-line); }
         .wds-diff-list p { font-family: DM Sans, sans-serif; font-size: 14px; line-height: 1.75; color: var(--v-ink-soft); padding: 12px 0; border-bottom: 1px solid var(--v-line); margin: 0; }
         .wds-diff-list p:last-child { border-bottom: none; }
@@ -304,7 +312,7 @@ export default function Vantara() {
         </section>
 
         {/* Introduction */}
-        <section className="wds-section wds-section--paper" aria-labelledby="intro-heading">
+        <section className="wds-section wds-section--paper wds-intro-section" aria-labelledby="intro-heading">
           <div className="wds-intro-grid">
             <div className="wds-intro-photo">
               <Image
@@ -334,14 +342,54 @@ export default function Vantara() {
           </div>
         </div>
 
+        {/* How We Engage */}
+        <section className="wds-section wds-section--paper" aria-labelledby="vantara-engage-heading">
+          <div className="wds-inner">
+            <div className="wds-label">How We Help</div>
+            <h2 className="wds-h2" id="vantara-engage-heading">How we help you buy, locally or abroad.</h2>
+            <p className="wds-body" style={{ maxWidth: '540px' }}>Buying from abroad or buying locally, the process is the same: structured, thorough, and in your interest.</p>
+
+            <div className="wds-mandate-grid">
+              <div className="wds-mandate-card wds-mandate-card--primary">
+                <div className="wds-mandate-badge">Most Booked</div>
+                <div className="wds-mandate-icon"><IconGlobe /></div>
+                <h3 className="wds-mandate-title">International Buyer Concierge</h3>
+                <p className="wds-mandate-body">For buyers relocating to or investing in South Africa. We source, verify, negotiate, and handle the paperwork, wherever you are.</p>
+                <div className="wds-mandate-list">
+                  <p>Sourcing and value verification</p>
+                  <p>Negotiation on your behalf</p>
+                  <p>Registration handled once you land</p>
+                  <p className="wds-mandate-price">From R18,000. Pricing scales with vehicle value.</p>
+                </div>
+                <Link href="/vantara/international-buyers" className="wds-mandate-link">See the full process →</Link>
+              </div>
+              <div className="wds-mandate-card">
+                <div className="wds-mandate-icon"><IconCar /></div>
+                <h3 className="wds-mandate-title">Domestic Vehicle Acquisition</h3>
+                <p className="wds-mandate-body">Give us your budget. We source, negotiate, and deliver, no dealer markup eating into what you set aside.</p>
+                <div className="wds-mandate-list">
+                  <p>Budget-based sourcing</p>
+                  <p>Full dealer negotiation</p>
+                  <p>Finance structuring support</p>
+                  <p className="wds-mandate-price">From R5,000. Fee structured into your budget, not added on top.</p>
+                </div>
+              </div>
+            </div>
+
+            <div className="wds-note">
+              <p className="wds-note-title">A straightforward note on how we work</p>
+              <p className="wds-note-body">Vantara works with a limited number of clients at any given time. We are not a high-volume operation. We take on engagements where we can genuinely add value and execute to the standard we hold ourselves to. If we can&apos;t help, we&apos;ll tell you. If we can, we&apos;ll show you exactly how.</p>
+            </div>
+          </div>
+        </section>
+
         {/* 01 - The Difference */}
         <section className="wds-section wds-section--paper" aria-labelledby="vantara-difference">
           <div className="wds-inner">
             <div className="wds-numeral" aria-hidden="true">01</div>
             <div className="wds-label">The Difference</div>
             <h2 className="wds-h2" id="vantara-difference">Advisory-first. Always.</h2>
-            <p className="wds-body">Vantara works exclusively for the buyer. In every vehicle purchase, the other side of the table is a professional whose income depends on closing on their terms. Vantara puts the same level of expertise on your side.</p>
-            <p className="wds-body" style={{ maxWidth: '560px' }}>The dealer wants to move stock. The agent wants to close the listing. The finance desk wants to maximise rate. None of them are working for you, and most buyers only realise that after the deal is done. Vantara carries none of that conflict. We work on mandate, for the client, and our position is simple: the right deal, or no deal.</p>
+            <p className="wds-body">Everyone else at the table is paid to close. We&apos;re not.</p>
 
             <div className="wds-diff-grid">
               <div className="wds-diff-card">
@@ -350,7 +398,7 @@ export default function Vantara() {
                 <p className="wds-body" style={{ marginBottom: '20px', maxWidth: 'none' }}>Before anything moves, we understand your position: your objective, your constraints, your risk. Then we structure the transaction, control the variables, and execute. You make the final call with full information, not under pressure.</p>
                 <div className="wds-diff-list">
                   <p>Advisory-first, strategy before any transaction</p>
-                  <p>Mandate-based, your interest, not the market&apos;s</p>
+                  <p>Your interest first, not the market&apos;s</p>
                   <p>Full-cycle, brief to handover, every step managed</p>
                   <p>Vehicle acquisition, domestic and international</p>
                 </div>
@@ -379,25 +427,22 @@ export default function Vantara() {
           <div className="wds-inner">
             <div className="wds-label">Proof</div>
             <h2 className="wds-h2" id="vantara-insights">Real transactions. Real outcomes.</h2>
-            <p className="wds-body" style={{ maxWidth: '520px' }}>Two mandates broken down in full, the thinking, the structure, and the execution. Read these to understand how Vantara approaches a deal before you bring us yours.</p>
+            <p className="wds-body" style={{ maxWidth: '520px' }}>Two deals broken down in full, the thinking, the structure, and the execution. Read these to understand how Vantara approaches a deal before you bring us yours.</p>
             <div className="wds-proof-grid">
               <div className="wds-proof-card">
                 <p className="wds-proof-label">Automotive Deal Execution</p>
                 <h3 className="wds-proof-title">Two dealers. One client. Every variable controlled.</h3>
-                <p className="wds-proof-body">A client came to Vantara wanting to upgrade their vehicle but facing a significant trade-in shortfall across two competing dealerships, with different pricing structures, different dealer incentives, and different finance scenarios on the table.</p>
-                <p className="wds-proof-body">Vantara structured both options side by side: trade-in positions across both dealers were mapped, R60,000 in combined dealer support was extracted from one transaction, and multiple balloon scenarios were modelled across both vehicles.</p>
-                <p className="wds-proof-body">The client made a fully informed decision, with no pressure, no information asymmetry, and a materially stronger financial position than they would have reached alone.</p>
+                <p className="wds-proof-body">A trade-in shortfall across two competing dealerships, mapped and negotiated side by side. R60,000 in dealer support extracted, and the client decided with complete information, no pressure.</p>
                 <div className="wds-proof-meta">
                   <p>Scope: <span>Vehicle acquisition, trade-in arbitrage, finance structuring</span></p>
                   <p>Outcome: <span>Full dual-option analysis. Client decided with complete information.</span></p>
                 </div>
-                <Link href="/vantara/automotive" className="wds-mandate-link">Full deal insight →</Link>
+                <Link href="/vantara/automotive" className="wds-mandate-link">Read the full case →</Link>
               </div>
               <div className="wds-proof-card">
                 <p className="wds-proof-label">International Buyer Concierge</p>
-                <h3 className="wds-proof-title">Buy a car in South Africa without setting foot in the country first.</h3>
+                <h3 className="wds-proof-title">Buy a car in South Africa before you even land.</h3>
                 <p className="wds-proof-body">We source it, verify it, negotiate the price, handle the paperwork, and deliver it. One person on the ground, so you don&apos;t have to be.</p>
-                <p className="wds-proof-body">Built for buyers relocating to South Africa who need a Traffic Register Number, NaTIS registration, and a vehicle sourced and verified before they arrive.</p>
                 <div className="wds-proof-meta">
                   <p>Scope: <span>Sourcing, verification, negotiation, TRN and registration paperwork</span></p>
                   <p>Outcome: <span>A vehicle ready and waiting, or delivered to wherever you land.</span></p>
@@ -412,12 +457,12 @@ export default function Vantara() {
           <div className="wds-inner">
             <div className="wds-label">Recent Outcomes</div>
             <h2 className="wds-h2" id="vantara-outcomes">Recent client outcomes. Real numbers.</h2>
-            <p className="wds-body" style={{ maxWidth: '520px' }}>Two mandates. What the process delivered in practice.</p>
+            <p className="wds-body" style={{ maxWidth: '520px' }}>Two deals. What the process delivered in practice.</p>
             <div className="wds-proof-grid">
               <div className="wds-proof-card">
                 <p className="wds-proof-label">Automotive &middot; Deal Insight</p>
                 <h3 className="wds-proof-title">Two dealers. One client. R60,000 extracted.</h3>
-                <p className="wds-proof-body">A vehicle acquisition mandate where every variable was controlled: trade-in arbitrage, dual-dealer leverage, and four balloon scenarios modelled across two vehicles. The client made the final call with full information and nothing left to chance.</p>
+                <p className="wds-proof-body">A vehicle acquisition where every variable was controlled: trade-in arbitrage, dual-dealer leverage, and four balloon scenarios modelled across two vehicles. The client made the final call with full information and nothing left to chance.</p>
                 <div className="wds-proof-meta">
                   <p><span>R60,000 dealer support</span></p>
                   <p><span>8 scenarios modelled</span></p>
@@ -426,7 +471,7 @@ export default function Vantara() {
                 <Link href="/vantara/automotive" className="wds-mandate-link">Read the full breakdown →</Link>
               </div>
               <div className="wds-proof-card">
-                <p className="wds-proof-label">Automotive &middot; Client Mandate</p>
+                <p className="wds-proof-label">Automotive &middot; Client Outcome</p>
                 <h3 className="wds-proof-title">First vehicle. R19,014 found before negotiation started.</h3>
                 <p className="wds-proof-body">A first-time buyer, two options, and a budget that pulled in two directions. Vantara assessed the full KZN market, modelled eight finance scenarios, and mapped the complete cost of ownership before the client saw a single dealer.</p>
                 <div className="wds-proof-meta">
@@ -457,7 +502,7 @@ export default function Vantara() {
               <Link href="/vantara/insight-3" className="wds-insights-row">
                 <div>
                   <p className="wds-insights-row-label">Advisory &middot; The Vantara model</p>
-                  <p className="wds-insights-row-title">The advisor is free. The mistake is not.</p>
+                  <p className="wds-insights-row-title">Getting it right is cheap. Getting it wrong isn&apos;t.</p>
                 </div>
                 <span className="wds-insights-row-arrow">→</span>
               </Link>
@@ -480,11 +525,11 @@ export default function Vantara() {
             <div className="wds-numeral" aria-hidden="true">02</div>
             <div className="wds-label">How We Work</div>
             <h2 className="wds-h2" id="vantara-how">Clarity. Structure. Execution.</h2>
-            <p className="wds-body">Vantara runs every mandate through four stages: brief and objectives, market intelligence, structured analysis, and negotiation through to close. Each stage has a defined output. Nothing moves until the previous stage is complete.</p>
+            <p className="wds-body">Vantara runs every engagement through four stages: brief and objectives, market intelligence, structured analysis, and negotiation through to close. Each stage has a defined output. Nothing moves until the previous stage is complete.</p>
             <div className="wds-process-grid">
               <div className="wds-process-card">
                 <div className="wds-process-icon"><IconClipboard /></div>
-                <h4 className="wds-process-title">Mandate &amp; Brief</h4>
+                <h4 className="wds-process-title">Brief &amp; Objectives</h4>
                 <p className="wds-process-desc">We begin with a conversation. We map your objective, your constraints, and what the right outcome looks like for you, not generically, specifically.</p>
               </div>
               <div className="wds-process-card">
@@ -512,49 +557,6 @@ export default function Vantara() {
             <div className="wds-label" style={{ justifyContent: 'center', display: 'flex' }}>Who This Is For</div>
             <h2 className="wds-h2" id="vantara-qual">Built for two kinds of buyers.</h2>
             <p className="wds-body">Someone in South Africa making a high-value vehicle purchase, unwilling to negotiate against a professional alone. Someone buying from outside the country, who needs a person on the ground they can trust completely. Neither situation gives you a fair shot without representation.</p>
-          </div>
-        </section>
-
-        {/* How We Engage */}
-        <section className="wds-section wds-section--paper" aria-labelledby="vantara-engage-heading">
-          <div className="wds-inner">
-            <div className="wds-label">How We Engage</div>
-            <h2 className="wds-h2" id="vantara-engage-heading">Two mandates. One standard of execution.</h2>
-            <p className="wds-body" style={{ maxWidth: '540px' }}>Every engagement is different. What doesn&apos;t change is how we work, structured, thorough, and always in your interest. Here is what each mandate looks like in practice.</p>
-
-            <div className="wds-mandate-grid">
-              <div className="wds-mandate-card wds-mandate-card--primary">
-                <div className="wds-mandate-badge">Primary Mandate</div>
-                <div className="wds-mandate-icon"><IconGlobe /></div>
-                <h3 className="wds-mandate-title">International Buyer Concierge</h3>
-                <p className="wds-mandate-body">For buyers relocating to or investing in South Africa. We source, verify, negotiate, and handle the Traffic Register Number and NaTIS paperwork, so you don&apos;t need to be in the country for any of it.</p>
-                <div className="wds-mandate-list">
-                  <p>Sourcing and value verification</p>
-                  <p>Negotiation on your behalf</p>
-                  <p>TRN and NaTIS registration handled</p>
-                  <p>Delivery, wherever you land</p>
-                  <p className="wds-mandate-price">From R18,000. Pricing scales with vehicle value.</p>
-                </div>
-                <Link href="/vantara/international-buyers" className="wds-mandate-link">See full pricing and process →</Link>
-              </div>
-              <div className="wds-mandate-card">
-                <div className="wds-mandate-icon"><IconCar /></div>
-                <h3 className="wds-mandate-title">Domestic Vehicle Acquisition</h3>
-                <p className="wds-mandate-body">You give us your budget and requirements. We source, evaluate, negotiate, and deliver. Our fee is built into the transaction, you pay within your budget, not on top of it.</p>
-                <div className="wds-mandate-list">
-                  <p>Budget-based sourcing</p>
-                  <p>Full dealer negotiation</p>
-                  <p>Finance structuring support</p>
-                  <p>Delivery coordination</p>
-                  <p className="wds-mandate-price">Free to the buyer. Always.</p>
-                </div>
-              </div>
-            </div>
-
-            <div className="wds-note">
-              <p className="wds-note-title">A straightforward note on how we work</p>
-              <p className="wds-note-body">Vantara works with a limited number of clients at any given time. We are not a high-volume operation. We take on mandates where we can genuinely add value and execute to the standard we hold ourselves to. If we can&apos;t help, we&apos;ll tell you. If we can, we&apos;ll show you exactly how.</p>
-            </div>
           </div>
         </section>
 

@@ -20,9 +20,9 @@ export default function VantaraInsight4() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/vantara#insights" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
+          <Link className="back-btn" href="/vantara#vantara-insights-heading" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara Insights · Automotive</p>
-          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>First-Time Buyer · Mandate Overview</p>
+          <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>First-Time Buyer · Deal Overview</p>
           <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,5vw,64px)', fontWeight:400, lineHeight:1.08, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>First vehicle. Two options.<br /><em style={{color:'var(--gold)'}}>One right decision.</em></h1>
           <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px'}}>A first-time buyer, two well-priced vehicles, and a budget that pulled in two directions. This is what Vantara did before the client saw a single listing - and how the decision got made with full confidence.</p>
         </div>
@@ -39,18 +39,18 @@ export default function VantaraInsight4() {
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px', maxWidth:'800px'}}>
-          <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>What this mandate<br /><em>looked like in practice.</em></h2>
+          <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>What this deal<br /><em>looked like in practice.</em></h2>
           <p className="section-body" style={{marginBottom:'28px'}}>The brief was straightforward: first vehicle, automatic transmission, finance-assisted, specific colour preference, timeline of late May to early June. Two vehicles were in consideration from the outset - one a proven city hatchback at the more comfortable price point, the other a newer crossover with stronger specification at a meaningfully higher monthly commitment.</p>
           <p className="section-body" style={{marginBottom:'28px'}}>Before the client saw a single listing, Vantara conducted a full market assessment. Every available unit matching the brief across KwaZulu-Natal was assessed on price, mileage, dealer credibility, and finance suitability. Two units came out as the strongest available in the province at their respective price points. Both were priced below market average - one by R14,498, the other by R4,516. Combined, that is R19,014 identified before any negotiation had taken place.</p>
           <p className="section-body" style={{marginBottom:'28px'}}>From there, the work covered the full picture on both vehicles. Finance was modelled across eight scenarios - two vehicles, four deposit and residual structures each, using the current prime lending rate as the baseline. The full cost of ownership was mapped across servicing, tyres, brakes, battery, insurance, and licensing. Dealer charges and common signing-table extras were explained in advance so the client could make calm, informed decisions rather than pressured ones. Safety ratings, driving characteristics, and specification were compared side by side with no dealer input involved. And Vantara produced an honest position on each vehicle - not a recommendation to spend more, but a clear assessment of what each option actually delivered for this client&apos;s situation.</p>
-          <p className="section-body">This is the work that happens before the deal starts. The client did not walk into a dealership hoping for the best. They walked in knowing exactly what the market looked like, what the numbers meant, and what decision made sense for their situation.</p>
+          <p className="section-body">This is the work that happens before the deal starts. The client walked into the dealership knowing exactly what the market looked like, what the numbers meant, and what decision made sense for their situation.</p>
         </section>
 
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px', maxWidth:'800px'}}>
           <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>When the numbers<br /><em>pull in two directions.</em></h2>
-          <p className="section-body" style={{marginBottom:'28px'}}>The more difficult part of this mandate was not finding the right vehicles - it was helping the client make the call when both options were genuinely viable.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>The more difficult part of this engagement was not finding the right vehicles - it was helping the client make the call when both options were genuinely viable.</p>
           <p className="section-body" style={{marginBottom:'28px'}}>The lower-priced hatchback was the financially cleaner entry. On a 72-month term with no deposit, the monthly instalment came in approximately R1,400 lower than the crossover. Over the full term, that difference is material - money that goes toward insurance, savings, or simply giving a first-time owner breathing room in the early months of ownership. The vehicle itself was well-specced, well-priced, and the best available unit at that price point in the province.</p>
           <p className="section-body" style={{marginBottom:'28px'}}>The crossover was the stronger vehicle outright. Better safety rating, smoother gearbox, more cabin space, higher ground clearance. If the finance approval supported it, it was the option that would serve the client for longer before the next upgrade.</p>
           <p className="section-body">Vantara&apos;s position was not to push toward the higher-priced unit. It was to lay out both options with complete clarity - what each cost to own, what each delivered, and what the honest difference was between them - and let the client make the call with full information. That is what the process is built to produce. Not a sale. A decision the client can stand behind.</p>
@@ -75,9 +75,9 @@ export default function VantaraInsight4() {
         <div className="divider"></div>
 
         <section style={{padding:'80px 60px', maxWidth:'800px'}}>
-          <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>This is how Vantara<br /><em>approaches every mandate.</em></h2>
+          <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>This is how Vantara<br /><em>approaches every deal.</em></h2>
           <p className="section-body" style={{marginBottom:'28px'}}>The detail changes with every client. The brief is different, the vehicles are different, the budget is different. What does not change is the sequence: full market assessment before any listing is shared, independent analysis before any dealer is contacted, complete information before any decision is made.</p>
-          <p className="section-body" style={{marginBottom:'28px'}}>The client in this mandate did not walk into a dealership hoping for the best. They walked in knowing exactly where the market sat, what each option cost over its full life, and what decision made sense for their situation. That is the only way Vantara operates.</p>
+          <p className="section-body" style={{marginBottom:'28px'}}>The client in this engagement walked into the dealership knowing exactly where the market sat, what each option cost over its full life, and what decision made sense for their situation. That is the only way Vantara operates.</p>
           <p className="section-body" style={{marginBottom:'20px'}}>If you are looking at a vehicle acquisition and want to know what this process looks like for your situation, start the conversation.</p>
           <p style={{fontSize:'13px', fontStyle:'italic', color:'var(--text-muted)', marginBottom:'40px'}}>Seeing something like this in your own search? <a href="https://wa.me/27712205313" target="_blank" rel="noopener noreferrer" style={{color:'var(--gold)', textDecoration:'none'}}>Start the conversation. →</a></p>
 

@@ -20,10 +20,10 @@ export default function VantaraInsight3() {
             </g>
           </svg>
           <div className="inner-hero-bg" aria-hidden="true"></div>
-          <Link className="back-btn" href="/vantara#insights" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
+          <Link className="back-btn" href="/vantara#vantara-insights-heading" style={{position:'relative', zIndex:10}}>Back to Vantara</Link>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'11px', letterSpacing:'0.22em', textTransform:'uppercase', color:'var(--gold)', marginBottom:'8px'}}>Vantara Insights · Advisory</p>
           <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'13px', letterSpacing:'0.14em', textTransform:'uppercase', color:'var(--text-muted)', fontStyle:'italic', marginBottom:'32px'}}>The Vantara Model</p>
-          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,5vw,64px)', fontWeight:400, lineHeight:1.08, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>The advisor is free.<br /><em style={{color:'var(--gold)'}}>The mistake is not.</em></h1>
+          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(34px,5vw,64px)', fontWeight:400, lineHeight:1.08, color:'var(--text-primary)', maxWidth:'720px', marginBottom:'28px'}}>Getting it right is cheap.<br /><em style={{color:'var(--gold)'}}>Getting it wrong isn&apos;t.</em></h1>
           <p style={{fontSize:'15px', lineHeight:1.8, color:'var(--text-secondary)', maxWidth:'500px'}}>Most high-value transactions happen without anyone in the buyer&apos;s corner. Vantara exists to change that, across vehicles, property, and strategic deals.</p>
         </div>
 
@@ -44,7 +44,7 @@ export default function VantaraInsight3() {
 
           <h2 className="section-title" style={{fontSize:'clamp(24px,3vw,36px)', marginBottom:'24px'}}>What this means<br /><em>for the client.</em></h2>
           <p className="section-body" style={{marginBottom:'28px'}}>It means your advisor&apos;s interests are aligned with your outcome, not with closing any deal, but with closing the right one. It means the professional across the table from the market is working for you. It means you make high-value decisions with full information, structured properly, and without the pressure that markets use to extract margin from unprepared buyers.</p>
-          <p className="section-body" style={{marginBottom:'40px'}}>Vantara works with a limited number of clients at any given time. We are not a volume operation. Every mandate gets the full process, because that is the only way the model works and the only standard we hold ourselves to.</p>
+          <p className="section-body" style={{marginBottom:'40px'}}>Vantara works with a limited number of clients at any given time. We are not a volume operation. Every engagement gets the full process, because that is the only way the model works and the only standard we hold ourselves to.</p>
 
           <div style={{background:'var(--surface)', padding:'36px 40px', borderLeft:'2px solid var(--gold)'}}>
             <p style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', fontStyle:'italic', color:'var(--text-primary)', lineHeight:1.5}}>Most people negotiate against a professional on the other side. Vantara puts a professional on your side.</p>
