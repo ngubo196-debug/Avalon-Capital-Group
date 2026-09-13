@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Afripact Civils: Zero Search Presence to 100+ Rankings | ADA',
-  description: 'Afripact was losing trust before the first call. The site fixed that. Within weeks, inspection requests came from people who had never heard of them.',
+  description: 'Afripact Civils had the track record but not the visibility. We rebuilt the site to match it. Within weeks, inspection requests were coming in from new prospects.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/ada/afripact-civils' },
 };
 
@@ -79,7 +79,7 @@ export default function AfripactCivils() {
           <div className="wds-badge">Live client: delivered engagement</div>
           <div className="wds-label"><span className="wds-label-bar" />Afripact Civils: Civil Construction, KZN</div>
           <h1 className="wds-h1">Building credibility before the conversation starts.</h1>
-          <p className="wds-body wds-hero-intro">Afripact Civils had completed real projects for real clients across KwaZulu-Natal. Nothing online reflected that. New prospects had no way to verify them before the first call. The site needed to close that gap.</p>
+          <p className="wds-body wds-hero-intro">Afripact Civils had completed real projects for real clients across KwaZulu-Natal. Nothing online reflected that. New prospects had no way to see the track record before the first call. The site needed to close that gap.</p>
 
           <div className="wds-stats">
             <div>
@@ -101,9 +101,9 @@ export default function AfripactCivils() {
       <section className="wds-section wds-section--wash" aria-labelledby="situation-heading">
         <div className="wds-inner">
           <div className="wds-label"><span className="wds-label-bar" />The Situation</div>
-          <h2 className="wds-h2" id="situation-heading">Real capability. No proof online.</h2>
-          <p className="wds-body">Afripact had the track record, the credentials, and the completed work. What they did not have was a digital presence that showed any of it. A new prospect searching online would find nothing that matched the quality of the business behind the name.</p>
-          <p className="wds-body">That gap costs work. Not because the business is weak, but because trust is built or lost before the first conversation.</p>
+          <h2 className="wds-h2" id="situation-heading">A track record that outran its website.</h2>
+          <p className="wds-body">Afripact Civils is CIDB Grade 2CE and 2GB registered, with institutional work for clients including Durban University of Technology and Transnet. That&rsquo;s a real, established contractor with real credentials.</p>
+          <p className="wds-body">None of that showed up online before we started. We built Afripact&rsquo;s first website on Bolt, a single-page build that got the business a digital presence but that Google couldn&rsquo;t properly index, so the track record still wasn&rsquo;t reachable through search. We rebuilt it on Next.js, so the credentials, the projects, and the capability actually show up when someone looks the business up.</p>
         </div>
       </section>
 
@@ -113,10 +113,11 @@ export default function AfripactCivils() {
           <h2 className="wds-h2" id="brief-heading">The clearest brief we have ever received.</h2>
           <p className="wds-body">The client said it directly:</p>
           <div className="wds-quote">
-            <p className="wds-quote-text">The website shows people I have never done business with that Afripact is not a scam but an actual business.</p>
+            <p className="wds-quote-text">ADA built a professional website for my company. A website I am proud of.</p>
             <span className="wds-quote-cite">Client, Afripact Civils</span>
           </div>
-          <p className="wds-body">That one sentence defined the entire engagement. The site was not a marketing tool. It was trust infrastructure. Built to answer the question a new prospect asks before they pick up the phone.</p>
+          <p className="wds-body">That pride matters. A contractor&rsquo;s website is often the first thing a prospect checks before picking up the phone, and it&rsquo;s now doing Afripact justice.</p>
+          <p className="wds-body">That sentence is the entire point of this engagement. A professional website isn&rsquo;t decoration, it&rsquo;s the first proof point most prospects see before they ever speak to the business directly.</p>
         </div>
       </section>
 

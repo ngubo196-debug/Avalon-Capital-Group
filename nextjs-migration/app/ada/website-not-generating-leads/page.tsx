@@ -129,7 +129,7 @@ export default function WebsiteNotGeneratingLeads() {
           <div className="wds-inner">
             <div className="wds-label">Proof</div>
             <h2 className="wds-h2" id="proof-heading">We&apos;ve done this before. Afripact Civils is the case study.</h2>
-            <p className="wds-body">Afripact Civils had real experience and a strong reputation, but a website that didn&apos;t prove it. Visitors had no way to confirm the business was legitimate before making contact. We rebuilt the messaging and the structure so the site answers that question immediately, before the conversation even starts.</p>
+            <p className="wds-body">Afripact Civils had real experience and a strong reputation, but a website that didn&apos;t prove it. Visitors had no way to see the track record before making contact. We rebuilt the messaging and the structure so the site answers that question immediately, before the conversation even starts.</p>
             <p className="wds-body">That is the same problem this page is about: a site that gets attention but doesn&apos;t convert it. Read the full <Link href="/ada/afripact-civils" style={{ color: 'var(--ada-accent)', textDecoration: 'none' }}>Afripact Civils case study</Link>.</p>
           </div>
         </section>

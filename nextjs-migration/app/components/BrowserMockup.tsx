@@ -55,7 +55,7 @@ export default function BrowserMockup({ src, url, alt, width = 1400, height = 30
           left: 0;
           width: 100%;
           will-change: transform;
-          animation: bm-scroll-${uid} ${duration}s linear infinite alternate both;
+          animation: bm-scroll-${uid} ${duration}s linear 2s infinite alternate both;
           animation-play-state: paused;
         }
         .bm-${uid}.is-visible .bm-imgwrap {

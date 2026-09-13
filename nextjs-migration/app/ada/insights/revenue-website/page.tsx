@@ -135,7 +135,7 @@ export default function RevenueWebsite() {
       <section className="wds-section" aria-labelledby="rw-practice">
         <div className="wds-inner">
           <h2 className="wds-h2" id="rw-practice">What this looks like in practice</h2>
-          <p className="wds-body"><Link href="/ada/afripact-civils">Afripact Civils</Link> needed a website that answered one question before anything else: is this a real business? Every element: the design, the copy, the case studies, the contact information: was structured to answer that question immediately and credibly. The result was a website that converted sceptical prospects into confident ones before a single conversation happened.</p>
+          <p className="wds-body"><Link href="/ada/afripact-civils">Afripact Civils</Link> needed a website that showed prospects what the business had already built, before the first call. Every element on the site was structured to make that track record immediately and credibly visible. The result was a website that converted sceptical prospects into confident ones before a single conversation happened.</p>
           <p className="wds-body"><Link href="/ada/canopy-courier">Canopy Courier</Link> needed a website that spoke to two completely different buyers simultaneously: retail walk-ins and fleet managers: without confusing either. The solution was a dual-path structure where each visitor type was routed to a completely different offer and conversion path within seconds of landing.</p>
           <p className="wds-body">Different problems. Different solutions. Same principle: every element serves the revenue outcome.</p>
           <Link href="/ada/audit" className="wds-case-link">Run the ADA diagnostic →</Link>
