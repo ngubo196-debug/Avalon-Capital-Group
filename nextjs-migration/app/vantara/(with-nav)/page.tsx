@@ -132,7 +132,7 @@ export default function Vantara() {
             __html: `
         .vantara-home-page {
           --v-gold: #C9A84C;
-          --v-gold-deep: #8C6D2C;
+          --v-gold-deep: #6E5220;
           --v-ink: #111111;
           --v-ink-soft: #3A3A3A;
           --v-ink-muted: #7A7A7A;
@@ -253,7 +253,7 @@ export default function Vantara() {
         .wds-mandate-list { display: flex; flex-direction: column; border-top: 1px solid var(--v-line); margin-top: auto; }
         .wds-mandate-list p { font-family: DM Sans, sans-serif; font-size: 13px; line-height: 1.75; color: var(--v-ink-soft); padding: 11px 0; border-bottom: 1px solid var(--v-line); margin: 0; }
         .wds-mandate-price { color: var(--v-gold-deep) !important; font-style: italic; border-bottom: none !important; padding-top: 14px !important; }
-        .wds-mandate-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--v-gold-deep); text-decoration: none; border-bottom: 1px solid transparent; padding-bottom: 2px; }
+        .wds-mandate-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--v-gold-deep); text-decoration: none; border-bottom: 1px solid var(--v-gold-deep); padding-bottom: 2px; }
 
         .wds-note { background: var(--v-tint); border-radius: 12px; padding: 1.75rem 2rem; margin-top: 2.5rem; }
         .wds-note-title { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 17px; font-weight: 400; color: var(--v-ink); margin-bottom: 10px; }
@@ -302,6 +302,13 @@ export default function Vantara() {
 
         {/* Hero */}
         <section className="wds-hero">
+          <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.28, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
+            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
+              <polygon points="290,20 560,640 20,640"/>
+              <polygon points="290,80 510,600 70,600"/>
+              <polygon points="290,140 460,560 120,560"/>
+            </g>
+          </svg>
           <div className="wds-inner wds-hero-inner">
             <h1 className="wds-h1">Vehicle acquisition. For the <em>buyer</em>.</h1>
             <p className="wds-subhead">We source, verify, negotiate, and handle the paperwork, working only for you, never the seller.</p>

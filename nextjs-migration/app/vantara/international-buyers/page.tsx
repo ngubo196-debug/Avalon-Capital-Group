@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import IntlBuyersForm from './IntlBuyersForm';
+import IntlBuyersPricing from './IntlBuyersPricing';
 
 export const metadata: Metadata = {
   title: 'International Buyer Vehicle Concierge | Vantara',
@@ -62,7 +63,7 @@ export default function InternationalBuyers() {
       <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
         .vantara-intl-page {
           --v-gold: #C9A84C;
-          --v-gold-deep: #8C6D2C;
+          --v-gold-deep: #6E5220;
           --v-ink: #111111;
           --v-ink-soft: #3A3A3A;
           --v-ink-muted: #7A7A7A;
@@ -116,11 +117,16 @@ export default function InternationalBuyers() {
         .wds-process-title { font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 600; color: var(--v-ink); margin-bottom: 6px; }
         .wds-process-desc { font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--v-ink-soft); margin: 0; }
 
-        .wds-tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 3rem; align-items: stretch; }
+        .wds-currency-toggle { display: inline-flex; gap: 4px; background: var(--v-tint); border-radius: 100px; padding: 4px; margin-top: 2rem; }
+        .wds-currency-btn { font-family: DM Sans, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--v-ink-muted); background: transparent; border: none; border-radius: 100px; padding: 8px 18px; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
+        .wds-currency-btn:hover { color: var(--v-ink); }
+        .wds-currency-btn--active { background: var(--v-gold); color: #FFFFFF; }
+        .wds-tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 1.5rem; align-items: stretch; }
         .wds-tier-card { background: var(--v-paper); border: 1px solid var(--v-line); border-radius: 16px; padding: 2.25rem 2rem; display: flex; flex-direction: column; }
         .wds-tier-card--entry { border: 2px solid var(--v-gold); box-shadow: 0 8px 28px rgba(201,168,76,0.18); }
         .wds-tier-price { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 30px; font-weight: 500; color: var(--v-ink); margin-bottom: 10px; }
         .wds-tier-range { font-family: DM Sans, sans-serif; font-size: 14px; color: var(--v-ink-muted); line-height: 1.6; }
+        .wds-tier-approx { font-family: DM Sans, sans-serif; font-size: 12px; font-style: italic; color: var(--v-ink-muted); margin-top: 10px; }
         .wds-tier-note { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--v-ink-soft); background: var(--v-tint); border-radius: 12px; padding: 1.5rem 1.75rem; margin-top: 2rem; max-width: 720px; }
 
         .wds-faq-list { margin-top: 3rem; max-width: 780px; display: flex; flex-direction: column; gap: 0; }
@@ -167,6 +173,13 @@ export default function InternationalBuyers() {
       ` }} />
 
       <section className="wds-hero">
+        <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.28, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
+          <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
+            <polygon points="290,20 560,640 20,640"/>
+            <polygon points="290,80 510,600 70,600"/>
+            <polygon points="290,140 460,560 120,560"/>
+          </g>
+        </svg>
         <div className="wds-inner wds-hero-inner">
           <Link href="/vantara" className="wds-back">← Back to Vantara</Link>
           <div className="wds-eyebrow">Vantara: Vehicle Acquisition Advisory</div>
@@ -262,20 +275,7 @@ export default function InternationalBuyers() {
       <section className="wds-section wds-section--paper" aria-labelledby="pricing-heading">
         <div className="wds-inner">
           <h2 className="wds-h2" id="pricing-heading">Straightforward pricing, no surprises</h2>
-          <div className="wds-tier-grid">
-            <div className="wds-tier-card wds-tier-card--entry">
-              <div className="wds-tier-price">From R18,000</div>
-              <div className="wds-tier-range">Vehicles under R350,000</div>
-            </div>
-            <div className="wds-tier-card">
-              <div className="wds-tier-price">R28,000</div>
-              <div className="wds-tier-range">Vehicles R350,000 to R800,000</div>
-            </div>
-            <div className="wds-tier-card">
-              <div className="wds-tier-price">R45,000+</div>
-              <div className="wds-tier-range">Vehicles above R800,000, scoped individually</div>
-            </div>
-          </div>
+          <IntlBuyersPricing />
           <p className="wds-tier-note">Inspection, transport, and registration costs are billed separately at actual cost. What we charge is for the work of finding, verifying, negotiating, and handling the paperwork, nothing hidden inside a bigger number later.</p>
           <div style={{ marginTop: '2rem' }}>
             <a href="#contact" className="wds-cta-btn">Get your quote</a>
