@@ -110,14 +110,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               priceRange: 'From R18,500',
               address: {
                 '@type': 'PostalAddress',
-                addressLocality: 'Durban',
+                addressLocality: 'Pietermaritzburg',
                 addressRegion: 'KwaZulu-Natal',
                 addressCountry: 'ZA',
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: -29.8587,
-                longitude: 31.0218,
+                latitude: -29.6006,
+                longitude: 30.3794,
               },
               areaServed: [
                 { '@type': 'City', name: 'Durban' },

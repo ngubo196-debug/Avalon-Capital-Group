@@ -295,7 +295,7 @@ export default function ADA() {
             <Link href="/about">About</Link>
             <Link href="/contact">Contact</Link>
           </div>
-          <div className="adaw-footer-reg">Avalon Capital Group (Pty) Ltd &bull; Reg. 2025/671885/07</div>
+          <div className="adaw-footer-reg">ADA - A Division of <Link href="/">Avalon Capital Group</Link><br />Avalon Capital Group (Pty) Ltd &bull; Reg. 2025/671885/07</div>
         </footer>
       </div>
     </>

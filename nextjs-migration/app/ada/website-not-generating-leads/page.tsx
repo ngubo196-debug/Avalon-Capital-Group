@@ -145,7 +145,7 @@ export default function WebsiteNotGeneratingLeads() {
       </section>
 
       <footer className="wds-footer">
-        <div className="wds-footer-brand">ADA - A division of Avalon Capital Group</div>
+        <div className="wds-footer-brand">ADA - A Division of <Link href="/">Avalon Capital Group</Link></div>
         <div className="wds-footer-links">
           <Link href="/ada#work">Work</Link>
           <Link href="/ada/insights">Insights</Link>

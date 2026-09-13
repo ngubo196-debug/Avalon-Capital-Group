@@ -599,7 +599,7 @@ export default function Vantara() {
 
         <footer className="wds-footer">
           <div>
-            <div className="wds-footer-brand"><em>Vantara</em> - A Division of Avalon Capital Group</div>
+            <div className="wds-footer-brand"><em>Vantara</em> - A Division of <Link href="/">Avalon Capital Group</Link></div>
             <div className="wds-footer-location">Pietermaritzburg, KwaZulu-Natal &middot; South Africa</div>
           </div>
           <div className="wds-footer-links">

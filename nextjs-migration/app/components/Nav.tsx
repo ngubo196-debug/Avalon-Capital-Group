@@ -66,7 +66,7 @@ export default function Nav() {
               <Link href="/ada/acg-case-study" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>ACG Case Study</Link>
               <div style={{display:'flex', flexDirection:'column', gap:'12px', marginTop:'4px', paddingTop:'12px', borderTop:'1px solid var(--border)'}}>
                 <Link href="/ada/insights" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Insights</Link>
-                <Link href="/ada/get-your-assistant" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Get Your Assistant</Link>
+                <Link href="/ada/ai-assistant-for-business" style={{fontSize:'13px', color:'var(--text-muted)', textDecoration:'none', letterSpacing:'0.05em'}} onClick={() => setMenuOpen(false)}>Get Your Assistant</Link>
               </div>
             </div>
           )}

@@ -317,7 +317,7 @@ export default function InternationalBuyers() {
       </section>
 
       <footer className="wds-footer">
-        <div className="wds-footer-brand">Vantara - A Division of Avalon Capital Group</div>
+        <div className="wds-footer-brand">Vantara - A Division of <Link href="/">Avalon Capital Group</Link></div>
         <div className="wds-footer-links">
           <Link href="/vantara">Vantara</Link>
           <Link href="/vantara/automotive">Deal Insights</Link>

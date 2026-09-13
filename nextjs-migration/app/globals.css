@@ -3,7 +3,6 @@
     --gold-light: #E8D5A3;
     --gold-dim: #8A6E2F;
     --black: #0A0A0A;
-    --deep: #111111;
     --surface: #161616;
     --surface2: #1E1E1E;
     --border: rgba(201,168,76,0.15);
@@ -19,7 +18,6 @@
     --ada-wash: #F7F7F5;
     --ada-white: #FFFFFF;
     --ada-accent: #1B3A8F;
-    --ada-accent-light: #EEF2FF;
   }
 
   *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }

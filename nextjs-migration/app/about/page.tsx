@@ -25,7 +25,7 @@ export default function About() {
                 name: 'What is Avalon Capital Group?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. ADA builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.',
+                  text: 'Avalon Capital Group is a South African business group operating through two divisions. Vantara handles vehicle acquisition advisory, sourcing and negotiating vehicle purchases for buyers in South Africa or from abroad. ADA builds digital infrastructure for businesses, websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.',
                 },
               },
               {
@@ -65,7 +65,7 @@ export default function About() {
                 name: 'How do I know which division is relevant to me?',
                 acceptedAnswer: {
                   '@type': 'Answer',
-                  text: 'If you are looking to acquire an asset - a vehicle, a property, or a structured deal where you need someone working in your interest - Vantara is the entry point. If your business needs a website that ranks on Google, converts visitors into clients, or digital infrastructure that generates consistent leads, ADA is the entry point. If you are not sure, one conversation is enough to know. The divisions are different businesses but the standard of work is the same, and the question of fit usually answers itself within the first few minutes.',
+                  text: "If you're looking to buy a vehicle, in South Africa or from abroad, and want someone working in your interest, Vantara is the entry point. If your business needs a website that ranks on Google, converts visitors into clients, or digital infrastructure that generates consistent leads, ADA is the entry point. If you're not sure, one conversation is enough to know. The divisions are different businesses but the standard of work is the same, and the question of fit usually answers itself within the first few minutes.",
                 },
               },
             ],
@@ -73,10 +73,56 @@ export default function About() {
         }}
       />
       <Nav />
-      <div id="page-about" className="page" role="main">
+      <div id="page-about" className="page acg-corporate-page" role="main">
+        <style
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: `
+        .acg-corporate-page {
+          --acg-paper: #FBF8F3;
+          --acg-ink: #221D17;
+          --acg-terracotta: #C1682B;
+          --acg-terracotta-deep: #96501F;
+          --acg-tint: #F3EEE4;
+
+          --black: var(--acg-paper);
+          --surface: var(--acg-tint);
+          --text: var(--acg-ink);
+          --text-light: var(--acg-ink);
+          --text-muted: rgba(34,29,23,0.68);
+          --text-dim: rgba(34,29,23,0.5);
+          --gold: var(--acg-terracotta);
+          --gold-light: var(--acg-terracotta);
+          --gold-dim: var(--acg-terracotta-deep);
+          --border: rgba(34,29,23,0.12);
+          --border-hover: rgba(34,29,23,0.22);
+
+          background: var(--acg-paper);
+          color: var(--acg-ink);
+          font-family: 'DM Sans', sans-serif;
+        }
+        .acg-corporate-page h1,
+        .acg-corporate-page h2:not(.founder-section *),
+        .acg-corporate-page .section-title,
+        .acg-corporate-page .division-name,
+        .acg-corporate-page summary {
+          font-family: 'Bodoni Moda', serif !important;
+        }
+        .acg-corporate-page .btn-primary {
+          color: #FFFFFF !important;
+        }
+        .acg-corporate-page .inner-hero-bg {
+          background: radial-gradient(ellipse 50% 70% at 90% 50%, rgba(193,104,43,0.05) 0%, transparent 70%);
+        }
+        .acg-corporate-page .founder-section {
+          background: #0A0A0A;
+        }
+      `,
+          }}
+        />
         <div className="inner-hero">
           <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
+            <g fill="none" stroke="#C1682B" strokeWidth="0.8">
               <polygon points="290,20 560,640 20,640"/>
               <polygon points="290,80 510,600 70,600"/>
               <polygon points="290,140 460,560 120,560"/>
@@ -85,17 +131,15 @@ export default function About() {
           <div className="inner-hero-bg" aria-hidden="true"></div>
           <Link className="back-btn" href="/" style={{cursor:'pointer', position:'relative', zIndex:10}}>Back to Home</Link>
           <div className="section-label">About the Group</div>
-          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(40px,6vw,78px)', fontWeight:300, lineHeight:1.05, maxWidth:'640px'}}>
-            Built to generate,<br />structure, and<br /><em>compound value.</em>
+          <h1 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'clamp(40px,6vw,78px)', fontWeight:300, lineHeight:1.05, maxWidth:'720px'}}>
+            Two businesses. One founder.<br /><em>Here&apos;s how it works.</em>
           </h1>
         </div>
 
         <section aria-labelledby="about-heading">
           <div className="section-label">Who We Are</div>
           <h2 className="section-title" id="about-heading">A group built on<br /><em>doing the work.</em></h2>
-          <p className="section-body">Avalon Capital Group is a KwaZulu-Natal business group with two operating divisions: Vantara for high-value acquisition brokerage, and ADA for SEO, web design, and AI-powered digital infrastructure. Registered, active, and built to deliver measurable outcomes for clients across South Africa.</p>
-          <p className="section-body">Avalon Capital Group is a South African business group operating through two focused portfolio companies. We are not a consultancy. We are not a holding company in name only. Every division operates in its market, executes real transactions, and delivers measurable outcomes for clients.</p>
-          <p className="section-body" style={{marginTop:'20px'}}>Our structure is deliberate. Vantara handles the physical world: acquisitions, brokerage, deal-making. ADA handles the digital world: systems, automation, visibility. Together they create a group with multiple entry points, multiple revenue streams, and a single unifying standard of service.</p>
+          <p className="section-body">Avalon Capital Group is a Pietermaritzburg-based business group with two active divisions: Vantara, which sources and negotiates vehicles for buyers, and ADA, which builds websites and digital systems for businesses. Both operate independently. Both are run to the same standard.</p>
 
           <div className="philosophy-grid" style={{marginTop:'72px'}}>
             <div className="philosophy-item">
@@ -162,7 +206,6 @@ export default function About() {
                 </svg>
                 Speak Directly
               </a>
-              <a href="#" className="cta-secondary">Learn More &#8594;</a>
             </div>
           </div>
         </section>
@@ -171,8 +214,8 @@ export default function About() {
 
         <section aria-labelledby="divisions-heading">
           <div className="section-label">Our Divisions</div>
-          <h2 className="section-title" id="divisions-heading">Two businesses.<br /><em>One group.</em></h2>
-          <p className="section-body">ACG operates through two focused businesses. Vantara works exclusively for buyers in vehicle and property transactions. ADA builds digital revenue systems for South African businesses serious about growth. Each division operates independently in its market, with the same standard of execution across both.</p>
+          <h2 className="section-title" id="divisions-heading">Two businesses.<br /><em>One standard.</em></h2>
+          <p className="section-body">Avalon Capital Group operates through two active businesses, with a third on the way. Vantara works exclusively for vehicle buyers. ADA builds digital revenue systems for South African businesses. Vuma, a business-documents platform, is coming soon. Each division operates independently, held to the same standard.</p>
 
           <div className="divisions-list">
             <Link className="division-row" href="/vantara">
@@ -180,7 +223,7 @@ export default function About() {
                 <div className="division-role">Acquisition &amp; Brokerage</div>
                 <div className="division-name">Vantara</div>
               </div>
-              <div className="division-desc">Premium brokerage for vehicle acquisitions, property deals, and strategic asset transactions. We source, qualify, structure, and deliver, with the client&apos;s interest as the only agenda.</div>
+              <div className="division-desc">Sources, verifies, and negotiates vehicle purchases for buyers, in South Africa or from abroad.</div>
               <div className="division-arrow">→</div>
             </Link>
             <Link className="division-row" href="/ada">
@@ -191,6 +234,14 @@ export default function About() {
               <div className="division-desc">AI-powered digital infrastructure for businesses. Websites that convert. Automation that reduces manual work. SEO that compounds. Systems that grow the business while the owner focuses on what matters.</div>
               <div className="division-arrow">→</div>
             </Link>
+            <div className="division-row" style={{opacity:0.55, cursor:'default', pointerEvents:'none'}}>
+              <div>
+                <div className="division-role">Business Documents</div>
+                <div className="division-name">Vuma</div>
+              </div>
+              <div className="division-desc">AI-generated quotes, invoices, and compliance documents for South African contractors. Coming soon.</div>
+              <div></div>
+            </div>
           </div>
         </section>
 
@@ -205,7 +256,7 @@ export default function About() {
               <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
                 What is Avalon Capital Group?
               </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Avalon Capital Group is a South African business group operating through two divisions. Vantara handles high-value acquisition brokerage - vehicle deals, property transactions, and strategic deal structuring for buyers who want the right outcome, not just any outcome. ADA builds digital infrastructure for businesses - websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.</p>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>Avalon Capital Group is a South African business group operating through two divisions. Vantara handles vehicle acquisition advisory, sourcing and negotiating vehicle purchases for buyers in South Africa or from abroad. ADA builds digital infrastructure for businesses, websites that rank on Google, convert visitors into clients, and keep working without ongoing ad spend. The group is based in KwaZulu-Natal and operates across South Africa.</p>
             </details>
             <details style={{borderTop:'1px solid var(--border)', padding:'24px 0'}}>
               <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
@@ -235,7 +286,7 @@ export default function About() {
               <summary style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'20px', cursor:'pointer', listStyle:'none', color:'var(--text-light, #F0EDE8)'}}>
                 How do I know which division is relevant to me?
               </summary>
-              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>If you are looking to acquire an asset - a vehicle, a property, or a structured deal where you need someone working in your interest - Vantara is the entry point. If your business needs a website that ranks on Google, converts visitors into clients, or digital infrastructure that generates consistent leads, ADA is the entry point. If you are not sure, one conversation is enough to know. The divisions are different businesses but the standard of work is the same, and the question of fit usually answers itself within the first few minutes.</p>
+              <p style={{fontSize:'14px', color:'var(--text-muted)', lineHeight:1.8, marginTop:'16px'}}>If you&apos;re looking to buy a vehicle, in South Africa or from abroad, and want someone working in your interest, Vantara is the entry point. If your business needs a website that ranks on Google, converts visitors into clients, or digital infrastructure that generates consistent leads, ADA is the entry point. If you&apos;re not sure, one conversation is enough to know. The divisions are different businesses but the standard of work is the same, and the question of fit usually answers itself within the first few minutes.</p>
             </details>
           </div>
         </section>
@@ -245,7 +296,7 @@ export default function About() {
           <div style={{border:'1px solid var(--border)', padding:'64px 40px', maxWidth:'600px', margin:'0 auto'}}>
             <div className="section-label" style={{justifyContent:'center', marginBottom:'20px'}}>Get in Touch</div>
             <h2 style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'34px', fontWeight:300, marginBottom:'16px'}}>Interested in working<br />with the group?</h2>
-            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, marginBottom:'32px'}}>Whether it&apos;s a deal, a project, or a partnership: every conversation starts the same way.</p>
+            <p style={{fontSize:'13px', color:'var(--text-muted)', lineHeight:1.8, marginBottom:'32px'}}>Whether it&apos;s a vehicle or a digital system: every conversation starts the same way.</p>
             <Link className="btn-primary" href="/contact" style={{color:'#141414'}}>Start a Conversation</Link>
           </div>
         </section>

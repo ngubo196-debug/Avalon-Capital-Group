@@ -292,7 +292,7 @@ export default function AiAssistantForBusiness() {
           <Link href="/ada/afripact-civils">Case study</Link>
           <Link href="/ada/contact">Contact</Link>
         </div>
-        <div className="wds-footer-reg">Avalon Capital Group (Pty) Ltd · Reg. 2025/671885/07</div>
+        <div className="wds-footer-reg">ADA - A Division of <Link href="/">Avalon Capital Group</Link><br />Avalon Capital Group (Pty) Ltd · Reg. 2025/671885/07</div>
       </footer>
     </div>
   );

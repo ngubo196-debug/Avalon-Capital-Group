@@ -40,10 +40,58 @@ export default function ContactContent() {
   return (
     <>
       <Nav />
-      <div id="page-contact" className="page" role="main">
+      <div id="page-contact" className="page acg-corporate-page" role="main">
+        <style
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{
+            __html: `
+        .acg-corporate-page {
+          --acg-paper: #FBF8F3;
+          --acg-ink: #221D17;
+          --acg-terracotta: #C1682B;
+          --acg-terracotta-deep: #96501F;
+          --acg-tint: #F3EEE4;
+
+          --black: var(--acg-paper);
+          --surface: var(--acg-tint);
+          --text: var(--acg-ink);
+          --text-light: var(--acg-ink);
+          --text-muted: rgba(34,29,23,0.68);
+          --text-dim: rgba(34,29,23,0.5);
+          --gold: var(--acg-terracotta);
+          --gold-light: var(--acg-terracotta);
+          --gold-dim: var(--acg-terracotta-deep);
+          --border: rgba(34,29,23,0.12);
+          --border-hover: rgba(34,29,23,0.22);
+
+          background: var(--acg-paper);
+          color: var(--acg-ink);
+          font-family: 'DM Sans', sans-serif;
+        }
+        .acg-corporate-page h1,
+        .acg-corporate-page h2,
+        .acg-corporate-page .contact-block-value {
+          font-family: 'Bodoni Moda', serif !important;
+        }
+        .acg-corporate-page .form-submit {
+          color: #FFFFFF !important;
+        }
+        .acg-corporate-page .inner-hero-bg {
+          background: radial-gradient(ellipse 50% 70% at 90% 50%, rgba(193,104,43,0.05) 0%, transparent 70%);
+        }
+        .acg-corporate-page .whatsapp-btn {
+          border-color: rgba(193,104,43,0.3);
+        }
+        .acg-corporate-page .whatsapp-btn:hover {
+          border-color: var(--acg-terracotta);
+          color: var(--acg-terracotta);
+        }
+      `,
+          }}
+        />
         <div className="inner-hero">
           <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.11, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
-            <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
+            <g fill="none" stroke="#C1682B" strokeWidth="0.8">
               <polygon points="290,20 560,640 20,640"/>
               <polygon points="290,80 510,600 70,600"/>
               <polygon points="290,140 460,560 120,560"/>
@@ -90,10 +138,8 @@ export default function ContactContent() {
                       <label className="form-label" htmlFor="interest">Area of Interest</label>
                       <select className="form-select" id="interest" name="interest" required style={{background:'var(--surface)'}}>
                         <option value="" style={{background:'var(--surface)'}}>Select one</option>
-                        <option style={{background:'var(--surface)'}}>Vantara - Vehicle Acquisition</option>
-                        <option style={{background:'var(--surface)'}}>Vantara - Property or Asset Deal</option>
-                        <option style={{background:'var(--surface)'}}>Vantara - Supply or Commodity Deal</option>
-                        <option style={{background:'var(--surface)'}}>Vantara - Strategic Brokerage</option>
+                        <option style={{background:'var(--surface)'}}>Vantara - Vehicle Acquisition (South Africa)</option>
+                        <option style={{background:'var(--surface)'}}>Vantara - Vehicle Acquisition (International Buyer)</option>
                         <option style={{background:'var(--surface)'}}>ADA - Website Development</option>
                         <option style={{background:'var(--surface)'}}>ADA - AI Automation</option>
                         <option style={{background:'var(--surface)'}}>ADA - SEO or Paid Advertising</option>
@@ -142,11 +188,13 @@ export default function ContactContent() {
                 <Link href="/vantara" style={{display:'block', textDecoration:'none'}}>
                   <div className="contact-block-value" style={{cursor:'pointer'}}>Vantara</div>
                 </Link>
-                <div className="contact-block-sub">Premium acquisition brokerage</div>
+                <div className="contact-block-sub">Sources and negotiates vehicle purchases for buyers.</div>
                 <Link href="/ada" style={{display:'block', textDecoration:'none'}}>
                   <div className="contact-block-value" style={{marginTop:'18px', cursor:'pointer'}}>ADA</div>
                 </Link>
-                <div className="contact-block-sub">AI-powered digital infrastructure</div>
+                <div className="contact-block-sub">AI-powered digital infrastructure for businesses.</div>
+                <div className="contact-block-value" style={{marginTop:'18px', opacity:0.55, cursor:'default'}}>Vuma</div>
+                <div className="contact-block-sub" style={{opacity:0.55}}>AI-generated quotes, invoices, and compliance documents for South African contractors. Coming soon.</div>
               </div>
               <div style={{height:'1px', background:'var(--border)'}}></div>
               <div>

@@ -85,7 +85,7 @@ export default function InsightsIndex() {
 
         <footer style={{borderTop:'1px solid var(--border)', padding:'40px 60px', display:'flex', justifyContent:'space-between', alignItems:'center', flexWrap:'wrap', gap:'24px'}}>
           <div>
-            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'18px', fontWeight:300}}>ADA - Asset. Development. Automation. - A division of Avalon Capital Group</div>
+            <div style={{fontFamily:"'Cormorant Garamond',serif", fontSize:'18px', fontWeight:300}}>ADA - Asset. Development. Automation. - A division of <Link href="/">Avalon Capital Group</Link></div>
           </div>
           <div style={{display:'flex', gap:'28px', flexWrap:'wrap'}}>
             <Link href="/ada#section-our-work" style={{fontSize:'11px', color:'var(--text-muted)', letterSpacing:'0.05em', textDecoration:'none'}}>Work</Link>
