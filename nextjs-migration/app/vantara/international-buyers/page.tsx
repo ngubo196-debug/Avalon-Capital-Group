@@ -79,8 +79,8 @@ export default function InternationalBuyers() {
           outline-offset: 2px;
         }
 
-        .wds-back { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 600; color: #4A3716; text-decoration: none; border-bottom: 1px solid #4A3716; padding-bottom: 2px; display: inline-block; margin-bottom: 32px; -webkit-text-stroke: 0.4px #4A3716; }
-        .wds-back:hover { color: var(--v-ink); border-color: var(--v-ink); -webkit-text-stroke-color: var(--v-ink); }
+        .wds-back { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 400; color: var(--v-ink); text-decoration: none; border-bottom: 1px solid var(--v-ink); padding-bottom: 2px; display: inline-block; margin-bottom: 32px; }
+        .wds-back:hover { border-color: var(--v-gold); }
         .wds-eyebrow { font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--v-gold-deep); margin-bottom: 20px; }
         .wds-h1 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 400; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.12; color: var(--v-ink); max-width: 820px; margin: 0; }
         .wds-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18; color: var(--v-ink); margin: 0 0 24px; }
