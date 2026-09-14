@@ -253,7 +253,7 @@ export default function Vantara() {
         .wds-mandate-list { display: flex; flex-direction: column; border-top: 1px solid var(--v-line); margin-top: auto; }
         .wds-mandate-list p { font-family: DM Sans, sans-serif; font-size: 13px; line-height: 1.75; color: var(--v-ink-soft); padding: 11px 0; border-bottom: 1px solid var(--v-line); margin: 0; }
         .wds-mandate-price { color: var(--v-gold-deep) !important; font-style: italic; border-bottom: none !important; padding-top: 14px !important; }
-        .wds-mandate-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--v-gold-deep); text-decoration: none; border-bottom: 1px solid var(--v-gold-deep); padding-bottom: 2px; }
+        .wds-mandate-link { display: inline-flex; align-items: center; gap: 8px; margin-top: 20px; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: #4A3716; text-decoration: none; border-bottom: 1px solid #4A3716; padding-bottom: 2px; -webkit-text-stroke: 0.4px #4A3716; }
 
         .wds-note { background: var(--v-tint); border-radius: 12px; padding: 1.75rem 2rem; margin-top: 2.5rem; }
         .wds-note-title { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 17px; font-weight: 400; color: var(--v-ink); margin-bottom: 10px; }
