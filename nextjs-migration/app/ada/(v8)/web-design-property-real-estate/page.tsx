@@ -5,6 +5,7 @@ import '../ada-v8-fixes.css';
 
 export const metadata = adaMeta('prp');
 export const dynamic = 'force-static';
+export const viewport = { themeColor: '#ffffff', colorScheme: 'light' };
 
 export default function Page() {
   return <AdaPage k="prp" />;

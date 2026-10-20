@@ -53,7 +53,8 @@
 .ada-v8 .alogo small{display:block;font-size:11px;color:var(--app-muted)}
 .ada-v8 .snav{display:flex;flex-direction:column;gap:2px}
 .ada-v8 .snav button{all:unset;cursor:pointer;display:flex;align-items:center;gap:10px;padding:9px 10px;border-radius:9px;color:var(--app-soft);font-weight:500;font-size:13px;transition:background .25s,color .25s}
-.ada-v8 .snav button:hover{background:var(--accent-soft);color:var(--app-ink)}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .snav button:hover{background:var(--accent-soft);color:var(--app-ink)}}
 .ada-v8 .snav button[aria-current="true"]{background:var(--app-panel);color:var(--app-ink);box-shadow:0 1px 2px rgba(0,0,0,.08),inset 0 0 0 1px var(--app-line)}
 .ada-v8 .snav button[aria-current="true"] .ic{color:var(--accent)}
 .ada-v8 .snav button:focus-visible{outline:2px solid var(--accent)}
@@ -101,9 +102,11 @@
 .ada-v8 .chip.mute{background:var(--app-bg);color:var(--app-muted)}
 .ada-v8 .chip.plain::before{display:none}
 .ada-v8 .abtn{all:unset;cursor:pointer;display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;padding:6px 11px;border-radius:8px;background:var(--app-bg);color:var(--app-ink);border:1px solid var(--app-line);transition:border-color .25s,background .25s;white-space:nowrap}
-.ada-v8 .abtn:hover{border-color:var(--accent)}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .abtn:hover{border-color:var(--accent)}}
 .ada-v8 .abtn.pri{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
-.ada-v8 .abtn.pri:hover{filter:brightness(1.1)}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .abtn.pri:hover{filter:brightness(1.1)}}
 .ada-v8 .abtn.wa{background:var(--wa);border-color:var(--wa);color:#fff}
 .ada-v8 .abtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .ada-v8 .abtn .ic{width:14px;height:14px}
@@ -124,10 +127,12 @@
 /* Tables */
 .ada-v8 .tbl{display:grid;font-size:12.5px}
 .ada-v8 .tr{display:grid;gap:12px;align-items:center;padding:10px 12px;border-top:1px solid var(--app-line);cursor:pointer;transition:background .2s;border-radius:8px}
-.ada-v8 .tr:hover{background:var(--app-bg)}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .tr:hover{background:var(--app-bg)}}
 .ada-v8 .tr:focus-visible{outline:2px solid var(--accent);outline-offset:-2px}
 .ada-v8 .th{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--app-muted);cursor:default;border-top:0}
-.ada-v8 .th:hover{background:transparent}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .th:hover{background:transparent}}
 .ada-v8 .tr .k{font-weight:700;font-variant-numeric:tabular-nums}
 .ada-v8 .tr .s{color:var(--app-muted);font-size:11.5px}
 .ada-v8 .num{font-variant-numeric:tabular-nums;text-align:right}
@@ -145,7 +150,8 @@
 .ada-v8 .kcol-h{display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;color:var(--app-soft);padding:0 2px}
 .ada-v8 .kcol-h span{font-size:11px;color:var(--app-muted);font-weight:500;font-variant-numeric:tabular-nums}
 .ada-v8 .kc{background:var(--app-panel);border:1px solid var(--app-line);border-radius:10px;padding:10px;display:grid;gap:6px;cursor:pointer;transition:border-color .25s,transform .3s var(--ease),box-shadow .3s}
-.ada-v8 .kc:hover{border-color:var(--accent-line);transform:translateY(-1px);box-shadow:0 6px 16px -10px rgba(0,0,0,.3)}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .kc:hover{border-color:var(--accent-line);transform:translateY(-1px);box-shadow:0 6px 16px -10px rgba(0,0,0,.3)}}
 .ada-v8 .kc:focus-visible{outline:2px solid var(--accent)}
 .ada-v8 .kc b{font-size:12.5px;line-height:1.3}
 .ada-v8 .kc .meta{display:flex;justify-content:space-between;align-items:center;gap:6px;font-size:11.5px;color:var(--app-muted)}
@@ -173,7 +179,9 @@
 .ada-v8 .trk.idle circle.b{fill:var(--app-muted)}
 .ada-v8 .trk.wk circle.b{fill:var(--warn)}
 .ada-v8 .trk.late circle.b{fill:var(--bad)}
-.ada-v8 .trk:hover circle.b,.ada-v8 .trk:focus circle.b{r:11}
+.ada-v8 .trk:focus circle.b{r:11}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .trk:hover circle.b{r:11}}
 .ada-v8 .trk:focus{outline:none}
 .ada-v8 .trk:focus-visible circle.h{opacity:.45}
 .ada-v8 .yard rect{fill:var(--app-ink);opacity:.07}
@@ -183,7 +191,8 @@
 
 /* Quote */
 .ada-v8 .qt .tr{grid-template-columns:minmax(0,1.8fr) 96px 96px 64px;cursor:default}
-.ada-v8 .qt .tr:hover{background:transparent}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .qt .tr:hover{background:transparent}}
 .ada-v8 .qsum{display:grid;gap:10px;margin-top:12px}
 .ada-v8 .mbar{height:12px;border-radius:12px;background:var(--app-bg);position:relative;overflow:visible}
 .ada-v8 .mbar i{position:absolute;left:0;top:0;bottom:0;border-radius:12px;background:var(--good);transition:width .7s var(--ease),background .4s}
@@ -326,7 +335,8 @@
 .ada-v8 .sysp h3{font-size:clamp(28px,2.8vw,38px);line-height:1.08}
 .ada-v8 .sysp p{color:var(--ink-soft)}
 .ada-v8 .sysp .tlink{all:unset;cursor:pointer;justify-self:start;font-weight:700;font-size:15px;border-bottom:1.5px solid var(--sys);padding-bottom:1px;margin-top:6px}
-.ada-v8 .sysp .tlink:hover{opacity:.7}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .sysp .tlink:hover{opacity:.7}}
 .ada-v8 .sysp .tlink:focus-visible{outline:2px solid var(--ink)}
 .ada-v8 .caps{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:15.5px;color:var(--ink-soft)}
 .ada-v8 .caps li{display:grid;grid-template-columns:18px minmax(0,1fr);gap:10px}
@@ -408,7 +418,8 @@
 .ada-v8 .chaos-stick{padding-block:clamp(64px,8vw,110px)}
 .ada-v8 .mt .tr{grid-template-columns:minmax(0,1.6fr) 92px 80px 92px minmax(0,1fr)}
 .ada-v8 .ptt .tr{grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) 80px 112px 96px;cursor:default}
-.ada-v8 .ptt .tr:hover{background:transparent}
+@media (hover:hover) and (pointer:fine){
+.ada-v8 .ptt .tr:hover{background:transparent}}
 @media (max-width:860px){
   .ada-v8 .mt .th,.ada-v8 .ptt .th{display:none}
   .ada-v8 .mt .tr{grid-template-columns:minmax(0,1fr) auto;row-gap:6px}

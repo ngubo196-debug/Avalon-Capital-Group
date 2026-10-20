@@ -44,6 +44,13 @@
   var dock=document.getElementById('dock'), first=document.querySelector('main>section'), close=document.querySelector('.close');
   function dk(){ if(!dock||!first||!close) return; dock.classList.toggle('show', first.getBoundingClientRect().bottom<0 && close.getBoundingClientRect().top>innerHeight*.9); }
   addEventListener('scroll', dk, {passive:true}); dk();
+  /* Grids below the fold settle in one after another, once. Anything already on screen is left alone, so nothing flashes. */
+  if(!reduce && 'IntersectionObserver' in window) document.querySelectorAll('.facts,.ind,.work-grid,.doors').forEach(function(g){
+    if(g.getBoundingClientRect().top < innerHeight) return;
+    [].forEach.call(g.children, function(c,i){ c.style.setProperty('--i', Math.min(i,6)); });
+    g.classList.add('rv-wait');
+    ADA.onView(g, function(){ g.classList.add('rv-in'); g.classList.remove('rv-wait'); setTimeout(function(){ g.classList.remove('rv-in'); }, 1200); }, .15);
+  });
 })();
 
 ;
