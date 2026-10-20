@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import AdaSectorCards from '../../components/AdaSectorCards';
+import AdaSectorCards from '@/app/components/AdaSectorCards';
 
 export const metadata: Metadata = {
   title: 'Websites for Established Businesses in Durban | ADA',

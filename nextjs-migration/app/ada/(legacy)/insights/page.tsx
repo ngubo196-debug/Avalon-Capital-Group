@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import Nav from '../../components/Nav';
+import Nav from '@/app/components/Nav';
 
 export const metadata: Metadata = {
   title: 'Insights | ADA - Asset. Development. Automation.',

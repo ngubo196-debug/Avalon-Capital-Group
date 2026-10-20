@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import ScrollReveal from '../../components/ScrollReveal';
+import ScrollReveal from '@/app/components/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
