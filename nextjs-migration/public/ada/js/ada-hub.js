@@ -146,9 +146,6 @@
   var pgBtns=[].slice.call(document.querySelectorAll('[data-pg]'));
   pgBtns.forEach(function(b){ b.addEventListener('click', function(){ currentPg=b.dataset.pg; pgBtns.forEach(function(x){ x.setAttribute('aria-pressed',String(x===b)); }); document.getElementById('scrA').hidden=currentPg!=='a'; document.getElementById('scrB').hidden=currentPg!=='b'; fitZoom(currentPg); ADA.track('page_compare',{view:currentPg}); }); });
 
-  /* Work: our own site, 1 to 29 */
-  var c29=document.getElementById('c29');
-  if(!reduce) ADA.onView(c29, function(){ var t0=performance.now(); (function f(now){ var k=Math.min(1,(now-t0)/1400); c29.textContent=Math.max(1,Math.round(1+28*(1-Math.pow(1-k,3)))); if(k<1) requestAnimationFrame(f); })(t0); }, .6);
 
   /* Afripact screenshot scrolls slowly, only while visible */
   document.querySelectorAll('.view').forEach(function(v){

@@ -108,13 +108,6 @@
     });
   });
 
-  /* Our own site count, 1 to 29 */
-  document.querySelectorAll('.c29').forEach(function(c){
-    if(reduce) return;
-    c.textContent='1';
-    ADA.onView(c, function(){ var t0=performance.now(); (function f(now){ var k=Math.min(1,(now-t0)/1400); c.textContent=Math.max(1,Math.round(1+28*(1-Math.pow(1-k,3)))); if(k<1) requestAnimationFrame(f); })(t0); }, .6);
-  });
-
   /* Client screenshot scrolls slowly, only while visible */
   document.querySelectorAll('.view').forEach(function(v){
     var img=v.querySelector('img');
