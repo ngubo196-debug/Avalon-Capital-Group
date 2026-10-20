@@ -46,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Organization',
+              '@id': 'https://www.avaloncapitalgroup.co.za/#org',
               name: 'Avalon Capital Group',
               description: 'ACG operates through two divisions: Vantara structures vehicle and property acquisitions for buyers who want the right deal, not just any deal. ADA builds websites and search visibility that generate consistent leads. Based in KwaZulu-Natal, built to compound.',
               url: 'https://www.avaloncapitalgroup.co.za',
@@ -107,7 +108,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               telephone: '+27712205313',
               email: 'hello@avaloncapitalgroup.co.za',
               image: 'https://www.avaloncapitalgroup.co.za/og-image.jpg',
-              priceRange: 'From R18,500',
               address: {
                 '@type': 'PostalAddress',
                 addressLocality: 'Pietermaritzburg',
