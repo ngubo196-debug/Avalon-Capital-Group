@@ -1,0 +1,49 @@
+/* Keeps globals.css (the ACG/legacy site, which still applies to every route) from leaking into
+   the v8 ADA pages. The v8 sheets are scoped under .ada-v8, so the reverse direction needs no fix.
+   Loaded after ada-base/hub/sys/ind.css. Everything is scoped to .ada-v8, the block wrapper AdaPage adds.
+   Element resets use :where() so they have zero specificity: they beat globals.css by source order
+   but never override a class rule in the v8 sheets. `revert` restores the browser default,
+   which is what these elements had when the pages were built. */
+
+/* body { font-weight: 300 } in globals.css; the .ada-v8 wrapper sets font/line-height/colour but no weight */
+:where(.ada-v8) { font-weight: 400; }
+
+/* section { padding: 100px 60px } and its 768px override */
+:where(.ada-v8) section { padding: revert; }
+
+/* nav { position: fixed; height: 72px; dark background; z-index: 10000; ... } and its 768px override */
+:where(.ada-v8) nav {
+  position: revert; top: revert; left: revert; right: revert;
+  z-index: revert; height: revert; padding: revert;
+  background: revert; border-bottom: revert; backdrop-filter: revert;
+  display: revert; align-items: revert; justify-content: revert;
+}
+
+/* footer { display: flex; padding: 44px 60px; ... } and its 768px override */
+:where(.ada-v8) footer {
+  display: revert; padding: revert; align-items: revert; justify-content: revert;
+  flex-direction: revert; gap: revert; text-align: revert;
+}
+
+/* Class-name collisions with globals.css (same name, different meaning) */
+
+/* .hero { padding: 120px 60px 80px }: v8 sets padding-block only */
+.ada-v8 .hero { padding-inline: 0; }
+
+/* .mobile-menu { position: fixed; top: 72px; display: none; ... }: v8 hides it with [hidden] */
+.ada-v8 .mobile-menu {
+  position: revert; top: revert; left: revert; right: revert;
+  z-index: revert; display: revert; flex-direction: revert;
+}
+
+/* .btn-primary { color: #141414 !important; uppercase; letter-spacing; hover lift } */
+.ada-v8 .btn-primary { color: #fff !important; text-transform: none; letter-spacing: normal; }
+.ada-v8 .btn-primary:hover,
+.ada-v8 .btn-primary:active { transform: none; box-shadow: none; }
+
+/* position: sticky on header.site needs no scrolling ancestor between it and the viewport.
+   ada-base.css sets overflow-x: hidden on .ada-v8 and globals.css sets it on body; both turn the
+   element into a scroll container and the header stops sticking. clip crops the same way
+   without creating one. html keeps overflow-x: hidden from globals.css, so nothing scrolls sideways. */
+.ada-v8 { overflow-x: clip; }
+body:has(.ada-v8) { overflow-x: clip; }

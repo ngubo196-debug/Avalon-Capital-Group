@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Plumbline Plumbing: burst geysers fixed today in PMB</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap">
+<style>
+.cq{container-type:inline-size;background:#fff}
+.pg{--ink:#10202B;--soft:#4A5862;--line:#E3E8EC;--sky:#EAF4FA;--blue:#0E5A8A;--wa:#1DA851;--fx:#1DA851;font-family:"DM Sans",system-ui,sans-serif;color:var(--ink);font-size:15px;line-height:1.5;background:#fff;position:relative}
+.pg *{box-sizing:border-box}
+.pg h1,.pg h2,.pg h3{font-family:Archivo,"DM Sans",sans-serif;margin:0;letter-spacing:-.02em;line-height:1.05}
+.pg p{margin:0}
+.pg .ribbon{background:#10202B;color:#fff;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;text-align:center;padding:5px 8px}
+.pg .bar{position:sticky;top:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:10px 16px;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.pg .brand{display:flex;align-items:center;gap:8px;font-family:Archivo,sans-serif;font-weight:800;font-size:18px;letter-spacing:-.02em}
+.pg .brand i{width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--blue)}
+.pg .call{font-size:13px;font-weight:700;color:var(--blue);border:1.5px solid var(--blue);border-radius:100px;padding:6px 12px;text-decoration:none}
+.pg .hero-img{aspect-ratio:4/3;width:100%;object-fit:cover;display:block;object-position:70% 30%}
+.pg .hero{padding:20px 16px 24px;display:grid;gap:14px}
+.pg .area{font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--blue)}
+.pg h1{font-size:34px;font-weight:800}
+.pg h1 span{color:var(--blue)}
+.pg .sub{color:var(--soft);font-size:16px}
+.pg .wa{display:flex;align-items:center;justify-content:center;gap:10px;background:var(--wa);color:#fff;font-weight:700;font-size:16px;border-radius:14px;padding:16px;text-decoration:none;box-shadow:0 8px 20px -8px rgba(29,168,81,.6);cursor:pointer;border:0;width:100%;font-family:inherit}
+.pg .wa svg{width:20px;height:20px}
+.pg .note{font-size:12.5px;color:var(--soft);text-align:center;margin-top:-6px}
+.pg .chips{display:flex;flex-wrap:wrap;gap:6px}
+.pg .chips span{font-size:12.5px;font-weight:500;background:var(--sky);color:var(--blue);padding:5px 10px;border-radius:100px}
+.pg section{padding:26px 16px;border-top:1px solid var(--line)}
+.pg h2{font-size:23px;font-weight:800;margin-bottom:14px}
+.pg .jobs{display:flex;gap:10px;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 -16px;padding:0 16px 6px;scrollbar-width:none}
+.pg .jobs figure{margin:0;flex:0 0 72%;scroll-snap-align:start}
+.pg .jobs img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px;display:block}
+.pg .jobs figcaption{font-size:13px;margin-top:6px;font-weight:500}
+.pg .jobs figcaption span{color:var(--soft);font-weight:400}
+.pg .stocknote{font-size:11.5px;color:var(--soft);margin-top:8px}
+.pg ol.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;counter-reset:s}
+.pg ol.steps li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start;counter-increment:s}
+.pg ol.steps li::before{content:counter(s);width:34px;height:34px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;font-weight:700;font-family:Archivo,sans-serif}
+.pg ol.steps b{display:block;font-size:15.5px}
+.pg ol.steps span{color:var(--soft);font-size:14px}
+.pg .rev{border:1.5px dashed var(--line);border-radius:14px;padding:16px;display:grid;gap:6px;background:#FAFCFD}
+.pg .stars{color:#F5A524;letter-spacing:2px;font-size:18px}
+.pg .rev p{color:var(--soft);font-size:13.5px}
+.pg .svc{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.pg .svc button{border:1px solid var(--line);background:#fff;border-radius:12px;padding:14px 12px;text-align:left;font:600 14px "DM Sans",sans-serif;color:var(--ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+.pg .svc button::after{content:"\203A";color:var(--wa);font-size:20px;line-height:1}
+.pg .end{background:var(--ink);color:#fff;padding:30px 16px 90px;display:grid;gap:14px}
+.pg .end h2{color:#fff;margin:0;font-size:26px}
+.pg .end p{color:#B7C3CC}
+.pg .foot{font-size:11.5px;color:#7E8C96}
+.pg .dock{position:sticky;bottom:0;z-index:6;padding:10px 12px calc(10px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,rgba(255,255,255,.96) 30%);margin-top:-74px;opacity:0;transform:translateY(100%);transition:opacity .3s,transform .4s cubic-bezier(.22,1,.36,1);pointer-events:none}
+.pg .dock.show{opacity:1;transform:none;pointer-events:auto}
+.pg .dock .wa{padding:13px;font-size:15px}
+.pg .toast{position:sticky;bottom:78px;z-index:7;margin:0 12px;background:#10202B;color:#fff;font-size:13px;border-radius:12px;padding:11px 13px;display:none;gap:4px;flex-direction:column;box-shadow:0 10px 30px -10px rgba(0,0,0,.5)}
+.pg .toast.show{display:flex;animation:tin .35s ease-out}
+.pg .toast b{color:#7EE2A2;font-size:12px;letter-spacing:.04em}
+@keyframes tin{from{transform:translateY(10px);opacity:0}}
+@container (min-width:760px){
+  .pg .heroWrap{display:grid;grid-template-columns:1.05fr 1fr;align-items:center;max-width:1100px;margin:0 auto}
+  .pg .hero-img{aspect-ratio:1/1;border-radius:0 0 0 0;order:2}
+  .pg .hero{padding:40px}
+  .pg h1{font-size:52px}
+  .pg section{max-width:1100px;margin:0 auto;padding:44px 40px}
+  .pg .jobs{margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr)}
+  .pg .svc{grid-template-columns:repeat(4,1fr)}
+  .pg .end{padding:50px max(40px,calc(50% - 510px)) 100px}
+  .pg .dock{max-width:420px;margin-left:auto;margin-right:16px}
+}
+.fx-on{outline:4px solid var(--fx,#1DA851)!important;outline-offset:3px;animation:fxp 1s ease-in-out 3;border-radius:6px}
+@keyframes fxp{50%{outline-color:transparent}}
+</style>
+</head>
+<body style="margin:0">
+<div class="cq"><div class="pg">
+  <div class="ribbon">Demo page by ADA &middot; fictional business</div>
+  <div class="bar" data-fix="2"><div class="brand"><i></i>Plumbline</div><a class="call" data-wa="call">Call now</a></div>
+  <div class="heroWrap">
+    <img class="hero-img" src="/ada/img/plumber-client.jpg" alt="Plumber talking a homeowner through a repair in her kitchen" data-fix="4">
+    <div class="hero">
+      <div class="area">Pietermaritzburg &middot; Hilton &middot; Howick</div>
+      <h1 data-fix="1">Burst geyser? <span>We're at your door today.</span></h1>
+      <p class="sub">Send a photo on WhatsApp and get your price before we start. No call-out surprises.</p>
+      <button class="wa" data-wa="hero" data-fix="3"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Get a price on WhatsApp</button>
+      <p class="note">Most quotes back within 15 minutes</p>
+      <div class="chips"><span>Same-day callouts</span><span>Price agreed first</span><span>Workmanship guarantee</span></div>
+    </div>
+  </div>
+  <section>
+    <h2>Recent jobs near you</h2>
+    <div class="jobs">
+      <figure><img src="/ada/img/geyser-install.jpg" alt="New geyser being connected" loading="lazy"><figcaption>Geyser replaced <span>&middot; Hilton</span></figcaption></figure>
+      <figure><img src="/ada/img/shower-install.jpg" alt="Rain shower being fitted" loading="lazy"><figcaption>Shower fitted <span>&middot; Scottsville</span></figcaption></figure>
+      <figure><img src="/ada/img/gas-heater.jpg" alt="Gas water heater being serviced" loading="lazy"><figcaption>Gas geyser serviced <span>&middot; Howick</span></figcaption></figure>
+      <figure><img src="/ada/img/filters-done.jpg" alt="Plumber with newly fitted water filters" loading="lazy"><figcaption>Water filters fitted <span>&middot; Northdale</span></figcaption></figure>
+    </div>
+    <p class="stocknote">Demo uses stock photos. Your page shows your own jobs.</p>
+  </section>
+  <section>
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li><div><b>Send a photo on WhatsApp</b><span>Of the geyser, leak or drain. Takes a minute.</span></div></li>
+      <li><div><b>Get a fixed price</b><span>You know the cost before anyone drives out.</span></div></li>
+      <li><div><b>We fix it, today</b><span>Same-day callouts across PMB, Hilton and Howick.</span></div></li>
+    </ol>
+  </section>
+  <section>
+    <h2>What do you need fixed?</h2>
+    <div class="svc"><button data-wa="geyser">Burst geyser</button><button data-wa="drain">Blocked drain</button><button data-wa="leak">Leak or burst pipe</button><button data-wa="bathroom">Bathroom job</button></div>
+  </section>
+  <section>
+    <div class="rev"><div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div><b>Your Google reviews show here</b><p>Pulled from your Google Business Profile, so visitors see what real customers said.</p></div>
+  </section>
+  <div class="end">
+    <h2>Water where it shouldn't be?</h2>
+    <p>Message now. A plumber can be with you today.</p>
+    <button class="wa" data-wa="end"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Get a price on WhatsApp</button>
+    <p class="foot">Plumbline is a fictional business on a demo page built by ADA.</p>
+  </div>
+  <div class="toast" role="status"><b>LOGGED: META AD &middot; GEYSER CAMPAIGN</b><span>On a live page this opens WhatsApp with the message already typed. Every tap is counted against the ad that brought it.</span></div>
+  <div class="dock" data-fix="5"><button class="wa" data-wa="dock"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2z"/></svg>Get a price on WhatsApp</button></div>
+</div></div>
+<script>
+(function(){var dk=document.querySelector('.dock'),hb=document.querySelector('.hero .wa');function dc(){dk.classList.toggle('show',hb.getBoundingClientRect().bottom<40)}addEventListener('scroll',dc,{passive:true});dc();var t=document.querySelector('.toast'),h;document.querySelectorAll('[data-wa]').forEach(function(b){b.addEventListener('click',function(e){e.preventDefault();t.classList.remove('show');void t.offsetWidth;t.classList.add('show');clearTimeout(h);h=setTimeout(function(){t.classList.remove('show')},4200);});});})();
+</script>
+</body>
+</html>
