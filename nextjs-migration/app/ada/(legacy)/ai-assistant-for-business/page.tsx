@@ -278,7 +278,7 @@ export default function AiAssistantForBusiness() {
           <div className="wds-related-divider"></div>
           <div className="wds-label"><span className="wds-label-bar" />Explore More</div>
           <div className="wds-related-links">
-            <Link href="/ada/business-automation">Business Automation</Link>
+            <Link href="/ada/business-systems">Business Automation</Link>
             <Link href="/ada/audit">Start with a diagnostic</Link>
           </div>
         </div>

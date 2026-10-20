@@ -194,7 +194,7 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
               <Link href="/ada/web-design-construction-kzn">Construction KZN</Link>
               <Link href="/ada/web-design-fleet-companies">Fleet Companies</Link>
               <Link href="/ada/web-design-logistics-transport">Logistics &amp; Transport</Link>
-              <Link href="/ada/business-automation">Business Automation</Link>
+              <Link href="/ada/business-systems">Business Automation</Link>
               <Link href="/ada/ai-assistant-for-business">AI Assistant</Link>
             </div>
           </li>
@@ -235,7 +235,7 @@ export default function AdaLayout({ children }: { children: React.ReactNode }) {
           <Link href="/ada/web-design-construction-kzn" className="ada-mobile-link" onClick={closeMobile}>Construction KZN</Link>
           <Link href="/ada/web-design-fleet-companies" className="ada-mobile-link" onClick={closeMobile}>Fleet Companies</Link>
           <Link href="/ada/web-design-logistics-transport" className="ada-mobile-link" onClick={closeMobile}>Logistics &amp; Transport</Link>
-          <Link href="/ada/business-automation" className="ada-mobile-link" onClick={closeMobile}>Business Automation</Link>
+          <Link href="/ada/business-systems" className="ada-mobile-link" onClick={closeMobile}>Business Automation</Link>
           <Link href="/ada/ai-assistant-for-business" className="ada-mobile-link" onClick={closeMobile}>AI Assistant</Link>
         </div>
       )}

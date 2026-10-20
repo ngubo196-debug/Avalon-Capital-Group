@@ -143,7 +143,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${BASE}/ada/ai-automation-south-africa`,
+      url: `${BASE}/ada/business-systems`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.8,
