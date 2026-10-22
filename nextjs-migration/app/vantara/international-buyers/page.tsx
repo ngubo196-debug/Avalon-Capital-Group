@@ -1,335 +1,768 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
-import IntlBuyersForm from './IntlBuyersForm';
-import IntlBuyersPricing from './IntlBuyersPricing';
+import type { CSSProperties } from 'react';
+
+const url = 'https://www.avaloncapitalgroup.co.za/vantara/international-buyers';
+const image = 'https://www.avaloncapitalgroup.co.za/assets/vantara/og-vantara.jpg';
 
 export const metadata: Metadata = {
-  title: 'International Buyer Vehicle Concierge | Vantara',
-  description: 'Vantara sources, verifies, negotiates, and registers your vehicle in South Africa end to end, Traffic Register Number and NaTIS included, so you can buy with confidence from anywhere.',
-  alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/vantara/international-buyers' },
+  title: { absolute: 'Buy a Car in South Africa as a Foreigner | Vantara' },
+  description: 'Buying a car in South Africa from abroad? Vantara sources, checks, inspects and negotiates before you land, and prepares your TRN. From R18,000. Prices in ZAR, USD, EUR and GBP.',
+  alternates: { canonical: url },
+  openGraph: {
+    title: 'Buy a Car in South Africa as a Foreigner | Vantara',
+    description: 'Buying a car in South Africa from abroad? Vantara sources, checks, inspects and negotiates before you land, and prepares your TRN. From R18,000. Prices in ZAR, USD, EUR and GBP.',
+    url,
+    siteName: 'Vantara',
+    locale: 'en_ZA',
+    type: 'website',
+    images: [{ url: image, width: 1200, height: 630 }],
+  },
+  twitter: { card: 'summary_large_image', title: 'Buy a Car in South Africa as a Foreigner | Vantara', description: 'Buying a car in South Africa from abroad? Vantara sources, checks, inspects and negotiates before you land, and prepares your TRN. From R18,000. Prices in ZAR, USD, EUR and GBP.', images: [image] },
 };
 
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: [
+export const dynamic = 'force-static';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@graph": [
     {
-      '@type': 'Question',
-      name: 'Can a foreigner actually buy and register a car in South Africa?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Yes. As a foreign national you'll first need a Traffic Register Number, which lets you be registered on the national vehicle system without a South African ID number. To apply you'll need a valid passport or travel document, a certified copy of it, two ID photographs, and proof of address, submitted at a Registering Authority or Licensing Centre. We handle this application as part of the service.",
+      "@type": "ProfessionalService",
+      "@id": "https://www.avaloncapitalgroup.co.za/vantara#vantara",
+      "name": "Vantara",
+      "description": "Vehicle acquisition advisory that works only for the buyer: sourcing, value checks, inspection, negotiation and paperwork, for buyers in South Africa and from abroad.",
+      "url": "https://www.avaloncapitalgroup.co.za/vantara",
+      "logo": "https://www.avaloncapitalgroup.co.za/assets/vantara/logo-full-ink.png",
+      "image": "https://www.avaloncapitalgroup.co.za/assets/vantara/og-vantara.jpg",
+      "telephone": "+27712205313",
+      "email": "luyanda@avaloncapitalgroup.co.za",
+      "priceRange": "R2,500 to R45,000+",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Pietermaritzburg",
+        "addressRegion": "KwaZulu-Natal",
+        "addressCountry": "ZA"
       },
+      "areaServed": {
+        "@type": "Country",
+        "name": "South Africa"
+      },
+      "founder": {
+        "@id": "https://www.avaloncapitalgroup.co.za/#luyanda"
+      },
+      "parentOrganization": {
+        "@id": "https://www.avaloncapitalgroup.co.za/#org"
+      }
     },
     {
-      '@type': 'Question',
-      name: 'Do I need to be in the country for this?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "Sourcing, verification, and negotiation happen entirely before you arrive. Registration is finalized in person once you're in South Africa, which fits naturally if you're already relocating here. Everything else is done and waiting by the time you land, registration is the only step that needs you.",
+      "@type": "Service",
+      "name": "Vehicle buying service for foreign buyers",
+      "serviceType": "Vehicle acquisition for international buyers",
+      "description": "Sourcing, value checks, inspection, negotiation and TRN and registration paperwork for people buying a car in South Africa from abroad.",
+      "url": "https://www.avaloncapitalgroup.co.za/vantara/international-buyers",
+      "provider": {
+        "@id": "https://www.avaloncapitalgroup.co.za/vantara#vantara"
       },
+      "areaServed": {
+        "@type": "Country",
+        "name": "South Africa"
+      },
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Vehicles under R350,000",
+          "price": "18000",
+          "priceCurrency": "ZAR",
+          "description": "Sourcing, value checks, negotiation and paperwork for vehicles under R350,000. Pass-through costs billed at actual cost."
+        },
+        {
+          "@type": "Offer",
+          "name": "Vehicles R350,000 to R800,000",
+          "price": "28000",
+          "priceCurrency": "ZAR",
+          "description": "Sourcing, value checks, negotiation and paperwork for vehicles between R350,000 and R800,000."
+        },
+        {
+          "@type": "Offer",
+          "name": "Vehicles above R800,000",
+          "price": "45000",
+          "priceCurrency": "ZAR",
+          "description": "Starting price for vehicles above R800,000, scoped individually."
+        },
+        {
+          "@type": "Offer",
+          "name": "Traffic Register Number preparation",
+          "price": "2500",
+          "priceCurrency": "ZAR",
+          "description": "TRN preparation on its own, credited toward the full service."
+        }
+      ]
     },
     {
-      '@type': 'Question',
-      name: 'What is a Traffic Register Number?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "It's the number non-citizens need before a vehicle can be registered in their name in South Africa. We handle the application as part of the service.",
-      },
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Can a foreigner buy and register a car in South Africa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You need a Traffic Register Number (TRN), which puts you on the national vehicle system without a South African ID number. The City of Cape Town lists a valid passport, a valid visa or permit, two ID photos and proof of address. I prepare the application with you and you attend the appointment in person. More on the TRN."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I need to be in the country?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Not for the search. Sourcing, value checks, inspection and negotiation all happen before you arrive. Registration in your name is done in person once you land, and the car can be held for you until then."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I get a TRN on a tourist entry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the licensing office. Offices apply the visa requirement differently, so I confirm it for your situation before you pay anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Who inspects the car?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every car on the shortlist is checked against trade and retail value and gets a physical inspection before you commit. I'm there when it makes sense, and I arrange the inspection when I'm not. You see the report."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you import a car for me?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. South Africa's import rules for used cars are restrictive, so I source locally. That keeps import duties and permits out of your deal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does it take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the brief and how fast the right car is found and checked. Start six to eight weeks before you land so the TRN appointment and the car line up with your arrival."
+          }
+        }
+      ]
     },
     {
-      '@type': 'Question',
-      name: 'Can you import a car for me instead of buying locally?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "No. South Africa's vehicle import rules are restrictive and don't apply to most relocating buyers. We source locally, which is faster, simpler, and avoids import duties and permits altogether.",
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'How long does this take?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: "It depends on what you're looking for and how quickly we can verify and negotiate a good match. We'll give you a realistic timeline once we know your brief.",
-      },
-    },
-  ],
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Vantara",
+          "item": "https://www.avaloncapitalgroup.co.za/vantara"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Buying from abroad",
+          "item": "https://www.avaloncapitalgroup.co.za/vantara/international-buyers"
+        }
+      ]
+    }
+  ]
 };
 
-export default function InternationalBuyers() {
+export default function Page() {
   return (
-    <div className="vantara-intl-page">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <style suppressHydrationWarning dangerouslySetInnerHTML={{ __html: `
-        .vantara-intl-page {
-          --v-gold: #C9A84C;
-          --v-gold-deep: #6E5220;
-          --v-ink: #111111;
-          --v-ink-soft: #3A3A3A;
-          --v-ink-muted: #7A7A7A;
-          --v-paper: #FDFCFA;
-          --v-tint: #F8F6F0;
-          --v-line: #E5E1D6;
-          background: var(--v-paper);
-        }
-        .vantara-intl-page a:focus-visible,
-        .vantara-intl-page button:focus-visible,
-        .vantara-intl-page input:focus-visible {
-          outline: 2px solid var(--v-gold);
-          outline-offset: 2px;
-        }
-
-        .wds-back { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 400; color: var(--v-ink); text-decoration: none; border-bottom: 1px solid var(--v-ink); padding-bottom: 2px; display: inline-block; margin-bottom: 32px; }
-        .wds-back:hover { border-color: var(--v-gold); }
-        .wds-eyebrow { font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--v-gold-deep); margin-bottom: 20px; }
-        .wds-h1 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 400; font-size: clamp(36px, 4.6vw, 60px); line-height: 1.12; color: var(--v-ink); max-width: 820px; margin: 0; }
-        .wds-h2 { font-family: Bodoni Moda, Cormorant Garamond, serif; font-weight: 500; font-size: clamp(26px, 2.8vw, 40px); line-height: 1.18; color: var(--v-ink); margin: 0 0 24px; }
-        .wds-subhead { font-family: DM Sans, sans-serif; font-size: 18px; font-weight: 300; line-height: 1.7; color: var(--v-ink-soft); max-width: 620px; margin: 24px 0 36px; }
-        .wds-body { font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 300; line-height: 1.8; color: var(--v-ink-soft); max-width: 700px; margin: 0; }
-        .wds-body strong { font-weight: 600; color: var(--v-ink); }
-        .wds-body + .wds-body { margin-top: 18px; }
-
-        .wds-hero { position: relative; min-height: 100vh; display: flex; align-items: center; padding: 3rem 3.5rem 6rem; overflow: hidden; background: var(--v-paper); }
-        .wds-hero::before {
-          content: ''; position: absolute; inset: 0; pointer-events: none;
-          background-image: repeating-linear-gradient(115deg, rgba(201,168,76,0.10) 0px, rgba(201,168,76,0.10) 1px, transparent 1px, transparent 64px);
-        }
-        .wds-hero-inner { position: relative; z-index: 1; }
-
-        .wds-section { padding: 5.5rem 3.5rem; }
-        .wds-section--paper { background: var(--v-paper); }
-        .wds-section--tint { background: var(--v-tint); }
-        .wds-inner { max-width: 1120px; margin: 0 auto; }
-
-        .wds-cta-btn { display: inline-block; background: var(--v-gold); color: #FFFFFF !important; border-radius: 100px; padding: 14px 34px; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 500; text-decoration: none; border: 2px solid var(--v-gold); cursor: pointer; transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease; }
-        .wds-cta-btn:hover { background: var(--v-gold-deep); border-color: var(--v-gold-deep); }
-        .wds-cta-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-
-        .wds-includes-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--v-line); border: 1px solid var(--v-line); border-radius: 16px; overflow: hidden; margin-top: 3rem; }
-        .wds-includes-card { background: var(--v-paper); padding: 2.25rem 2rem; }
-        .wds-includes-title { display: block; font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 600; color: var(--v-ink); margin-bottom: 10px; }
-        .wds-includes-desc { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 300; line-height: 1.75; color: var(--v-ink-soft); margin: 0; }
-
-        .wds-process-list { display: flex; flex-direction: column; gap: 0; margin-top: 3rem; max-width: 720px; }
-        .wds-process-step { display: flex; gap: 24px; padding: 28px 0; border-bottom: 1px solid var(--v-line); }
-        .wds-process-step:last-child { border-bottom: none; }
-        .wds-process-num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--v-gold); color: #FFFFFF; display: flex; align-items: center; justify-content: center; font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 600; }
-        .wds-process-title { font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 600; color: var(--v-ink); margin-bottom: 6px; }
-        .wds-process-desc { font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 300; line-height: 1.7; color: var(--v-ink-soft); margin: 0; }
-
-        .wds-currency-toggle { display: inline-flex; gap: 4px; background: var(--v-tint); border-radius: 100px; padding: 4px; margin-top: 2rem; }
-        .wds-currency-btn { font-family: DM Sans, sans-serif; font-size: 13px; font-weight: 600; letter-spacing: 0.02em; color: var(--v-ink-muted); background: transparent; border: none; border-radius: 100px; padding: 8px 18px; cursor: pointer; transition: background 0.2s ease, color 0.2s ease; }
-        .wds-currency-btn:hover { color: var(--v-ink); }
-        .wds-currency-btn--active { background: var(--v-gold); color: #FFFFFF; }
-        .wds-tier-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 1.5rem; align-items: stretch; }
-        .wds-tier-card { background: var(--v-paper); border: 1px solid var(--v-line); border-radius: 16px; padding: 2.25rem 2rem; display: flex; flex-direction: column; }
-        .wds-tier-card--entry { border: 2px solid var(--v-gold); box-shadow: 0 8px 28px rgba(201,168,76,0.18); }
-        .wds-tier-price { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 30px; font-weight: 500; color: var(--v-ink); margin-bottom: 10px; }
-        .wds-tier-range { font-family: DM Sans, sans-serif; font-size: 14px; color: var(--v-ink-muted); line-height: 1.6; }
-        .wds-tier-approx { font-family: DM Sans, sans-serif; font-size: 12px; font-style: italic; color: var(--v-ink-muted); margin-top: 10px; }
-        .wds-tier-note { font-family: DM Sans, sans-serif; font-size: 14px; font-weight: 300; line-height: 1.8; color: var(--v-ink-soft); background: var(--v-tint); border-radius: 12px; padding: 1.5rem 1.75rem; margin-top: 2rem; max-width: 720px; }
-
-        .wds-faq-list { margin-top: 3rem; max-width: 780px; display: flex; flex-direction: column; gap: 0; }
-        .wds-faq-item { border-bottom: 1px solid var(--v-line); padding: 22px 0; }
-        .wds-faq-item summary { font-family: DM Sans, sans-serif; font-size: 16px; font-weight: 600; color: var(--v-ink); cursor: pointer; list-style: none; }
-        .wds-faq-item summary::-webkit-details-marker { display: none; }
-        .wds-faq-item summary::after { content: '+'; float: right; color: var(--v-gold-deep); font-weight: 400; }
-        .wds-faq-item[open] summary::after { content: '\\2212'; }
-        .wds-faq-answer { font-family: DM Sans, sans-serif; font-size: 15px; font-weight: 300; line-height: 1.75; color: var(--v-ink-soft); margin-top: 14px; }
-
-        .wds-contact-grid { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3rem; margin-top: 3rem; align-items: stretch; }
-        .wds-form-group { margin-bottom: 18px; }
-        .wds-form-label { display: block; font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--v-ink-muted); margin-bottom: 8px; }
-        .wds-form-input { width: 100%; padding: 12px 14px; font-family: DM Sans, sans-serif; font-size: 15px; color: var(--v-ink); background: #FFFFFF; border: 1px solid var(--v-line); border-radius: 8px; }
-        .wds-form-input::placeholder { color: var(--v-ink-muted); }
-        .wds-form-success { background: var(--v-tint); border-radius: 12px; padding: 2rem; font-family: DM Sans, sans-serif; }
-        .wds-form-success strong { display: block; color: var(--v-ink); margin-bottom: 8px; font-size: 16px; }
-        .wds-form-success p { color: var(--v-ink-soft); font-size: 14px; line-height: 1.7; margin: 0; }
-
-        .wds-contact-side { background: var(--v-tint); border-radius: 16px; padding: 2.25rem; display: flex; flex-direction: column; justify-content: space-between; }
-        .wds-contact-email-label { font-family: DM Sans, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--v-ink-muted); margin-bottom: 10px; }
-        .wds-contact-email { font-family: DM Sans, sans-serif; font-size: 18px; color: var(--v-gold-deep); text-decoration: none; word-break: break-word; }
-        .wds-contact-email:hover { text-decoration: underline; }
-        .wds-contact-trust { font-family: DM Sans, sans-serif; font-size: 14px; font-style: italic; line-height: 1.75; color: var(--v-ink-soft); margin-top: 1.75rem; padding-top: 1.75rem; border-top: 1px solid var(--v-line); }
-
-        .wds-footer { background: var(--v-ink); padding: 3rem 3.5rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; }
-        .wds-footer-brand { font-family: Bodoni Moda, Cormorant Garamond, serif; font-size: 16px; font-weight: 500; color: #FFFFFF; }
-        .wds-footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-        .wds-footer-links a { font-family: DM Sans, sans-serif; font-size: 13px; color: rgba(255,255,255,0.5); text-decoration: none; }
-        .wds-footer-links a:hover { color: #FFFFFF; }
-        .wds-footer-legal { width: 100%; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); margin-top: 4px; }
-        .wds-footer-legal p { font-family: DM Sans, sans-serif; font-size: 11px; color: rgba(255,255,255,0.3); margin-bottom: 8px; line-height: 1.7; }
-
-        @media (max-width: 900px) {
-          .wds-includes-grid { grid-template-columns: 1fr; }
-          .wds-tier-grid { grid-template-columns: 1fr; }
-          .wds-contact-grid { grid-template-columns: 1fr; }
-        }
-        @media (max-width: 768px) {
-          .wds-hero { padding: 2.5rem 1.5rem 4rem; }
-          .wds-section { padding: 4rem 1.5rem; }
-          .wds-footer { padding: 2.5rem 20px; flex-direction: column; text-align: center; }
-        }
-      ` }} />
-
-      <section className="wds-hero">
-        <svg className="inner-hero-geo" style={{position:'absolute', right:'-120px', top:'50%', transform:'translateY(-50%)', opacity:0.28, pointerEvents:'none', zIndex:1}} width="580" height="680" viewBox="0 0 580 680" xmlns="http://www.w3.org/2000/svg">
-          <g fill="none" stroke="#C9A84C" strokeWidth="0.8">
-            <polygon points="290,20 560,640 20,640"/>
-            <polygon points="290,80 510,600 70,600"/>
-            <polygon points="290,140 460,560 120,560"/>
-          </g>
-        </svg>
-        <div className="wds-inner wds-hero-inner">
-          <Link href="/vantara" className="wds-back">← Back to Vantara</Link>
-          <div className="wds-eyebrow">Vantara: Vehicle Acquisition Advisory</div>
-          <h1 className="wds-h1">Buy a car in South Africa before you even land.</h1>
-          <p className="wds-subhead">We source it, verify it, negotiate the price, handle the paperwork, and deliver it. One person on the ground, so you don&apos;t have to be.</p>
-          <a href="#contact" className="wds-cta-btn">Start your enquiry</a>
-        </div>
-      </section>
-
-      <section className="wds-section wds-section--tint" aria-labelledby="problem-heading">
-        <div className="wds-inner">
-          <h2 className="wds-h2" id="problem-heading">Buying blind is expensive</h2>
-          <p className="wds-body">Without a local reference, it&apos;s hard to know if a price is fair. You can&apos;t inspect a car you haven&apos;t seen. And registering a vehicle in South Africa requires a Traffic Register Number before anything else is even possible, a step most people relocating here have never heard of until they&apos;re stuck on it.</p>
-          <p className="wds-body">Doing this alone from another country means guessing on price, trusting a stranger&apos;s word on condition, and working through a registration process built for people who already live here.</p>
-        </div>
-      </section>
-
-      <section className="wds-section wds-section--paper" aria-labelledby="includes-heading">
-        <div className="wds-inner">
-          <h2 className="wds-h2" id="includes-heading">The full process, handled</h2>
-          <div className="wds-includes-grid">
-            <div className="wds-includes-card">
-              <span className="wds-includes-title">Sourcing</span>
-              <p className="wds-includes-desc">We search dealer stock, private sales, and our own network against your brief, budget, make, model, spec, non-negotiables, and bring you a shortlist, not one car.</p>
-            </div>
-            <div className="wds-includes-card">
-              <span className="wds-includes-title">Verification</span>
-              <p className="wds-includes-desc">Every shortlisted vehicle is checked against trade and retail value before you spend a rand. We arrange the physical inspection and review the report with you.</p>
-            </div>
-            <div className="wds-includes-card">
-              <span className="wds-includes-title">Negotiation</span>
-              <p className="wds-includes-desc">We negotiate on your behalf. This is the part you genuinely can&apos;t do from abroad, you have no local price reference and no leverage.</p>
-            </div>
-            <div className="wds-includes-card">
-              <span className="wds-includes-title">Paperwork</span>
-              <p className="wds-includes-desc">Traffic Register Number application, NaTIS registration, ownership transfer, roadworthy where required. Without this, nothing else matters.</p>
-            </div>
-            <div className="wds-includes-card">
-              <span className="wds-includes-title">Delivery</span>
-              <p className="wds-includes-desc">Your vehicle delivered to wherever you land, or held ready until you arrive.</p>
-            </div>
-            <div className="wds-includes-card">
-              <span className="wds-includes-title">One point of contact</span>
-              <p className="wds-includes-desc">You deal with one person, start to finish. No handoffs, no chasing.</p>
-            </div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <main>
+        <section className="page-hero" aria-labelledby="h1">
+          <div className="hero-lines" aria-hidden="true">
+            <svg viewBox="0 0 1000 900" preserveAspectRatio="xMidYMid meet">
+              <path style={{ '--d': '200' } as CSSProperties} d="M120 -20 L560 860" />
+              <path style={{ '--d': '320' } as CSSProperties} d="M168 -20 L584 812" />
+              <path style={{ '--d': '440' } as CSSProperties} d="M1020 -20 L584 852" />
+            </svg>
           </div>
-        </div>
-      </section>
-
-      <section className="wds-section wds-section--tint" aria-labelledby="process-heading">
-        <div className="wds-inner">
-          <h2 className="wds-h2" id="process-heading">How it works</h2>
-          <div className="wds-process-list">
-            <div className="wds-process-step">
-              <div className="wds-process-num" aria-hidden="true">1</div>
-              <div>
-                <p className="wds-process-title">Tell us what you need.</p>
-                <p className="wds-process-desc">Budget, vehicle type, timeline.</p>
+          <div className="wrap page-hero-grid">
+            <div className="hero-copy">
+              <nav className="crumbs ld" style={{ '--d': '40' } as CSSProperties} aria-label="Breadcrumb">
+                <Link href="/vantara">Vantara</Link>
+                <span aria-hidden="true">/</span>
+                <span aria-current="page">Buying from abroad</span>
+              </nav>
+              <p className="eyebrow ld" style={{ '--d': '80' } as CSSProperties}>
+                <i></i>
+                For buyers outside South Africa
+              </p>
+              <h1 id="h1">
+                <span className="ln">
+                  <span style={{ '--d': '160' } as CSSProperties}>Buy a car in South Africa</span>
+                </span>
+                <span className="ln">
+                  <span style={{ '--d': '260' } as CSSProperties}>
+                    <em>before you land.</em>
+                  </span>
+                </span>
+              </h1>
+              <p className="ld" style={{ '--d': '420' } as CSSProperties}>
+                I source the car, check its value, arrange the inspection and negotiate the price while you are still overseas. Your Traffic Register Number is prepared in advance, so registration is one appointment once you arrive.
+              </p>
+              <div className="cta-row ld" style={{ '--d': '520' } as CSSProperties}>
+                <a className="btn btn-ink" href="#start">
+                  Start your enquiry
+                  {' '}
+                  <span className="arr">
+                    <svg viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+                <a className="ghost" href="#pricing">See pricing</a>
               </div>
             </div>
-            <div className="wds-process-step">
-              <div className="wds-process-num" aria-hidden="true">2</div>
-              <div>
-                <p className="wds-process-title">We shortlist and verify.</p>
-                <p className="wds-process-desc">You see options with real value checks attached, not a dealer&apos;s asking price.</p>
+            <div className="svc-card" aria-label="What happens before and after you land">
+              <div className="df-head">
+                <b>Your purchase file</b>
+                <span>From abroad</span>
               </div>
-            </div>
-            <div className="wds-process-step">
-              <div className="wds-process-num" aria-hidden="true">3</div>
-              <div>
-                <p className="wds-process-title">We negotiate.</p>
-                <p className="wds-process-desc">You approve the final price before anything is committed.</p>
+              <div className="phase">
+                <small>Before you land</small>
+                <ul className="df-list" id="dfList">
+                  <li className="on">
+                    <span className="tick">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2.5 6.2l2.3 2.3 4.7-5" />
+                      </svg>
+                    </span>
+                    Car sourced to your brief
+                  </li>
+                  <li className="on">
+                    <span className="tick">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2.5 6.2l2.3 2.3 4.7-5" />
+                      </svg>
+                    </span>
+                    Value checked, inspection arranged
+                  </li>
+                  <li className="on">
+                    <span className="tick">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2.5 6.2l2.3 2.3 4.7-5" />
+                      </svg>
+                    </span>
+                    Price negotiated, you approve
+                  </li>
+                  <li className="on">
+                    <span className="tick">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2.5 6.2l2.3 2.3 4.7-5" />
+                      </svg>
+                    </span>
+                    TRN documents and booking ready
+                  </li>
+                </ul>
               </div>
-            </div>
-            <div className="wds-process-step">
-              <div className="wds-process-num" aria-hidden="true">4</div>
-              <div>
-                <p className="wds-process-title">We handle the paperwork.</p>
-                <p className="wds-process-desc">TRN, registration, transfer, done for you.</p>
-              </div>
-            </div>
-            <div className="wds-process-step">
-              <div className="wds-process-num" aria-hidden="true">5</div>
-              <div>
-                <p className="wds-process-title">Delivery.</p>
-                <p className="wds-process-desc">Your car, ready, wherever you need it.</p>
+              <div className="phase">
+                <small>After you land</small>
+                <ul className="df-list">
+                  <li className="on">
+                    <span className="tick">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2.5 6.2l2.3 2.3 4.7-5" />
+                      </svg>
+                    </span>
+                    TRN appointment, in person
+                  </li>
+                  <li className="on">
+                    <span className="tick">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2.5 6.2l2.3 2.3 4.7-5" />
+                      </svg>
+                    </span>
+                    Registration in your name
+                  </li>
+                  <li className="on">
+                    <span className="tick">
+                      <svg viewBox="0 0 12 12">
+                        <path d="M2.5 6.2l2.3 2.3 4.7-5" />
+                      </svg>
+                    </span>
+                    Keys handed over
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="wds-section wds-section--paper" aria-labelledby="pricing-heading">
-        <div className="wds-inner">
-          <h2 className="wds-h2" id="pricing-heading">Straightforward pricing, no surprises</h2>
-          <IntlBuyersPricing />
-          <p className="wds-tier-note">Inspection, transport, and registration costs are billed separately at actual cost. What we charge is for the work of finding, verifying, negotiating, and handling the paperwork, nothing hidden inside a bigger number later.</p>
-          <div style={{ marginTop: '2rem' }}>
-            <a href="#contact" className="wds-cta-btn">Get your quote</a>
+        </section>
+        <section className="sec ways" aria-labelledby="pain-h">
+          <div className="wrap">
+            <div className="sec-head">
+              <div>
+                <p className="eyebrow rv">
+                  <i></i>
+                  Why buyers get stuck
+                </p>
+                <h2 id="pain-h" className="rv" style={{ '--s': '1' } as CSSProperties}>
+                  Buying blind
+                  {' '}
+                  <em>is expensive.</em>
+                </h2>
+              </div>
+              <p className="lede rv" style={{ '--s': '2' } as CSSProperties}>Doing this alone from another country means guessing on price, trusting a stranger on condition and learning the paperwork the hard way.</p>
+            </div>
+            <div className="pains">
+              <div className="pain rv" style={{ '--s': '0' } as CSSProperties}>
+                <h3>No local price reference</h3>
+                <p>You can&apos;t tell a fair price from a dealer&apos;s opening number when you don&apos;t know the market.</p>
+              </div>
+              <div className="pain rv" style={{ '--s': '1' } as CSSProperties}>
+                <h3>No way to see the car</h3>
+                <p>Photos hide what an inspection finds. Without someone on your side, condition is a guess.</p>
+              </div>
+              <div className="pain rv" style={{ '--s': '2' } as CSSProperties}>
+                <h3>The TRN catches people out</h3>
+                <p>A car can&apos;t be registered in your name without a Traffic Register Number, and most buyers hear about it too late.</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="wds-section wds-section--tint" aria-labelledby="faq-heading">
-        <div className="wds-inner">
-          <h2 className="wds-h2" id="faq-heading">Frequently asked questions</h2>
-          <div className="wds-faq-list">
-            {faqSchema.mainEntity.map((item) => (
-              <details className="wds-faq-item" key={item.name}>
-                <summary>{item.name}</summary>
-                <p className="wds-faq-answer">{item.acceptedAnswer.text}</p>
-              </details>
-            ))}
+        </section>
+        <section className="sec" aria-labelledby="scope-h">
+          <div className="wrap">
+            <div className="sec-head">
+              <div>
+                <p className="eyebrow rv">
+                  <i></i>
+                  What I handle
+                </p>
+                <h2 id="scope-h" className="rv" style={{ '--s': '1' } as CSSProperties}>
+                  The full purchase,
+                  {' '}
+                  <em>one person.</em>
+                </h2>
+              </div>
+              <p className="lede rv" style={{ '--s': '2' } as CSSProperties}>You deal with me from the first message to the keys. No handoffs, no chasing.</p>
+            </div>
+            <div className="scope">
+              <div className="scope-item rv" style={{ '--s': '0' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M3 8.4l3 3 7-7" />
+                </svg>
+                <div>
+                  <h3>Sourcing</h3>
+                  <p>Dealer stock, private sales and my network, searched against your budget, spec and non-negotiables. You get a shortlist, not one car.</p>
+                </div>
+              </div>
+              <div className="scope-item rv" style={{ '--s': '1' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M3 8.4l3 3 7-7" />
+                </svg>
+                <div>
+                  <h3>Value checks</h3>
+                  <p>Every shortlisted car is checked against trade and retail value before you spend a rand.</p>
+                </div>
+              </div>
+              <div className="scope-item rv" style={{ '--s': '0' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M3 8.4l3 3 7-7" />
+                </svg>
+                <div>
+                  <h3>Inspection</h3>
+                  <p>A physical inspection on the car you choose, with the report reviewed with you.</p>
+                </div>
+              </div>
+              <div className="scope-item rv" style={{ '--s': '1' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M3 8.4l3 3 7-7" />
+                </svg>
+                <div>
+                  <h3>Negotiation</h3>
+                  <p>I negotiate on your behalf. You approve the final price before anything is committed.</p>
+                </div>
+              </div>
+              <div className="scope-item rv" style={{ '--s': '0' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M3 8.4l3 3 7-7" />
+                </svg>
+                <div>
+                  <h3>TRN and registration</h3>
+                  <p>TRN application prepared, registration, ownership transfer and roadworthy where required.</p>
+                </div>
+              </div>
+              <div className="scope-item rv" style={{ '--s': '1' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M3 8.4l3 3 7-7" />
+                </svg>
+                <div>
+                  <h3>Delivery or holding</h3>
+                  <p>The car delivered where you land, or held until you arrive.</p>
+                </div>
+              </div>
+              <div className="scope-item rv out" style={{ '--s': '0' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M4 4l8 8M12 4l-8 8" />
+                </svg>
+                <div>
+                  <h3>Not included: importing</h3>
+                  <p>I source locally. Importing a used car into South Africa is restricted.</p>
+                </div>
+              </div>
+              <div className="scope-item rv out" style={{ '--s': '1' } as CSSProperties}>
+                <svg viewBox="0 0 16 16">
+                  <path d="M4 4l8 8M12 4l-8 8" />
+                </svg>
+                <div>
+                  <h3>Not included: attending for you</h3>
+                  <p>TRN appointments and registration need you there in person.</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <section className="wds-section wds-section--paper" id="contact" aria-labelledby="contact-heading">
-        <div className="wds-inner">
-          <h2 className="wds-h2" id="contact-heading">Start your enquiry</h2>
-          <p className="wds-body">Tell us your budget, your vehicle requirements, and your timeline. We&apos;ll respond directly, with a realistic plan for how to get you into the right vehicle.</p>
-          <div className="wds-contact-grid">
+        </section>
+        <section className="sec" id="how" aria-labelledby="how-h">
+          <div className="wrap">
+            <div className="sec-head">
+              <div>
+                <p className="eyebrow rv">
+                  <i></i>
+                  How it works
+                </p>
+                <h2 id="how-h" className="rv" style={{ '--s': '1' } as CSSProperties}>
+                  Five steps
+                  {' '}
+                  <em>from your inbox to the keys.</em>
+                </h2>
+              </div>
+              <p className="lede rv" style={{ '--s': '2' } as CSSProperties}>You approve every step from wherever you are.</p>
+            </div>
+            <div className="steps-wrap">
+              <span className="rail" aria-hidden="true">
+                <i id="rail"></i>
+              </span>
+              <ol className="steps" id="steps">
+                <li className="step lit rv" style={{ '--s': '0' } as CSSProperties}>
+                  <span className="dot">01</span>
+                  <div>
+                    <h3>Brief</h3>
+                    <p>Tell me your budget, the vehicle you want, your arrival date and the city you land in.</p>
+                  </div>
+                </li>
+                <li className="step lit rv" style={{ '--s': '1' } as CSSProperties}>
+                  <span className="dot">02</span>
+                  <div>
+                    <h3>Shortlist</h3>
+                    <p>You see options with value checks attached, not a dealer&apos;s asking price.</p>
+                  </div>
+                </li>
+                <li className="step lit rv" style={{ '--s': '2' } as CSSProperties}>
+                  <span className="dot">03</span>
+                  <div>
+                    <h3>Inspect and negotiate</h3>
+                    <p>The chosen car is inspected. I negotiate and you approve the final price.</p>
+                  </div>
+                </li>
+                <li className="step lit rv" style={{ '--s': '3' } as CSSProperties}>
+                  <span className="dot">04</span>
+                  <div>
+                    <h3>Paperwork</h3>
+                    <p>Your TRN documents and booking are ready before you fly.</p>
+                  </div>
+                </li>
+                <li className="step lit rv" style={{ '--s': '4' } as CSSProperties}>
+                  <span className="dot">05</span>
+                  <div>
+                    <h3>Handover</h3>
+                    <p>One appointment after you land, then the car is registered in your name and ready.</p>
+                  </div>
+                </li>
+              </ol>
+            </div>
+          </div>
+        </section>
+        <section className="sec ways" id="pricing" aria-labelledby="price-h">
+          <div className="wrap">
+            <div className="sec-head">
+              <div>
+                <p className="eyebrow rv">
+                  <i></i>
+                  Pricing
+                </p>
+                <h2 id="price-h" className="rv" style={{ '--s': '1' } as CSSProperties}>
+                  Straightforward pricing.
+                  {' '}
+                  <em>No surprises.</em>
+                </h2>
+              </div>
+              <div style={{ display: 'grid', gap: '12px', justifyItems: 'start' }}>
+                <div className="cur" role="group" aria-label="Show prices in">
+                  <button type="button" data-c="ZAR" aria-pressed="true">ZAR</button>
+                  <button type="button" data-c="USD" aria-pressed="false">USD</button>
+                  <button type="button" data-c="EUR" aria-pressed="false">EUR</button>
+                  <button type="button" data-c="GBP" aria-pressed="false">GBP</button>
+                </div>
+                <small id="curNote" style={{ color: 'var(--muted)', fontSize: '13.5px' }} hidden>Approximate. Final price confirmed in ZAR.</small>
+              </div>
+            </div>
+            <div className="tiers">
+              <div className="tier rv" style={{ '--s': '0' } as CSSProperties}>
+                <small>Vehicles under R350,000</small>
+                <span className="amt" data-zar="18000" data-pre="From ">From R18,000</span>
+                <p>Most first cars, bakkies and everyday SUVs.</p>
+              </div>
+              <div className="tier rv feat" style={{ '--s': '1' } as CSSProperties}>
+                <small>Vehicles R350,000 to R800,000</small>
+                <span className="amt" data-zar="28000" data-pre="">R28,000</span>
+                <p>Newer SUVs, double cabs and well-kept 4x4s.</p>
+              </div>
+              <div className="tier rv" style={{ '--s': '2' } as CSSProperties}>
+                <small>Vehicles above R800,000</small>
+                <span className="amt" data-zar="45000" data-pre="From ">From R45,000</span>
+                <p>Scoped individually for higher-value cars.</p>
+              </div>
+            </div>
+            <p className="price-note rv">My fee covers finding, checking, negotiating and the paperwork. Inspection, transport and registration are billed at actual cost and shown to you separately.</p>
+            <div className="addon rv">
+              <div>
+                <b>
+                  TRN only:
+                  {' '}
+                  <span className="amt" data-zar="2500" style={{ fontSize: 'inherit', fontFamily: 'inherit' }}>R2,500</span>
+                </b>
+                <p>Not ready to buy yet? I prepare your Traffic Register Number on its own. If you go ahead with the full service later, the R2,500 is credited toward it.</p>
+              </div>
+              <Link href="/vantara/traffic-register-number" className="btn btn-line">TRN help</Link>
+            </div>
+          </div>
+        </section>
+        <section className="sec" id="faq" aria-labelledby="faq-h">
+          <div className="wrap faq">
+            <div className="faq-intro">
+              <p className="eyebrow rv">
+                <i></i>
+                Questions
+              </p>
+              <h2 id="faq-h" className="rv" style={{ '--s': '1' } as CSSProperties}>
+                Buying from abroad,
+                {' '}
+                <em>answered.</em>
+              </h2>
+              <p className="lede rv" style={{ '--s': '2' } as CSSProperties}>Licensing rules are set by each office and can change. I confirm what applies to you before you pay.</p>
+            </div>
             <div>
-              <IntlBuyersForm />
-            </div>
-            <div className="wds-contact-side">
-              <div>
-                <div className="wds-contact-email-label">Or email us directly</div>
-                <a href="mailto:hello@avaloncapitalgroup.co.za" className="wds-contact-email">hello@avaloncapitalgroup.co.za</a>
-              </div>
-              <p className="wds-contact-trust">One advisor, one process, from your first email to the day your car is delivered.</p>
+              <details className="rv" style={{ '--s': '0' } as CSSProperties}>
+                <summary>
+                  Can a foreigner buy and register a car in South Africa?
+                  <span className="pm" aria-hidden="true"></span>
+                </summary>
+                <div className="ans">
+                  <p>
+                    Yes. You need a Traffic Register Number (TRN), which puts you on the national vehicle system without a South African ID number. The City of Cape Town lists a valid passport, a valid visa or permit, two ID photos and proof of address. I prepare the application with you and you attend the appointment in person.
+                    {' '}
+                    <Link href="/vantara/traffic-register-number" className="ghost">More on the TRN</Link>
+                    .
+                  </p>
+                </div>
+              </details>
+              <details className="rv" style={{ '--s': '1' } as CSSProperties}>
+                <summary>
+                  Do I need to be in the country?
+                  <span className="pm" aria-hidden="true"></span>
+                </summary>
+                <div className="ans">
+                  <p>
+                    Not for the search. Sourcing, value checks, inspection and negotiation all happen before you arrive. Registration in your name is done in person once you land, and the car can be held for you until then.
+                  </p>
+                </div>
+              </details>
+              <details className="rv" style={{ '--s': '2' } as CSSProperties}>
+                <summary>
+                  Can I get a TRN on a tourist entry?
+                  <span className="pm" aria-hidden="true"></span>
+                </summary>
+                <div className="ans">
+                  <p>It depends on the licensing office. Offices apply the visa requirement differently, so I confirm it for your situation before you pay anything.</p>
+                </div>
+              </details>
+              <details className="rv" style={{ '--s': '3' } as CSSProperties}>
+                <summary>
+                  Who inspects the car?
+                  <span className="pm" aria-hidden="true"></span>
+                </summary>
+                <div className="ans">
+                  <p>
+                    Every car on the shortlist is checked against trade and retail value and gets a physical inspection before you commit. I&apos;m there when it makes sense, and I arrange the inspection when I&apos;m not. You see the report.
+                  </p>
+                </div>
+              </details>
+              <details className="rv" style={{ '--s': '4' } as CSSProperties}>
+                <summary>
+                  Can you import a car for me?
+                  <span className="pm" aria-hidden="true"></span>
+                </summary>
+                <div className="ans">
+                  <p>No. South Africa&apos;s import rules for used cars are restrictive, so I source locally. That keeps import duties and permits out of your deal.</p>
+                </div>
+              </details>
+              <details className="rv" style={{ '--s': '5' } as CSSProperties}>
+                <summary>
+                  How long does it take?
+                  <span className="pm" aria-hidden="true"></span>
+                </summary>
+                <div className="ans">
+                  <p>
+                    It depends on the brief and how fast the right car is found and checked. Start six to eight weeks before you land so the TRN appointment and the car line up with your arrival.
+                  </p>
+                </div>
+              </details>
             </div>
           </div>
-        </div>
-      </section>
-
-      <footer className="wds-footer">
-        <div className="wds-footer-brand">Vantara - A Division of <Link href="/">Avalon Capital Group</Link></div>
-        <div className="wds-footer-links">
-          <Link href="/vantara">Vantara</Link>
-          <Link href="/vantara/automotive">Deal Insights</Link>
-          <Link href="/contact">Contact</Link>
-          <a href="/privacy-policy">Privacy Policy</a>
-          <a href="/terms-of-service">Terms of Service</a>
-        </div>
-        <div className="wds-footer-legal">
-          <p>Avalon Capital Group (Pty) Ltd &middot; Reg. No. 2025/671885/07 &middot; Durban, KwaZulu-Natal, South Africa</p>
-          <p>Avalon Capital Group does not provide financial, investment, or legal advice. All information shared is for general informational purposes only. Clients are encouraged to consult with licensed professionals before making any investment or business decisions.</p>
-        </div>
-      </footer>
-    </div>
+        </section>
+        <section className="sec ways" aria-labelledby="rel-h">
+          <div className="wrap">
+            <div className="sec-head">
+              <div>
+                <p className="eyebrow rv">
+                  <i></i>
+                  Next
+                </p>
+                <h2 id="rel-h" className="rv" style={{ '--s': '1' } as CSSProperties}>
+                  Before you
+                  {' '}
+                  <em>decide.</em>
+                </h2>
+              </div>
+            </div>
+            <div className="related">
+              <Link href="/vantara/overland-vehicle-south-africa" className="rel rv" style={{ '--s': '0' } as CSSProperties}>
+                <span className="tag">Overland</span>
+                <h3>Driving Africa?</h3>
+                <p>Buying a 4x4 for a trip north? The overland page covers border papers and what to buy.</p>
+              </Link>
+              <Link href="/vantara/traffic-register-number" className="rel rv" style={{ '--s': '1' } as CSSProperties}>
+                <span className="tag">R2,500</span>
+                <h3>TRN help on its own</h3>
+                <p>What the Traffic Register Number is, the documents, and how I prepare it.</p>
+              </Link>
+              <Link href="/vantara/about" className="rel rv" style={{ '--s': '2' } as CSSProperties}>
+                <span className="tag">About</span>
+                <h3>Who you&apos;d be dealing with</h3>
+                <p>Three years on a dealership floor, trained by BAIC South Africa.</p>
+              </Link>
+            </div>
+          </div>
+        </section>
+        <section className="close" id="start" aria-labelledby="close-h">
+          <div className="close-lines" aria-hidden="true">
+            <svg viewBox="0 0 900 600">
+              <path d="M80 -20 L420 620" />
+              <path d="M118 -20 L440 580" />
+              <path d="M860 -20 L440 620" />
+            </svg>
+          </div>
+          <div className="wrap" style={{ alignItems: 'start' }}>
+            <div className="close-l">
+              <p className="eyebrow">
+                <i></i>
+                Start your enquiry
+              </p>
+              <h2 id="close-h">
+                Tell me when you land.
+                {' '}
+                <em>I&apos;ll plan the rest.</em>
+              </h2>
+              <p>Fill this in and it becomes a WhatsApp message to me, ready to send. Prefer email? Use the address below.</p>
+              <div className="close-r">
+                <div className="contact-card">
+                  <small>Email</small>
+                  <div className="contact-row">
+                    <span id="email">luyanda@avaloncapitalgroup.co.za</span>
+                    <button className="chip-btn" id="copyEmail" type="button">Copy</button>
+                  </div>
+                </div>
+                <div className="contact-card">
+                  <small>WhatsApp</small>
+                  <div className="contact-row">
+                    <span>+27 71 220 5313</span>
+                  </div>
+                </div>
+                <div className="contact-card">
+                  <small>Based in</small>
+                  <div className="contact-row">
+                    <span>Pietermaritzburg. Buyers anywhere in South Africa and abroad.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <form className="enq" id="enqForm" data-ref="VAN-INTL" noValidate>
+                <div className="row">
+                  <label htmlFor="f-name">
+                    Full name
+                    <input id="f-name" name="name" autoComplete="name" required />
+                  </label>
+                  <label htmlFor="f-country">
+                    Coming from
+                    <input id="f-country" name="country" autoComplete="country-name" placeholder="United Kingdom" />
+                  </label>
+                </div>
+                <div className="row">
+                  <label htmlFor="f-when">
+                    Arriving
+                    <input id="f-when" name="when" placeholder="23 December" required />
+                  </label>
+                  <label htmlFor="f-city">
+                    Landing in
+                    <input id="f-city" name="city" placeholder="Cape Town" />
+                  </label>
+                </div>
+                <div className="row">
+                  <label htmlFor="f-need">
+                    I need
+                    <select defaultValue={'Full vehicle service'} id="f-need" name="need">
+                      <option>Full vehicle service</option>
+                      <option>TRN only</option>
+                      <option>Overland vehicle</option>
+                      <option>Not sure yet</option>
+                    </select>
+                  </label>
+                  <label htmlFor="f-budget">
+                    Budget
+                    <input id="f-budget" name="budget" inputMode="decimal" placeholder="R250,000" />
+                  </label>
+                </div>
+                <label htmlFor="f-car">
+                  What you&apos;re looking for
+                  <textarea id="f-car" name="car" placeholder="Make, model, year range, anything you won't compromise on"></textarea>
+                </label>
+                <p className="err" id="enqErr" hidden></p>
+                <button className="btn btn-ink" type="submit" style={{ background: 'var(--gold)', color: 'var(--ink)' }}>
+                  Prepare my message
+                  {' '}
+                  <span className="arr">
+                    <svg viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </button>
+              </form>
+              <div className="enq ready" id="enqReady" hidden>
+                <p>Your message is ready. Open WhatsApp to send it to me directly.</p>
+                <a className="btn btn-ink" id="enqLink" href="#" target="_blank" rel="noopener" style={{ background: 'var(--gold)', color: 'var(--ink)' }}>
+                  Open WhatsApp
+                  {' '}
+                  <span className="arr">
+                    <svg viewBox="0 0 16 16" aria-hidden="true">
+                      <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
+                  </span>
+                </a>
+                {' '}
+                <button className="chip-btn" id="enqEdit" type="button">Edit details</button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </>
   );
 }

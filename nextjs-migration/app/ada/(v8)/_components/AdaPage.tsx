@@ -27,7 +27,7 @@ export function adaMeta(k: Key): Metadata {
     title: { absolute: p.title },
     description: p.description,
     alternates: { canonical: p.canonical },
-    openGraph: { title: p.title, description: p.description, url: p.canonical, type: 'website', locale: 'en_ZA', siteName: 'ADA' },
+    openGraph: { title: p.title, description: p.description, url: p.canonical, type: 'website', locale: 'en_ZA', siteName: 'ADA', images: ['/og-image.jpg'] },
   };
 }
 

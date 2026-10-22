@@ -1,0 +1,66 @@
+/* What globals.css (the ACG site) still applies inside .vantara-v3, undone here.
+   vantara.css is scoped under .vantara-v3, so the other direction needs no fix.
+   Loaded after vantara.css. Element resets use :where() (zero specificity): they beat globals.css by source
+   order but never override a class rule in vantara.css. `revert` gives back the browser default, which is what
+   these elements had when the pages were designed. */
+
+/* body { font-weight: 300 }: the prototype runs at 400 and the wrapper sets no weight of its own */
+:where(.vantara-v3) { font-weight: 400; }
+
+/* html rules that cannot move onto the wrapper: anchor offset under the sticky header, and the colour
+   behind the page when the browser overscrolls */
+html:has(.vantara-v3) { scroll-padding-top: 88px; background: #FDFCFA; }
+
+/* position: sticky on header.site needs no scroll container between it and the viewport. vantara.css puts
+   overflow-x: hidden (from the old body rule) on the wrapper and globals.css has it on body; clip crops the
+   same way without creating one. html keeps overflow-x: hidden from globals.css, so nothing scrolls sideways. */
+.vantara-v3 { overflow-x: clip; }
+body:has(.vantara-v3) { overflow-x: clip; }
+
+/* The prototype's <head> had one inline rule that is not in site.css: [hidden] { display: none !important }.
+   The design relies on it (menu, enquiry confirmation, currency note, form errors), and several of those
+   elements also have their own display rule, which would otherwise win over the hidden attribute. */
+.vantara-v3 [hidden] { display: none !important; }
+
+/* section { padding: 100px 60px; position: relative } and its 768px override */
+:where(.vantara-v3) section { padding: revert; position: revert; }
+
+/* nav { position: fixed; height: 72px; padding: 0 60px; dark bar; z-index: 10000 } and its 768px override.
+   Hits the breadcrumb <nav class="crumb"> inside the pages. */
+:where(.vantara-v3) nav {
+  position: revert; top: revert; left: revert; right: revert;
+  z-index: revert; height: revert; padding: revert;
+  background: revert; border-bottom: revert; backdrop-filter: revert;
+  display: revert; align-items: revert; justify-content: revert;
+}
+
+/* footer { display: flex; padding: 44px 60px; space-between } and its 768px override (column, centred) */
+:where(.vantara-v3) footer {
+  display: revert; padding: revert; align-items: revert; justify-content: revert;
+  flex-direction: revert; gap: revert; text-align: revert;
+}
+
+/* Class names that globals.css also defines */
+
+/* .hero { min-height: 100vh; display: flex; column; centred; padding: 120px 60px 80px }:
+   vantara.css sets only position, overflow and padding-block */
+.vantara-v3 .hero {
+  min-height: revert; display: revert; flex-direction: revert; justify-content: revert; padding-inline: revert;
+}
+
+/* .mobile-menu { display: none; position: fixed; top: 72px; z-index: 10000; ... } and .mobile-menu.open { display: flex }.
+   The menu is opened by removing [hidden], so it needs block display, in the header's flow. */
+.vantara-v3 .mobile-menu {
+  display: block; position: revert; top: revert; left: revert; right: revert;
+  z-index: revert; height: revert; max-height: revert; overflow-y: revert; flex-direction: revert;
+}
+.vantara-v3 .mobile-menu.open { display: block; }
+
+/* .mobile-menu a { letter-spacing: .2em; text-transform: uppercase; light text } and its gold hover */
+.vantara-v3 .mobile-menu a { letter-spacing: revert; text-transform: revert; }
+.vantara-v3 .mobile-menu a:hover { color: inherit; }
+.vantara-v3 .mobile-menu a.btn-ink:hover { color: var(--paper); }
+
+/* .cta-row, .tag, .on, .open (apart from .mobile-menu.open) and .show also exist in globals.css, but there they
+   are qualified by .founder-section, .form-success or #offers-modal-bg, which Vantara pages never use, so no
+   override is needed. */

@@ -3,6 +3,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import './globals.css';
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.avaloncapitalgroup.co.za'),
   title: 'Avalon Capital Group | Investment, Brokerage & Digital Services | South Africa',
   description:
     'Avalon Capital Group is a South African business ecosystem operating through Vantara (premium acquisition brokerage) and ADA (AI-powered digital infrastructure). We structure deals, build digital systems, and create compounding value.',
@@ -14,6 +15,12 @@ export const metadata: Metadata = {
     ],
     apple: { url: '/apple-touch-icon.png', sizes: '180x180' },
   },
+  openGraph: {
+    type: 'website',
+    locale: 'en_ZA',
+    siteName: 'Avalon Capital Group',
+    images: ['/og-image.jpg'],
+  },
   twitter: {
     card: 'summary_large_image',
     images: ['https://avaloncapitalgroup.co.za/og-image.jpg'],
@@ -22,18 +29,12 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="author" content="Avalon Capital Group" />
         <meta name="google-site-verification" content="xakG5wb8pmc22WJRC2LrpUiq5hJo1lErDmrOzsi-F1U" />
-
-        {/* Open Graph */}
-        <meta property="og:type" content="website" />
-        <meta property="og:image" content="https://avaloncapitalgroup.co.za/og-image.jpg" />
-        <meta property="og:locale" content="en_ZA" />
-        <meta property="og:site_name" content="Avalon Capital Group" />
 
         {/* Favicon */}
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -48,7 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Organization',
               '@id': 'https://www.avaloncapitalgroup.co.za/#org',
               name: 'Avalon Capital Group',
-              description: 'ACG operates through two divisions: Vantara structures vehicle and property acquisitions for buyers who want the right deal, not just any deal. ADA builds websites and search visibility that generate consistent leads. Based in KwaZulu-Natal, built to compound.',
+              description: 'Avalon Capital Group runs two businesses: Vantara, a car buying advisor that works only for the buyer, and ADA, which builds websites, ads and business systems that bring in work. Based in Pietermaritzburg, KwaZulu-Natal.',
               url: 'https://www.avaloncapitalgroup.co.za',
               logo: 'https://www.avaloncapitalgroup.co.za/assets/acg-logo.jpg',
               image: 'https://www.avaloncapitalgroup.co.za/og-image.jpg',
@@ -68,8 +69,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': 'Person',
+              '@id': 'https://www.avaloncapitalgroup.co.za/#luyanda',
               name: 'Luyanda Ngubo',
-              jobTitle: 'Founder and Principal',
+              jobTitle: 'Founder, Avalon Capital Group',
               worksFor: {
                 '@type': 'Organization',
                 name: 'Avalon Capital Group',
@@ -83,14 +85,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 'SEO and organic search strategy',
                 'Web design and conversion architecture',
                 'Digital agency services, South Africa',
-                'Vehicle acquisition brokerage',
+                'Vehicle acquisition advisory',
                 'Automotive industry, South Africa',
-                'Property deal structuring and investment analysis',
                 'AI-augmented business operations',
                 'KwaZulu-Natal business market',
                 'Cold outreach and client acquisition',
               ],
-              description: 'Luyanda Ngubo is the founder and principal of Avalon Capital Group, a KwaZulu-Natal business group operating through Vantara (vehicle and property acquisition brokerage) and ADA (SEO, web design, and AI-augmented digital systems for South African businesses).',
+              description: 'Luyanda Ngubo is the founder of Avalon Capital Group, which runs Vantara (car buying advisory for buyers in South Africa and abroad) and ADA (websites, ads and business systems for South African businesses).',
             }),
           }}
         />
@@ -103,7 +104,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Avalon Capital Group',
-              description: 'ACG operates through two divisions: Vantara structures vehicle and property acquisitions for buyers who want the right deal, not just any deal. ADA builds websites and search visibility that generate consistent leads. Based in KwaZulu-Natal, built to compound.',
+              description: 'Avalon Capital Group runs two businesses: Vantara, a car buying advisor that works only for the buyer, and ADA, which builds websites, ads and business systems that bring in work. Based in Pietermaritzburg, KwaZulu-Natal.',
               url: 'https://www.avaloncapitalgroup.co.za',
               telephone: '+27712205313',
               email: 'hello@avaloncapitalgroup.co.za',
@@ -119,21 +120,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 latitude: -29.6006,
                 longitude: 30.3794,
               },
-              areaServed: [
-                { '@type': 'City', name: 'Durban' },
-                { '@type': 'City', name: 'Pietermaritzburg' },
-                { '@type': 'AdministrativeArea', name: 'KwaZulu-Natal' },
-              ],
+              areaServed: { '@type': 'Country', name: 'South Africa' },
               hasOfferCatalog: {
                 '@type': 'OfferCatalog',
                 name: 'Services',
                 itemListElement: [
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Business Acquisition Brokerage' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vehicle Acquisition' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web Design Durban' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Digital Agency' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SEO Services KwaZulu-Natal' } },
-                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Presence Audit' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Vehicle acquisition advisory' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Traffic Register Number preparation' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Websites' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Ads and Meta ads' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Google Business Profile' } },
+                  { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Business systems' } },
                 ],
               },
               sameAs: [
