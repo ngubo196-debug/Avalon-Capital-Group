@@ -49,6 +49,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@type': 'Organization',
               '@id': 'https://www.avaloncapitalgroup.co.za/#org',
               name: 'Avalon Capital Group',
+              legalName: 'Avalon Capital Group (Pty) Ltd',
+              identifier: '2025/671885/07',
               description: 'Avalon Capital Group runs two businesses: Vantara, a car buying advisor that works only for the buyer, and ADA, which builds websites, ads and business systems that bring in work. Based in Pietermaritzburg, KwaZulu-Natal.',
               url: 'https://www.avaloncapitalgroup.co.za',
               logo: 'https://www.avaloncapitalgroup.co.za/assets/acg-logo.jpg',
@@ -72,11 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@id': 'https://www.avaloncapitalgroup.co.za/#luyanda',
               name: 'Luyanda Ngubo',
               jobTitle: 'Founder, Avalon Capital Group',
-              worksFor: {
-                '@type': 'Organization',
-                name: 'Avalon Capital Group',
-                url: 'https://www.avaloncapitalgroup.co.za',
-              },
+              worksFor: { '@id': 'https://www.avaloncapitalgroup.co.za/#org' },
               url: 'https://www.avaloncapitalgroup.co.za/about',
               sameAs: [
                 'https://www.linkedin.com/in/luyanda-ngubo',

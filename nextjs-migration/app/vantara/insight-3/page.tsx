@@ -101,6 +101,7 @@ const schema = {
       "publisher": {
         "@id": "https://www.avaloncapitalgroup.co.za/vantara#vantara"
       },
+      "datePublished": "2026-04-28",
       "dateModified": "2026-10-22",
       "inLanguage": "en-ZA"
     },
