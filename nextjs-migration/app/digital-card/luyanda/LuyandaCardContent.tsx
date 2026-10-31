@@ -355,7 +355,7 @@ export default function LuyandaCardContent() {
               <div className="division-pill-name">Vantara</div>
               <div className="division-pill-tag">Structured. Advised. Delivered.</div>
             </a>
-            <a className="division-pill" href="https://www.avaloncapitalgroup.co.za/ada">
+            <a className="division-pill" href="https://adagrowth.co.za">
               <div className="division-pill-label">Division</div>
               <div className="division-pill-name">ADA</div>
               <div className="division-pill-tag">AI-Powered Digital</div>

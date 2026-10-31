@@ -5,13 +5,20 @@ import PhilosophyGrid from './components/PhilosophyGrid';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Avalon Capital Group | Investment, Brokerage & Digital Services | South Africa',
-  description: 'South African business group behind Vantara and ADA, structuring deals, building digital systems, and creating compounding value.',
+  title: 'Avalon Capital Group | South African Business Group',
+  description: 'Avalon Capital Group is a South African business group. Vantara advises vehicle buyers, and ADA is the group marketing and systems division.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za' },
+  openGraph: {
+    type: 'website',
+    url: 'https://www.avaloncapitalgroup.co.za',
+    title: 'Avalon Capital Group | South African Business Group',
+    description: 'Avalon Capital Group is a South African business group. Vantara advises vehicle buyers, and ADA is the group marketing and systems division.',
+    images: ['/og-image.jpg'],
+  },
   twitter: {
     card: 'summary_large_image',
-    title: 'Avalon Capital Group | Investment, Brokerage & Digital Services | South Africa',
-    description: 'South African business group behind Vantara and ADA, structuring deals, building digital systems, and creating compounding value.',
+    title: 'Avalon Capital Group | South African Business Group',
+    description: 'Avalon Capital Group is a South African business group. Vantara advises vehicle buyers, and ADA is the group marketing and systems division.',
   },
 };
 
@@ -122,12 +129,12 @@ export default function Home() {
               <div className="cell-desc">Sources, verifies, and negotiates vehicle purchases for buyers, in South Africa or from abroad.</div>
               <span className="cell-link">See how it works</span>
             </Link>
-            <Link className="structure-cell" href="/ada" style={{cursor:'pointer'}}>
-              <div className="cell-type">Digital Revenue Systems</div>
+            <a className="structure-cell" href="https://adagrowth.co.za" style={{cursor:'pointer'}}>
+              <div className="cell-type">Marketing &amp; Systems Division</div>
               <div className="cell-name">ADA</div>
-              <div className="cell-desc">Builds websites, SEO, and AI-assisted automation for businesses that want more customers, not more busywork.</div>
-              <span className="cell-link">See how it works</span>
-            </Link>
+              <div className="cell-desc">The group&apos;s marketing and systems division. Websites, search visibility, and business systems for companies that want more customers. Lives at adagrowth.co.za.</div>
+              <span className="cell-link">Visit adagrowth.co.za</span>
+            </a>
             <div className="structure-cell" style={{opacity:0.55, cursor:'default', pointerEvents:'none'}}>
               <div className="cell-type">Business Documents</div>
               <div className="cell-name">Vuma</div>

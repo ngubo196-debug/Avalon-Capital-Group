@@ -5,8 +5,8 @@ import ScrollReveal from '../components/ScrollReveal';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Avalon Capital Group | Digital Agency & Acquisition Brokerage | KZN',
-  description: 'ACG is a KZN-based holding group with two operating divisions - Vantara for high-value acquisition brokerage and ADA for digital growth. Registered, local, and built to deliver.',
+  title: 'About Avalon Capital Group | South African Business Group | KZN',
+  description: 'ACG is a KZN-based holding group with two operating divisions: Vantara for vehicle acquisition advisory and ADA for marketing and systems. Registered, local, and run by one accountable founder.',
   alternates: { canonical: 'https://www.avaloncapitalgroup.co.za/about' },
 };
 
@@ -226,14 +226,14 @@ export default function About() {
               <div className="division-desc">Sources, verifies, and negotiates vehicle purchases for buyers, in South Africa or from abroad.</div>
               <div className="division-arrow">→</div>
             </Link>
-            <Link className="division-row" href="/ada">
+            <a className="division-row" href="https://adagrowth.co.za">
               <div>
-                <div className="division-role">Digital &amp; AI Services</div>
+                <div className="division-role">Marketing &amp; Systems</div>
                 <div className="division-name">ADA</div>
               </div>
               <div className="division-desc">AI-powered digital infrastructure for businesses. Websites that convert. Automation that reduces manual work. SEO that compounds. Systems that grow the business while the owner focuses on what matters.</div>
               <div className="division-arrow">→</div>
-            </Link>
+            </a>
             <div className="division-row" style={{opacity:0.55, cursor:'default', pointerEvents:'none'}}>
               <div>
                 <div className="division-role">Business Documents</div>

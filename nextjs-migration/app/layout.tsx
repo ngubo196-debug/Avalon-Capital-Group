@@ -4,9 +4,9 @@ import './globals.css';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.avaloncapitalgroup.co.za'),
-  title: 'Avalon Capital Group | Investment, Brokerage & Digital Services | South Africa',
+  title: 'Avalon Capital Group | South African Business Group',
   description:
-    'Avalon Capital Group is a South African business ecosystem operating through Vantara (premium acquisition brokerage) and ADA (AI-powered digital infrastructure). We structure deals, build digital systems, and create compounding value.',
+    'Avalon Capital Group is a South African business group. Vantara advises vehicle buyers, and ADA is the group marketing and systems division.',
   icons: {
     icon: [
       { url: '/favicon.svg', type: 'image/svg+xml' },
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               name: 'Avalon Capital Group',
               legalName: 'Avalon Capital Group (Pty) Ltd',
               identifier: '2025/671885/07',
-              description: 'Avalon Capital Group runs two businesses: Vantara, a car buying advisor that works only for the buyer, and ADA, which builds websites, ads and business systems that bring in work. Based in Pietermaritzburg, KwaZulu-Natal.',
+              description: 'Avalon Capital Group runs two businesses: Vantara, a car buying advisor that works only for the buyer, and ADA, the group marketing and systems division (adagrowth.co.za). Based in Pietermaritzburg, KwaZulu-Natal.',
               url: 'https://www.avaloncapitalgroup.co.za',
               logo: 'https://www.avaloncapitalgroup.co.za/assets/acg-logo.jpg',
               image: 'https://www.avaloncapitalgroup.co.za/og-image.jpg',
@@ -59,6 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               email: 'hello@avaloncapitalgroup.co.za',
               sameAs: [
                 'https://www.linkedin.com/company/avalon-capital-group',
+                'https://adagrowth.co.za',
               ],
             }),
           }}
@@ -82,14 +83,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               knowsAbout: [
                 'SEO and organic search strategy',
                 'Web design and conversion architecture',
-                'Digital agency services, South Africa',
                 'Vehicle acquisition advisory',
                 'Automotive industry, South Africa',
                 'AI-augmented business operations',
                 'KwaZulu-Natal business market',
                 'Cold outreach and client acquisition',
               ],
-              description: 'Luyanda Ngubo is the founder of Avalon Capital Group, which runs Vantara (car buying advisory for buyers in South Africa and abroad) and ADA (websites, ads and business systems for South African businesses).',
+              description: 'Luyanda Ngubo is the founder of Avalon Capital Group, which runs Vantara (car buying advisory for buyers in South Africa and abroad) and ADA (the group marketing and systems division, at adagrowth.co.za).',
             }),
           }}
         />
@@ -102,7 +102,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               '@context': 'https://schema.org',
               '@type': 'LocalBusiness',
               name: 'Avalon Capital Group',
-              description: 'Avalon Capital Group runs two businesses: Vantara, a car buying advisor that works only for the buyer, and ADA, which builds websites, ads and business systems that bring in work. Based in Pietermaritzburg, KwaZulu-Natal.',
+              description: 'Avalon Capital Group runs two businesses: Vantara, a car buying advisor that works only for the buyer, and ADA, the group marketing and systems division (adagrowth.co.za). Based in Pietermaritzburg, KwaZulu-Natal.',
               url: 'https://www.avaloncapitalgroup.co.za',
               telephone: '+27712205313',
               email: 'hello@avaloncapitalgroup.co.za',

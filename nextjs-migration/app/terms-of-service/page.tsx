@@ -87,8 +87,8 @@ export default function TermsOfService() {
           <ul style={{display:'flex', gap:'28px', listStyle:'none'}}>
             <li><Link href="/" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-dim)', textDecoration:'none'}}>Home</Link></li>
             <li><Link href="/vantara" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-dim)', textDecoration:'none'}}>Vantara</Link></li>
-            <li><Link href="/ada" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-dim)', textDecoration:'none'}}>ADA</Link></li>
-            <li><Link href="/offers" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-dim)', textDecoration:'none'}}>Offers</Link></li>
+            <li><a href="https://adagrowth.co.za" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-dim)', textDecoration:'none'}}>ADA</a></li>
+            <li><a href="https://adagrowth.co.za/offers" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--text-dim)', textDecoration:'none'}}>Offers</a></li>
             <li><Link href="/privacy-policy" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--gold)', textDecoration:'none'}}>Privacy Policy</Link></li>
             <li><Link href="/terms-of-service" style={{fontSize:'10px', letterSpacing:'0.18em', textTransform:'uppercase', color:'var(--gold)', textDecoration:'none'}}>Terms of Service</Link></li>
           </ul>

@@ -189,9 +189,9 @@ export default function ContactContent() {
                   <div className="contact-block-value" style={{cursor:'pointer'}}>Vantara</div>
                 </Link>
                 <div className="contact-block-sub">Sources and negotiates vehicle purchases for buyers.</div>
-                <Link href="/ada" style={{display:'block', textDecoration:'none'}}>
+                <a href="https://adagrowth.co.za" style={{display:'block', textDecoration:'none'}}>
                   <div className="contact-block-value" style={{marginTop:'18px', cursor:'pointer'}}>ADA</div>
-                </Link>
+                </a>
                 <div className="contact-block-sub">AI-powered digital infrastructure for businesses.</div>
                 <div className="contact-block-value" style={{marginTop:'18px', opacity:0.55, cursor:'default'}}>Vuma</div>
                 <div className="contact-block-sub" style={{opacity:0.55}}>AI-generated quotes, invoices, and compliance documents for South African contractors. Coming soon.</div>
