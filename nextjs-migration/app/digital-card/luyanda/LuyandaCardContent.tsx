@@ -1,5 +1,18 @@
 import SaveContactButton from './SaveContactButton';
 
+/*
+  Worked-with logos. Only logos with a real file are shown.
+  To add one: drop the file in public/assets/card/ and add a line here.
+  Waiting on files: Biz Acumen Consulting, Hucklberry, PurpleYouniverse,
+  Vuma Business Documents, Aksonsicar, Jeremiah's Auto,
+  Emerald Auto (Church Street), Meridian Digital.
+*/
+const WORKED_WITH: { name: string; src: string; w: number; h: number }[] = [
+  { name: 'Afripact Civils', src: '/assets/card/afripact.jpeg', w: 134, h: 99 },
+  { name: 'Mbusi Car Rentals', src: '/assets/card/mbusi.jpg', w: 784, h: 300 },
+  { name: 'SAWON Foundation', src: '/assets/card/sawon.png', w: 300, h: 300 },
+];
+
 const CSS = `
 .lc-root {
   --ink: #121317;
@@ -10,7 +23,7 @@ const CSS = `
   color-scheme: light;
   min-height: 100vh;
   min-height: 100dvh;
-  padding: 40px 16px 32px;
+  padding: 24px 16px 32px;
   font-family: 'DM Sans', system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
@@ -18,20 +31,38 @@ const CSS = `
 .lc-root a, .lc-root button { -webkit-tap-highlight-color: transparent; }
 .lc-root :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
 
-.lc-head { margin-bottom: 28px; }
+.lc-hero { margin-bottom: 28px; }
+.lc-photo {
+  position: relative; overflow: hidden;
+  aspect-ratio: 800 / 840; border-radius: 22px;
+  background: #eceef1;
+}
+.lc-photo img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: center top;
+  animation: lc-zoom 1100ms cubic-bezier(.2,.7,.2,1) both;
+}
+.lc-photo-shade {
+  position: absolute; left: 0; right: 0; bottom: 0; height: 52%;
+  background: linear-gradient(to top, rgba(18,19,23,.94), rgba(18,19,23,0));
+}
+.lc-photo-text { position: absolute; left: 22px; right: 22px; bottom: 20px; color: #fff; }
 .lc-name {
   font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 1.08;
-  letter-spacing: -0.01em;
-  margin: 0 0 8px;
+  font-weight: 500; font-size: 44px; line-height: 1.04;
+  letter-spacing: -0.01em; margin: 0 0 6px;
 }
-.lc-role { font-size: 16px; font-weight: 500; margin: 0 0 14px; }
-.lc-line { font-size: 17px; line-height: 1.45; margin: 0 0 18px; }
+.lc-role { font-size: 16px; font-weight: 500; margin: 0; color: rgba(255,255,255,.88); }
+.lc-tag {
+  font-family: 'Bodoni Moda', 'Cormorant Garamond', serif;
+  font-style: italic; font-weight: 400;
+  font-size: 34px; line-height: 1.12; letter-spacing: -0.01em;
+  margin: 26px 0 12px;
+}
+.lc-line { font-size: 16px; line-height: 1.45; color: var(--ink); margin: 0 0 14px; }
 .lc-loc { font-size: 14px; line-height: 1.5; color: var(--muted); margin: 0; }
 
-.lc-actions { display: grid; gap: 10px; margin-bottom: 36px; }
+.lc-actions { display: grid; gap: 10px; margin-bottom: 40px; }
 .lc-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
 .lc-btn {
   display: flex; align-items: center; justify-content: center; gap: 8px;
@@ -49,6 +80,23 @@ const CSS = `
 .lc-row .lc-btn { padding: 0 8px; flex-direction: column; gap: 6px; min-height: 64px; font-size: 14px; }
 .lc-save { width: 100%; border-color: var(--line); }
 
+.lc-label {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--muted); margin: 0 0 14px;
+}
+
+.lc-proof { margin-bottom: 40px; }
+.lc-logos { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+@media (max-width: 339px) { .lc-logos { grid-template-columns: repeat(2, 1fr); } }
+.lc-logo {
+  display: flex; flex-direction: column; align-items: center; justify-content: space-between;
+  gap: 10px; padding: 14px 8px 10px;
+  border: 1px solid var(--line); border-radius: 14px; background: #fff;
+}
+.lc-logo-box { display: flex; align-items: center; justify-content: center; height: 48px; width: 100%; }
+.lc-logo-box img { display: block; max-height: 48px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
+.lc-logo-name { font-size: 12px; line-height: 1.3; color: var(--muted); text-align: center; margin: 0; }
+
 .lc-cards { display: grid; gap: 14px; }
 .lc-biz {
   border: 1px solid var(--line);
@@ -56,14 +104,17 @@ const CSS = `
   border-radius: 12px;
   padding: 20px 20px 8px;
 }
+.lc-biz.lc-nolink { padding-bottom: 20px; }
 .lc-logo-ada {
-  width: 112px; height: 29px; margin: 0 0 14px -9px; /* PNG has ~9px of built-in left padding at this size */
+  width: 112px; height: 29px; margin: 0 0 14px -9px;
   background-color: var(--ink);
   -webkit-mask: url('/assets/ada-logo-mark.png') left center / contain no-repeat;
   mask: url('/assets/ada-logo-mark.png') left center / contain no-repeat;
 }
 .lc-logo-vantara { display: block; height: 18px; width: auto; margin: 6px 0 20px; }
-.lc-biz p { font-size: 16px; line-height: 1.45; margin: 0 0 6px; }
+.lc-org { font-family: 'Bodoni Moda', 'Cormorant Garamond', serif; font-weight: 500; font-size: 24px; line-height: 1.1; margin: 0 0 10px; }
+.lc-biz .lc-title { font-size: 16px; line-height: 1.45; font-weight: 700; margin: 0 0 4px; }
+.lc-biz .lc-desc { font-size: 15px; line-height: 1.45; color: var(--muted); margin: 0 0 6px; }
 .lc-biz a {
   display: flex; align-items: center; min-height: 48px;
   font-size: 15px; font-weight: 500; color: var(--ink);
@@ -84,10 +135,12 @@ const CSS = `
 .lc-toast.show { opacity: 1; transform: translate(-50%, 0); }
 
 @keyframes lc-rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+@keyframes lc-zoom { from { transform: scale(1.06); } to { transform: scale(1); } }
 .lc-rise { opacity: 0; animation: lc-rise 560ms cubic-bezier(.2,.7,.2,1) forwards; animation-delay: var(--d, 0ms); }
 
 @media (prefers-reduced-motion: reduce) {
   .lc-rise { opacity: 1; animation: none; }
+  .lc-photo img { animation: none; }
   .lc-btn, .lc-toast { transition: none; }
 }
 `;
@@ -103,13 +156,23 @@ const icon = {
 };
 
 export default function LuyandaCardContent() {
+  const logosEnd = 260 + WORKED_WITH.length * 60;
+
   return (
     <main className="lc-root">
       <style dangerouslySetInnerHTML={{ __html: CSS }} />
       <div className="lc-wrap">
-        <header className="lc-head lc-rise" style={{ ['--d' as string]: '0ms' }}>
-          <h1 className="lc-name">Luyanda Ngubo</h1>
-          <p className="lc-role">Founder, ADA</p>
+        <header className="lc-hero lc-rise" style={{ ['--d' as string]: '0ms' }}>
+          <div className="lc-photo">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/assets/card/luyanda-card.jpg" alt="Luyanda Ngubo" width={800} height={840} />
+            <div className="lc-photo-shade" aria-hidden="true" />
+            <div className="lc-photo-text">
+              <h1 className="lc-name">Luyanda Ngubo</h1>
+              <p className="lc-role">Founder, ADA</p>
+            </div>
+          </div>
+          <p className="lc-tag">I solve problems, and get you paid.</p>
           <p className="lc-line">Google ads, websites and business systems for South African businesses.</p>
           <p className="lc-loc">
             Pietermaritzburg, KwaZulu-Natal
@@ -149,14 +212,42 @@ export default function LuyandaCardContent() {
           <SaveContactButton />
         </div>
 
-        <div className="lc-cards" role="group" aria-label="Businesses">
-          <article className="lc-biz lc-rise" style={{ ['--rule' as string]: '#C4502A', ['--d' as string]: '240ms' }}>
+        <div className="lc-proof" role="group" aria-label="Businesses worked with">
+          <p className="lc-label lc-rise" style={{ ['--d' as string]: '200ms' }}>Worked with</p>
+          <div className="lc-logos">
+            {WORKED_WITH.map((c, i) => (
+              <div key={c.name} className="lc-logo lc-rise" style={{ ['--d' as string]: `${240 + i * 60}ms` }}>
+                <div className="lc-logo-box">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
+                  <img src={c.src} alt={c.name} width={c.w} height={c.h} loading="lazy" />
+                </div>
+                <p className="lc-logo-name">{c.name}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <p className="lc-label lc-rise" style={{ ['--d' as string]: `${logosEnd}ms` }}>Roles</p>
+        <div className="lc-cards" role="group" aria-label="Roles and businesses">
+          <article className="lc-biz lc-rise" style={{ ['--rule' as string]: '#C4502A', ['--d' as string]: `${logosEnd + 40}ms` }}>
             <div className="lc-logo-ada" role="img" aria-label="ADA" />
-            <p>Ads, websites and business systems.</p>
+            <p className="lc-title">Founder</p>
+            <p className="lc-desc">Google ads, websites and business systems.</p>
             <a href="https://adagrowth.co.za">adagrowth.co.za</a>
           </article>
 
-          <article className="lc-biz lc-rise" style={{ ['--rule' as string]: '#C9A84C', ['--d' as string]: '340ms' }}>
+          <article className="lc-biz lc-nolink lc-rise" style={{ ['--rule' as string]: '#d5d6db', ['--d' as string]: `${logosEnd + 100}ms` }}>
+            <p className="lc-org">Afripact Civils</p>
+            <p className="lc-title">Head of Sales and Strategy</p>
+          </article>
+
+          <article className="lc-biz lc-rise" style={{ ['--rule' as string]: '#d5d6db', ['--d' as string]: `${logosEnd + 160}ms` }}>
+            <p className="lc-org">Avalon Capital Group</p>
+            <p className="lc-title">Founder and Principal</p>
+            <a href="https://www.avaloncapitalgroup.co.za">avaloncapitalgroup.co.za</a>
+          </article>
+
+          <article className="lc-biz lc-rise" style={{ ['--rule' as string]: '#C9A84C', ['--d' as string]: `${logosEnd + 220}ms` }}>
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               className="lc-logo-vantara"
@@ -165,12 +256,19 @@ export default function LuyandaCardContent() {
               width={903}
               height={109}
             />
-            <p>Vehicle acquisition advisory.</p>
+            <p className="lc-title">Founder</p>
+            <p className="lc-desc">Vehicle acquisition advisory.</p>
             <a href="https://www.avaloncapitalgroup.co.za/vantara">avaloncapitalgroup.co.za/vantara</a>
+          </article>
+
+          <article className="lc-biz lc-nolink lc-rise" style={{ ['--rule' as string]: '#d5d6db', ['--d' as string]: `${logosEnd + 280}ms` }}>
+            <p className="lc-org">Biz Acumen Consulting</p>
+            <p className="lc-title">Technical Lead</p>
+            <p className="lc-desc">Sales optimization and business development.</p>
           </article>
         </div>
 
-        <p className="lc-foot lc-rise" style={{ ['--d' as string]: '440ms' }}>
+        <p className="lc-foot lc-rise" style={{ ['--d' as string]: `${logosEnd + 340}ms` }}>
           Avalon Capital Group (Pty) Ltd, Reg. 2025/671885/07
         </p>
       </div>
