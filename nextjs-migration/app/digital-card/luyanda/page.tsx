@@ -17,13 +17,20 @@ export const metadata: Metadata = {
     siteName: 'ADA',
     title: TITLE,
     description: DESCRIPTION,
-    images: [],
+    images: [
+      {
+        url: 'https://www.avaloncapitalgroup.co.za/assets/ada-card-og.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Luyanda Ngubo, Founder, ADA',
+      },
+    ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: TITLE,
     description: DESCRIPTION,
-    images: [],
+    images: ['https://www.avaloncapitalgroup.co.za/assets/ada-card-og.jpg'],
   },
 };
 
