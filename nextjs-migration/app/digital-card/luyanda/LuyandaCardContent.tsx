@@ -7,10 +7,18 @@ import SaveContactButton from './SaveContactButton';
   Vuma Business Documents, Aksonsicar, Jeremiah's Auto,
   Emerald Auto (Church Street), Meridian Digital.
 */
-const WORKED_WITH: { name: string; src: string; w: number; h: number }[] = [
-  { name: 'Afripact Civils', src: '/assets/card/afripact.jpeg', w: 134, h: 99 },
+const WORKED_WITH: { name: string; src: string; w: number; h: number; href?: string }[] = [
+  { name: 'Afripact Civils', src: '/assets/card/afripact.jpeg', w: 134, h: 99, href: 'https://afripact.net' },
   { name: 'Mbusi Car Rentals', src: '/assets/card/mbusi.jpg', w: 784, h: 300 },
   { name: 'SAWON Foundation', src: '/assets/card/sawon.png', w: 300, h: 300 },
+  { name: 'Biz Acumen', src: '/assets/card/bizacumen.png', w: 918, h: 272, href: 'https://bizacumen.co.za' },
+  { name: 'Hucklberry Media', src: '/assets/card/hucklberry.png', w: 2092, h: 560, href: 'https://hucklberry.co.za' },
+  { name: 'The Purple Youniverse', src: '/assets/card/purple.png', w: 600, h: 362 },
+  { name: 'Vuma', src: '/assets/card/vuma.png', w: 710, h: 282 },
+  { name: 'Aksons Motor Group', src: '/assets/card/aksons.png', w: 800, h: 200, href: 'https://aksonsicar.co.za' },
+  { name: "Jeremiah's Auto", src: '/assets/card/jeremiahs.png', w: 692, h: 182, href: 'https://www.jeremiahsauto.co.za' },
+  { name: 'Emerald Auto', src: '/assets/card/emerald.png', w: 320, h: 80, href: 'https://www.emeraldautopmb.co.za' },
+  { name: 'Meridian Digital', src: '/assets/card/meridian.png', w: 202, h: 311, href: 'https://www.meridiandigital.co.za' },
 ];
 
 const CSS = `
@@ -93,6 +101,8 @@ const CSS = `
   gap: 10px; padding: 14px 8px 10px;
   border: 1px solid var(--line); border-radius: 14px; background: #fff;
 }
+.lc-logo-link { text-decoration: none; color: inherit; min-height: 48px; }
+.lc-logo-link:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
 .lc-logo-box { display: flex; align-items: center; justify-content: center; height: 48px; width: 100%; }
 .lc-logo-box img { display: block; max-height: 48px; max-width: 100%; width: auto; height: auto; object-fit: contain; }
 .lc-logo-name { font-size: 12px; line-height: 1.3; color: var(--muted); text-align: center; margin: 0; }
@@ -215,15 +225,27 @@ export default function LuyandaCardContent() {
         <div className="lc-proof" role="group" aria-label="Businesses worked with">
           <p className="lc-label lc-rise" style={{ ['--d' as string]: '200ms' }}>Worked with</p>
           <div className="lc-logos">
-            {WORKED_WITH.map((c, i) => (
-              <div key={c.name} className="lc-logo lc-rise" style={{ ['--d' as string]: `${240 + i * 60}ms` }}>
-                <div className="lc-logo-box">
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={c.src} alt={c.name} width={c.w} height={c.h} loading="lazy" />
+            {WORKED_WITH.map((c, i) => {
+              const inner = (
+                <>
+                  <div className="lc-logo-box">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={c.src} alt={c.name} width={c.w} height={c.h} loading="lazy" />
+                  </div>
+                  <p className="lc-logo-name">{c.name}</p>
+                </>
+              );
+              const style = { ['--d' as string]: `${240 + i * 60}ms` };
+              return c.href ? (
+                <a key={c.name} href={c.href} target="_blank" rel="noopener noreferrer" aria-label={`${c.name} website`} className="lc-logo lc-logo-link lc-rise" style={style}>
+                  {inner}
+                </a>
+              ) : (
+                <div key={c.name} className="lc-logo lc-rise" style={style}>
+                  {inner}
                 </div>
-                <p className="lc-logo-name">{c.name}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
